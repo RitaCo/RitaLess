@@ -1,0 +1,123 @@
+/**
+ * Bundle	: Panels
+ * Auther	: Saleh Souzanchi
+ **/
+ 
+ 
+ #Panels {
+
+	 
+	.head2eing(){
+		background-color: #F5F5F5;
+		background-image: -moz-linear-gradient(center top , #FFFFFF, #E6E6E6);
+		background-repeat: repeat-x;
+		border-color: #E6E6E6 #E6E6E6 #A2A2A2;
+		border-image: none;
+		
+		//linear-gradient(to bottom, #F2F2F2, #E2E2E2)
+	}
+	
+	.panel(){
+		overflow: hidden;
+		position: relative;
+		.flex-box();
+		.flex-row();
+		.border(1px, solid,@panel-brColor);
+		background-color: @panel-bg;
+		background-clip: padding-box;  
+	}	
+	
+	.header() when (@dark = true) {
+		background-color: #E2E2E2;
+		background-image: linear-gradient(to bottom, #F2F2F2, #E2E2E2);
+		.border-bottom(1px,solid,@panel-head-brColor)	
+	}
+	
+	.header() when (@dark = false){
+		background-color: #F0F0F0;
+		background-image: linear-gradient(to bottom, #fff 10%, #F0F0F0 100%);		
+		.border-bottom(1px,solid,@panel-head-brColor)	
+	}	
+	
+	.header(){
+		height: 40px;
+		padding: 0px 10px;	
+		overflow: hidden;
+		position: relative;
+		box-shadow: 0 1px 0 #FFFFFF inset;
+		.flex(1);
+		.flex-box();
+		.flex-col();
+		
+		> .header-caption {
+			font-family: WNasim;
+			font-style: normal;
+			font-size: 16px;
+			text-indent: 10px;
+			color: #333;
+			text-shadow: 2px 2px 1px #C0C0C0;		
+			.flex-order(1);
+			.flex();
+			align-self: center;
+		}
+
+		> .header-icon{
+			.flex-order(0);
+			padding: 0 5px;
+			.flex-box();
+			.flex-col();
+			align-self: center;
+			i{
+				font-size: 18px;
+				line-height: 2;
+			}
+		}
+		
+		> .header-helpers{
+			.flex-order(3);
+			.flex-box();
+			.flex-col();
+			
+			> *{
+				.border(1px, solid,#777272);
+				width: 25px;
+				height: 25px;
+				overflow: hidden;
+				box-shadow: 0 0 1px #707070 inset;
+				background-color: white;
+				margin: 0px 2px;
+				text-align: center;
+				align-self: center;
+				.brCorner-sm;
+				cursor: pointer;
+				> i{
+					
+					text-align: center;
+					position: relative;
+				}
+			}
+		}
+
+	}
+
+	
+	.body(){
+		padding: @panel-body-padding;
+		background-color: @panel-body-bg;
+		.flex-box();
+		overflow: hidden;
+		position: relative;
+		.flex(1);
+	}
+	
+
+	.footer(){
+		background: @panel-footer-bg;
+		overflow: hidden;
+		position: relative;
+		box-shadow: 0 1px 0 #FFFFFF inset;
+		padding: 10px 20px;
+		.border-top(1px,solid,@panel-footer-brColor);
+	}
+	
+}

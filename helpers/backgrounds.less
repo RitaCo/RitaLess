@@ -1,0 +1,111 @@
+/* BackGround */
+
+.bg-gradient(@from: #000, @to: #EEE){
+	background: @from;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
+	background-image: -moz-linear-gradient(top, @from, @to);
+	background-image: -ms-linear-gradient(top, @from, @to);
+	background-image: linear-gradient(top, @from, @to);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{from}', endColorstr='@{to}',GradientType=0);
+
+}
+
+.bg-linear-gradient(@color1:#ccc, @color2:#fff, @stop1:0, @stop2:100%, @deg:0deg) {
+  @old-deg: @deg + 90deg;
+  background-color: @color2;
+  background: -webkit-linear-gradient(@old-deg, @color1 @stop1, @color2 @stop2);
+  background:    -moz-linear-gradient(@old-deg, @color1 @stop1, @color2 @stop2);
+  background:     -ms-linear-gradient(@old-deg, @color1 @stop1, @color2 @stop2);
+  background:      -o-linear-gradient(@old-deg, @color1 @stop1, @color2 @stop2);
+  background:         linear-gradient(@deg, @color1 @stop1, @color2 @stop2);
+  filter: ~"progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000')";
+}
+
+
+.gradient (@origin: left, @start: #ffffff, @stop: #000000) {
+    background-color: @start;
+    background-image: -webkit-linear-gradient(@origin, @start, @stop);
+    background-image: -moz-linear-gradient(@origin, @start, @stop);
+    background-image: -o-linear-gradient(@origin, @start, @stop);
+    background-image: -ms-linear-gradient(@origin, @start, @stop);
+    background-image: linear-gradient(@origin, @start, @stop);
+}
+
+.quick-gradient (@origin: left, @alpha: 0.2) {
+    background-image: -webkit-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -moz-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -o-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: -ms-linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+    background-image: linear-gradient(@origin, rgba(0,0,0,0.0), rgba(0,0,0,@alpha));
+}
+
+/**
+	Horizontal gradient, from left to right
+	Creates two color stops, start and end, by specifying a color and position for each color stop.
+	 Color stops are not available in IE9 and below. 
+ 
+ */
+.bg-h(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%) {
+    background-image: -webkit-linear-gradient(left, color-stop(@start-color @start-percent), color-stop(@end-color @end-percent)); // Safari 5.1-6, Chrome 10+
+    background-image:  linear-gradient(to right, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@start-color),argb(@end-color))); // IE9 and down
+}
+
+/**
+	Vertical gradient, from top to bottom
+	
+	Creates two color stops, start and end, by specifying a color and position for each color stop.
+	Color stops are not available in IE9 and below.
+ */
+.bg-v(@start-color: #555; @end-color: #333; @start-percent: 0%; @end-percent: 100%) {
+	background-image: -webkit-linear-gradient(top, @start-color @start-percent, @end-color @end-percent);  // Safari 5.1-6, Chrome 10+
+	background-image: linear-gradient(to bottom, @start-color @start-percent, @end-color @end-percent); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+	background-repeat: repeat-x;
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@start-color),argb(@end-color))); // IE9 and down
+}
+
+/**
+ * directional
+ */
+.bg-d(@start-color: #555; @end-color: #333; @deg: 45deg) {
+	background-repeat: repeat-x;
+	background-image: -webkit-linear-gradient(@deg, @start-color, @end-color); // Safari 5.1-6, Chrome 10+
+	background-image: linear-gradient(@deg, @start-color, @end-color); // Standard, IE10, Firefox 16+, Opera 12.10+, Safari 7+, Chrome 26+
+}
+
+/**
+ * horizontal-three-colors
+ */
+.bg-h3c(@start-color: #00b3ee; @mid-color: #7a43b6; @color-stop: 50%; @end-color: #c3325f) {
+	background-image: -webkit-linear-gradient(left, @start-color, @mid-color @color-stop, @end-color);
+	background-image: linear-gradient(to right, @start-color, @mid-color @color-stop, @end-color);
+	background-repeat: no-repeat;
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@start-color),argb(@end-color))); // IE9 and down, gets no color-stop at all for proper fallback
+}
+
+/**
+ * vertical-three-colors
+ */
+.bg-v3c(@start-color: #00b3ee; @mid-color: #7a43b6; @color-stop: 50%; @end-color: #c3325f) {
+	background-image: -webkit-linear-gradient(@start-color, @mid-color @color-stop, @end-color);
+	background-image: linear-gradient(@start-color, @mid-color @color-stop, @end-color);
+	background-repeat: no-repeat;
+	filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@start-color),argb(@end-color))); // IE9 and down, gets no color-stop at all for proper fallback
+}
+
+/**
+ * radial
+ */
+.bg-r(@inner-color: #555; @outer-color: #333) {
+	background-image: -webkit-radial-gradient(circle, @inner-color, @outer-color);
+	background-image: radial-gradient(circle, @inner-color, @outer-color);
+	background-repeat: no-repeat;
+}
+/**
+ * striped
+ */
+.bg-s(@color: rgba(255,255,255,.15); @angle: 45deg) {
+	background-image: -webkit-linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+	background-image: linear-gradient(@angle, @color 25%, transparent 25%, transparent 50%, @color 50%, @color 75%, transparent 75%, transparent);
+}

@@ -1,0 +1,133 @@
+
+
+/************************************
+ *  panels widget
+ ************************************/
+[class^="wid-panel"]+[class^="wid-panel"]{
+	margin-top: 20px;
+	
+} 
+
+
+.wid-panel-box{
+	.border();
+	background-color: @panel-bg;
+	overflow: hidden;
+	padding: @panel-body-padding;
+	background-clip: padding-box; 
+	.error &{
+		background: red;
+	}
+}
+
+
+
+/**
+ * 
+ **/ 
+.wid-panel{
+	/*  vars block */
+	@dark: false;
+	
+	/*  main block */
+	#Panels > .panel;
+	
+			
+	
+	/*  child block */
+	
+	> .panel-header{
+		#Panels > .header();
+	}
+	
+	> .panel-nav{
+	}	
+	
+	> .panel-body{
+		#Panels > .body;
+	}
+	
+	> .panel-footer{
+		#Panels >.footer;
+	}
+
+}
+
+
+
+.wid-panel-border {
+	/*  vars block */
+	@dark: true;
+	@panel-bg: rgba(134, 147, 160, 0.11);
+	@panel-brColor: #bbb;
+	
+	/*  main block */
+	#Panels > .panel;
+	
+			
+	
+	/*  child block */
+	
+	> .panel-header{
+		#Panels > .header();
+	}
+	
+	> .panel-body{
+		#Panels > .body;
+		margin: 6px;
+		.border(1px, solid,@panel-brColor);
+		border-radius:inherit;
+		box-shadow: 0px 0px 2px 0px #ccc;
+	}
+	
+	> .panel-footer{
+		#Panels >.footer;
+	}
+	
+}
+
+
+
+.wid-panel-framed {
+	/*  vars block */
+	@dark: true;
+	@panel-bg: rgba(134, 147, 160, 0.11);
+	@panel-brColor: #bbb;
+	
+	/*  main block */
+	#Panels > .panel;
+	
+	background-color: #E2E2E2;
+			
+	padding: 6px;
+	/*  child block */
+	
+	> .panel-header{
+		#Panels > .header();
+		margin-top: -6px;
+		margin-left: -6px;
+		margin-right: -6px ;
+		border: none;
+	}
+	
+	> .panel-body{
+		#Panels > .body;
+		 border-top-left-radius: inherit;
+		 border-top-right-radius: inherit;
+		.border-top(1px, solid,@panel-brColor);
+		.border-left(1px, solid,@panel-brColor);
+		.border-right(1px, solid,@panel-brColor);
+		box-shadow: 0px 0px 2px 0px #ccc;
+	}
+	
+	> .panel-footer{
+		#Panels >.footer;
+		.border-bottom(1px, solid,@panel-brColor);
+		.border-left(1px, solid,@panel-brColor);
+		.border-right(1px, solid,@panel-brColor);
+		border-bottom-left-radius: inherit;
+		border-bottom-right-radius: inherit;
+	}
+	
+}
+

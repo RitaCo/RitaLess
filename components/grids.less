@@ -1,0 +1,105 @@
+/**
+ *  grid with table /support fluid with/height- nestet - border spiliter 
+ */
+.com-gridTable{
+
+	display: table;
+	width: 100% ;
+	table-layout:  fixed;
+	position: relative;
+	overflow:auto;
+	
+	
+	
+	& + &{
+		margin-top: grid-gap-between;	
+	}	
+	
+	&.opt-autoHeight{
+		height: 100%;
+	}
+
+	>.is-col-gridTable{
+		display: table-cell;
+		width: auto;
+		padding-right: @grid-gap-columns;
+		padding-left: @grid-gap-columns;
+		vertical-align: top;
+		
+	}
+	
+	
+	&.opt-border > .is-col-gridTable{
+		 .border-right();
+	}
+
+
+	&.opt-border > .is-col-gridTable:first-child {
+  		border-right: none ;
+	}		
+}
+	
+
+.is-col-gridTable{
+		&.grid1 {
+		    width: 8.33%;
+		}
+		&.grid2 {
+		    width: 16.6%;
+		}
+		&.grid3 {
+		    width: 25%;
+		}
+		&.grid4 {
+		    width: 33.33%;
+		}
+		&.grid5 {
+		    width: 41.66%;
+		}
+		&.grid6 {
+		    width: 50%;
+		}
+		&.grid7 {
+		    width: 58.33%;
+		}
+		&.grid8 {
+		    width: 66.66%;
+		}
+		&.grid9 {
+		    width: 75%;
+		}
+		&.grid10 {
+		    width: 83.33%;
+		}
+		&.grid11 {
+		    width: 91.66%;
+		}
+		&.grid12 {
+		    width: 100%;
+		}
+}
+
+.com-gridTable > .is-col-gridTable:only-child {
+	padding: 0px;
+	border-right:none
+}
+
+
+.is-col-gridTable > .com-gridTable > .is-col-gridTable:first-child{
+	padding-left: @grid-gap-columns;
+	border-right:none;
+}
+.is-col-gridTable > .com-gridTable > .is-col-gridTable:last-child{
+	padding-right: @grid-gap-columns;
+}
+
+.is-col-gridTable > .com-gridTable:only-child > .is-col-gridTable:first-child{
+	padding-right: 0px;
+}
+.is-col-gridTable > .com-gridTable:only-child > .is-col-gridTable:last-child{
+	padding-left: 0px;
+}
+
+.com-gridTable > .com-gridTable .is-col-gridTable:first-child{
+	border-right: none;
+}

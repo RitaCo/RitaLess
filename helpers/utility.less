@@ -1,0 +1,96 @@
+/**
+ * Helpers Utility
+ */
+
+.pos(@t:0 ,@b:0, @l:0, @r:0){
+    position: absolute;
+    top:@t;
+    bottom: @b;
+    left:@l;
+    right:@r;
+    
+}
+.box-sizing(@type: border-box) {
+	-moz-box-sizing: @type;
+	-webkit-box-sizing: @type;
+	-ms-box-sizing: @type;
+	box-sizing: @type;
+}
+
+
+.placeholder(@color: #DDD) {
+	:-moz-placeholder {
+		color: @color;
+	}
+	::-webkit-input-placeholder {
+		color: @color;
+	}
+}
+
+.clearfix() {
+  &:before,
+  &:after {
+    content: " "; // 1
+    display: table; // 2
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+.inline-block() when (@using-ieclasses) {
+	display: inline-block;
+	.ie7 & {
+		display: inline;
+		zoom: 1;
+	}
+}
+
+.inline-block() when not (@using-ieclasses) {
+	display: inline-block;
+	*display: inline;
+	*zoom: 1;
+}
+
+.ir() {
+	border: 0;
+	font: 0/0 a;
+	text-shadow: none;
+	color: transparent;
+	background-color: transparent;
+}
+
+.hidden() {
+	display: none !important;
+	visibility: hidden;
+}
+
+.visually-hidden() {
+	border: 0;
+	clip: rect(0 0 0 0);
+	height: 1px;
+	margin: -1px;
+	overflow: hidden;
+	padding: 0;
+	position: absolute;
+	width: 1px;
+	&.focusable:active,
+	&.focusable:focus {
+	    clip: auto;
+	    height: auto;
+	    margin: 0;
+	    overflow: visible;
+	    position: static;
+	    width: auto;
+	}
+}
+
+.size(@thesize) {
+	width: @thesize;
+	height: @thesize;
+}
+
+.size(@width, @height) {
+	width: @width;
+	height: @height;
+}

@@ -1,0 +1,82 @@
+.com-layout{
+	.flex-box();
+	position: relative;
+		overflow: -moz-hidden-unscrollable;	
+
+	&.typ-row{
+	 	 flex-flow: column wrap;
+	}
+	
+	
+	&.typ-col{
+		 flex-flow: row wrap;
+	}
+
+	.fluid{
+ 		flex:1;
+
+	}
+	
+
+}
+
+
+
+	
+
+.typ-col, .typ-row {
+	&.opt-childs-fluid-fix{
+	   > * {
+	   	.flex(1,1,0);
+		}		
+	}
+
+	&.opt-childs-fluid-auto{
+	   > * {
+	   	.flex(1,1,auto);
+		}		
+	}
+	
+	> * {
+		position: relative;
+	}
+}
+
+
+
+
+.com-layout-columns{
+	.flex-box();
+	position: relative;
+	overflow: -moz-hidden-unscrollable;
+	flex-wrap: wrap;
+	box-lines: multiple;
+	 		
+	> .layout-cell {
+		flex-basis: 100%;
+
+		background-clip: content-box;
+		color: #222;
+		padding: 0.5rem 1rem;
+	}
+	
+	&.col2 > .layout-cell{
+	    flex-basis: 50%;
+	}
+	
+	&.col3 > .layout-cell{
+	    flex-basis: 33.33%;
+	}
+	
+	&.col4 > .layout-cell{
+		flex-basis: 25%;
+	}
+
+	&.col5 > .layout-cell{
+		flex-basis: 20%;
+	}
+
+	&.col6 > .layout-cell{
+		flex-basis: 16.66%;
+	}	
+}
