@@ -1,15 +1,46 @@
+.boxShadow-sm{
+	box-shadow:0 0 3px -1px #aaa;
+}
+.boxShadow{
+	box-shadow:0 0 6px -1px #aaa;
+}
+
+.boxShadow-lg{
+	box-shadow:0 0 9px -1px #aaa;
+}
+
+
+
+.brCorner{
+	.border-radius(@border-radius-base); 
+}
+
+.brCorner-sm {
+	.border-radius(@border-radius-small); 
+}
+
+.brCorner-lg {
+	.border-radius(@border-radius-large); 
+}
+
+/* Text Algins */
+.text-right{ text-align: right; }
+.text-center{ text-align: center; }
+.text-left{ text-align: left; }
 
 
 
 
 
-.no-padding{
+
+
+.padding-none{
 	padding: 0px!important;
 }
-.no-margin{
+.margin-none{
 	margin: 0px!important;
 }
-.no-border{
+.border-none{
 	border-left: none!important;
 	border-right: none!important;
 	border-top: none!important;
@@ -17,15 +48,10 @@
 }
 
 
-.no-bg{
+.bg-none{
 	background: transparent !important;
+	
 }
-
-
-/* Text Algins */
-.tx-left { text-align: left; }
-.tx-center { text-align: center; }
-.tx-right { text-align: right;}
 
 
 /* Efects */
@@ -44,7 +70,7 @@
 
 .c-splitter-row{
   height: 6px;
- .background_gradient(#F1F1F1,#D8D8D8);
+ .bg-gradient(#F1F1F1,#D8D8D8);
   border-color: #bbb;
   border-style: solid;
   border-bottom-width: 1px;
@@ -63,7 +89,7 @@
   border-top: none;
   border-bottom: none;	
    
-   .linear-gradient(#F1F1F1, #D8D8D8, 0, 100%, 90deg);
+   .bg-linear-gradient(#F1F1F1, #D8D8D8, 0, 100%, 90deg);
 }
 .c-splitter-col2{
 	width:20px;
