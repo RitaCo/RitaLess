@@ -1,4 +1,83 @@
-/**
+
+
+
+
+
+
+
+ 
+#Tab {
+	
+	.tab(){
+
+		position: relative;
+		.flex-box();
+		.flex-row();
+		.border(1px, solid,@tab-brColor);
+		overflow: auto;
+	}
+	
+
+	.tab-nav(){
+		list-style:none;
+		position: relative;
+		background: @tab-nav-bg;
+		padding: @tab-nav-padding;
+		
+		.flex(1);
+		.flex-box();
+		.flex-col();
+	}	
+	
+	
+	.tab-item(){
+		position: relative;
+		z-index: 10;
+		margin-left:2px;
+
+		cursor: pointer;
+		&.active{
+			> a{
+				
+				background: white ;
+				.border(1px, solid, @tab-item-brColor);
+			}
+		}
+		
+		&:not(.active):hover > a{
+			
+			background-color: #ddd;
+			border-bottom: none
+		}
+	}
+	
+	
+	.tab-item-link(){
+		position: relative;
+		.flex-box();
+		color: @tab-item-color ;
+		padding : @tab-item-padding;
+		font-size: 16px;
+		
+		font-family: "WKoodak","comic sans ms";
+	
+	}
+
+	
+	.tab-container(){
+		padding: 10px;
+		background-clip: content-box-box;
+		position: relative;
+		background: white;	
+	}	
+	
+	.tab-body(){
+		padding: @padding-block;
+		display: none;
+		font-size: 11px;
+		font-family: WNazanin;
+	}
+}/**
  * Bundle	: Tab Bundel
  * Auther	: Saleh Souzanchi
  **/
