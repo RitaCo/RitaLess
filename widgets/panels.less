@@ -1,5 +1,4 @@
 
-
 /************************************
  *  panels widget
  ************************************/
@@ -99,7 +98,7 @@
 	
 	background-color: #E2E2E2;
 			
-	padding: 6px;
+	padding: 5px;
 	/*  child block */
 	
 	> .panel-header{
@@ -117,14 +116,16 @@
 		.border-top(1px, solid,@panel-brColor);
 		.border-left(1px, solid,@panel-brColor);
 		.border-right(1px, solid,@panel-brColor);
-		box-shadow: 0px 0px 2px 0px #ccc;
+		.border-bottom(1px, solid,@panel-brColor);
+		box-shadow: 0px 0px 1px 0px #ccc;
+		
 	}
 	
 	> .panel-footer{
 		#Panels >.footer;
 		.border-bottom(1px, solid,@panel-brColor);
 		.border-left(1px, solid,@panel-brColor);
-		.border-right(1px, solid,@panel-brColor);
+		 .border-right(1px, solid,@panel-brColor);
 		border-bottom-left-radius: inherit;
 		border-bottom-right-radius: inherit;
 	}
