@@ -1,20 +1,20 @@
 /* shadow */
 
 .shadow-box(@x-axis: 0, @y-axis: 1px, @blur: 2px, @alpha: 0.1) {
-  -webkit-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
-  -moz-box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
   box-shadow: @x-axis @y-axis @blur rgba(0, 0, 0, @alpha);
 }
 
 
-
 .shadow-box-inner(@horizontal:0px, @vertical:1px, @blur:2px, @alpha: 0.4) {
-  -webkit-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
-  -moz-box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
   box-shadow: inset @horizontal @vertical @blur rgba(0, 0, 0, @alpha);
 }
 
 
 .shadow-text(@shadow:#fff){
 	text-shadow:0 1px 0 @shadow;
+}
+
+.wid-3d(){
+	
+	box-shadow: 0 1px 0 #ffffff inset,0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
 }

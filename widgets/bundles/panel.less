@@ -22,21 +22,21 @@
 		position: relative;
 		.flex-box();
 		.flex-row();
-		.border(1px, solid,@panel-brColor);
+		.br(1px, solid,@panel-brColor);
 		background-color: @panel-bg;
-		background-clip: padding-box;  
+		//background-clip: padding-box;  
 	}	
 	
 	.header() when (@dark = true) {
 		background-color: #dedede;
 		background-image: linear-gradient(to bottom, #F2F2F2, #dedede);
-		.border-bottom(1px,solid,@panel-head-brColor)	
+		.br-bottom(1px,solid,@panel-head-brColor)	
 	}
 	
 	.header() when (@dark = false){
 		background-color: #F0F0F0;
 		background-image: linear-gradient(to bottom, #fff 10%, #F0F0F0 100%);		
-		.border-bottom(1px,solid,@panel-head-brColor)	
+		.br-bottom(1px,solid,@panel-head-brColor)	
 	}	
 	
 	.header(){
@@ -79,7 +79,7 @@
 			.flex-col();
 			
 			> *{
-				.border(1px, solid,#777272);
+				.br(1px, solid,#777272);
 				width: 25px;
 				height: 25px;
 				overflow: hidden;
@@ -102,22 +102,13 @@
 
 	
 	.body(){
-		padding: @panel-body-padding;
+
 		background-color: @panel-body-bg;
 		.flex-box();
 		.flex-row();
-		overflow: hidden;
+		overflow:  auto;
 		position: relative;
 		.flex(1);
-	}
-	
-
-	.footer(){
-		background: @panel-footer-bg;
-		overflow: hidden;
-		position: relative;
-		box-shadow: 0 1px 0 #FFFFFF inset;
-		padding: 10px 20px;
 	}
 	
 }

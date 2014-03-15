@@ -1,11 +1,3 @@
-
-
-
-
-
-
-
- 
 #Tab {
 	
 	.tab(){
@@ -13,13 +5,14 @@
 		position: relative;
 		.flex-box();
 		.flex-row();
-		.border(1px, solid,@tab-brColor);
+		.br(1px, solid,@tab-brColor);
 		overflow: auto;
 	}
 	
 
 	.tab-nav(){
 		list-style:none;
+		
 		position: relative;
 		background: @tab-nav-bg;
 		padding: @tab-nav-padding;
@@ -40,7 +33,7 @@
 			> a{
 				
 				background: white ;
-				.border(1px, solid, @tab-item-brColor);
+				.br(1px, solid, @tab-item-brColor);
 			}
 		}
 		
@@ -57,9 +50,8 @@
 		.flex-box();
 		color: @tab-item-color ;
 		padding : @tab-item-padding;
-		font-size: 16px;
-		
-		font-family: "WKoodak","comic sans ms";
+		font-size: @tab-item-font-size;
+		font-family: @tab-item-font-family;
 	
 	}
 

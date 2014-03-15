@@ -2,15 +2,15 @@
  * Borders Radius
  */
 
-.border-radius(@radius: @border-radius-base){ 
-	.border-radius(@radius, @radius);
+.br-radius(@radius: @border-radius-base){ 
+	.br-radius(@radius, @radius);
 }
 
-.border-radius(@top, @bottom){
-	.border-radius(@top, @top, @bottom, @bottom);
+.br-radius(@top, @bottom){
+	.br-radius(@top, @top, @bottom, @bottom);
 }
 
-.border-radius(@top-left, @top-right, @bottom-right, @bottom-left){
+.br-radius(@top-left, @top-right, @bottom-right, @bottom-left){
 	border-radius:@top-left @top-right @bottom-right @bottom-left;
 }
 
@@ -18,25 +18,25 @@
  * Border
  */
 
-.border(@size: @base-border-size, @type: @base-border-type, @color: @base-border-color){ 
-	.border-top(@size, @type, @color);
-	.border-left(@size, @type, @color);
-	.border-right(@size, @type, @color);
-	.border-bottom(@size, @type, @color);
+.br(@size: @base-border-size, @type: @base-border-type, @color: @base-border-color){ 
+	.br-top(@size, @type, @color);
+	.br-left(@size, @type, @color);
+	.br-right(@size, @type, @color);
+	.br-bottom(@size, @type, @color);
 }
 
-.border-top(@size: @base-border-size, @type: @base-border-type, @color: @base-border-color){ 
+.br-top(@size: @base-border-size, @type: @base-border-type, @color: @base-border-color){ 
 	border-top:@size @type @color;
 }
 
-.border-right(@size: @base-border-size, @type: @base-border-type, @color: @base-border-color){ 
+.br-right(@size: @base-border-size, @type: @base-border-type, @color: @base-border-color){ 
 	border-right: @size @type @color;
 }
 
-.border-left(@size: @base-border-size, @type: @base-border-type, @color: @base-border-color){ 
+.br-left(@size: @base-border-size, @type: @base-border-type, @color: @base-border-color){ 
 	border-left: @size @type @color;
 }
 
-.border-bottom(@size: @base-border-size, @type: @base-border-type, @color: @base-border-color){ 
+.br-bottom(@size: @base-border-size, @type: @base-border-type, @color: @base-border-color){ 
 	border-bottom: @size @type @color;
 }
