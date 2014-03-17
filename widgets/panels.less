@@ -1,8 +1,8 @@
 @import  (reference) "/bundles/panel.less";
 
 
-.panel-body > *{
-	.br-top(1px,solid,@panel-brColor);
+.panel-body > *:not(:first-child){
+	.br-top(1px,solid,@panel-brColor) !important;
 	.wid-3d();
 }
 

@@ -2,42 +2,113 @@
 .wid-toolbar{
 	overflow: hidden;    
 	position: relative; 
-
-	.toolbar-band {
-		padding: 5px 5px;
+	padding: 0px;
+	line-height: 0px;
+	background-color: @toolbar-bg;
+	.flex-box();
+	.flex-row();
+	
+	
+	> .toolbar-band {
+		
+		.wid-3d();
 	   	border-bottom: 1px solid #bbb;
- 		border-top: 1px solid #FBFBFB;
-	   	.bg-gradient(#fafafa,#ececec);
-	  	min-height: 26px;
-      	overflow: hidden;
-   }
-	&.toolbar-top{
-		border-bottom: 1px solid #bbb;
-		margin-bottom: 0px;
-		.toolbar-band:last-child{
-			border-bottom:0px;
-		}
-		.toolbar-band:first-child{
-			border-top:0px;
-		}
-	}
 
-	&.toolbar-bottom{
-		border-top: 1px solid #bbb;
-		margin-top: 0px;
-		.toolbar-band:last-child{
-			border-bottom:0px;
-		}
-		.toolbar-band:first-child{
-			border-top:0px;
-		}		
-	}
-   
+	   	.bg-h(#fafafa,#ececec);
+	  	height: 50px;
+    
+      	padding: 2px 10px;
+   		.flex-box();
+		.flex-col();
+   		&:last-child{
+   			border-bottom:none;
+   			
+   		}
+   		
+   		&.band-sm{
+   			height: 36px;
+   		
+   		}
+   		&.band-lg{
+   			height: 70px;
+   		}	
+		
+   }
+
+}
+
+
+.toolbar-band  > .btn,
+.toolbar-band  > .btn.deactive{
+        border-radius: 0;
+    border: 1px solid transparent ;
+    background: none;
+    box-shadow: none;
+    cursor: pointer;    
+    display: flex !important;
+    height: auto;
+    align-items:center;
+    padding: 0px 10px;
+    margin: 0px 1px;
+    i{
+    	margin: 0px 10px;
+    }
+ }
+
+.toolbar-band.band-sm  > .btn{
+		
+	i{
+    	margin: 0px 5px;
+    }		
+}
+
+.toolbar-band.band-lg  > .btn{
+	   	
+		.flex-col();
+		justify-content:center;
+		
+	i{
+    	margin: 0px 0px;
+    	font-size: 40px;
+    	.flex(1,1,100%);
+    	
+    }		
+}
+
+.toolbar-band  > .btn:hover{
+    border: 1px solid silver;
+	.wid-3d();
+    background: none;
+    color: #222;
+    
+	
+
+
+} 
+
+
+
+
+.toolbar-band  > .btn:active,
+.toolbar-band  > .btn.active{
+	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.19) inset;
+	.br(1px,solid,#9C9C9C);
+} 
+
+.toolbar-band  > .btn.deactive:hover{
+       border: 1px solid transparent ;
 }
 
 
 
-
-
-
+.toolbar-band  >  .separator {
+    
+    
+   width: 5px	;
+   background-color: rgba(193, 193, 193, 0.26);
+   box-shadow: 0 0 2px rgba(0, 0, 0, 0.38) inset;
+    margin:3px 5px;
+    border-radius:2px;
+    background-color: silver;
+}
 
