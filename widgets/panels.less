@@ -1,12 +1,12 @@
 @import  (reference) "/bundles/panel.less";
 
 
-.panel-body > *:not(:first-child){
+.panel-body [class^="body-"]{
 	.br-top(1px,solid,@panel-brColor) !important;
 	.wid-3d();
 }
 
-.panel-body > *:first-child{
+.panel-body [class^="body-"]:first-child{
 	border-top: none !important;
 }
 
