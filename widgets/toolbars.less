@@ -10,7 +10,7 @@
 	
 	
 	> .toolbar-band {
-		
+		line-height:3.5;
 		.wid-3d();
 	   	border-bottom: 1px solid #bbb;
 
@@ -38,8 +38,7 @@
 }
 
 
-.toolbar-band  > .btn,
-.toolbar-band  > .btn.deactive{
+.toolbar-band  > .btn{
         border-radius: 0;
     border: 1px solid transparent ;
     background: none;
@@ -54,6 +53,23 @@
     	margin: 0px 10px;
     }
  }
+
+.toolbar-band  > .btn.disabled{
+	color: silver;
+	
+}
+
+.toolbar-band  > .btn.disabled:hover{
+	box-shadow: none;
+	border: none !important;
+}
+.toolbar-band  > .btn:not(.disabled):hover{
+    border: 1px solid silver;
+	.wid-3d();
+    background: none;
+    color: #222;
+ } 
+
 
 .toolbar-band.band-sm  > .btn{
 		
@@ -75,28 +91,18 @@
     }		
 }
 
-.toolbar-band  > .btn:hover{
-    border: 1px solid silver;
-	.wid-3d();
-    background: none;
-    color: #222;
-    
-	
-
-
-} 
 
 
 
 
-.toolbar-band  > .btn:active,
+.toolbar-band  > .btn:not(.disabled):active,
 .toolbar-band  > .btn.active{
 	box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.19) inset;
 	.br(1px,solid,#9C9C9C);
 } 
 
 .toolbar-band  > .btn.deactive:hover{
-       border: 1px solid transparent ;
+       
 }
 
 
