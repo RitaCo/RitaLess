@@ -24,22 +24,16 @@
 		.flex-row();
 		.br(1px, solid,@panel-brColor);
 		background-color: @panel-bg;
-		//background-clip: padding-box;  
+		box-shadow:@panel-shadow-box;
+		background-clip: padding-box;  
 	}	
 	
-	.header() when (@dark = true) {
-		background-color: #dedede;
-		background-image: linear-gradient(to bottom, #F2F2F2, #dedede);
-		.br-bottom(1px,solid,@panel-head-brColor)	
-	}
-	
-	.header() when (@dark = false){
-		background-color: #F0F0F0;
-		background-image: linear-gradient(to bottom, #fff 10%, #F0F0F0 100%);		
-		.br-bottom(1px,solid,@panel-head-brColor)	
-	}	
 	
 	.header(){
+		background-color: @panel-head-bg;
+		background-image: linear-gradient(to bottom, @panel-head-bg-gradient-strat, @panel-head-bg-gradient-end);
+		.br-bottom(1px,solid,@panel-head-brColor);	
+
 		height: 40px;
 		padding: 0px 10px;	
 		overflow: hidden;

@@ -1,14 +1,14 @@
 @import  (reference) "/bundles/panel.less";
 
 
-.panel-body [class^="body-"]{
+.panel-body  >*:not(:first-child){
 	.br-top(1px,solid,@panel-brColor) !important;
 	.wid-3d();
 }
 
-.panel-body [class^="body-"]:first-child{
-	border-top: none !important;
-}
+//.panel-body [class^="body-"]:first-child{
+//	border-top: none !important;
+//}
 
 /************************************
  *  panels widget
@@ -25,13 +25,11 @@
 }
 
 
-
 /************************************
  *  panel widget
  ************************************/
 .wid-panel{
 	/*  vars block */
-	@dark: false;
 	
 	/*  main block */
 	#Panels > .panel;
@@ -43,7 +41,8 @@
 		#Panels > .header();
 	}
 	
-	> .panel-body{
+	> .panel-body,
+	>form > .panel-body{
 		#Panels > .body;
 	}
 }
@@ -54,9 +53,9 @@
  ************************************/
 .wid-panel-border {
 	/*  vars block */
-	@dark: true;
 	@panel-bg:  rgba(134, 147, 160, 0.11);
-	@panel-brColor: #bbb;
+	
+	
 	
 	/*  main block */
 	#Panels > .panel;
@@ -67,10 +66,11 @@
 	
 	> .panel-header{
 		#Panels > .header();
-		
+		.br-bottom(1px, solid,@panel-brColor);
 	}
 	
-	> .panel-body{
+	> .panel-body,
+	> form > .panel-body {
 		#Panels > .body;
 		margin: 6px;
 		.br(1px, solid,@panel-brColor);
@@ -85,9 +85,8 @@
  ************************************/
 .wid-panel-framed {
 	/*  vars block */
-	@dark: true;
 	@panel-bg: #E2E2E2;
-	@panel-brColor: #bbb;
+	
 	
 	/*  main block */
 	#Panels > .panel();
@@ -101,14 +100,16 @@
 		border: none;
 	}
 	
-	> .panel-body{
+	> .panel-body,
+	> form > .panel-body {
 		#Panels > .body;
 		.br(1px, solid,@panel-brColor);
 	//	box-shadow: 0px 0px 1px 0px #ccc;
 		margin: 6px;
 	}
 	
-	> .panel-header+.panel-body{
+	> .panel-header+.panel-body,
+	> .panel-header+form >.panel-body{
 		margin-top: 0px;
 	}
 }
