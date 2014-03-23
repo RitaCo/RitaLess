@@ -1,6 +1,7 @@
 
 .wid-toolbar{
 	overflow: hidden;    
+	.br(1px, solid,@tab-brColor);
 	position: relative; 
 	padding: 0px;
 	line-height: 0px;
@@ -41,7 +42,7 @@
 .toolbar-band  > .btn{
         border-radius: 0;
     border: 1px solid transparent ;
-
+	background: transparent;
     box-shadow: none;
     cursor: pointer;    
     display: flex !important;
@@ -108,13 +109,10 @@
 
 
 .toolbar-band  >  .separator {
-    
-    
-   width: 5px	;
-   background-color: rgba(193, 193, 193, 0.26);
-   box-shadow: 0 0 2px rgba(0, 0, 0, 0.38) inset;
-    margin:3px 5px;
-    border-radius:2px;
-    background-color: silver;
+	width: 4px	;
+   	background-color: #ccc;
+   	.br(1px, solid,#bbb);
+    margin:3px 10px;
+
 }
 

@@ -53,6 +53,35 @@
 			}
 			
 		}
+		
+		.error-message{
+			position: absolute;
+			border: 2px solid #e67e22;
+			background-color: rgba(255, 243, 224, 0.59);
+			font-family: WYekan;
+			font-weight: normal;
+			font-size: 14px;
+			text-shadow: 0 0 3px #c5c5c5;
+			display: block;
+			z-index: 5;
+			padding: 5px 15px;
+			box-shadow: 1px 1px 4px 1px #999;
+			border-radius: 6px;
+			.text-not-wrap();
+  				position: absolute;
+
+			&:before{
+				content: " ";
+				top: -10px ;
+				position: absolute;
+				width: 0; 
+				height: 0; 
+				border-left: 10px solid transparent; 
+				border-right: 10px solid transparent; 
+				border-bottom: 10px solid #e67e22;				
+				
+			}
+		}
 			 
 	}
 
@@ -71,7 +100,7 @@
 	}
 	
 	.error input{
-		border-color: red;
+		border-color: #DC0000;
 	}
 
 	// horizontal
@@ -96,6 +125,12 @@
 		
 		input[type="number"]{
 			min-width: 150px;
+		}
+		
+		.error-message{
+		    top: 50px;
+			left: 2%;
+			min-width: 400px;
 		}		
 	}
 	
