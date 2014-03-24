@@ -1,7 +1,7 @@
 
 .com-form{
 	padding: 0;
-	
+	position: relative;
 	.input {		
 		padding: 10px;
 		font-weight: normal;
@@ -9,17 +9,24 @@
 		background: #f9f9f9;
 		border-top:1px solid #fff;
 		border-bottom: 1px solid #ddd;
-
-		.flex(1);	
+		position: relative;
+			align-items:center;
 		.flex-box();
 		.flex-col();
 		
+
+
+		> *{
+			//flex:0;
+		}
+				
 		label{
 			color: #222;
 			font-family: WMitra,monospace;
 			font-size: 16px;
 			font-weight: bold;
 			text-shadow: 1px 1px 1px #c9c9c9;
+			overflow: hidden;
 			
 		}
 		
@@ -33,7 +40,7 @@
 			box-shadow: 0px 0px 5px 0px #DCDCDC inset;
 			background: #fdfdfd;
 			background-clip: padding-box;
-
+			
 			&:focus{
 				box-shadow: inset 0px 0px 2px 0px #DCDCDC;
 				background: white;	
@@ -43,10 +50,11 @@
 		input[type='text'],
 		textarea{
 			padding: 2px 10px;
+			
 		}
 		select {
-			padding: 0;
-			
+			display: block;
+		
 			option{
 				padding:2px 10px;
 				font-size: 12px;
@@ -61,8 +69,9 @@
 			font-family: WYekan;
 			font-weight: normal;
 			font-size: 14px;
+			top: -50px;
 			text-shadow: 0 0 3px #c5c5c5;
-			display: block;
+			
 			z-index: 5;
 			padding: 5px 15px;
 			box-shadow: 1px 1px 4px 1px #999;
@@ -82,6 +91,16 @@
 				
 			}
 		}
+		
+		&.required label:after {
+			color: #e32;
+			content: '*';
+			padding: 5px;
+		}
+		
+		&.error {
+			border-right: 5px solid #DC0000;
+		}		
 			 
 	}
 
@@ -93,70 +112,9 @@
 		border-bottom: none;
 	}
 	
-	.required label:after {
-		color: #e32;
-		content: '*';
-		padding: 5px;
-	}
-	
-	.error input{
-		border-color: #DC0000;
-	}
-
-	// horizontal
-	.form-h .input,
-	.input.form-h{
-		.flex-col() !important;
-		align-items:center;
-		> label{
-			width: 200px;
-		}
-		
-		input[type="text"],
-		textarea{
-			.flex(1);
-		}
-		
-		select{
-			min-width: 150px;
-			padding: 0px;
-		}
-		
-		
-		input[type="number"]{
-			min-width: 150px;
-		}
-		
-		.error-message{
-		    top: 50px;
-			left: 2%;
-			min-width: 400px;
-		}		
-	}
-	
 
 
-	// vertical
-	.form-v .input,
-	.input.form-v{
-		.flex-row() !important;
-		
-		> label{
-			.flex(1,1,100%);
-			padding: 0 20px;
-			padding-bottom: 2px;
-		}
-		
-		input,
-		textarea{
-			.flex(1,1,100%);
-		}
-		
-		select{
-			display: block;
-			width: 200px;
-		}
-	}	
+
 }
 
 

@@ -19,21 +19,34 @@
 		background: @toolbar-bg;
 		overflow: hidden;
 		position: relative;
-		padding: 10px 20px;		
+		padding: 10px 20px;	
+			.wid-3d();	
 	}
 	&-container{
 		padding: @padding-block;
 		box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.3) inset !important;
-		
+		position: relative;
+		overflow: auto;
+		.flex-box();
+		.flex-row();
 		p{
 			margin: 5px 0px;
 		}
 	}
 	&-footer{
 		background: @toolbar-bg;
-
+			.wid-3d();
 		overflow: hidden;
 		position: relative;
 		padding: 10px 20px;
 	}	
+}
+
+
+
+.parentInherit{
+	display: inherit !important;
+	flex-direction: inherit !important;
+    flex: 1 1 auto ;
+    min-width: min-content; 	
 }
