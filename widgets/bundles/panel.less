@@ -9,7 +9,8 @@
 
 	
 	.panel(){
-		overflow: auto;
+		overflow: overlay;
+		overflow: -moz-hidden-unscrollable;
 		position: relative;
 		.flex-box();
 		.flex-row();
@@ -91,7 +92,7 @@
 		background-color: @panel-body-bg;
 		.flex-box();
 		.flex-row();
-		overflow: auto;
+
 		position: relative;
 		.flex(1);
 	}
