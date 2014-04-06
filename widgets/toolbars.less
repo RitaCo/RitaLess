@@ -16,10 +16,10 @@
 	
 	
 	> .toolbar-band {
-		line-height:3.5;
+	
 		.wid-3d();
 	   	border-bottom: 1px solid #bbb;
-
+		line-height: 2;
 	   	.bg-h(#fafafa,#ececec);
 	  	height: 50px;
     
@@ -37,8 +37,19 @@
    		}
    		&.band-lg{
    			height: 70px;
+			line-height:3.5;
    		}	
+	
+	> * {
+		margin: 0px 5px;
 		
+		&:first-child{
+			margin-right:0;
+		}
+		&:last-child{
+			margin-left:0;
+		}
+	}	
    }
 
 }
@@ -56,7 +67,7 @@
     padding: 0px 10px;
     margin: 0px 1px;
     i{
-    	margin: 0px 10px;
+    	margin: 0px;
     }
  }
 
@@ -77,10 +88,19 @@
  } 
 
 
+.toolbar-band > .btn{
+		
+	i{
+
+    	font-size: 30px;
+    }		
+}
+
 .toolbar-band.band-sm  > .btn{
 		
 	i{
-    	margin: 0px 5px;
+    	
+    	font-size: 20px;
     }		
 }
 
@@ -90,7 +110,7 @@
 		justify-content:center;
 		
 	i{
-    	margin: 0px 0px;
+    	
     	font-size: 40px;
     	.flex(1,1,100%);
     	
