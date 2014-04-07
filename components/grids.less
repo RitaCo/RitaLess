@@ -19,7 +19,7 @@
 		height: 100%;
 	}
 
-	>.is-col-gridTable{
+	>.grid-col{
 		display: table-cell;
 		width: auto;
 		padding-right: @grid-gap-columns;
@@ -29,18 +29,18 @@
 	}
 	
 	
-	&.opt-border > .is-col-gridTable{
+	&.opt-border > .grid-col{
 		 .br-right();
 	}
 
 
-	&.opt-border > .is-col-gridTable:first-child {
+	&.opt-border > .grid-col:first-child {
   		border-right: none ;
 	}		
 }
 	
 
-.is-col-gridTable{
+.grid-col{
 		&.grid1 {
 		    width: 8.33%;
 		}
@@ -79,27 +79,27 @@
 		}
 }
 
-.com-gridTable > .is-col-gridTable:only-child {
+.com-gridTable > .grid-col:only-child {
 	padding: 0px;
 	border-right:none
 }
 
 
-.is-col-gridTable > .com-gridTable > .is-col-gridTable:first-child{
+.grid-col > .com-gridTable > .grid-col:first-child{
 	padding-left: @grid-gap-columns;
 	border-right:none;
 }
-.is-col-gridTable > .com-gridTable > .is-col-gridTable:last-child{
+.grid-col > .com-gridTable > .grid-col:last-child{
 	padding-right: @grid-gap-columns;
 }
 
-.is-col-gridTable > .com-gridTable:only-child > .is-col-gridTable:first-child{
+.grid-col > .com-gridTable:only-child > .grid-col:first-child{
 	padding-right: 0px;
 }
-.is-col-gridTable > .com-gridTable:only-child > .is-col-gridTable:last-child{
+.grid-col > .com-gridTable:only-child > .grid-col:last-child{
 	padding-left: 0px;
 }
 
-.com-gridTable > .com-gridTable .is-col-gridTable:first-child{
+.com-gridTable > .com-gridTable .grid-col:first-child{
 	border-right: none;
 }
