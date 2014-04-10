@@ -5,8 +5,8 @@
 
 
 
-[class$="-body"] > [class^="wid-"]{
-//	border: none ;
+.body-container.padding-none > [class^="wid-"]{
+	border: none ;
 	
 } 
 
@@ -15,24 +15,21 @@
 	
 	
 	&-header{
-		
 		background: @toolbar-bg;
-
 		position: relative;
 		padding: 10px 20px;
 		.wid-3d();
-	//	.br(1px,solid,#fff);
 		.br-bottom(1px,solid,@panel-brColor);
-	
-		
+		.flex(0);
+		.flex-order(1);
 	}
+	
 	&-container{
 		padding: @padding-block;
 		box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.3) inset !important;
 		position: relative;
-
-		.flex-box();
-		.flex-row();
+		.flex(1);
+		.flex-order(2);
 		p{
 			margin: 5px 0px;
 		}
@@ -40,11 +37,13 @@
 	&-footer{
 		.br-top(1px,solid,@panel-brColor) !important;
 		background: @toolbar-bg;
-			.wid-3d();
-
+		.wid-3d();
+		.flex-order(3);
 		position: relative;
 		padding: 10px 20px;
-	}	
+		.flex(0);
+	}
+	
 }
 
 

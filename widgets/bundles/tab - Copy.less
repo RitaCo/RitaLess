@@ -1,53 +1,46 @@
-/**
- * Bundle	: Tab Bundel
- * Auther	: Saleh Souzanchi
- **/
-
-
 #Tab {
 	.tab(){
+
 		position: relative;
-		.flex(1);
 		.flex-box();
 		.flex-row();
 		.br(1px, solid,@tab-brColor);
+		overflow: auto;
 	}
 	
+
 	.tab-nav(){
 		list-style:none;
+		
 		position: relative;
 		background: @tab-nav-bg;
 		padding: @tab-nav-padding;
-		.wid-3d();
+		
+		.flex(1);
 		.flex-box();
 		.flex-col();
 	}	
 	
+	
 	.tab-item(){
 		position: relative;
-		z-index: 1;
+		z-index: 10;
 		margin-left:2px;
-		padding: 2px;
-		cursor: default;
-		background: @tab-item-bg;
 		.br(1px, solid, transparent);
-		
-		> a{ 
-			.br(1px, solid, transparent);
-			z-index:2;
-		}
+		cursor: pointer;
 		
 		&.active{
 			> a{
-				background-color: @tab-container-bg;
+				
+				background-color: #ddd;
 				.br(1px, solid, @tab-item-brColor);
 			}
 		}
 		
 		&:not(.active):hover > a{
 			.br(1px, solid, @tab-item-brColor);
-			background-color: @tab-item-bg-hover;
-			cursor: pointer;
+			background-color: #eee;
+			border-bottom-color: transparent;
 		}
 	}
 	
@@ -59,7 +52,6 @@
 		padding : @tab-item-padding;
 		font-size: @tab-item-font-size;
 		font-family: @tab-item-font-family;
-		font-weight: @tab-item-font-weight;
 	
 	}
 
@@ -68,21 +60,20 @@
 		padding: 6px;
 		background-clip: content-box-box;
 		position: relative;
-		background-color: @tab-container-bg;
-		.flex(1);
+		background-color: #ddd;
 		.flex-box();
-		
 	}	
 	
 	.tab-body(){
 		padding: @padding-block;
 		display: none;
+		font-size: 11px;
+		font-family: WNazanin;
 		.br(1px, solid,@tab-brColor);
-		background: @tab-body-bg;
-
-		&.active{
-			display: block;
-			.flex(1);
-		}
+		background: white;
+		.flex(1);
 	}
-}
+}/**
+ * Bundle	: Tab Bundel
+ * Auther	: Saleh Souzanchi
+ **/

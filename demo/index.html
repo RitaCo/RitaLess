@@ -3,7 +3,7 @@
 <head>
 	<meta http-equiv="content-type" content="text/html" />
 	<meta name="author" content="zoghal" />
-    <link href="ritaless.css" media="all" rel="stylesheet" type="text/css" />
+    <link href="rita.css" media="all" rel="stylesheet" type="text/css" />
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
 	<title>demo 2</title>
 	
@@ -42,48 +42,441 @@
 </head>
 
 <body>
-
-<div class="wid-panel-box ">
-	
-		<h1>wid-panel-box</h1>
-		<h2>wid-panel-box</h2>
+<section class="LayoutContentHeading com-layout typ-row">
 
 	
+	<aside class="ContentNavigator com-layout typ-col">
+		<div class="title-group">
+			<h3>فهرست</h3>
+			<h5 class="">دموی فریم ورک اینترفیس ریتا</h5>
+		</div>
+		<div class="action-groups com-layout typ-col">
+			<a class="action" title="تنظیمات"><i class=" icon-settingsandroid"></i></a>
+			<a class="disabled" title="راهنمایی"><i class="icon-support"></i></a>
+		
+		</div>
+	</aside>
+	
+	<aside class="Breadcrumb com-layout typ-col">
+		<ul><li class="first"><a href="/admin">مدیریت</a><span>/</span></li><li>یو ای<span>/</span></li><li class="last">فهرست</li></ul>	</aside>
+
+</section>
+	
+	<!-- /Content Toolbar -->
+	<section class="LayoutFlashMSG">
+		
+			</section>
+	<!-- 
+	$this->assign('contentPadding','20px 20px');
+	$this->assign('contentType','col');
+	 -->
+	 	<section id="ContentContainer" class="LayoutContentBody fluid com-layout typ-row" style="padding: 0px 10% 20px 10%">
+		<style>
+.demo-title{
+	display: block;
+	font-family: fantasy;
+	font-size: 30px;
+	text-align: center;
+	padding: 10px;
+	
+	background: #F9CE89 ;
+	color: #000;
+	margin: 20px 0;
+}
+
+.layout-cell{
+		background-color: rgba(187, 187, 187, 0.5);
+		text-align: center;
+		box-shadow: 0 0 5px -2px #000 inset;
+}
+.com-layout-columns{
+	background:  rgba(205, 251, 239, 0.63);
+}
+</style>
+
+
+<div class="demo-title">
+	Database Grid
+
 </div>
-<div class="wid-panel-box brCorner ">
+
+<div class="wid-panel-framed">
+	<header class="panel-header">
+		<div class="header-icon"><i class="user-icon-businessmen2"></i></div>
+		<div class="header-caption">گروه ها</div>
+	</header> 
+	<div class="panel-body">
+		<div class="body-header padding-none">
+		<nav class="wid-toolbar">
+			<div class="toolbar-band band-lg">
+			<a class="btn" href="/admin/UserManager/groups/add">
+				<i class="u-group19"></i>
+			</a>
+			
+			</div>
+		</nav>
+		</div>
+		<div class="body-container padding-none">
+		
+			
+	<!-- Start > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\grid.ctp -->
+	<div data-ajax="1" data-update="#content" class="wid-dataGrid">
 	
-		<h1>wid-panel-box</h1>
-		<h2>wid-panel-box</h2>
+	<!-- Start > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\filter.ctp -->
+	
+	<!-- End > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\filter.ctp -->
+		<table>
+					<thead>
+				
+	<!-- Start > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\headers.ctp -->
+	
+<tr class="table-header">
+			<th>
+			شناسه		</th>
+				<th class="sort desc">
+			<a id="link-1044908791" class="sort desc desc" href="/admin/UserManager/groups/index/sort:Group.title/direction:asc/limit:20">نام گروه</a>		</th>
+				<th>
+			عملیات		</th>
+		</tr>
+
+	<!-- End > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\headers.ctp -->
+				</thead>
+						<tbody class="table-body">
+				
+	<!-- Start > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\row.ctp -->
+	<tr data-depth="0" class="table-row">
+			<td width="80px">
+			2		</td>
+				<td>
+			مدیر ارشد		</td>
+				<td width="200px">
+			
+	<!-- Start > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\actions_column.ctp -->
+	<a title="ویرایش" class="btn btn-rounded btn-small btn-action" type="link" href="/admin/UserManager/groups/edit/2">ویرایش</a><a title="حذف" data-confirm_message="آیا اطمینان کامل دارید؟" class="btn btn-rounded btn-small btn-caution confirm_message" type="link" href="/admin/UserManager/groups/delete/2">حذف</a>
+	<!-- End > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\actions_column.ctp -->
+			</td>
+		</tr>
+	<!-- End > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\row.ctp -->
+	
+
+	<!-- Start > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\row.ctp -->
+	<tr data-depth="0" class="table-row">
+			<td width="80px">
+			3		</td>
+				<td>
+			کاربر عادی		</td>
+				<td width="200px">
+			
+
+	<a title="ویرایش" class="btn btn-rounded btn-small btn-action" type="link" href="/admin/UserManager/groups/edit/3">ویرایش</a><a title="حذف" data-confirm_message="آیا اطمینان کامل دارید؟" class="btn btn-rounded btn-small btn-caution confirm_message" type="link" href="/admin/UserManager/groups/delete/3">حذف</a>
+
+			</td>
+		</tr>
 
 	
+
+
+	<tr data-depth="0" class="table-row">
+			<td width="80px">
+			4		</td>
+				<td>
+			شسیشسیشس		</td>
+				<td width="200px">
+			
+
+	<a title="ویرایش" class="btn btn-rounded btn-small btn-action" type="link" href="/admin/UserManager/groups/edit/4">ویرایش</a><a title="حذف" data-confirm_message="آیا اطمینان کامل دارید؟" class="btn btn-rounded btn-small btn-caution confirm_message" type="link" href="/admin/UserManager/groups/delete/4">حذف</a>
+	<!-- End > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\actions_column.ctp -->
+			</td>
+		</tr>
+	<!-- End > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\row.ctp -->
+	
+
+	<!-- Start > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\row.ctp -->
+	<tr data-depth="0" class="table-row">
+			<td width="80px">
+			1		</td>
+				<td>
+			سیستم		</td>
+				<td width="200px">
+			
+	<!-- Start > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\actions_column.ctp -->
+	<a title="ویرایش" class="btn btn-rounded btn-small btn-action" type="link" href="/admin/UserManager/groups/edit/1">ویرایش</a><a title="حذف" data-confirm_message="آیا اطمینان کامل دارید؟" class="btn btn-rounded btn-small btn-caution confirm_message" type="link" href="/admin/UserManager/groups/delete/1">حذف</a>
+	<!-- End > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\actions_column.ctp -->
+			</td>
+		</tr>
+	<!-- End > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\row.ctp -->
+				</tbody>
+						<tfoot>
+				<tr class="table-footer">
+											<td colspan="2" class="pagination">
+													</td>
+											<td class="limit">
+							<select name="data[limit]">
+<option value="10">10</option>
+<option value="25">25</option>
+<option value="100">100</option>
+<option value="250">250</option>
+</select>						</td>
+										</tr>
+			</tfoot>
+				</table>
 </div>
-<div class="wid-panel-box set-shadow brCorner-lg">
-	
-		<h1>wid-panel-box</h1>
-		<h2>wid-panel-box</h2>
+	<!-- End > G:\xampp\htdocs\rita-app\Core\DataGridder\View\Elements\datagrid\grid.ctp -->
+			</div>
+	</div>
+</div>
+<div class="demo-title">
+	button's demo
 
-	
 </div>
 
-<div class="pageer"></div>
+<div class="wid-panel-framed">
+	<header class="panel-header">
+		<div class="header-icon"><i class="user-boy1"></i></div>
+		<div class="header-caption">گروه ها</div>
+	</header>
 
+	<div class="panel-body">
+
+		<div class="body-container">
+			<p>
+				<a class="btn btn-action"><i class=" icon-createfile"></i>ایجاد</a>
+				<a class="btn btn-caution"><i class=" icon-deletefile"></i>حذف</a>
+				<a class="btn btn-highlight"><i class=" icon-editalt"></i>ویرایش</a>
+				<a class="btn btn-primary"><i class=" icon-circleforward"></i>بعدی</a>
+				<a class="btn btn-royal"><i class=" icon-circleforward"></i>بعدی</a>
+				<a class="btn"><i class=" icon-circleforward"></i>بعدی</a>
+			</p>
+			<p class="btn-wrap">
+				<a class="btn btn-3d "><i class=" icon-createfile"></i>ایجاد</a>
+				<a class="btn btn-border"><i class=" icon-deletefile"></i>حذف</a>
+				<a class="btn btn-flat btn-caution "><i class=" icon-editalt"></i>ویرایش</a>
+				<a class="btn btn-circle"><i class=" icon-circleforward"></i>بعدی</a>
+				<a class="btn btn-pill"><i class=" icon-circleforward"></i>بعدی</a>
+			</p>
+			<p>
+				<a class="btn"><i class=" icon-createfile"></i>ایجاد</a>
+				<a class="btn"><i class=" icon-deletefile"></i>حذف</a>
+				<a class="btn"><i class=" icon-editalt"></i>ویرایش</a>
+				<a class="btn"><i class=" icon-circleforward"></i>بعدی</a>
+			</p>			
+		</div>
+		<div class="body-footer">
+			<p>
+				<a class="btn btn-action"><i class=" icon-createfile"></i>ایجاد</a>
+				<a class="btn btn-caution"><i class=" icon-deletefile"></i>حذف</a>
+				<a class="btn btn-highlight"><i class=" icon-editalt"></i>ویرایش</a>
+				<a class="btn btn-primary"><i class=" icon-circleforward"></i>بعدی</a>
+				<a class="btn btn-royal"><i class=" icon-circleforward"></i>بعدی</a>
+				<a class="btn btn-secondary"><i class=" icon-circleforward"></i>بعدی</a>
+				<a class="btn btn-3d"><i class=" icon-circleforward"></i>بعدی</a>
+			</p>
+		
+		</div>	
+	</div>
+</div>
+
+
+<div class="demo-title">
+	Toolbar Demo
+
+</div>
+		<div class="wid-toolbar">
+			<div class="toolbar-band band-lg">
+				<a class="btn" href="http://">	<i class="u-security2"></i></a>
+				<a class="btn" href="http://">	<i class="u-notes4"></i></a>
+				<div class="separator"></div>
+				<a class="btn active" href="http://">	<i class="u-notes3"></i></a>
+				<a class="btn" href="http://">	<i class="u-notes5"></i></a>
+			</div>
+			<div class="toolbar-band band-sm">
+				<a class="btn">
+					<i class="icon-tasks"></i>	ایجاد
+				</a>
+				<a class="btn active">
+					<i class="icon-tasks"></i>	ایجاد
+				</a>
+				<a class="btn disabled">
+					<i class="icon-tasks"></i>	ایجاد
+				</a>
+			</div>
+		</div>
+
+<div class="wid-panel-framed brCorner">
+	<div class="panel-header">
+		<div class="header-icon"><i class=" icon-tasks"></i></div>
+		<div class="header-caption">تب بالا</div>
+		<div class="header-helpers">
+			<a><i class="icon-minimize"></i></a>
+			<a><i class="icon-maximize"></i></a>
+			<a><i class="icon-restore"></i></a>
+		</div>
+	</div>
+	<div class="panel-body">
+		<div class="body-header padding-none">
+			<div class="wid-toolbar">
+				<div class="toolbar-band band-lg">
+					<a class="btn" href="http://">	<i class="user-icon-female44"></i></a>
+					<a class="btn" href="http://">	<i class="user-icon-female44"></i></a>
+					<div class="separator"></div>
+					<a class="btn active" href="http://">	<i class="user-icon-female44"></i></a>
+					<a class="btn" href="http://">	<i class="user-icon-female44"></i></a>
+				</div>
+				<div class="toolbar-band band-sm">
+					<a class="btn">
+						<i class="icon-tasks"></i>	ایجاد
+					</a>
+					<a class="btn active">
+						<i class="icon-tasks"></i>	ایجاد
+					</a>
+					<a class="btn disabled">
+						<i class="icon-tasks"></i>	ایجاد
+					</a>
+				</div>
+			</div>
+		</div>
+		<div class="body-container">
+			<div class="wid-tab typ-top">
+				<ul class="tab-nav">
+					<li class="active"><a>تب اول</a></li>
+					<li><a>آپشنال</a></li>
+					<li><a>تنظیمات دستی</a></li>
+					<li><a>ABCdef بدون شرح</a></li>
+				</ul>
+				<div class="tab-container">
+					<div class="tab-body active" id="tab1">
+						<p> لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰</p>
+					<a class="btn">
+						<i class="icon-tasks"></i>دکمه تستی
+					</a>						
+					</div>
+					<div class="tab-body" id="tab2">aaaaaaaaaaaaaaa</div>
+				</div>
+			</div>
+		</div>
+		<div class="body-footer padding-none">
+			<div class="wid-toolbar">
+				<div class="toolbar-band">
+					<a class="btn">
+						<i class="icon-tasks"></i>
+						ایجاد
+					</a>			
+				</div>
+				<div class="toolbar-band">
+					<p>asdas</p>
+				</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<div class="demo-title">
+	Panel's Demo
+
+</div>
+
+
+<div class="wid-panel-box  ">
+		<h1>wid-panel-box</h1>
+		<h3>effects : none </h3>
+</div>
+
+<div class="wid-panel-box boxShadow-sm brCorner-sm">
+		<h1>wid-panel-box</h1>
+		<h3>effects : boxShadow-sm, brCorner-sm</h3>
+</div>
+
+<div class="wid-panel-box brCorner boxShadow">
+		<h1>wid-panel-box</h1>
+		<h3>effects : boxShadow, brCorner</h3>
+		
+</div>
+
+<div class="wid-panel-box boxShadow-lg brCorner-lg">
+		<h1>wid-panel-box</h1>
+		<h3>effects : boxShadow-lg, brCorner-lg</h3>
+</div>
 
 
 <div class="wid-panel">
 	<div class="panel-header">
-		{header}
+		{panel header}
 	</div>
 
 	<div class="panel-body">
-		{body}
-	</div>
-	<div class="panel-footer">
-		{footer}
+			<h1>wid-panel</h1>
 	</div>
 </div>
 
-<div class="wid-panel set-brCorner">
+<div class="wid-panel">
+	<header class="panel-header">
+		<div class="header-icon"><i class="user-boy1"></i></div>
+		<div class="header-caption">عنوان پنل</div>
+	</header>
+
+	<div class="panel-body">
+		<div class="body-header">
+						
+						{body header}
+		</div>
+		<div class="body-container">
+			<h2>wid-panel</h2>
+			{body container}
+		</div>	
+		<div class="body-footer">
+			{body footer}
+		</div>
+	</div>
+</div>
+
+<div class="wid-panel-border">
+	<header class="panel-header">
+		<div class="header-icon"><i class="user-boy1"></i></div>
+		<div class="header-caption">گروه ها</div>
+	</header>
+
+	<div class="panel-body">
+		<div class="body-header">
+							
+						{body header}
+		</div>
+		<div class="body-container">
+		<h2>wid-panel-border</h2>
+			{body container}
+		</div>	
+		<div class="body-footer">
+						{body footer}
+		</div>
+	</div>
+</div>
+
+
+<div class="wid-panel-framed">
+	<header class="panel-header">
+		<div class="header-icon"><i class="user-boy1"></i></div>
+		<div class="header-caption">گروه ها</div>
+	</header>
+
+	<div class="panel-body">
+		<div class="body-header">
+							
+						{body header}
+		</div>
+		<div class="body-container">
+		<h2>wid-panel-framed</h2>
+			{body container}
+		</div>	
+		<div class="body-footer">
+						{body footer}
+		</div>
+	</div>
+</div>
+
+
+<div class="wid-panel brCorner">
+
 	<div class="panel-header">
+	
 		<div class="header-caption">عنوان پنل</div>
 		<div class="header-icon"><i class=" icon-tasks"></i></div>
 		<div class="header-helpers">
@@ -94,19 +487,53 @@
 	</div>
 	
 	<div class="panel-body">
-		<h1>panel-border</h1>
-		set-panel-border
+		<div class="body-header">
+							
+						{body header}
+		</div>
+		<div class="body-container">
+		<h2>wid-panel</h2>
+			{body container}
+		</div>	
+		<div class="body-footer">
+						{body footer}
+		</div>
 	</div>
 </div>
 
-<div class="wid-panel brCorner-lg set-shadow">
+<div class="wid-panel-border brCorner-lg boxShadow-lg">
 	<div class="panel-body">
-		<h1>Panel</h1>
-		
+	
+		<div class="body-header">
+							
+						{body header}
+		</div>
+		<div class="body-container">
+		<h2>wid-panel-border</h2>
+			{body container}
+		</div>	
+		<div class="body-footer">
+						{body footer}
+		</div>
+	
 	</div>
-	<!--  -->
-	<div class="panel-footer">
-		{footer}
+</div>
+
+<div class="wid-panel-framed brCorner-lg ">
+	<div class="panel-body">
+	
+		<div class="body-header">
+							
+						{body header}
+		</div>
+		<div class="body-container">
+		<h2>wid-panel-framed</h2>
+			{body container}
+		</div>	
+		<div class="body-footer">
+						{body footer}
+		</div>
+	
 	</div>
 </div>
 
@@ -122,183 +549,19 @@
 	</div>
 	<!--  -->
 	<div class="panel-body">
-		<h1>Panel</h1>
-		set-shadow
-	</div>
-	<!--  -->
-	<div class="panel-footer">
-		{footer}
-	</div>
-</div>
-
-
-
-<div class="pageer"></div>
-
-<div class="wid-panel-border set-shadow">
-	<div class="panel-header">
-		<div class="header-icon"><i class=" icon-tasks"></i></div>
-		<div class="header-caption">عنوان پنل</div>
-		<div class="header-helpers">
-			<a><i class=" icon-minimize"></i></a>
-			<a><i class="  icon-maximize"></i></a>
-			<a><i class=" icon-restore"></i></a>
+		<div class="body-header">
+							
+						{body header}
 		</div>
-	</div>
-	<div class="panel-body">
-		<h1>panel-border</h1>
-		
-
-		
-	</div>
-	<div class="panel-footer">ss
-	</div>
-	
-</div>
-
-<div class="wid-panel-border brCorner">
-	<div class="panel-header">
-		<div class="header-icon"><i class=" icon-tasks"></i></div>
-		<div class="header-caption">عنوان پنل</div>
-		<div class="header-helpers">
-			<a><i class=" icon-minimize"></i></a>
-			<a><i class="  icon-maximize"></i></a>
-			<a><i class=" icon-restore"></i></a>
-		</div>
-	</div>
-	<div class="panel-body">
-		<h1>panel-border</h1>
-		
-
-		
-	</div>
-	<div class="panel-footer">ss
-	</div>
-	
-</div>
-<div class="pageer"></div>
-
-<div class="wid-panel-framed set-shadow">
-	<div class="panel-header">
-		<div class="header-icon"><i class=" icon-tasks"></i></div>
-		<div class="header-caption">عنوان پنل</div>
-		<div class="header-helpers">
-			<a><i class=" icon-minimize"></i></a>
-			<a><i class="  icon-maximize"></i></a>
-			<a><i class=" icon-restore"></i></a>
-		</div>
-	</div>
-	<div class="panel-body">
-		<h1>panel-border</h1>
-		
-
-		
-	</div>
-	<div class="panel-footer">ss
-	</div>
-	
-</div>
-
-<div class="wid-panel-framed brCorner">
-	<div class="panel-header">
-		<div class="header-icon"><i class=" icon-tasks"></i></div>
-		<div class="header-caption">عنوان پنل</div>
-		<div class="header-helpers">
-			<a><i class=" icon-minimize"></i></a>
-			<a><i class="  icon-maximize"></i></a>
-			<a><i class=" icon-restore"></i></a>
-		</div>
-	</div>
-	<div class="panel-body">
-		<h1>panel-border</h1>
-		
-		
-	</div>
-	<div class="panel-footer">ss
-	</div>
-	
-</div>
-
-
-<div class="wid-panel-framed brCorner">
-	<div class="panel-body">
-		<h1>panel-border</h1>
-		
-
-		
-	</div>
-	<div class="panel-footer">ss
-	</div>
-	
-</div>
-
-
-<div class="pageer"></div>
-
-<style>
-#grid1{
-
-	border: 1px dotted #000;
-}
-
-#grid1 .is-col-gridTable{
-	
-}
-</style>
-
-<div id="grid1" class="com-gridTable opt-border ">
-	<div class="is-col-gridTable grid2">grid2</div>
-	<div class="is-col-gridTable grid5">
-		grid2
-		<div id="grid1" class="com-gridTable opt-border">
-			<div class="is-col-gridTable ">
-				<div class="wid-panel-framed brCorner fluid">
-					<div class="panel-body">
-				col
-					</div>
-				</div>	
-			</div>
-			<div class="is-col-gridTable ">
-				<div class="wid-panel-framed brCorner fluid">
-					<div class="panel-body">
-				col
-					</div>
-				</div>	
-			</div>
-			<div class="is-col-gridTable ">
-				<div class="wid-panel-framed brCorner fluid">
-					<div class="panel-body">
-				col
-					</div>
-				</div>	
-			</div>
-			<div class="is-col-gridTable ">
-				<div class="wid-panel-framed brCorner fluid">
-					<div class="panel-body">
-				col
-					</div>
-				</div>	
-			</div>						
-		</div>
-	</div>
-	
-	<div class="is-col-gridTable grid1">
-		<div class="wid-panel-framed brCorner">
-			<div class="panel-body">
-			s
-			</div>
-		</div>
-	</div>
-	<div class="is-col-gridTable grid2">
-		<div class="wid-panel-framed brCorner fluid">
-			<div class="panel-body">
-			s
-			</div>
+		<div class="body-container">
+		<h2>wid-panel</h2>
+			{body container}
 		</div>	
+		<div class="body-footer">
+						{body footer}
+		</div>		
 	</div>
 </div>
-
-<div class="pageer"></div>
 
 
 <div class="wid-panel-framed brCorner">
@@ -312,18 +575,299 @@
 		</div>
 	</div>
 	<div class="panel-body">
-		<h1>panel-border</h1>
-		
 
+		<div class="body-container">
 		
+			<br>
+			<div class="well">
+				<h1>well demo</h1>
+			</div>
+		</div>
+	<!--  -->
+		<div class="body-footer">
+			{footer}
+		</div>
 	</div>
-	<div class="panel-footer">ss
-	</div>
-	
+</div>
+<div class="demo-title">
+	Tab's Demo
+
 </div>
 
 
-<div class="pageer"></div>
+		<div class="wid-tab typ-top">
+			<ul class="tab-nav">
+				<li data-tab="#tab1"><a>tab1</a></li>
+				<li data-tab="#tab2" class="active"><a>tab2</a></li>
+				<li data-tab="#tab3"><a>tab3</a></li>
+				<li data-tab="#tab4"><a>tab4</a></li>
+			</ul>
+			<div class="tab-container">
+				<div class="tab-body " id="tab1">
+					<p> لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰ لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰</p>
+					<p style="font-family: WRoya;"> لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰ لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰</p>
+					<p style="font-family: WRoya; font-weight: bold;"> لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰ لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰</p>
+				</div>
+				<div class="tab-body " id="tab2">asdasdasd</div>			
+				<div class="tab-body " id="tab3">aaaaaaaaa222aaaaaa</div>			
+				<div class="tab-body " id="tab4">aaaaaaaaaffffffffaaaaaa</div>			
+			</div>
+		</div>
+
+		<div class="wid-tab typ-bottom ">
+			<ul class="tab-nav">
+				<li class="active"><a>تب اول</a></li>
+				<li><a>آپشنال</a></li>
+				<li><a>تنظیمات دستی</a></li>
+				<li><a>ABCdef بدون شرح</a></li>
+			</ul>
+			<div class="tab-container">
+				<div class="tab-body active" id="tab1"><p> لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰</p></div>
+				<div class="tab-body" id="tab2">aaaaaaaaaaaaaaa</div>
+			</div>
+		</div>	
+
+
+		<div class="wid-tab typ-left">
+			<ul class="tab-nav">
+				<li class="active"><a>تب اول</a></li>
+				<li><a>آپشنال</a></li>
+				<li><a>تنظیمات دستی</a></li>
+				<li><a>ABCdef بدون شرح</a></li>
+			</ul>
+			<div class="tab-container">
+				<div class="tab-body active" id="tab1"><p> لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰</p></div>
+				<div class="tab-body" id="tab2">aaaaaaaaaaaaaaa</div>
+			</div>
+		</div>	
+
+
+		<div class="wid-tab typ-right">
+			<ul class="tab-nav">
+				<li class="active"><a>تب اول</a></li>
+				<li><a>آپشنال</a></li>
+				<li><a>تنظیمات دستی</a></li>
+				<li><a>ABCdef بدون شرح</a></li>
+			</ul>
+			<div class="tab-container">
+				<div class="tab-body active" id="tab1">
+					<p style="font-family: WMitra; font-weight: bold; font-size: 14px;"> لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰</p><h1>میترا ۱۲</h1>
+					<p style="font-family: WTraffic; font-weight: normal; font-size: 14px;"> لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰</p><h1>ترافیک 14</h1>
+					<p style="font-family: WKoodak; font-weight: normal; font-size: 14px;"> لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰</p><h1>کودک ۱۳</h1>
+				</div>
+				<div class="tab-body" id="tab2">aaaaaaaaaaaaaaa</div>
+			</div>
+		</div>	
+		
+
+
+<div class="wid-panel-framed brCorner">
+	<div class="panel-header">
+		<div class="header-icon"><i class=" icon-tasks"></i></div>
+		<div class="header-caption">تب بالا</div>
+		<div class="header-helpers">
+			<a><i class="icon-minimize"></i></a>
+			<a><i class="icon-maximize"></i></a>
+			<a><i class="icon-restore"></i></a>
+		</div>
+	</div>
+	<div class="panel-body">
+	
+		<div class="wid-tab typ-top border-none">
+			<ul class="tab-nav">
+				<li class="active"><a>تب اول</a></li>
+				<li><a>آپشنال</a></li>
+				<li><a>تنظیمات دستی</a></li>
+				<li><a>ABCdef بدون شرح</a></li>
+			</ul>
+			<div class="tab-container">
+				<div class="tab-body active" id="tab1"><p style="font-family: WYekan; font-size: 12px; font-weight: normal;"> لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰</p><h1>یکان معمولی ۱۲</h1></div>
+				<div class="tab-body" id="tab2">{text}</div>
+			</div>
+		</div>
+		
+		<div class="body-footer">{text}</div>	
+	</div>	
+</div>
+
+
+	
+<!--  -->
+<div class="wid-panel-framed brCorner">
+	<div class="panel-header">
+		<div class="header-icon"><i class=" icon-tasks"></i></div>
+		<div class="header-caption">تب چپ</div>
+		<div class="header-helpers">
+			<a><i class="icon-minimize"></i></a>
+			<a><i class="icon-maximize"></i></a>
+			<a><i class="icon-restore"></i></a>
+		</div>
+	</div>
+	<div class="panel-body padding-none">
+	
+		<div class="wid-tab typ-right border-none">
+			<ul class="tab-nav">
+				<li class="active"><a>تب اول</a></li>
+				<li><a>آپشنال</a></li>
+				<li><a>تنظیمات دستی</a></li>
+				<li><a>ABCdef بدون شرح</a></li>
+			</ul>
+			<div class="tab-container">
+				<div class="tab-body active" id="tab1"><p style="font-family: WYekan; font-weight: bold; font-size: 12px;"> لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰</p><h1>یکان درشت ۱۲</h1></div>
+				<div class="tab-body" id="tab2">{text}</div>
+			</div>
+		</div>
+		
+		<div class="body-footer">{text}</div>	
+	</div>
+</div>
+<!--  -->
+<div class="wid-panel-framed brCorner">
+	<div class="panel-header">
+		
+		<div class="header-icon"><i class=" icon-tasks"></i></div>
+		<div class="header-caption">تب راست</div>
+		<div class="header-helpers">
+			<a><i class="icon-minimize"></i></a>
+			<a><i class="icon-maximize"></i></a>
+			<a><i class="icon-restore"></i></a>
+		</div>
+		
+	</div>
+	<div class="panel-body">
+	
+		<div class="wid-tab typ-left border-none">
+			<ul class="tab-nav">
+				<li class="active"><a>تب اول</a></li>
+				<li><a>آپشنال</a></li>
+				<li><a>تنظیمات دستی</a></li>
+				<li><a>ABCdef بدون شرح</a></li>
+			</ul>
+			<div class="tab-container">
+				<div class="tab-body active" id="tab1"><p style="font-family: WNazanin; font-weight: bold; font-size: 14px;"> لورم ایپسوم متن ساختگی به سادگی از صنعت شناخته چاپ استاندارد و وب سایت حروفچینی است. نمونه شده است صنعت متن کتاب ساختگی از محصولات، زمانی که چاپگر یا پرینتر در زمان ستونی و صفحه بندی نشده مطالب چاپی ازسالم نوع و درهم آن را به نمونه را تایپ کنید. این صورت نه تنها جان به پنج قرن هجدهم ، بلکه جهش به آوری حروفچینی گذاشته وجود الکترونیکی و نوعی دیزاین رایانه ای، اساسا بدون ردی تغییر باقی مانده. آن را در فوتبال با انتشار ورق حاوی شهریار معابر فکری هکرها پزشک محبوبیت بود، و اخیرا فکری با نرم افزار هکر را نشر شناخت هیت من رومیزی همانند از جمله نسخه های دیگران بوده است راکه در پی فرهنگ پس از آن و می خواهد به آن را دارند، تنها به استفاده دلیل آن است.. 123456789 ۱۲۳۴۵۶۷۸۹۰</p><h1>نازنین درشت ۱۴</h1></div>
+				<div class="tab-body" id="tab2">{text}</div>
+			</div>
+		</div>
+		<div class="body-footer">{text}</div>
+					
+	</div>
+</div>
+<div class="demo-title">
+	Table Grid
+
+</div>
+<style>
+#grid1{
+
+	border: 1px dotted red;
+}
+
+#grid1 > .grid-col{
+	background-color: rgba(0,0,0,0.1);
+	background-clip: content-box;
+	
+}
+#grid2{
+	background: red;
+}
+#grid2 .grid-col{
+	background-color: rgba(0,0,0,0.5);
+	background-clip: content-box;
+	
+}
+
+#grid2 .grid-col > * {
+	margin: 5px 0px;
+}
+</style>
+<div id="grid1" class="com-gridTable opt-border ">
+	<div class="grid-col grid3">
+	<h3>grid 3/12</h3>
+	</div>
+	<div class="grid-col grid3">
+		<h3>grid 3/12</h3>
+		
+	</div>
+	
+	<div class="grid-col grid4">
+	<h3>grid 4/12</h3>
+		<div class="wid-panel-framed brCorner">
+			<div class="panel-body">
+				<div class="body-container"> {text}</div>
+			</div>
+		</div>
+	</div>
+	<div class="grid-col grid2">
+		<h3>grid 2/12</h3>
+		<div class="wid-panel-framed brCorner fluid">
+			<div class="panel-body">
+				<div class="body-container"> {text}</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<br>
+
+<div id="grid1" class="com-gridTable opt-border ">
+	<div class="grid-col grid1">
+	<h3>grid 1/12</h3>
+	</div>
+	<div class="grid-col grid1">
+		<h3>grid 1/12</h3>
+		
+	</div>
+	
+	<div class="grid-col grid8">
+	<h3>grid 8/12</h3>
+		<div id="grid2" class="com-gridTable opt-border">
+			<div class="grid-col ">
+				<div class="wid-panel-framed brCorner fluid">
+					<div class="panel-body">
+				col
+					</div>
+				</div>	
+			</div>
+			<div class="grid-col ">
+				<div class="wid-panel-framed brCorner fluid">
+					<div class="panel-body">
+				col
+					</div>
+				</div>	
+			</div>
+			<div class="grid-col ">
+				<div class="wid-panel-framed brCorner fluid">
+					<div class="panel-body">
+				col
+					</div>
+				</div>	
+			</div>
+			<div class="grid-col ">
+				<div class="wid-panel-framed brCorner fluid">
+					<div class="panel-body">
+				col
+					</div>
+				</div>	
+			</div>						
+		</div>
+	</div>
+	<div class="grid-col grid2">
+		<h3>grid 2/12</h3>
+		<div class="wid-panel-framed brCorner fluid">
+			<div class="panel-body">
+				<div class="body-container"> {text}</div>
+			</div>
+		</div>	
+	</div>
+</div>
+<div class="demo-title">
+	Layout Grid
+
+</div>
+
+
+
+
 
 <div class="com-layout-columns col2">
 	<div class="layout-cell"> <h1>Cell1</h1></div>
@@ -333,7 +877,7 @@
 
 </div>
 
-<div class="pageer"></div>
+<br>
 
 <div class="com-layout-columns col2">
 
@@ -347,7 +891,7 @@
 	
 </div>
 
-<div class="pageer"></div>
+<br>
 
 <div class="com-layout-columns col3">
 
@@ -361,7 +905,7 @@
 	
 </div>
 
-<div class="pageer"></div>
+<br>
 
 <div class="com-layout-columns col4">
 
@@ -375,7 +919,7 @@
 	
 </div>
 
-<div class="pageer"></div>
+<br>
 
 <div class="com-layout-columns col5">
 	<div class="layout-cell"> <h1>Cell1</h1></div>
@@ -396,8 +940,8 @@
 
 </div>
 
+<br>
 
-<div class="pageer"></div>
 
 <div class="com-layout-columns col6">
 	<div class="layout-cell"> <h1>Cell1</h1></div>
@@ -417,6 +961,151 @@
 	<div class="layout-cell"> <h1>Cell7</h1></div>
 
 </div>
+
+
+<div class="demo-title">
+ Typography demo
+
+</div>
+<style>
+
+.xxx{
+	background: whitesmoke;
+}
+.xxx > *{
+	line-height: normal !important;
+	font-size: 14px !important;
+	font-weight: normal !important;
+	background: white;
+	margin: 10px 0px;
+	
+}
+</style>
+<div class="com-layout-columns col1 xxx">
+	<div class="layout-cell" style="font-family: WYekan,tahoma;"> test فونت فارسی و TypoGraphy . این just آزمایش برای ۱۲۳456 and فاصله خطها</div>
+	<div class="layout-cell" style="font-family: WAmer,tahoma;"> test فونت فارسی و TypoGraphy . این just آزمایش برای ۱۲۳456 and فاصله خطها</div>
+	<div class="layout-cell" style="font-family: WRoya,Tahoma;"> test فونت فارسی و TypoGraphy . این just آزمایش برای ۱۲۳456 and فاصله خطها</div>
+	<div class="layout-cell" style="font-family: WNazanin,Tahoma;">  test فونت فارسی و TypoGraphy . این just آزمایش برای ۱۲۳456 and فاصله خطها</div>
+	<div class="layout-cell" style="font-family: WMitra,Tahoma;">  test فونت فارسی و TypoGraphy . این just آزمایش برای ۱۲۳456 and فاصله خطها</div>
+	<div class="layout-cell" style="font-family: WIranian,Tahoma;">  test فونت فارسی و TypoGraphy . این just آزمایش برای ۱۲۳456 and فاصله خطها</div>
+	<div class="layout-cell" style="font-family: WTraffic,Tahoma;"> test فونت فارسی و TypoGraphy . این just آزمایش برای ۱۲۳456 and فاصله خطها</div>
+
+</div>
+
+<div class="demo-title">
+Forms Demo
+
+</div>
+
+<div class="wid-panel brCorner">
+	<header class="panel-header">
+		<div class="header-icon"><i class="user-icon-businessmen2"></i></div>
+		<div class="header-caption">گروه ها</div>
+	</header>
+
+	<div class="panel-body">
+	<form action="/admin/uis" novalidate="novalidate" class="parentInherit com-form form-h" id="GroupAdminIndexForm" method="post" accept-charset="utf-8"><div style="display:none;"><input name="_method" value="POST" type="hidden"></div>		<div class="body-container padding-none form-h">
+			
+			<div class="com-input text required"><div class="input-container"><label for="GroupTitle">عنوان گروه Aval</label><input name="data[Group][title]" maxlength="255" id="GroupTitle" required="required" type="text"></div></div>			
+			
+			<div class="com-input textarea required"><div class="input-container"><label for="GroupSlug">نامک</label><textarea name="data[Group][slug]" cols="30" rows="6" id="GroupSlug" required="required"></textarea></div></div>			
+			<div class="form-col">
+			<div class="com-input text required"><div class="input-container"><label for="GroupTitle">عنوان گروه Aval</label><input name="data[Group][title]" maxlength="255" id="GroupTitle" required="required" type="text"></div></div>			
+			
+			<div class="com-input textarea required"><div class="input-container"><label for="GroupSlug">نامک</label><textarea name="data[Group][slug]" cols="30" rows="6" id="GroupSlug" required="required"></textarea></div></div>			
+			
+			</div>
+			
+			
+			<div class="com-input select"><div class="input-container"><label for="GroupUser">نامک</label><select name="data[Group][user]" id="GroupUser">
+<option value=""></option>
+<option value="s">کوچیک</option>
+<option value="m">متوسط</option>
+<option value="l">بزرگ</option>
+</select></div></div>
+			<div class="com-input number"><div class="input-container"><label for="GroupXxx">نامک</label><input name="data[Group][xxx]" id="GroupXxx" type="number"></div></div>
+		</div>
+		<div class="body-footer">
+			<div class="submit"><input class="btn btn-action" value="ایجاد" type="submit"></div>		</div>
+	 	</form>	</div>
+</div>
+
+
+
+
+<div class="wid-panel-border brCorner-lg">
+	<header class="panel-header">
+		<div class="header-icon"><i class="user-icon-businessmen2"></i></div>
+		<div class="header-caption">گروه ها</div>
+	</header>
+	<div class="panel-body">
+		<form action="/admin/uis" novalidate="novalidate" class="parentInherit com-form form-h" id="GroupAdminIndexForm" method="post" accept-charset="utf-8"><div style="display:none;"><input name="_method" value="POST" type="hidden"></div>		<div class="body-container padding-none form-v">
+			
+			<div class="com-input text required"><div class="input-container"><label for="GroupTitle">عنوان گروه Aval</label><input name="data[Group][title]" maxlength="255" id="GroupTitle" required="required" type="text"></div></div>			
+			
+			<div class="com-input text required"><div class="input-container"><label for="GroupSlug">نامک</label><input name="data[Group][slug]" maxlength="255" id="GroupSlug" required="required" type="text"></div></div>
+
+			<div class="form-col">
+			<div class="com-input text required"><div class="input-container"><label for="GroupTitle">عنوان گروه Aval</label><input name="data[Group][title]" maxlength="255" id="GroupTitle" required="required" type="text"></div></div>			
+			
+			<div class="com-input textarea required"><div class="input-container"><label for="GroupSlug">نامک</label><textarea name="data[Group][slug]" cols="30" rows="6" id="GroupSlug" required="required"></textarea></div></div>			
+			
+			</div>
+			
+			<div class="com-input select"><div class="input-container"><label for="GroupUser">نامک</label><select name="data[Group][user]" id="GroupUser">
+<option value=""></option>
+<option value="s">کوچیک</option>
+<option value="m">متوسط</option>
+<option value="l">بزرگ</option>
+</select></div></div>
+			<div class="com-input number"><div class="input-container"><label for="GroupXxx">نامک</label><input name="data[Group][xxx]" id="GroupXxx" type="number"></div></div>
+		</div>
+		<div class="body-footer">
+			<div class="submit"><input class="btn btn-action" value="ایجاد" type="submit"></div>		</div>
+	</form>	
+	</div>
+	
+</div>
+
+
+
+
+<div class="wid-panel-framed brCorner-sm">
+	<header class="panel-header">
+		<div class="header-icon"><i class="user-icon-businessmen2"></i></div>
+		<div class="header-caption">گروه ها</div>
+	</header>
+	<div class="panel-body">
+	<form action="/admin/uis" novalidate="novalidate" class="parentInherit com-form form-h" id="GroupAdminIndexForm" method="post" accept-charset="utf-8"><div style="display:none;"><input name="_method" value="POST" type="hidden"></div>
+		<div class="body-container padding-none ">
+			
+			<div class="com-input text required"><div class="input-container"><label for="GroupTitle">عنوان گروه Aval</label><input name="data[Group][title]" maxlength="255" id="GroupTitle" required="required" type="text"></div></div>			
+			
+			<div class="com-input text form-v required"><div class="input-container"><label for="GroupSlug">نامک</label><input name="data[Group][slug]" maxlength="255" id="GroupSlug" required="required" type="text"></div></div>			
+			<div class="com-input select form-v"><div class="input-container"><label for="GroupUser">نامک</label><select name="data[Group][user]" id="GroupUser">
+<option value=""></option>
+<option value="s">کوچیک</option>
+<option value="m">متوسط</option>
+<option value="l">بزرگ</option>
+</select></div></div>
+			<div class="com-input number"><div class="input-container"><label for="GroupXxx">نامک</label><input name="data[Group][xxx]" id="GroupXxx" type="number"></div></div>
+		</div>
+		<div class="body-footer">
+			<div class="submit"><input class="btn btn-action" value="ایجاد" type="submit"></div>		</div>
+		</form>	</div>
+	
+</div>
+	</section>
+
+
+		
+
+	
+	
+	
+		
+	
+
 
 
 

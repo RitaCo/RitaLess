@@ -1,0 +1,58 @@
+.UserManger .user-info {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal ;
+  -webkit-box-direction: normal ;
+  -webkit-flex-direction: row ;
+  -ms-flex-direction: row ;
+  flex-direction: row ;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+}
+.UserManger .user-info .avator-box {
+  position: relative;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 1 auto;
+  -ms-flex: 0 1 auto;
+  flex: 0 1 auto;
+  line-height: 0;
+}
+.UserManger .user-info .avator-box img {
+  border: 1px solid #fff;
+  -webkit-box-shadow: 0px 0px 2px 0px #666;
+  box-shadow: 0px 0px 2px 0px #666;
+  margin: 10px;
+  width: 80px;
+}
+.UserManger .user-info .user-details {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
+}
+.UserManger .user-info .user-details > dt {
+  color: #222;
+  font-family: "WAmer";
+  font-size: 14px;
+  clear: both;
+  float: right;
+  width: 100px;
+  text-shadow: 0px 0px 5px #aaa;
+}
+.UserManger .user-info .user-details > dd {
+  font-size: 14px;
+  float: right;
+  display: block;
+  font-family: WYekan,Tahoma;
+}
+.UserManger .user-info .user-details > dd:before {
+  content: ":";
+  padding: 0px 10px;
+}

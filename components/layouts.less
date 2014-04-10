@@ -46,37 +46,42 @@
 
 
 .com-layout-columns{
-	.flex-box();
-	position: relative;
-	overflow: -moz-hidden-unscrollable;
-	flex-wrap: wrap;
-	box-lines: multiple;
+
+ 	display: flex;
+    flex-direction: row;
+	flex-wrap:wrap;
 	 		
 	> .layout-cell {
-		flex-basis: 100%;
-
+		flex:1;
 		background-clip: content-box;
 		color: #222;
-		padding: 1rem 0.5rem ;
-	}
+		padding: 1rem 1rem ;
+		//padding: 10px;
 	
+	
+	}
+
+	&.col1 > .layout-cell{
+	    flex: 0 0 100%;
+	}
+		
 	&.col2 > .layout-cell{
-	    flex-basis: 50%;
+	    flex: 0 0 50%;
 	}
 	
 	&.col3 > .layout-cell{
-	    flex-basis: 33.33%;
+	    flex: 0 0 33.33%;
 	}
 	
 	&.col4 > .layout-cell{
-		flex-basis: 25%;
+		flex: 0 0 25%;
 	}
 
 	&.col5 > .layout-cell{
-		flex-basis: 20%;
+		flex: 0 0 20%;
 	}
 
 	&.col6 > .layout-cell{
-		flex-basis: 16.66%;
+		flex: 0 0 16.66%;
 	}	
 }

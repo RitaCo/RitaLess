@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html dir="rtl" lang="fa">
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>  ریتا | کاربران > اعضا > فهرست  </title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />	<link href="/theme/Admin/favicon.ico" type="image/x-icon" rel="icon" /><link href="/theme/Admin/favicon.ico" type="image/x-icon" rel="shortcut icon" />	<script type="text/javascript">
+		window.ENV ={};
+		var Rita = {};
+		Rita.here = '/admin/rita/UserManager/members';
+		Rita.params = {"plugin":"UserManager","controller":"members","action":"admin_index","named":{"limit":10},"pass":[],"prefix":"admin","admin":true,"alias":{"current":null,"parent":"UserManager","routeID":9},"pjax":false,"isAjax":false,"paging":{"Member":{"page":1,"current":10,"count":false,"prevPage":false,"nextPage":false,"pageCount":0,"order":null,"limit":10,"options":{"conditions":[]},"paramType":"named"}},"models":{"Member":{"plugin":"UserManager","className":"Member"},"Group":{"plugin":"UserManager","className":"Group"},"Profile":{"plugin":"UserManager","className":"Profile"}}};
+		Rita.url = 'http://rita-app.loc/admin/rita/UserManager/members';
+	</script>	
+	
+	
+	<link rel="stylesheet" type="text/css" href="/icons/icons.css" />
+	<link rel="stylesheet" type="text/css" href="../rita.css" />
+	<link rel="stylesheet" type="text/css" href="debug.css" />
+	<link rel="stylesheet" type="text/css" href="styles.css" />
+	<link rel="stylesheet" type="text/css" href="/icon/user-icon.css" />
+	<link rel="stylesheet" type="text/css" href="/icon2/flaticon.css" />
+	<link rel="stylesheet" type="text/css" href="user-manager.css" />
+		
+
+	</head>
+<body >
+
+	<!-- base.ctp -->
+	<section  class="LayoutHeader com-layout typ-col">
+	<div class="rita-logo">
+		<img src="/theme/Admin/img/ritaco-logo.png" alt="" />	</div>
+	<div class="fluid">
+		
+
+
+<ul id="HeaderTopNav" class="com-layout typ-col" >
+	<li>
+		<a href="/admin" title="داشبرد" data-ajax="false" class="com-layout typ-col opt-childs-fluid-auto"><i class="icon-home"></i><span>داشبورد</span></a>	</li>
+	
+
+	<li>
+		<a href="/admin/page/mangers" data-ajax="false" title="مدیریت صفحات" class="com-layout typ-col opt-childs-fluid-auto"><i class="icon-treediagram"></i><span>صفحات</span></a>	</li>
+
+	<li>
+		<a href="/admin/rita" data-ajax="false" title="مرکز کنترل ریتا" class="com-layout typ-col opt-childs-fluid-auto active inlineActive"><i class="icon-controlpanel"></i><span>مرکز کنترل</span><b class="caret"></b></a>		<div class="popup">aaaaaaaaaaaa</div>
+	</li>
+
+	<li>
+		<a href="/admin/services" data-ajax="false" title="مدیریت سرویس ها" class="com-layout typ-col opt-childs-fluid-auto"><i class="icon-indexmanager"></i><span>سرویس ها</span><b class="caret"></b></a>		<div class="popup">aaaaaaaaaaaa</div>
+
+	</li>
+	
+
+</ul>
+	</div>
+	
+	<div class="header-placeHolder">
+		<div id="UserLogin" class="block com-layout typ-col">
+			<div class="userAvatar">
+				<img src="/img/ritaco-logo-black.png" alt="" />				
+			</div>
+			<div class="UserUserName">
+				<a>زغال</a>
+			</div>
+		
+		</div>
+			</div>
+</section>	<section class="ViewPort com-layout typ-row">
+
+		<div  class="LayoutBody com-layout typ-col fluid" >
+		
+				
+
+
+
+<div class="layout-panel-wrapper right"></div>
+<div class="layout-content-wrapper fluid com-layout typ-row"><section class="LayoutContentHeading com-layout typ-row">
+
+	
+	<aside class="ContentNavigator com-layout typ-col">
+		<div class="title-group">
+			<h3>فهرست</h3>
+			<h5 class="">فهرست کلیه اعضای ثبت شده.</h5>
+		</div>
+		<div class="action-groups com-layout typ-col">
+			<a  class="action" title="تنظیمات"><i class=" icon-settingsandroid"></i></a>
+			<a  class="disabled" title="راهنمایی"><i class="icon-support"></i></a>
+		
+		</div>
+	</aside>
+	
+	<aside class="Breadcrumb com-layout typ-col">
+		<ul><li class="first"><a href="/admin">مدیریت</a><span>/</span></li><li><a href="/admin/rita/UserManager">کاربران</a><span>/</span></li><li><a href="/admin/rita/UserManager/members">اعضا</a><span>/</span></li><li class="last">فهرست</li></ul>	</aside>
+
+</section>
+	
+	<!-- /Content Toolbar -->
+	<section class="LayoutFlashMSG">
+		
+			</section>
+	<!-- 
+	$this->assign('contentPadding','20px 20px');
+	$this->assign('contentType','col');
+	 -->
+	 	<section id="ContentContainer" class="LayoutContentBody fluid com-layout typ-row" style="padding: 0px 100px 20px 100px">
+		
+
+
+
+
+
+
+<div class="wid-panel-framed brCorner">
+	<div class="panel-header">
+		<div class="header-caption">اعضا</div>
+	</div>
+	<div class="panel-body">
+		<div class="body-header padding-none" >
+			
+			<div class="wid-toolbar">
+				<div class="toolbar-band ">
+					<a href="UserManager.Memeber@&gt;:add" class="btn"><i class="u-group19"></i></a>				</div>
+				<div class="toolbar-band form-bg-none padding-none ">
+					<form action="/admin/rita/UserManager/members" novalidate="novalidate" class="parentInherit com-form form-h" id="searchAdminIndexForm" method="post" accept-charset="utf-8"><div style="display:none;"><input type="hidden" name="_method" value="POST"/></div>						<div class="form-col">
+						<div class="com-input select"><div class="input-container"><label for="searchGroups">گروه</label><select name="data[search][groups]" id="searchGroups">
+<option value="">همه</option>
+</select></div></div>				 		<div class="com-input text"><div class="input-container"><label for="UserMail">ایمیل</label><input name="data[User][mail]" type="text" id="UserMail"/></div></div>				 		<div class="com-input text"><div class="input-container"><label for="ProfileFirstName">نام</label><input name="data[Profile][first_name]" type="text" id="ProfileFirstName"/></div></div>				 		<div class="com-input text"><div class="input-container"><label for="ProfileLastName">فامیلی</label><input name="data[Profile][last_name]" type="text" id="ProfileLastName"/></div></div>				 		</div>
+					</form>				</div>
+				<div class="toolbar-band band-sm ">
+					<div >صفحه 1 از 1</div>
+					<div >صفحه 1 از 1</div>
+				</div>
+			</div>
+		</div>
+		<!-- body container -->
+		<div class="body-container  ">
+			<div class="com-layout-columns col2">
+			<div class="layout-cell">
+	<div class="wid-panel-framed UserManger brCorner-sm">
+		<div class="panel-body">
+			<div class="body-header padding-none">
+				<div class="user-info">
+					<div class="avator-box"><img src="http://rokh.chehrak.com/fe52d9867c3b9c4a4293915a5a372b27?size=128" alt="" /></div>
+				 
+				 	<dl class="user-details">
+						<dt class="layout-cell">نام</dt><dd class="layout-cell">محمد صالح سوزنچی</dd>
+						<dt class="layout-cell">ایمیل</dt><dd class="layout-cell">saleh.souzanchi@gmail.com</dd>
+						<dt class="layout-cell">سطح کاربری</dt><dd class="layout-cell">مدیر ارشد</dd>
+					</dl> 
+			
+				</div>
+			</div>
+			<div class="body-container">
+				<div class="wid-tab typ-right">
+					<ul class="tab-nav ">
+						<li data-tab="tab1"><a>یاداشت های مدیریتی</a></li>
+						<li data-tab="tab2"><a>گزارش ها</a></li>
+					</ul>
+				
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+<div class="layout-cell">
+	<div class="wid-panel-framed UserManger brCorner-sm">
+		<div class="panel-body">
+			<div class="body-header padding-none">
+				<div class="user-info">
+					<div class="avator-box"><img src="http://rokh.chehrak.com/ea4008e8adfac556edc362253347f69c?size=128" alt="" /></div>
+				 
+				 	<dl class="user-details">
+						<dt class="layout-cell">نام</dt><dd class="layout-cell">زغال رغالیان</dd>
+						<dt class="layout-cell">ایمیل</dt><dd class="layout-cell">zoghal@zoghal.net</dd>
+						<dt class="layout-cell">سطح کاربری</dt><dd class="layout-cell">کاربر عادی</dd>
+					</dl> 
+			
+				</div>
+			</div>
+			<div class="body-container">
+				<div class="wid-tab typ-right">
+					<ul class="tab-nav ">
+						<li data-tab="tab1"><a>یاداشت های مدیریتی</a></li>
+						<li data-tab="tab2"><a>گزارش ها</a></li>
+					</ul>
+				
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+			<div class="layout-cell">
+	<div class="wid-panel-framed UserManger brCorner-sm">
+		<div class="panel-body">
+			<div class="body-header padding-none">
+				<div class="user-info">
+					<div class="avator-box"><img src="http://rokh.chehrak.com/fe52d9867c3b9c4a4293915a5a372b27?size=128" alt="" /></div>
+				 
+				 	<dl class="user-details">
+						<dt class="layout-cell">نام</dt><dd class="layout-cell">محمد صالح سوزنچی</dd>
+						<dt class="layout-cell">ایمیل</dt><dd class="layout-cell">saleh.souzanchi@gmail.com</dd>
+						<dt class="layout-cell">سطح کاربری</dt><dd class="layout-cell">مدیر ارشد</dd>
+					</dl> 
+			
+				</div>
+			</div>
+			<div class="body-container">
+				<div class="wid-tab typ-right">
+					<ul class="tab-nav ">
+						<li data-tab="tab1"><a>یاداشت های مدیریتی</a></li>
+						<li data-tab="tab2"><a>گزارش ها</a></li>
+					</ul>
+				
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+<div class="layout-cell">
+	<div class="wid-panel-framed UserManger brCorner-sm">
+		<div class="panel-body">
+			<div class="body-header padding-none">
+				<div class="user-info">
+					<div class="avator-box"><img src="http://rokh.chehrak.com/ea4008e8adfac556edc362253347f69c?size=128" alt="" /></div>
+				 
+				 	<dl class="user-details">
+						<dt class="layout-cell">نام</dt><dd class="layout-cell">زغال رغالیان</dd>
+						<dt class="layout-cell">ایمیل</dt><dd class="layout-cell">zoghal@zoghal.net</dd>
+						<dt class="layout-cell">سطح کاربری</dt><dd class="layout-cell">کاربر عادی</dd>
+					</dl> 
+			
+				</div>
+			</div>
+			<div class="body-container">
+				<div class="wid-tab typ-right">
+					<ul class="tab-nav ">
+						<li data-tab="tab1"><a>یاداشت های مدیریتی</a></li>
+						<li data-tab="tab2"><a>گزارش ها</a></li>
+					</ul>
+				
+				</div>
+			</div>
+		</div>
+	</div>	
+</div>
+			</div>
+		</div>	
+	</div>
+</div>	</section>
+
+
+		
+
+	
+	
+	
+		
+	
+
+
+</div>
+<div class="layout-panel-wrapper left"></div>
+			   
+		</div>
+		<section class="LayoutFooter com-layout typ-col opt-childs-fluid-fix">
+	<div>
+		طراحی و پیاده سازی توسط  :  <a href="http://ritaco.net" target="_blank"> توسعه پرداز ریتا- ریتاکو </a>	</div>
+	<div>
+		Rita Service Presenter Platform	</div>
+	<div> 
+		 ویرایش : 7.0.0 درحال توسعه	</div>
+</section>	</section>	
+	
+	
+	<!-- /base.ctp -->
+</body>
+</html>
