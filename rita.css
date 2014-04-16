@@ -492,6 +492,9 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   position: relative;
   overflow: -moz-hidden-unscrollable;
 }
@@ -687,14 +690,14 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   border-bottom: 1px solid #ddd;
 }
 .com-form .form-col .com-input {
@@ -812,6 +815,8 @@ a {
   background: white;
 }
 .com-input > .input-container > input[type='text'],
+.com-input > .input-container > input[type='email'],
+.com-input > .input-container > input[type='password'],
 .com-input > .input-container > textarea {
   padding: 2px 10px;
   width: 100%;
@@ -884,14 +889,14 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   padding: 0px 20px;
   -webkit-box-align: center;
   -webkit-align-items: center;
@@ -2208,14 +2213,14 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: vertical ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: column ;
   -ms-flex-direction: column ;
   flex-direction: column ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 .wid-toolbar > .toolbar-band {
   -webkit-box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
@@ -2234,14 +2239,14 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 .wid-toolbar > .toolbar-band:last-child {
   border-bottom: none;
@@ -2308,9 +2313,6 @@ button.btn-tiny {
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-box-pack: center;
   -webkit-justify-content: center;
   -ms-flex-pack: center;
@@ -2371,14 +2373,14 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: vertical ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: column ;
   -ms-flex-direction: column ;
   flex-direction: column ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   border-top: 1px solid #bbbbbb;
   border-left: 1px solid #bbbbbb;
   border-right: 1px solid #bbbbbb;
@@ -2410,14 +2412,14 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 .wid-panel > .panel-header > .header-caption {
   font-family: WNasim;
@@ -2448,14 +2450,14 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -2473,14 +2475,14 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 .wid-panel > .panel-header > .header-helpers > * {
   border-top: 1px solid #777272;
@@ -2527,14 +2529,14 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: vertical ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: column ;
   -ms-flex-direction: column ;
   flex-direction: column ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   background-color: #ffffff;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -2566,14 +2568,14 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   border-bottom: 1px solid #bbbbbb;
 }
 .wid-panel-border > .panel-header > .header-caption {
@@ -2605,14 +2607,14 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -2630,14 +2632,14 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 .wid-panel-border > .panel-header > .header-helpers > * {
   border-top: 1px solid #777272;
@@ -2691,14 +2693,14 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: vertical ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: column ;
   -ms-flex-direction: column ;
   flex-direction: column ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   background-color: #ffffff;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -2731,14 +2733,14 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   border: none;
 }
 .wid-panel-framed > .panel-header > .header-caption {
@@ -2770,14 +2772,14 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   -webkit-align-self: center;
   -ms-flex-item-align: center;
   align-self: center;
@@ -2795,14 +2797,14 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+  flex-wrap: wrap;
   -webkit-box-orient: horizontal ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
 .wid-panel-framed > .panel-header > .header-helpers > * {
   border-top: 1px solid #777272;
@@ -2845,119 +2847,193 @@ button.btn-tiny {
 .wid-panel-framed > .panel-header + form > .panel-body {
   margin-top: 0px;
 }
-.wid-tab {
-  position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.wid-tab.typ {
+  /**
+ * 
+ */
+  /**
+ * 
+ */
+}
+.wid-tab.typ-top {
   -webkit-box-orient: vertical ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: column ;
   -ms-flex-direction: column ;
   flex-direction: column ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  border-top: 1px solid #c9c9c9;
-  border-left: 1px solid #c9c9c9;
-  border-right: 1px solid #c9c9c9;
+}
+.wid-tab.typ-top > .tab-nav {
+  padding-bottom: 0px;
+  padding-top: 5px;
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
   border-bottom: 1px solid #c9c9c9;
 }
-.wid-tab > .tab-nav {
-  list-style: none;
-  position: relative;
-  background: #f5f5f5;
-  padding: 5px;
-  -webkit-box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
-  box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.wid-tab.typ-top li {
+  margin-bottom: -1px;
+  padding-bottom: 0px;
+}
+.wid-tab.typ-top li.active {
+  border-bottom-color: #e5e6ea;
+}
+.wid-tab.typ-top li a {
+  border-radius: 6px 6px 0px 0px;
+  border-bottom: none;
+}
+.wid-tab.typ-top li:not(.active):hover > a {
+  border-bottom: none;
+}
+.wid-tab.typ-top li.active a {
+  border-bottom: none;
+}
+.wid-tab.typ-top .tab-container {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+.wid-tab.typ-top .tab-body.active {
+  display: block;
+}
+.wid-tab.typ-bottom {
+  -webkit-box-orient: vertical ;
+  -webkit-box-direction: normal ;
+  -webkit-flex-direction: column ;
+  -ms-flex-direction: column ;
+  flex-direction: column ;
+}
+.wid-tab.typ-bottom > .tab-nav {
+  padding-bottom: 5px;
+  padding-top: 0px;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+  border-top: 1px solid #c9c9c9;
+}
+.wid-tab.typ-bottom li {
+  margin-top: -1px;
+  padding-top: 0px;
+}
+.wid-tab.typ-bottom li.active {
+  border-top-color: #e5e6ea;
+}
+.wid-tab.typ-bottom li a {
+  border-radius: 0px 0px 6px 6px;
+  border-top: none;
+}
+.wid-tab.typ-bottom li:not(.active):hover > a {
+  border-top: none;
+}
+.wid-tab.typ-bottom li.active a {
+  border-top: none;
+}
+.wid-tab.typ-bottom .tab-container {
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
+}
+.wid-tab.typ-bottom .tab-body.active {
+  display: block;
+}
+.wid-tab.typ-right {
   -webkit-box-orient: horizontal ;
   -webkit-box-direction: normal ;
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
 }
-.wid-tab > .tab-nav > li {
-  position: relative;
-  z-index: 10;
-  margin-left: 2px;
-  cursor: pointer;
-  padding: 5px;
-  background: white;
-}
-.wid-tab > .tab-nav > li > a {
-  border-top: 1px solid #ff0000;
-  border-left: 1px solid #ff0000;
-  border-right: 1px solid #ff0000;
-  border-bottom: 1px solid #ff0000;
-}
-.wid-tab > .tab-nav > li.active > a {
-  background-color: #ddd;
-  border-top: 1px solid #c9c9c9;
+.wid-tab.typ-right > .tab-nav {
+  padding-left: 0px;
+  padding-right: 10px;
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
   border-left: 1px solid #c9c9c9;
+  -webkit-box-orient: vertical ;
+  -webkit-box-direction: normal ;
+  -webkit-flex-direction: column ;
+  -ms-flex-direction: column ;
+  flex-direction: column ;
+}
+.wid-tab.typ-right li {
+  margin-left: -1px;
+  padding-left: 0px;
+}
+.wid-tab.typ-right li.active {
+  border-left-color: #e5e6ea;
+}
+.wid-tab.typ-right li a {
+  border-radius: 0px 6px 6px 0;
+  border-left: none;
+}
+.wid-tab.typ-right li:not(.active):hover > a {
+  border-left: none;
+}
+.wid-tab.typ-right li.active a {
+  border-left: none;
+}
+.wid-tab.typ-right .tab-container {
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
+}
+.wid-tab.typ-right .tab-body.active {
+  display: block;
+}
+.wid-tab.typ-le1ft {
+  -webkit-box-orient: horizontal ;
+  -webkit-box-direction: normal ;
+  -webkit-flex-direction: row ;
+  -ms-flex-direction: row ;
+  flex-direction: row ;
+}
+.wid-tab.typ-le1ft > .tab-nav {
+  padding-left: 5px;
+  padding-right: 0px;
+  -webkit-box-ordinal-group: 2;
+  -webkit-order: 1;
+  -ms-flex-order: 1;
+  order: 1;
   border-right: 1px solid #c9c9c9;
-  border-bottom: 1px solid #c9c9c9;
+  -webkit-box-orient: vertical ;
+  -webkit-box-direction: normal ;
+  -webkit-flex-direction: column ;
+  -ms-flex-direction: column ;
+  flex-direction: column ;
 }
-.wid-tab > .tab-nav > li:not(.active):hover > a {
-  border-top: 1px solid #c9c9c9;
-  border-left: 1px solid #c9c9c9;
-  border-right: 1px solid #c9c9c9;
-  border-bottom: 1px solid #c9c9c9;
-  background-color: #eee;
-  border-bottom-color: transparent;
+.wid-tab.typ-le1ft li {
+  margin-right: -1px;
+  padding-right: 0px;
 }
-.wid-tab > .tab-nav > li > a {
-  position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  color: #333333;
-  padding: 5px 15px;
-  font-size: 16px;
-  font-family: "WKoodak", "comic sans ms";
+.wid-tab.typ-le1ft li.active {
+  border-right-color: #e5e6ea;
 }
-.wid-tab > .tab-container {
-  padding: 6px;
-  -webkit-background-clip: content-box-box;
-  background-clip: content-box-box;
-  position: relative;
-  background-color: #eee;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+.wid-tab.typ-le1ft li a {
+  border-radius: 6px 0px 0px 6px;
+  border-right: 0px;
 }
-.wid-tab > .tab-container > .tab-body {
-  padding: 6px;
-  display: none;
-  font-size: 11px;
-  font-family: WNazanin;
-  border-top: 1px solid #c9c9c9;
-  border-left: 1px solid #c9c9c9;
-  border-right: 1px solid #c9c9c9;
-  border-bottom: 1px solid #c9c9c9;
-  background: white;
+.wid-tab.typ-le1ft li:not(.active):hover > a {
+  border-right: 0px;
+}
+.wid-tab.typ-le1ft li.active a {
+  border-right: 0px;
+}
+.wid-tab.typ-le1ft .tab-container {
+  -webkit-box-ordinal-group: 1;
+  -webkit-order: 0;
+  -ms-flex-order: 0;
+  order: 0;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
-.wid-tab > .tab-container > .tab-body.active {
+.wid-tab.typ-le1ft .tab-body.active {
   display: block;
 }

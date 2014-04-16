@@ -35,6 +35,8 @@
 .wid-tab.typ{
 	
 &-top{
+	.flex-row();
+		
 	>.tab-nav{
 		padding-bottom: 0px;
 		padding-top: 5px;
@@ -66,16 +68,21 @@
 	}
 	
 	.tab-container{
-		.flex-order(1);		
+		.flex-order(1);	
+		.flex(1);	
 	}
 	.tab-body.active{
 		display: block;
+		width: 100%;
+		
+		overflow: auto;
 	}	
 }	
 
 
 &-bottom{
-
+	.flex-row();
+	
 	>.tab-nav{
 		padding-bottom: 5px;
 		padding-top: 0px;
@@ -109,10 +116,14 @@
 	
 	
 	.tab-container{
-		.flex-order(0);		
+		.flex-order(0);	
+		.flex(1);	
 	}
 	.tab-body.active{
 		display: block;
+		width: 100%;
+		
+		overflow: auto;
 	}	
 
 	
@@ -163,11 +174,13 @@
 	
 	.tab-container{
 		.flex-order(1);
-		flex:1;
+		.flex-row();
 
 	}
 	.tab-body.active{
 		display: block;
+		height: 100%;
+		overflow: auto;	
 
 	}	
 
@@ -216,11 +229,13 @@
 	
 	.tab-container{
 		.flex-order(0);
-		flex:1;
+		.flex-row();
 
 	}
 	.tab-body.active{
 		display: block;
+		height: 100%;
+		overflow: auto;
 		
 	}	
 
