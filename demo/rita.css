@@ -114,7 +114,6 @@ dfn {
  */
 hr {
   -moz-box-sizing: content-box;
-  -webkit-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -277,8 +276,6 @@ html input[disabled] {
  */
 input[type="checkbox"],
 input[type="radio"] {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   /* 1 */
   padding: 0;
@@ -336,8 +333,6 @@ table {
 *,
 *:before,
 *:after {
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
   box-sizing: border-box;
   margin: 0;
   padding: 0;
@@ -409,15 +404,12 @@ a {
  * toolbar varilabels
  */
 .boxShadow-sm {
-  -webkit-box-shadow: 0 0 3px -1px #aaaaaa;
   box-shadow: 0 0 3px -1px #aaaaaa;
 }
 .boxShadow {
-  -webkit-box-shadow: 0 0 6px -1px #aaaaaa;
   box-shadow: 0 0 6px -1px #aaaaaa;
 }
 .boxShadow-lg {
-  -webkit-box-shadow: 0 0 9px -1px #aaaaaa;
   box-shadow: 0 0 9px -1px #aaaaaa;
 }
 .brCorner {
@@ -459,7 +451,8 @@ a {
   height: 6px;
   background: #f1f1f1;
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f1f1f1), to(#d8d8d8));
-  background-image: -webkit-linear-gradient(top, #f1f1f1, #d8d8d8);
+  background-image: -moz-linear-gradient(top, #f1f1f1, #d8d8d8);
+  background-image: -ms-linear-gradient(top, #f1f1f1, #d8d8d8);
   background-image: linear-gradient(top, #f1f1f1, #d8d8d8);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f1f1f1', endColorstr='#d8d8d8', GradientType=0);
   border-color: #bbb;
@@ -480,7 +473,9 @@ a {
   border-bottom: none;
   background-color: #d8d8d8;
   background: -webkit-linear-gradient(180deg, #f1f1f1 0, #d8d8d8 100%);
-  background: -webkit-linear-gradient(0deg, #f1f1f1 0, #d8d8d8 100%);
+  background: -moz-linear-gradient(180deg, #f1f1f1 0, #d8d8d8 100%);
+  background: -ms-linear-gradient(180deg, #f1f1f1 0, #d8d8d8 100%);
+  background: -o-linear-gradient(180deg, #f1f1f1 0, #d8d8d8 100%);
   background: linear-gradient(90deg, #f1f1f1 0, #d8d8d8 100%);
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
 }
@@ -488,44 +483,25 @@ a {
   width: 20px;
 }
 .com-layout {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   position: relative;
   overflow: -moz-hidden-unscrollable;
 }
 .com-layout.typ-row {
-  -webkit-flex-flow: column wrap;
-  -ms-flex-flow: column wrap;
   flex-flow: column wrap;
 }
 .com-layout.typ-col {
-  -webkit-flex-flow: row wrap;
-  -ms-flex-flow: row wrap;
   flex-flow: row wrap;
 }
 .com-layout .fluid {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1;
 }
 .typ-col.opt-childs-fluid-fix > *,
 .typ-row.opt-childs-fluid-fix > * {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 0;
-  -ms-flex: 1 1 0;
   flex: 1 1 0;
 }
 .typ-col.opt-childs-fluid-auto > *,
 .typ-row.opt-childs-fluid-auto > * {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 .typ-col > *:not(script),
@@ -533,63 +509,32 @@ a {
   position: relative;
 }
 .com-layout-columns {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: row;
-  -ms-flex-direction: row;
   flex-direction: row;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
 }
 .com-layout-columns > .layout-cell {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
   flex: 1;
-  -webkit-background-clip: content-box;
   background-clip: content-box;
   color: #222;
   padding: 1rem 1rem ;
 }
 .com-layout-columns.col1 > .layout-cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 100%;
-  -ms-flex: 0 0 100%;
   flex: 0 0 100%;
 }
 .com-layout-columns.col2 > .layout-cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 50%;
-  -ms-flex: 0 0 50%;
   flex: 0 0 50%;
 }
 .com-layout-columns.col3 > .layout-cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 33.33%;
-  -ms-flex: 0 0 33.33%;
   flex: 0 0 33.33%;
 }
 .com-layout-columns.col4 > .layout-cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 25%;
-  -ms-flex: 0 0 25%;
   flex: 0 0 25%;
 }
 .com-layout-columns.col5 > .layout-cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 20%;
-  -ms-flex: 0 0 20%;
   flex: 0 0 20%;
 }
 .com-layout-columns.col6 > .layout-cell {
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 0 16.66%;
-  -ms-flex: 0 0 16.66%;
   flex: 0 0 16.66%;
 }
 /**
@@ -682,21 +627,8 @@ a {
   position: relative;
 }
 .com-form .form-col {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
   border-bottom: 1px solid #ddd;
 }
@@ -725,9 +657,6 @@ a {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #ddd;
   position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 .com-input.required .input-container > label:after {
@@ -749,7 +678,6 @@ a {
   text-shadow: 0 0 3px #c5c5c5;
   z-index: 5;
   padding: 5px 15px;
-  -webkit-box-shadow: 1px 1px 4px 1px #999;
   box-shadow: 1px 1px 4px 1px #999;
   border-radius: 6px;
   text-wrap: none;
@@ -801,16 +729,13 @@ a {
   border-radius: 3px;
   font-family: WAmer,Tahoma;
   color: #555;
-  -webkit-box-shadow: 0px 0px 5px 0px #DCDCDC inset;
   box-shadow: 0px 0px 5px 0px #DCDCDC inset;
   background: #fdfdfd;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
 .com-input > .input-container > input:focus,
 .com-input > .input-container > textarea:focus,
 .com-input > .input-container > select:focus {
-  -webkit-box-shadow: 0px 0px 2px 0px #DCDCDC inset;
   box-shadow: 0px 0px 2px 0px #DCDCDC inset;
   background: white;
 }
@@ -853,7 +778,6 @@ a {
   background: #fcf2a5;
   border: 1px solid #333;
   border-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px #ccc;
   box-shadow: 0 1px 2px #ccc;
   color: #333;
   font-weight: bold;
@@ -865,7 +789,6 @@ a {
   background: #e6f5fd;
   border: 1px solid #b2c8ff;
   border-radius: 5px;
-  -webkit-box-shadow: 0 1px 2px #ccc;
   box-shadow: 0 1px 2px #ccc;
   color: #333;
   font-weight: bold;
@@ -877,7 +800,6 @@ a {
   background: #08A000;
   border: 1px solid #fff;
   border-radius: 5px;
-  -webkit-box-shadow: 0 0px 2px #000;
   box-shadow: 0 0px 2px #000;
   color: #fff;
   font-weight: bold;
@@ -885,31 +807,16 @@ a {
   cursor: pointer;
 }
 .alert_error {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
   padding: 0px 20px;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   background: #fb1800;
   border: 1px solid #fff;
   border-radius: 5px;
-  -webkit-box-shadow: 0px 0px 3px 0px #444;
   box-shadow: 0px 0px 3px 0px #444;
   color: #fff;
   font-weight: bold;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
 .alert_warning p,
@@ -927,50 +834,25 @@ a {
   margin: 0 0 0 3px;
   vertical-align: middle;
 }
-@-webkit-keyframes glowing {
-  /* line 29, ../scss/partials/_glow.scss */
-  from {
-    -webkit-box-shadow: 0px 0px 0px rgba(44, 154, 219, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 0px rgba(44, 154, 219, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-  /* line 30, ../scss/partials/_glow.scss */
-  50% {
-    -webkit-box-shadow: 0px 0px 16px rgba(44, 154, 219, 0.8), 0px 1px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 16px rgba(44, 154, 219, 0.8), 0px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-  /* line 31, ../scss/partials/_glow.scss */
-  to {
-    -webkit-box-shadow: 0px 0px 0px rgba(44, 154, 219, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
-    box-shadow: 0px 0px 0px rgba(44, 154, 219, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-}
 @keyframes glowing {
   /* line 29, ../scss/partials/_glow.scss */
   from {
-    -webkit-box-shadow: 0px 0px 0px rgba(44, 154, 219, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 0px rgba(44, 154, 219, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
   }
   /* line 30, ../scss/partials/_glow.scss */
   50% {
-    -webkit-box-shadow: 0px 0px 16px rgba(44, 154, 219, 0.8), 0px 1px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 16px rgba(44, 154, 219, 0.8), 0px 1px 2px rgba(0, 0, 0, 0.2);
   }
   /* line 31, ../scss/partials/_glow.scss */
   to {
-    -webkit-box-shadow: 0px 0px 0px rgba(44, 154, 219, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
     box-shadow: 0px 0px 0px rgba(44, 154, 219, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
   }
 }
 /* line 24, ../scss/partials/_buttons.scss */
 .btn {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15);
   background-color: #eeeeee;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fbfbfb), to(#e1e1e1));
-  background: -webkit-linear-gradient(top, #fbfbfb, #e1e1e1);
   background: linear-gradient(to bottom, #fbfbfb, #e1e1e1);
-  display: -webkit-inline-flex;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   vertical-align: middle;
   zoom: 1;
@@ -993,14 +875,11 @@ a {
 /* line 42, ../scss/partials/_buttons.scss */
 .btn:hover {
   background-color: #eeeeee;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#dcdcdc));
-  background: -webkit-linear-gradient(top, #ffffff, #dcdcdc);
   background: linear-gradient(to bottom, #ffffff, #dcdcdc);
   cursor: pointer;
 }
 /* line 46, ../scss/partials/_buttons.scss */
 .btn:active {
-  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px #ffffff;
   box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px #ffffff;
   text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
   background: #eeeeee;
@@ -1026,7 +905,6 @@ button.btn {
 .btn.disabled:active,
 input.btn:disabled,
 button.btn:disabled {
-  -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
   opacity: 0.8;
@@ -1038,21 +916,15 @@ button.btn:disabled {
 }
 /* line 86, ../scss/partials/_buttons.scss */
 .btn-wrap {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e3e3e3), to(#f2f2f2));
-  background: -webkit-linear-gradient(top, #e3e3e3, #f2f2f2);
   background: linear-gradient(to bottom, #e3e3e3, #f2f2f2);
-  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.04);
   box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.04);
   padding: 10px;
   display: inline-block;
 }
 /* line 96, ../scss/partials/_buttons.scss */
 .btn-flat {
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition-property: background;
   transition-property: background;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   background: #eeeeee;
   border: none;
@@ -1064,23 +936,18 @@ button.btn:disabled {
 }
 /* line 108, ../scss/partials/_buttons.scss */
 .btn-flat:active {
-  -webkit-transition-duration: 0s;
   transition-duration: 0s;
   background: #eeeeee;
   color: #bbbbbb;
 }
 /* line 113, ../scss/partials/_buttons.scss */
 .btn-flat.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 123, ../scss/partials/_buttons.scss */
 .btn-border {
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   color: #666666;
   border: 2px solid #666666;
@@ -1095,7 +962,6 @@ button.btn:disabled {
 }
 /* line 137, ../scss/partials/_buttons.scss */
 .btn-border:active {
-  -webkit-transition-duration: 0s;
   transition-duration: 0s;
   background: none;
   color: #4d4d4d;
@@ -1103,19 +969,13 @@ button.btn:disabled {
 }
 /* line 143, ../scss/partials/_buttons.scss */
 .btn-border.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 153, ../scss/partials/_buttons.scss */
 .btn-3d {
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #bbbbbb, 0px 8px 3px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #bbbbbb, 0px 8px 3px rgba(0, 0, 0, 0.2);
-  background: -webkit-gradient(linear, left top, left bottom, from(#f3f3f3), to(#e9e9e9));
-  background: -webkit-linear-gradient(top, #f3f3f3, #e9e9e9);
   background: linear-gradient(to bottom, #f3f3f3, #e9e9e9);
   background-color: #eeeeee;
   color: #666666;
@@ -1126,19 +986,13 @@ button.btn:disabled {
 }
 /* line 165, ../scss/partials/_buttons.scss */
 .btn-3d:hover {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #bbbbbb, 0px 8px 3px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #bbbbbb, 0px 8px 3px rgba(0, 0, 0, 0.2);
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#ebebeb));
-  background: -webkit-linear-gradient(top, #ffffff, #ebebeb);
   background: linear-gradient(to bottom, #ffffff, #ebebeb);
   background-color: white;
 }
 /* line 170, ../scss/partials/_buttons.scss */
 .btn-3d:active {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #bbbbbb, 0px 3px 3px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #bbbbbb, 0px 3px 3px rgba(0, 0, 0, 0.2);
-  background: -webkit-gradient(linear, left top, left bottom, from(#e9e9e9), to(#f3f3f3));
-  background: -webkit-linear-gradient(top, #e9e9e9, #f3f3f3);
   background: linear-gradient(to bottom, #e9e9e9, #f3f3f3);
   background-color: #eeeeee;
   color: #bbbbbb;
@@ -1147,7 +1001,6 @@ button.btn:disabled {
 }
 /* line 178, ../scss/partials/_buttons.scss */
 .btn-3d.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 192, ../scss/partials/_buttons.scss */
@@ -1161,7 +1014,6 @@ button.btn:disabled {
 /* line 192, ../scss/partials/_buttons.scss */
 .btn-circle {
   border-radius: 240px;
-  -webkit-box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.2);
   width: 120px;
   line-height: 120px;
@@ -1172,8 +1024,6 @@ button.btn:disabled {
 }
 /* line 226, ../scss/partials/_buttons.scss */
 .btn-primary {
-  background: -webkit-gradient(linear, left top, left bottom, from(#00b5e5), to(#008db2));
-  background: -webkit-linear-gradient(top, #00b5e5, #008db2);
   background: linear-gradient(to bottom, #00b5e5, #008db2);
   background-color: #00a1cb;
   border-color: #007998;
@@ -1183,8 +1033,6 @@ button.btn:disabled {
 /* line 233, ../scss/partials/_buttons.scss */
 .btn-primary:hover {
   background-color: #00a1cb;
-  background: -webkit-gradient(linear, left top, left bottom, from(#00c9fe), to(#008db2));
-  background: -webkit-linear-gradient(top, #00c9fe, #008db2);
   background: linear-gradient(to bottom, #00c9fe, #008db2);
 }
 /* line 237, ../scss/partials/_buttons.scss */
@@ -1194,14 +1042,9 @@ button.btn:disabled {
 }
 /* line 250, ../scss/partials/_buttons.scss */
 .btn-3d-primary {
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #007998, 0px 8px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #007998, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#00a9d5), to(#0099c1));
-  background: -webkit-linear-gradient(top, #00a9d5, #0099c1);
   background: linear-gradient(to bottom, #00a9d5, #0099c1);
   background-color: #00a1cb;
   color: white;
@@ -1212,19 +1055,13 @@ button.btn:disabled {
 }
 /* line 262, ../scss/partials/_buttons.scss */
 .btn-3d-primary:hover {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #00708e, 0px 8px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #00708e, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#00c1f4), to(#009dc6));
-  background: -webkit-linear-gradient(top, #00c1f4, #009dc6);
   background: linear-gradient(to bottom, #00c1f4, #009dc6);
   background-color: #00c9fe;
 }
 /* line 267, ../scss/partials/_buttons.scss */
 .btn-3d-primary:active {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #007998, 0px 3px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #007998, 0px 3px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#0099c1), to(#00a9d5));
-  background: -webkit-linear-gradient(top, #0099c1, #00a9d5);
   background: linear-gradient(to bottom, #0099c1, #00a9d5);
   background-color: #1495b7;
   color: #005065;
@@ -1233,16 +1070,12 @@ button.btn:disabled {
 }
 /* line 275, ../scss/partials/_buttons.scss */
 .btn-3d-primary.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 289, ../scss/partials/_buttons.scss */
 .btn-border-primary {
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   color: #00a1cb;
   border: 2px solid #00a1cb;
@@ -1257,7 +1090,6 @@ button.btn:disabled {
 }
 /* line 303, ../scss/partials/_buttons.scss */
 .btn-border-primary:active {
-  -webkit-transition-duration: 0s;
   transition-duration: 0s;
   background: none;
   color: #007998;
@@ -1265,16 +1097,12 @@ button.btn:disabled {
 }
 /* line 309, ../scss/partials/_buttons.scss */
 .btn-border-primary.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 321, ../scss/partials/_buttons.scss */
 .btn-flat-primary {
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition-property: background;
   transition-property: background;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   background: #00a1cb;
   color: white;
@@ -1287,20 +1115,16 @@ button.btn:disabled {
 }
 /* line 333, ../scss/partials/_buttons.scss */
 .btn-flat-primary:active {
-  -webkit-transition-duration: 0s;
   transition-duration: 0s;
   background: #1495b7;
   color: #00647f;
 }
 /* line 338, ../scss/partials/_buttons.scss */
 .btn-flat-primary.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 226, ../scss/partials/_buttons.scss */
 .btn-secondary {
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f2f2f2));
-  background: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
   background: linear-gradient(to bottom, #ffffff, #f2f2f2);
   background-color: white;
   border-color: #e6e6e6;
@@ -1310,8 +1134,6 @@ button.btn:disabled {
 /* line 233, ../scss/partials/_buttons.scss */
 .btn-secondary:hover {
   background-color: white;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#f2f2f2));
-  background: -webkit-linear-gradient(top, #ffffff, #f2f2f2);
   background: linear-gradient(to bottom, #ffffff, #f2f2f2);
 }
 /* line 237, ../scss/partials/_buttons.scss */
@@ -1321,14 +1143,9 @@ button.btn:disabled {
 }
 /* line 250, ../scss/partials/_buttons.scss */
 .btn-3d-secondary {
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #e6e6e6, 0px 8px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #e6e6e6, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#fafafa));
-  background: -webkit-linear-gradient(top, #ffffff, #fafafa);
   background: linear-gradient(to bottom, #ffffff, #fafafa);
   background-color: white;
   color: white;
@@ -1339,19 +1156,13 @@ button.btn:disabled {
 }
 /* line 262, ../scss/partials/_buttons.scss */
 .btn-3d-secondary:hover {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #e0e0e0, 0px 8px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #e0e0e0, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#ffffff), to(#fcfcfc));
-  background: -webkit-linear-gradient(top, #ffffff, #fcfcfc);
   background: linear-gradient(to bottom, #ffffff, #fcfcfc);
   background-color: white;
 }
 /* line 267, ../scss/partials/_buttons.scss */
 .btn-3d-secondary:active {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #e6e6e6, 0px 3px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #e6e6e6, 0px 3px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#fafafa), to(#ffffff));
-  background: -webkit-linear-gradient(top, #fafafa, #ffffff);
   background: linear-gradient(to bottom, #fafafa, #ffffff);
   background-color: white;
   color: #cccccc;
@@ -1360,16 +1171,12 @@ button.btn:disabled {
 }
 /* line 275, ../scss/partials/_buttons.scss */
 .btn-3d-secondary.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 289, ../scss/partials/_buttons.scss */
 .btn-border-secondary {
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   color: white;
   border: 2px solid white;
@@ -1384,7 +1191,6 @@ button.btn:disabled {
 }
 /* line 303, ../scss/partials/_buttons.scss */
 .btn-border-secondary:active {
-  -webkit-transition-duration: 0s;
   transition-duration: 0s;
   background: none;
   color: #e6e6e6;
@@ -1392,16 +1198,12 @@ button.btn:disabled {
 }
 /* line 309, ../scss/partials/_buttons.scss */
 .btn-border-secondary.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 321, ../scss/partials/_buttons.scss */
 .btn-flat-secondary {
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition-property: background;
   transition-property: background;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   background: white;
   color: white;
@@ -1414,20 +1216,16 @@ button.btn:disabled {
 }
 /* line 333, ../scss/partials/_buttons.scss */
 .btn-flat-secondary:active {
-  -webkit-transition-duration: 0s;
   transition-duration: 0s;
   background: white;
   color: #d9d9d9;
 }
 /* line 338, ../scss/partials/_buttons.scss */
 .btn-flat-secondary.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 226, ../scss/partials/_buttons.scss */
 .btn-action {
-  background: -webkit-gradient(linear, left top, left bottom, from(#8fcf00), to(#6b9c00));
-  background: -webkit-linear-gradient(top, #8fcf00, #6b9c00);
   background: linear-gradient(to bottom, #8fcf00, #6b9c00);
   background-color: #7db500;
   border-color: #5a8200;
@@ -1437,8 +1235,6 @@ button.btn:disabled {
 /* line 233, ../scss/partials/_buttons.scss */
 .btn-action:hover {
   background-color: #7db500;
-  background: -webkit-gradient(linear, left top, left bottom, from(#a0e800), to(#6b9c00));
-  background: -webkit-linear-gradient(top, #a0e800, #6b9c00);
   background: linear-gradient(to bottom, #a0e800, #6b9c00);
 }
 /* line 237, ../scss/partials/_buttons.scss */
@@ -1448,14 +1244,9 @@ button.btn:disabled {
 }
 /* line 250, ../scss/partials/_buttons.scss */
 .btn-3d-action {
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #5a8200, 0px 8px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #5a8200, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#84bf00), to(#76ab00));
-  background: -webkit-linear-gradient(top, #84bf00, #76ab00);
   background: linear-gradient(to bottom, #84bf00, #76ab00);
   background-color: #7db500;
   color: white;
@@ -1466,19 +1257,13 @@ button.btn:disabled {
 }
 /* line 262, ../scss/partials/_buttons.scss */
 .btn-3d-action:hover {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #537800, 0px 8px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #537800, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#99de00), to(#79b000));
-  background: -webkit-linear-gradient(top, #99de00, #79b000);
   background: linear-gradient(to bottom, #99de00, #79b000);
   background-color: #a0e800;
 }
 /* line 267, ../scss/partials/_buttons.scss */
 .btn-3d-action:active {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #5a8200, 0px 3px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #5a8200, 0px 3px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#76ab00), to(#84bf00));
-  background: -webkit-linear-gradient(top, #76ab00, #84bf00);
   background: linear-gradient(to bottom, #76ab00, #84bf00);
   background-color: #76a312;
   color: #374f00;
@@ -1487,16 +1272,12 @@ button.btn:disabled {
 }
 /* line 275, ../scss/partials/_buttons.scss */
 .btn-3d-action.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 289, ../scss/partials/_buttons.scss */
 .btn-border-action {
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   color: #7db500;
   border: 2px solid #7db500;
@@ -1511,7 +1292,6 @@ button.btn:disabled {
 }
 /* line 303, ../scss/partials/_buttons.scss */
 .btn-border-action:active {
-  -webkit-transition-duration: 0s;
   transition-duration: 0s;
   background: none;
   color: #5a8200;
@@ -1519,16 +1299,12 @@ button.btn:disabled {
 }
 /* line 309, ../scss/partials/_buttons.scss */
 .btn-border-action.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 321, ../scss/partials/_buttons.scss */
 .btn-flat-action {
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition-property: background;
   transition-property: background;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   background: #7db500;
   color: white;
@@ -1541,20 +1317,16 @@ button.btn:disabled {
 }
 /* line 333, ../scss/partials/_buttons.scss */
 .btn-flat-action:active {
-  -webkit-transition-duration: 0s;
   transition-duration: 0s;
   background: #76a312;
   color: #486900;
 }
 /* line 338, ../scss/partials/_buttons.scss */
 .btn-flat-action.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 226, ../scss/partials/_buttons.scss */
 .btn-highlight {
-  background: -webkit-gradient(linear, left top, left bottom, from(#fa9915), to(#d87e04));
-  background: -webkit-linear-gradient(top, #fa9915, #d87e04);
   background: linear-gradient(to bottom, #fa9915, #d87e04);
   background-color: #f18d05;
   border-color: #bf7004;
@@ -1564,8 +1336,6 @@ button.btn:disabled {
 /* line 233, ../scss/partials/_buttons.scss */
 .btn-highlight:hover {
   background-color: #f18d05;
-  background: -webkit-gradient(linear, left top, left bottom, from(#fba42e), to(#d87e04));
-  background: -webkit-linear-gradient(top, #fba42e, #d87e04);
   background: linear-gradient(to bottom, #fba42e, #d87e04);
 }
 /* line 237, ../scss/partials/_buttons.scss */
@@ -1575,14 +1345,9 @@ button.btn:disabled {
 }
 /* line 250, ../scss/partials/_buttons.scss */
 .btn-3d-highlight {
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #bf7004, 0px 8px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #bf7004, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#fa9306), to(#e78705));
-  background: -webkit-linear-gradient(top, #fa9306, #e78705);
   background: linear-gradient(to bottom, #fa9306, #e78705);
   background-color: #f18d05;
   color: white;
@@ -1593,19 +1358,13 @@ button.btn:disabled {
 }
 /* line 262, ../scss/partials/_buttons.scss */
 .btn-3d-highlight:hover {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #b56a04, 0px 8px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #b56a04, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#faa024), to(#ec8a05));
-  background: -webkit-linear-gradient(top, #faa024, #ec8a05);
   background: linear-gradient(to bottom, #faa024, #ec8a05);
   background-color: #fba42e;
 }
 /* line 267, ../scss/partials/_buttons.scss */
 .btn-3d-highlight:active {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #bf7004, 0px 3px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #bf7004, 0px 3px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#e78705), to(#fa9306));
-  background: -webkit-linear-gradient(top, #e78705, #fa9306);
   background: linear-gradient(to bottom, #e78705, #fa9306);
   background-color: #d8891e;
   color: #8d5303;
@@ -1614,16 +1373,12 @@ button.btn:disabled {
 }
 /* line 275, ../scss/partials/_buttons.scss */
 .btn-3d-highlight.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 289, ../scss/partials/_buttons.scss */
 .btn-border-highlight {
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   color: #f18d05;
   border: 2px solid #f18d05;
@@ -1638,7 +1393,6 @@ button.btn:disabled {
 }
 /* line 303, ../scss/partials/_buttons.scss */
 .btn-border-highlight:active {
-  -webkit-transition-duration: 0s;
   transition-duration: 0s;
   background: none;
   color: #bf7004;
@@ -1646,16 +1400,12 @@ button.btn:disabled {
 }
 /* line 309, ../scss/partials/_buttons.scss */
 .btn-border-highlight.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 321, ../scss/partials/_buttons.scss */
 .btn-flat-highlight {
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition-property: background;
   transition-property: background;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   background: #f18d05;
   color: white;
@@ -1668,20 +1418,16 @@ button.btn:disabled {
 }
 /* line 333, ../scss/partials/_buttons.scss */
 .btn-flat-highlight:active {
-  -webkit-transition-duration: 0s;
   transition-duration: 0s;
   background: #d8891e;
   color: #a66103;
 }
 /* line 338, ../scss/partials/_buttons.scss */
 .btn-flat-highlight.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 226, ../scss/partials/_buttons.scss */
 .btn-caution {
-  background: -webkit-gradient(linear, left top, left bottom, from(#e8543f), to(#d9331a));
-  background: -webkit-linear-gradient(top, #e8543f, #d9331a);
   background: linear-gradient(to bottom, #e8543f, #d9331a);
   background-color: #e54028;
   border-color: #c22d18;
@@ -1691,8 +1437,6 @@ button.btn:disabled {
 /* line 233, ../scss/partials/_buttons.scss */
 .btn-caution:hover {
   background-color: #e54028;
-  background: -webkit-gradient(linear, left top, left bottom, from(#eb6855), to(#d9331a));
-  background: -webkit-linear-gradient(top, #eb6855, #d9331a);
   background: linear-gradient(to bottom, #eb6855, #d9331a);
 }
 /* line 237, ../scss/partials/_buttons.scss */
@@ -1702,14 +1446,9 @@ button.btn:disabled {
 }
 /* line 250, ../scss/partials/_buttons.scss */
 .btn-3d-caution {
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #c22d18, 0px 8px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #c22d18, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#e64831), to(#e4381f));
-  background: -webkit-linear-gradient(top, #e64831, #e4381f);
   background: linear-gradient(to bottom, #e64831, #e4381f);
   background-color: #e54028;
   color: white;
@@ -1720,19 +1459,13 @@ button.btn:disabled {
 }
 /* line 262, ../scss/partials/_buttons.scss */
 .btn-3d-caution:hover {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #b92b16, 0px 8px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #b92b16, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#e9604c), to(#e43c23));
-  background: -webkit-linear-gradient(top, #e9604c, #e43c23);
   background: linear-gradient(to bottom, #e9604c, #e43c23);
   background-color: #eb6855;
 }
 /* line 267, ../scss/partials/_buttons.scss */
 .btn-3d-caution:active {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #c22d18, 0px 3px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #c22d18, 0px 3px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#e4381f), to(#e64831));
-  background: -webkit-linear-gradient(top, #e4381f, #e64831);
   background: linear-gradient(to bottom, #e4381f, #e64831);
   background-color: #cd5240;
   color: #952312;
@@ -1741,16 +1474,12 @@ button.btn:disabled {
 }
 /* line 275, ../scss/partials/_buttons.scss */
 .btn-3d-caution.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 289, ../scss/partials/_buttons.scss */
 .btn-border-caution {
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   color: #e54028;
   border: 2px solid #e54028;
@@ -1765,7 +1494,6 @@ button.btn:disabled {
 }
 /* line 303, ../scss/partials/_buttons.scss */
 .btn-border-caution:active {
-  -webkit-transition-duration: 0s;
   transition-duration: 0s;
   background: none;
   color: #c22d18;
@@ -1773,16 +1501,12 @@ button.btn:disabled {
 }
 /* line 309, ../scss/partials/_buttons.scss */
 .btn-border-caution.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 321, ../scss/partials/_buttons.scss */
 .btn-flat-caution {
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition-property: background;
   transition-property: background;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   background: #e54028;
   color: white;
@@ -1795,20 +1519,16 @@ button.btn:disabled {
 }
 /* line 333, ../scss/partials/_buttons.scss */
 .btn-flat-caution:active {
-  -webkit-transition-duration: 0s;
   transition-duration: 0s;
   background: #cd5240;
   color: #ac2815;
 }
 /* line 338, ../scss/partials/_buttons.scss */
 .btn-flat-caution.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 226, ../scss/partials/_buttons.scss */
 .btn-royal {
-  background: -webkit-gradient(linear, left top, left bottom, from(#99389f), to(#752a79));
-  background: -webkit-linear-gradient(top, #99389f, #752a79);
   background: linear-gradient(to bottom, #99389f, #752a79);
   background-color: #87318c;
   border-color: #632466;
@@ -1818,8 +1538,6 @@ button.btn:disabled {
 /* line 233, ../scss/partials/_buttons.scss */
 .btn-royal:hover {
   background-color: #87318c;
-  background: -webkit-gradient(linear, left top, left bottom, from(#ab3eb2), to(#752a79));
-  background: -webkit-linear-gradient(top, #ab3eb2, #752a79);
   background: linear-gradient(to bottom, #ab3eb2, #752a79);
 }
 /* line 237, ../scss/partials/_buttons.scss */
@@ -1829,14 +1547,9 @@ button.btn:disabled {
 }
 /* line 250, ../scss/partials/_buttons.scss */
 .btn-3d-royal {
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #632466, 0px 8px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #632466, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#8e3494), to(#802e84));
-  background: -webkit-linear-gradient(top, #8e3494, #802e84);
   background: linear-gradient(to bottom, #8e3494, #802e84);
   background-color: #87318c;
   color: white;
@@ -1847,19 +1560,13 @@ button.btn:disabled {
 }
 /* line 262, ../scss/partials/_buttons.scss */
 .btn-3d-royal:hover {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #5b215f, 0px 8px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #5b215f, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#a43caa), to(#833088));
-  background: -webkit-linear-gradient(top, #a43caa, #833088);
   background: linear-gradient(to bottom, #a43caa, #833088);
   background-color: #ab3eb2;
 }
 /* line 267, ../scss/partials/_buttons.scss */
 .btn-3d-royal:active {
-  -webkit-box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #632466, 0px 3px 3px rgba(0, 0, 0, 0.3);
   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #632466, 0px 3px 3px rgba(0, 0, 0, 0.3);
-  background: -webkit-gradient(linear, left top, left bottom, from(#802e84), to(#8e3494));
-  background: -webkit-linear-gradient(top, #802e84, #8e3494);
   background: linear-gradient(to bottom, #802e84, #8e3494);
   background-color: #764479;
   color: #3e1740;
@@ -1868,16 +1575,12 @@ button.btn:disabled {
 }
 /* line 275, ../scss/partials/_buttons.scss */
 .btn-3d-royal.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 289, ../scss/partials/_buttons.scss */
 .btn-border-royal {
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition-property: all;
   transition-property: all;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   color: #87318c;
   border: 2px solid #87318c;
@@ -1892,7 +1595,6 @@ button.btn:disabled {
 }
 /* line 303, ../scss/partials/_buttons.scss */
 .btn-border-royal:active {
-  -webkit-transition-duration: 0s;
   transition-duration: 0s;
   background: none;
   color: #632466;
@@ -1900,16 +1602,12 @@ button.btn:disabled {
 }
 /* line 309, ../scss/partials/_buttons.scss */
 .btn-border-royal.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 321, ../scss/partials/_buttons.scss */
 .btn-flat-royal {
-  -webkit-box-shadow: none;
   box-shadow: none;
-  -webkit-transition-property: background;
   transition-property: background;
-  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   background: #87318c;
   color: white;
@@ -1922,14 +1620,12 @@ button.btn:disabled {
 }
 /* line 333, ../scss/partials/_buttons.scss */
 .btn-flat-royal:active {
-  -webkit-transition-duration: 0s;
   transition-duration: 0s;
   background: #764479;
   color: #501d53;
 }
 /* line 338, ../scss/partials/_buttons.scss */
 .btn-flat-royal.disabled {
-  -webkit-box-shadow: none;
   box-shadow: none;
 }
 /* line 351, ../scss/partials/_buttons.scss */
@@ -2014,20 +1710,15 @@ button.btn-tiny {
 }
 /* line 441, ../scss/partials/_buttons.scss */
 .btn.glow {
-  -webkit-animation-duration: 3s;
   animation-duration: 3s;
   -khtml-animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
   animation-iteration-count: infinite;
   -khtml-animation-name: glowing;
-  -webkit-animation-name: glowing;
   animation-name: glowing;
 }
 /* line 444, ../scss/partials/_buttons.scss */
 .btn.glow:active {
-  -webkit-animation-name: none;
   animation-name: none;
-  -webkit-box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px #ffffff;
   box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px #ffffff;
 }
 /* line 456, ../scss/partials/_buttons.scss */
@@ -2053,7 +1744,6 @@ button.btn-tiny {
 }
 /* line 479, ../scss/partials/_buttons.scss */
 .btn-dropdown ul {
-  -webkit-box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
   box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
   border-radius: 3px;
   display: none;
@@ -2085,7 +1775,6 @@ button.btn-tiny {
 }
 /* line 507, ../scss/partials/_buttons.scss */
 .btn-dropdown ul .btn-dropdown-divider {
-  -webkit-box-shadow: inset 0px 1px 0px white;
   box-shadow: inset 0px 1px 0px white;
   border-top: 1px solid #e4e4e4;
 }
@@ -2114,30 +1803,16 @@ button.btn-tiny {
   background: #f0f0f0;
   position: relative;
   padding: 10px 20px;
-  -webkit-box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   border-bottom: 1px solid #bbbbbb;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1;
 }
 .body-container {
   padding: 6px;
-  -webkit-box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.3) inset !important;
   box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.3) inset !important;
   position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  -webkit-box-ordinal-group: 3;
-  -webkit-order: 2;
-  -ms-flex-order: 2;
   order: 2;
 }
 .body-container p {
@@ -2146,39 +1821,22 @@ button.btn-tiny {
 .body-footer {
   border-top: 1px solid #bbbbbb !important;
   background: #f0f0f0;
-  -webkit-box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
-  -webkit-box-ordinal-group: 4;
-  -webkit-order: 3;
-  -ms-flex-order: 3;
   order: 3;
   position: relative;
   padding: 10px 20px;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
   flex: 0 1 auto;
 }
 .parentInherit {
   display: inherit !important;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-  -webkit-flex-direction: inherit !important;
-  -ms-flex-direction: inherit !important;
   flex-direction: inherit !important;
-  -webkit-box-flex: 1 ;
-  -webkit-flex: 1 1 auto ;
-  -ms-flex: 1 1 auto ;
   flex: 1 1 auto ;
-  min-width: -webkit-min-content;
-  min-width: -moz-min-content;
   min-width: min-content;
 }
 .well {
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
   border-radius: 4px;
-  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05) inset;
   margin-bottom: 20px;
   min-height: 20px;
@@ -2209,43 +1867,20 @@ button.btn-tiny {
   padding: 0px;
   line-height: 0px;
   background-color: #f0f0f0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: vertical ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: column ;
-  -ms-flex-direction: column ;
   flex-direction: column ;
 }
 .wid-toolbar > .toolbar-band {
-  -webkit-box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   border-bottom: 1px solid #bbb;
   line-height: 2;
   background-image: -webkit-linear-gradient(left, color-stop(#fafafa 0%), color-stop(#ececec 100%));
-  background-image: -webkit-gradient(linear, left top, right top, from(#fafafa), to(#ececec));
-  background-image: -webkit-linear-gradient(left, #fafafa 0%, #ececec 100%);
   background-image: linear-gradient(to right, #fafafa 0%, #ececec 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffececec', GradientType=1);
   height: 50px;
   padding: 2px 10px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
 }
 .wid-toolbar > .toolbar-band:last-child {
@@ -2271,14 +1906,10 @@ button.btn-tiny {
   border-radius: 0;
   border: 1px solid transparent ;
   background: transparent;
-  -webkit-box-shadow: none;
   box-shadow: none;
   cursor: pointer;
   display: flex !important;
   height: auto;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
   align-items: center;
   padding: 0px 10px;
   margin: 0px 1px;
@@ -2290,13 +1921,11 @@ button.btn-tiny {
   color: silver;
 }
 .toolbar-band > .btn.disabled:hover {
-  -webkit-box-shadow: none;
   box-shadow: none;
   border: none !important;
 }
 .toolbar-band > .btn:not(.disabled):hover {
   border: 1px solid silver;
-  -webkit-box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   background: none;
   color: #222;
@@ -2308,26 +1937,15 @@ button.btn-tiny {
   font-size: 20px;
 }
 .toolbar-band.band-lg > .btn {
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-  -ms-flex-pack: center;
   justify-content: center;
 }
 .toolbar-band.band-lg > .btn i {
   font-size: 40px;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
   flex: 1 1 100%;
 }
 .toolbar-band > .btn:not(.disabled):active,
 .toolbar-band > .btn.active {
-  -webkit-box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.19) inset;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.19) inset;
   border-top: 1px solid #9c9c9c;
   border-left: 1px solid #9c9c9c;
@@ -2354,7 +1972,6 @@ button.btn-tiny {
   background-color: #ffffff;
   overflow: hidden;
   padding: 10px;
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
 .error .wid-panel-box {
@@ -2369,56 +1986,28 @@ button.btn-tiny {
   overflow: overlay;
   overflow: -moz-hidden-unscrollable;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: vertical ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: column ;
-  -ms-flex-direction: column ;
   flex-direction: column ;
   border-top: 1px solid #bbbbbb;
   border-left: 1px solid #bbbbbb;
   border-right: 1px solid #bbbbbb;
   border-bottom: 1px solid #bbbbbb;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   /*  child block */
 }
 .wid-panel > .panel-header {
   background-color: #dedede;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#dedede));
-  background-image: -webkit-linear-gradient(top, #f2f2f2, #dedede);
   background-image: linear-gradient(to bottom, #f2f2f2, #dedede);
   border-bottom: 1px solid #bbbbbb;
   height: 40px;
   padding: 0px 10px;
   overflow: hidden;
   position: relative;
-  -webkit-box-shadow: 0 1px 0 #FFFFFF inset;
   box-shadow: 0 1px 0 #FFFFFF inset;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
 }
 .wid-panel > .panel-header > .header-caption {
@@ -2428,38 +2017,15 @@ button.btn-tiny {
   text-indent: 10px;
   color: #333;
   text-shadow: 2px 2px 1px #C0C0C0;
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
 }
 .wid-panel > .panel-header > .header-icon {
-  -webkit-box-ordinal-group: 1;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
   order: 0;
   padding: 0 5px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
 }
 .wid-panel > .panel-header > .header-icon i {
@@ -2467,21 +2033,8 @@ button.btn-tiny {
   line-height: 2;
 }
 .wid-panel > .panel-header > .header-helpers {
-  -webkit-box-ordinal-group: 4;
-  -webkit-order: 3;
-  -ms-flex-order: 3;
   order: 3;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
 }
 .wid-panel > .panel-header > .header-helpers > * {
@@ -2492,13 +2045,10 @@ button.btn-tiny {
   width: 25px;
   height: 25px;
   overflow: hidden;
-  -webkit-box-shadow: 0 0 1px #707070 inset;
   box-shadow: 0 0 1px #707070 inset;
   background-color: white;
   margin: 0px 2px;
   text-align: center;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
   border-radius: 3px 3px 3px 3px;
   cursor: pointer;
@@ -2511,9 +2061,6 @@ button.btn-tiny {
 .wid-panel > form > .panel-body {
   background-color: #ffffff;
   position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 /************************************
@@ -2525,22 +2072,10 @@ button.btn-tiny {
   overflow: overlay;
   overflow: -moz-hidden-unscrollable;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: vertical ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: column ;
-  -ms-flex-direction: column ;
   flex-direction: column ;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   background: rgba(134, 147, 160, 0.11);
   border-top: 1px solid #bbbbbb;
@@ -2551,30 +2086,14 @@ button.btn-tiny {
 }
 .wid-panel-border > .panel-header {
   background-color: #dedede;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#dedede));
-  background-image: -webkit-linear-gradient(top, #f2f2f2, #dedede);
   background-image: linear-gradient(to bottom, #f2f2f2, #dedede);
   height: 40px;
   padding: 0px 10px;
   overflow: hidden;
   position: relative;
-  -webkit-box-shadow: 0 1px 0 #FFFFFF inset;
   box-shadow: 0 1px 0 #FFFFFF inset;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
   border-bottom: 1px solid #bbbbbb;
 }
@@ -2585,38 +2104,15 @@ button.btn-tiny {
   text-indent: 10px;
   color: #333;
   text-shadow: 2px 2px 1px #C0C0C0;
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
 }
 .wid-panel-border > .panel-header > .header-icon {
-  -webkit-box-ordinal-group: 1;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
   order: 0;
   padding: 0 5px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
 }
 .wid-panel-border > .panel-header > .header-icon i {
@@ -2624,21 +2120,8 @@ button.btn-tiny {
   line-height: 2;
 }
 .wid-panel-border > .panel-header > .header-helpers {
-  -webkit-box-ordinal-group: 4;
-  -webkit-order: 3;
-  -ms-flex-order: 3;
   order: 3;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
 }
 .wid-panel-border > .panel-header > .header-helpers > * {
@@ -2649,13 +2132,10 @@ button.btn-tiny {
   width: 25px;
   height: 25px;
   overflow: hidden;
-  -webkit-box-shadow: 0 0 1px #707070 inset;
   box-shadow: 0 0 1px #707070 inset;
   background-color: white;
   margin: 0px 2px;
   text-align: center;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
   border-radius: 3px 3px 3px 3px;
   cursor: pointer;
@@ -2668,16 +2148,12 @@ button.btn-tiny {
 .wid-panel-border > form > .panel-body {
   background-color: #ffffff;
   position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   margin: 6px;
   border-top: 1px solid #bbbbbb;
   border-left: 1px solid #bbbbbb;
   border-right: 1px solid #bbbbbb;
   border-bottom: 1px solid #bbbbbb;
-  -webkit-box-shadow: 0 0 1px #fff;
   box-shadow: 0 0 1px #fff;
 }
 /************************************
@@ -2689,22 +2165,10 @@ button.btn-tiny {
   overflow: overlay;
   overflow: -moz-hidden-unscrollable;
   position: relative;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: vertical ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: column ;
-  -ms-flex-direction: column ;
   flex-direction: column ;
   background-color: #ffffff;
-  -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
-  -webkit-background-clip: padding-box;
   background-clip: padding-box;
   border-top: 1px solid #bbbbbb;
   border-left: 1px solid #bbbbbb;
@@ -2715,31 +2179,15 @@ button.btn-tiny {
 }
 .wid-panel-framed > .panel-header {
   background-color: #dedede;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#dedede));
-  background-image: -webkit-linear-gradient(top, #f2f2f2, #dedede);
   background-image: linear-gradient(to bottom, #f2f2f2, #dedede);
   border-bottom: 1px solid #bbbbbb;
   height: 40px;
   padding: 0px 10px;
   overflow: hidden;
   position: relative;
-  -webkit-box-shadow: 0 1px 0 #FFFFFF inset;
   box-shadow: 0 1px 0 #FFFFFF inset;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
   flex: 0 1 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
   border: none;
 }
@@ -2750,38 +2198,15 @@ button.btn-tiny {
   text-indent: 10px;
   color: #333;
   text-shadow: 2px 2px 1px #C0C0C0;
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
 }
 .wid-panel-framed > .panel-header > .header-icon {
-  -webkit-box-ordinal-group: 1;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
   order: 0;
   padding: 0 5px;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
 }
 .wid-panel-framed > .panel-header > .header-icon i {
@@ -2789,21 +2214,8 @@ button.btn-tiny {
   line-height: 2;
 }
 .wid-panel-framed > .panel-header > .header-helpers {
-  -webkit-box-ordinal-group: 4;
-  -webkit-order: 3;
-  -ms-flex-order: 3;
   order: 3;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
 }
 .wid-panel-framed > .panel-header > .header-helpers > * {
@@ -2814,13 +2226,10 @@ button.btn-tiny {
   width: 25px;
   height: 25px;
   overflow: hidden;
-  -webkit-box-shadow: 0 0 1px #707070 inset;
   box-shadow: 0 0 1px #707070 inset;
   background-color: white;
   margin: 0px 2px;
   text-align: center;
-  -webkit-align-self: center;
-  -ms-flex-item-align: center;
   align-self: center;
   border-radius: 3px 3px 3px 3px;
   cursor: pointer;
@@ -2833,9 +2242,6 @@ button.btn-tiny {
 .wid-panel-framed > form > .panel-body {
   background-color: #ffffff;
   position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
   border-top: 1px solid #bbbbbb;
   border-left: 1px solid #bbbbbb;
@@ -2849,17 +2255,8 @@ button.btn-tiny {
 }
 .wid-tab {
   position: relative;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
   border-top: 1px solid #c9c9c9;
   border-left: 1px solid #c9c9c9;
   border-right: 1px solid #c9c9c9;
@@ -2870,19 +2267,8 @@ button.btn-tiny {
   position: relative;
   background: #f5f5f5;
   padding: 20px;
-  -webkit-box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: wrap;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
 }
 .wid-tab > .tab-nav > li {
@@ -2931,20 +2317,11 @@ button.btn-tiny {
 }
 .wid-tab > .tab-container {
   padding: 6px;
-  -webkit-background-clip: content-box-box;
   background-clip: content-box-box;
   position: relative;
   background-color: #e5e6ea;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 0;
-  -ms-flex: 1 1 0;
   flex: 1 1 0;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-wrap: nowrap;
-  -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
 }
 .wid-tab > .tab-container > .tab-body {
@@ -2966,18 +2343,11 @@ button.btn-tiny {
  */
 }
 .wid-tab.typ-top {
-  -webkit-box-orient: vertical ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: column ;
-  -ms-flex-direction: column ;
   flex-direction: column ;
 }
 .wid-tab.typ-top > .tab-nav {
   padding-bottom: 0px;
   padding-top: 5px;
-  -webkit-box-ordinal-group: 1;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
   order: 0;
   border-bottom: 1px solid #c9c9c9;
 }
@@ -2999,13 +2369,7 @@ button.btn-tiny {
   border-bottom: none;
 }
 .wid-tab.typ-top .tab-container {
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 .wid-tab.typ-top .tab-body.active {
@@ -3014,18 +2378,11 @@ button.btn-tiny {
   overflow: auto;
 }
 .wid-tab.typ-bottom {
-  -webkit-box-orient: vertical ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: column ;
-  -ms-flex-direction: column ;
   flex-direction: column ;
 }
 .wid-tab.typ-bottom > .tab-nav {
   padding-bottom: 5px;
   padding-top: 0px;
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1;
   border-top: 1px solid #c9c9c9;
 }
@@ -3047,13 +2404,7 @@ button.btn-tiny {
   border-top: none;
 }
 .wid-tab.typ-bottom .tab-container {
-  -webkit-box-ordinal-group: 1;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
   order: 0;
-  -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
   flex: 1 1 auto;
 }
 .wid-tab.typ-bottom .tab-body.active {
@@ -3062,24 +2413,13 @@ button.btn-tiny {
   overflow: auto;
 }
 .wid-tab.typ-right {
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
 }
 .wid-tab.typ-right > .tab-nav {
   padding-left: 0px;
   padding-right: 10px;
-  -webkit-box-ordinal-group: 1;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
   order: 0;
   border-left: 1px solid #c9c9c9;
-  -webkit-box-orient: vertical ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: column ;
-  -ms-flex-direction: column ;
   flex-direction: column ;
 }
 .wid-tab.typ-right li {
@@ -3100,40 +2440,21 @@ button.btn-tiny {
   border-left: none;
 }
 .wid-tab.typ-right .tab-container {
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1;
-  -webkit-box-orient: vertical ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: column ;
-  -ms-flex-direction: column ;
   flex-direction: column ;
 }
 .wid-tab.typ-right .tab-body.active {
   display: block;
-  height: 100%;
-  overflow: auto;
+  flex: 1 1 0;
 }
 .wid-tab.typ-left {
-  -webkit-box-orient: horizontal ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: row ;
-  -ms-flex-direction: row ;
   flex-direction: row ;
 }
 .wid-tab.typ-left > .tab-nav {
   padding-left: 5px;
   padding-right: 0px;
-  -webkit-box-ordinal-group: 2;
-  -webkit-order: 1;
-  -ms-flex-order: 1;
   order: 1;
   border-right: 1px solid #c9c9c9;
-  -webkit-box-orient: vertical ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: column ;
-  -ms-flex-direction: column ;
   flex-direction: column ;
 }
 .wid-tab.typ-left li {
@@ -3154,18 +2475,10 @@ button.btn-tiny {
   border-right: 0px;
 }
 .wid-tab.typ-left .tab-container {
-  -webkit-box-ordinal-group: 1;
-  -webkit-order: 0;
-  -ms-flex-order: 0;
   order: 0;
-  -webkit-box-orient: vertical ;
-  -webkit-box-direction: normal ;
-  -webkit-flex-direction: column ;
-  -ms-flex-direction: column ;
   flex-direction: column ;
 }
 .wid-tab.typ-left .tab-body.active {
   display: block;
-  height: 100%;
-  overflow: auto;
+  flex: 1 1 0;
 }
