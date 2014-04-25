@@ -404,22 +404,22 @@ a {
  * toolbar varilabels
  */
 .boxShadow-sm {
-  box-shadow: 0 0 3px -1px #aaaaaa;
+  box-shadow: 0 0 3px -1px #aaaaaa !important;
 }
 .boxShadow {
-  box-shadow: 0 0 6px -1px #aaaaaa;
+  box-shadow: 0 0 6px -1px #aaaaaa !important;
 }
 .boxShadow-lg {
-  box-shadow: 0 0 9px -1px #aaaaaa;
+  box-shadow: 0 0 9px -1px #aaaaaa !important;
 }
 .brCorner {
-  border-radius: 4px 4px 4px 4px;
+  border-radius: 4px 4px 4px 4px !important;
 }
 .brCorner-sm {
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px !important;
 }
 .brCorner-lg {
-  border-radius: 6px 6px 6px 6px;
+  border-radius: 6px 6px 6px 6px !important;
 }
 /* Text Algins */
 .text-right {
@@ -670,15 +670,15 @@ a {
 .com-input .error-message {
   border: 2px solid #e67e22;
   background-color: rgba(255, 243, 224, 0.85);
-  font-family: WYekan;
+  font-family: WRoya;
   font-weight: normal;
-  font-size: 14px;
-  top: 7px;
-  left: 10%;
+  font-size: 16px;
+  color: #22277E;
+  left: 20px;
   text-shadow: 0 0 3px #c5c5c5;
   z-index: 5;
   padding: 5px 15px;
-  box-shadow: 1px 1px 4px 1px #999;
+  box-shadow: 2px 2px 2px 0px #C9C9C9;
   border-radius: 6px;
   text-wrap: none;
   white-space: nowrap;
@@ -686,15 +686,15 @@ a {
   position: absolute;
 }
 .com-input .error-message:before {
+  border-bottom: 13px solid #e67e22;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
   content: " ";
-  top: 0px ;
-  right: -16px;
-  position: absolute;
-  width: 0;
   height: 0;
-  border-bottom: 16px solid transparent;
-  border-top: 16px solid transparent;
-  border-left: 16px solid #e67e22;
+  left: 13px;
+  position: absolute;
+  top: -13px;
+  width: 0;
 }
 .com-input .error-message:hover {
   cursor: pointer;
@@ -772,6 +772,9 @@ a {
 .form-v .com-input select,
 .com-input.form-v select {
   width: 50%;
+}
+div.submit {
+  display: inline-block;
 }
 .alert_warning {
   padding: auto;
@@ -1804,7 +1807,6 @@ button.btn-tiny {
   position: relative;
   padding: 10px 20px;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
-  border-bottom: 1px solid #bbbbbb;
   flex: 0 1 auto;
   order: 1;
 }
@@ -1819,13 +1821,20 @@ button.btn-tiny {
   margin: 5px 0px;
 }
 .body-footer {
-  border-top: 1px solid #bbbbbb !important;
   background: #f0f0f0;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   order: 3;
   position: relative;
   padding: 10px 20px;
   flex: 0 1 auto;
+}
+.body-header + .body-container,
+.body-header + [class^="wid-"] {
+  border-top: 1px solid #bbbbbb;
+}
+.body-container + .body-footer,
+[class^="wid-"] + .body-footer {
+  border-top: 1px solid #bbbbbb !important;
 }
 .parentInherit {
   display: inherit !important;
@@ -1934,7 +1943,8 @@ button.btn-tiny {
   font-size: 30px;
 }
 .toolbar-band.band-sm > .btn i {
-  font-size: 20px;
+  font-size: 15px;
+  margin-left: 5px;
 }
 .toolbar-band.band-lg > .btn {
   flex-direction: row ;
@@ -2050,7 +2060,7 @@ button.btn-tiny {
   margin: 0px 2px;
   text-align: center;
   align-self: center;
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px !important;
   cursor: pointer;
 }
 .wid-panel > .panel-header > .header-helpers > * > i {
@@ -2137,7 +2147,7 @@ button.btn-tiny {
   margin: 0px 2px;
   text-align: center;
   align-self: center;
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px !important;
   cursor: pointer;
 }
 .wid-panel-border > .panel-header > .header-helpers > * > i {
@@ -2231,7 +2241,7 @@ button.btn-tiny {
   margin: 0px 2px;
   text-align: center;
   align-self: center;
-  border-radius: 3px 3px 3px 3px;
+  border-radius: 3px 3px 3px 3px !important;
   cursor: pointer;
 }
 .wid-panel-framed > .panel-header > .header-helpers > * > i {
