@@ -771,8 +771,10 @@ a {
   cursor: pointer;
 }
 .com-input > .input-container {
-  display: table;
-  width: 100%;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
   padding: 10px;
   border-right: 10px solid transparent;
   border-bottom: none	;
@@ -786,8 +788,8 @@ a {
   vertical-align: middle;
   font-weight: bold;
   text-shadow: 1px 1px 1px #c9c9c9;
-  min-width: 30%;
-  display: table-cell;
+  min-width: 130px;
+  display: block;
   text-wrap: none;
   white-space: nowrap;
   word-wrap: normal;
@@ -795,7 +797,7 @@ a {
 .com-input > .input-container > input,
 .com-input > .input-container > textarea,
 .com-input > .input-container > select {
-  display: table-cell;
+  display: block;
   border: 1px solid #bbb;
   border-radius: 3px;
   font-family: WAmer,Tahoma;
@@ -818,7 +820,10 @@ a {
 .com-input > .input-container > input[type='password'],
 .com-input > .input-container > textarea {
   padding: 2px 10px;
-  width: 100%;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 .com-input > .input-container select option {
   padding: 2px 10px;
@@ -843,9 +848,21 @@ a {
   top: auto;
   right: 3%;
 }
+.form-v .com-input input,
+.com-input.form-v input,
+.form-v .com-input textarea,
+.com-input.form-v textarea {
+  width: 100% ;
+}
 .form-v .com-input select,
 .com-input.form-v select {
   width: 50%;
+}
+.com-input.checkbox > .input-container {
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 div.submit {
   display: inline-block;
@@ -2175,9 +2192,6 @@ button.btn-tiny {
   -webkit-flex: 1 1 auto ;
   -ms-flex: 1 1 auto ;
   flex: 1 1 auto ;
-  min-width: -webkit-min-content;
-  min-width: -moz-min-content;
-  min-width: min-content;
 }
 .well {
   background-color: #f5f5f5;

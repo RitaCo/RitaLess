@@ -48,8 +48,6 @@
 	background: #f9f9f9;
 	border-top:1px solid #fff;
 	border-bottom: 1px solid #ddd;
-	
-	
 	position: relative;
 	.flex(1);
 
@@ -101,13 +99,14 @@
 }
 	
 .com-input > .input-container{ 
-	display: table;
-	width: 100%;
+	display: flex;
 	padding: 10px;
 	border-right: 10px solid transparent;
 	border-bottom: none	;		
 	border-top: none;
-	text-align: right;		
+	text-align: right;	
+	
+	
 	> label{
 		color: #222;
 		font-family: WMitra,Tahoma;
@@ -115,16 +114,15 @@
 		vertical-align: middle;
 		font-weight: bold;
 		text-shadow: 1px 1px 1px #c9c9c9;
-		min-width: 30%;
-
-		display: table-cell;
+		min-width: 130px;
+		display: block;
 			.text-not-wrap();				
 	}
 	
 	> input,
 	> textarea,
 	> select {
-		display: table-cell;
+		display: block;
 		border: 1px solid #bbb;
 		border-radius: 3px;
 		font-family: WAmer,Tahoma;
@@ -144,7 +142,11 @@
 	> input[type='password'],
 	> textarea{
 		padding: 2px 10px;
-		width: 100%;
+		flex:1;
+	}
+	
+	> input[type='checkbox']{
+		//margin: 0 20px;
 	}
 	select {
 		option{
@@ -157,41 +159,46 @@
 }
 
 
-	// vertical
-	.form-v .com-input,
-	.com-input.form-v{
-		.input-container {
-				display:block;
-				padding-right: 0px;
-		}
-		&.error .input-container{
-			padding-right: 10px !important;
-		}
-		.input-container > label{
-			
-			padding: 0 20px;
-			padding-bottom: 2px;
-		}
+// vertical
+.form-v .com-input,
+.com-input.form-v{
+	.input-container {
+			display:block;
+			padding-right: 0px;
+	}
+	&.error .input-container{
+		padding-right: 10px !important;
+	}
+	.input-container > label{
 		
-		.error-message {
-			top: auto;
-			right : 3%;
-			
-			&:before{
-				//top: auto;
-			}
-		}
-		input,
-		textarea{
-			
-		}
+		padding: 0 20px;
+		padding-bottom: 2px;
+	}
+	
+	.error-message {
+		top: auto;
+		right : 3%;
 		
-		select{
-			width: 50%;
-		
+		&:before{
+			//top: auto;
 		}
-	}	
+	}
+	input,
+	textarea{
+		width: 100% ;	
+	}
+	
+	select{
+		width: 50%;
+	
+	}
+}	
 
+
+
+.com-input.checkbox > .input-container{
+	align-items: center;
+}
 
 div.submit{
 	display: inline-block;
