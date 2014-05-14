@@ -4,16 +4,18 @@
 	position: relative;
 
 	 .form-col{
-	 	.flex(1);
+	 	.flex(1,1,0);
 		.flex-box();
 		.flex-col();
+		.flex-nowrap();
+
   		border-bottom: 1px solid #ddd;
 		
 		.com-input{
 			border-left:1px solid #fff;
 			border-right: 1px solid #ddd;
 				border-bottom: none;
-			display: flex;
+			display: block;
 			
 			&:first-child{
 				border-right : none;
@@ -99,8 +101,10 @@
 }
 	
 .com-input > .input-container{ 
-	display: flex;
-	flex:1 ;
+	.flex-box();
+	.flex-col();
+	.flex-nowrap();
+	.flex(1);
 	padding: 10px;
 	border-right: 10px solid transparent;
 	border-bottom: none	;		

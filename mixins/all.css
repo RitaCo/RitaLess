@@ -1,0 +1,50 @@
+/**
+ * Helpers Utility
+ */
+/**
+ *  Typography related mixins
+ */
+.text-not-wrap {
+  text-wrap: none;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+/**
+* flex-start | flex-end | center | baseline | stretch
+*/
+/**
+ * Borders Radius
+ */
+/**
+ * Border
+ */
+/* BackGround */
+/**
+	Horizontal gradient, from left to right
+	Creates two color stops, start and end, by specifying a color and position for each color stop.
+	 Color stops are not available in IE9 and below. 
+ 
+ */
+/**
+	Vertical gradient, from top to bottom
+	
+	Creates two color stops, start and end, by specifying a color and position for each color stop.
+	Color stops are not available in IE9 and below.
+ */
+/**
+ * directional
+ */
+/**
+ * horizontal-three-colors
+ */
+/**
+ * vertical-three-colors
+ */
+/**
+ * radial
+ */
+/**
+ * striped
+ */
+/*Transformations*/
+/* shadow */

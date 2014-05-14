@@ -685,9 +685,9 @@ a {
 }
 .com-form .form-col {
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -697,16 +697,16 @@ a {
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   border-bottom: 1px solid #ddd;
 }
 .com-form .form-col .com-input {
   border-left: 1px solid #fff;
   border-right: 1px solid #ddd;
   border-bottom: none;
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
 }
 .com-form .form-col .com-input:first-child {
   border-right: none;
@@ -778,10 +778,18 @@ a {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 1 ;
-  -webkit-flex: 1 ;
-  -ms-flex: 1 ;
-  flex: 1 ;
+  -webkit-box-orient: horizontal ;
+  -webkit-box-direction: normal ;
+  -webkit-flex-direction: row ;
+  -ms-flex-direction: row ;
+  flex-direction: row ;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   padding: 10px;
   border-right: 10px solid transparent;
   border-bottom: none	;
