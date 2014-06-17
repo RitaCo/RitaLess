@@ -2450,7 +2450,6 @@ button.btn-tiny {
   overflow: overlay;
   overflow: -moz-hidden-unscrollable;
   position: relative;
-  white-space: nowrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2604,7 +2603,6 @@ button.btn-tiny {
   overflow: overlay;
   overflow: -moz-hidden-unscrollable;
   position: relative;
-  white-space: nowrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2764,7 +2762,6 @@ button.btn-tiny {
   overflow: overlay;
   overflow: -moz-hidden-unscrollable;
   position: relative;
-  white-space: nowrap;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -3010,6 +3007,7 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  white-space: normal;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
