@@ -1,54 +1,39 @@
-.boxShadow-sm{
-	box-shadow:0 0 3px -1px #aaa !important;
-}
-.boxShadow{
-	box-shadow:0 0 6px -1px #aaa !important;
-}
+/**
+ * shadow class
+ */
+.boxShadow-sm{ box-shadow:0 0 3px -1px #aaa !important; }
+.boxShadow{	box-shadow:0 0 6px -1px #aaa !important; }
+.boxShadow-lg{ 	box-shadow:0 0 9px -1px #aaa !important; }
 
-.boxShadow-lg{
-	box-shadow:0 0 9px -1px #aaa !important;
-}
+/**
+ * border radius class
+ */
+.brCorner{ .br-radius(@border-radius-base) !important; }
+.brCorner-sm { 	.br-radius(@border-radius-small) !important; }
+.brCorner-lg { .br-radius(@border-radius-large) !important; }
 
-
-
-.brCorner{
-	.br-radius(@border-radius-base) !important; 
-}
-
-.brCorner-sm {
-	.br-radius(@border-radius-small) !important; 
-}
-
-.brCorner-lg {
-	.br-radius(@border-radius-large) !important; 
-}
-
-
-
-
-/* Text Algins */
+/**
+ * text align
+ */
 .text-right{ text-align: right; }
 .text-center{ text-align: center; }
 .text-left{ text-align: left; }
 
+/**
+ * padding class
+ */
+.padding-none{ 	padding: 0px!important; }
+.padding-sm{ padding: 15px!important; }
+.padding-lg{ padding: 30px!important; }
 
+/**
+ * margin class
+ */
+.margin-none{ margin: 0px!important; }
 
-
-.padding-none{
-	padding: 0px!important;
-}
-
-.padding-sm{
-	padding: 15px!important;
-}
-
-.padding-lg{
-	padding: 30px!important;
-}
-
-.margin-none{
-	margin: 0px!important;
-}
+/**
+ * border class
+ */
 .border-none{
 	border-left: none!important;
 	border-right: none!important;
@@ -56,42 +41,17 @@
 	border-bottom: none!important;
 }
 
-
+/**
+ * background class
+ */
 .bg-none{
 	background: transparent !important;
 	
 }
 
-
-
-/****************************************************************************************/
-
-
-
-
-.c-splitter-row{
-  height: 6px;
- .bg-gradient(#F1F1F1,#D8D8D8);
-  border-color: #bbb;
-  border-style: solid;
-  border-bottom-width: 1px;
-  border-left: none;
-  border-right: none;
-  
-  &.flat{
-  	 background: #D8D8D8  !important;
-  }
+.flex-none{
+	display: block !important;
 }
-.c-splitter-col{
-	width:10px;
-  border-color: #bbb;
-  border-style: solid;
-  border-width: 1px;
-  border-top: none;
-  border-bottom: none;	
-   
-   .bg-linear-gradient(#F1F1F1, #D8D8D8, 0, 100%, 90deg);
-}
-.c-splitter-col2{
-	width:20px;
+.flex-nofluid { 
+	.flex(0) !important;  
 }

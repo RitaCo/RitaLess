@@ -25,12 +25,16 @@
 		padding: @padding-block;
 		box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.3) inset !important;
 		position: relative;
+		white-space: normal;
 		.flex(1);
 		.flex-order(2);
 		p{
 			margin: 5px 0px;
 		}
+		
 	}
+	
+	
 .body-footer{
 	
 		background: @toolbar-bg;
@@ -53,6 +57,48 @@
 		.br-top(1px,solid,@panel-brColor) !important;
 }
 
+
+
+.body-splitter{
+  border-color: #bbb;
+  border-style: solid;
+  border-width: 1px;
+  border-left: none;
+  border-right: none;
+  background-color: #E2E2E2;
+  height: 10px;
+  margin-left: -1px;
+  margin-right: -1px;	
+		.flex-order(2);
+				.flex(0);
+}
+	
+.c-splitter-row{
+  height: 6px;
+ .bg-gradient(#F1F1F1,#D8D8D8);
+  border-color: #bbb;
+  border-style: solid;
+  border-bottom-width: 1px;
+  border-left: none;
+  border-right: none;
+  
+  &.flat{
+  	 background: #D8D8D8  !important;
+  }
+}
+.c-splitter-col{
+	width:10px;
+  border-color: #bbb;
+  border-style: solid;
+  border-width: 1px;
+  border-top: none;
+  border-bottom: none;	
+   
+   .bg-linear-gradient(#F1F1F1, #D8D8D8, 0, 100%, 90deg);
+}
+.c-splitter-col2{
+	width:20px;
+}
 
 .parentInherit{
 	display: inherit !important;
