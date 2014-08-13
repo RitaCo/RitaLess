@@ -11,6 +11,7 @@
 		.flex-box();
 	
 		.br(1px, solid,@tab-brColor);
+			background-color: @tab-bg;
 	}
 	
 	.tab-nav(){
@@ -21,6 +22,7 @@
 		.wid-3d();
 		.flex-box();
 		.flex-col();
+		-moz-user-select:none;
 	}	
 	
 	.tab-item(){
@@ -31,6 +33,7 @@
 		cursor: default;
 		background: @tab-item-bg;
 		.br(1px, solid, transparent);
+	
 		
 		> a{ 
 			.br(1px, solid, transparent);
@@ -40,7 +43,7 @@
 		
 		&.active{
 			> a{
-				background-color: @tab-container-bg;
+				background-color: @tab-bg;
 				.br(1px, solid, @tab-item-brColor);
 			}
 		}
@@ -66,7 +69,7 @@
 
 	
 	.tab-container(){
-		padding: 6px;
+		margin: 6px;
 		background-clip: content-box-box;
 		position: relative;
 		background-color: @tab-container-bg;
@@ -74,15 +77,18 @@
 		display: flex;
 		white-space: normal;
 		flex-wrap : nowrap;
+
+		box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.5) inset;
+		outline: 1px solid #ededed;
+		.br(1px, solid,@tab-container-border-color);	
 		
 	}	
 	
 	.tab-body(){
-		padding: @padding-block;
+		padding: @tab-body-padding;
 		display: none;
-		.br(1px, solid,@tab-brColor);
-		background: @tab-body-bg;
-		position: relative;
 	
+		
+		position: relative;
 	}
 }

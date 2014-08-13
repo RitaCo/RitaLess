@@ -50,7 +50,7 @@
 	}
 
 	li.active {
-		border-bottom-color: @tab-container-bg;
+		border-bottom-color: @tab-bg;
 	}
 		
 	li a {
@@ -69,7 +69,7 @@
 	
 	.tab-container{
 		.flex-order(1);	
-		.flex(1);	
+		flex:1;	
 	}
 	.tab-body.active{
 		display: block;
@@ -96,7 +96,7 @@
 	}
 
 	li.active {
-		border-top-color: @tab-container-bg;
+		border-top-color: @tab-bg;
 	}
 
 	
@@ -154,7 +154,7 @@
 	}
 	
 	li.active {
-		border-left-color: @tab-container-bg;
+		border-left-color: @tab-bg;
 	}
 
 	
@@ -179,7 +179,8 @@
 	}
 	.tab-body.active{
 		display: block;
-		flex:1 1 0;
+		overflow: auto;
+		flex:1;
 
 	}	
 
@@ -209,7 +210,7 @@
 	}
 
 	li.active {
-		border-right-color: @tab-container-bg;
+		border-right-color: @tab-bg;
 	}
 	
 	li a {

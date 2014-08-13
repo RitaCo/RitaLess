@@ -490,6 +490,27 @@ a {
   -ms-flex: 0 1 auto !important;
   flex: 0 1 auto !important;
 }
+.fluid {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+}
+.inherited {
+  display: inherit !important;
+  -webkit-flex-direction: inherit !important;
+  -ms-flex-direction: inherit !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  flex-direction: inherit !important;
+  -webkit-box-flex: 1 ;
+  -webkit-flex: 1 1 auto ;
+  -ms-flex: 1 1 auto ;
+  flex: 1 1 auto ;
+  min-width: -webkit-min-content;
+  min-width: -moz-min-content;
+  min-width: min-content;
+}
 .com-layout {
   display: -webkit-box;
   display: -webkit-flex;
@@ -506,12 +527,6 @@ a {
   -webkit-flex-flow: row nowrap;
   -ms-flex-flow: row nowrap;
   flex-flow: row nowrap;
-}
-.com-layout .fluid {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
 }
 .typ-col.opt-childs-fluid-fix > *,
 .typ-row.opt-childs-fluid-fix > * {
@@ -2174,6 +2189,11 @@ button.btn-tiny {
 .body-container p {
   margin: 5px 0px;
 }
+.wid-panel-framed .body-container,
+.wid-panel-border .body-container {
+  -webkit-box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.5) inset !important;
+  box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.5) inset !important;
+}
 .body-footer {
   background: #f0f0f0;
   -webkit-box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
@@ -2450,7 +2470,10 @@ button.btn-tiny {
   overflow: overlay;
   overflow: -moz-hidden-unscrollable;
   position: relative;
-  white-space: nowrap;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2477,16 +2500,13 @@ button.btn-tiny {
   background-image: -webkit-linear-gradient(top, #f2f2f2, #dedede);
   background-image: linear-gradient(to bottom, #f2f2f2, #dedede);
   border-bottom: 1px solid #bbbbbb;
+  -moz-user-select: none;
   height: 40px;
   padding: 0px 10px;
   overflow: hidden;
   position: relative;
   -webkit-box-shadow: 0 1px 0 #FFFFFF inset;
   box-shadow: 0 1px 0 #FFFFFF inset;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2582,9 +2602,9 @@ button.btn-tiny {
   background-color: #ffffff;
   position: relative;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2594,6 +2614,8 @@ button.btn-tiny {
   -webkit-flex-direction: column ;
   -ms-flex-direction: column ;
   flex-direction: column ;
+  white-space: initial;
+  margin: 6px;
 }
 /************************************
  *  panel border widget
@@ -2604,7 +2626,10 @@ button.btn-tiny {
   overflow: overlay;
   overflow: -moz-hidden-unscrollable;
   position: relative;
-  white-space: nowrap;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2631,16 +2656,13 @@ button.btn-tiny {
   background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#dedede));
   background-image: -webkit-linear-gradient(top, #f2f2f2, #dedede);
   background-image: linear-gradient(to bottom, #f2f2f2, #dedede);
+  -moz-user-select: none;
   height: 40px;
   padding: 0px 10px;
   overflow: hidden;
   position: relative;
   -webkit-box-shadow: 0 1px 0 #FFFFFF inset;
   box-shadow: 0 1px 0 #FFFFFF inset;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2737,9 +2759,9 @@ button.btn-tiny {
   background-color: #ffffff;
   position: relative;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2749,6 +2771,7 @@ button.btn-tiny {
   -webkit-flex-direction: column ;
   -ms-flex-direction: column ;
   flex-direction: column ;
+  white-space: initial;
   margin: 6px;
   border-top: 1px solid #bbbbbb;
   border-left: 1px solid #bbbbbb;
@@ -2764,7 +2787,10 @@ button.btn-tiny {
   overflow: overlay;
   overflow: -moz-hidden-unscrollable;
   position: relative;
-  white-space: nowrap;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 0;
+  -ms-flex: 1 1 0;
+  flex: 1 1 0;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2792,16 +2818,13 @@ button.btn-tiny {
   background-image: -webkit-linear-gradient(top, #f2f2f2, #dedede);
   background-image: linear-gradient(to bottom, #f2f2f2, #dedede);
   border-bottom: 1px solid #bbbbbb;
+  -moz-user-select: none;
   height: 40px;
   padding: 0px 10px;
   overflow: hidden;
   position: relative;
   -webkit-box-shadow: 0 1px 0 #FFFFFF inset;
   box-shadow: 0 1px 0 #FFFFFF inset;
-  -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2898,9 +2921,9 @@ button.btn-tiny {
   background-color: #ffffff;
   position: relative;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-flex: 1 1 100%;
+  -ms-flex: 1 1 100%;
+  flex: 1 1 100%;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2910,6 +2933,7 @@ button.btn-tiny {
   -webkit-flex-direction: column ;
   -ms-flex-direction: column ;
   flex-direction: column ;
+  white-space: initial;
   border-top: 1px solid #bbbbbb;
   border-left: 1px solid #bbbbbb;
   border-right: 1px solid #bbbbbb;
@@ -2934,6 +2958,7 @@ button.btn-tiny {
   border-left: 1px solid #c9c9c9;
   border-right: 1px solid #c9c9c9;
   border-bottom: 1px solid #c9c9c9;
+  background-color: #ebebeb;
 }
 .wid-tab > .tab-nav {
   list-style: none;
@@ -2951,6 +2976,7 @@ button.btn-tiny {
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
+  -moz-user-select: none;
 }
 .wid-tab > .tab-nav > li {
   position: relative;
@@ -2973,7 +2999,7 @@ button.btn-tiny {
   white-space: nowrap;
 }
 .wid-tab > .tab-nav > li.active > a {
-  background-color: #e5e6ea;
+  background-color: #ebebeb;
   border-top: 1px solid #c9c9c9;
   border-left: 1px solid #c9c9c9;
   border-right: 1px solid #c9c9c9;
@@ -2997,11 +3023,11 @@ button.btn-tiny {
   font-weight: normal;
 }
 .wid-tab > .tab-container {
-  padding: 6px;
+  margin: 6px;
   -webkit-background-clip: content-box-box;
   background-clip: content-box-box;
   position: relative;
-  background-color: #e5e6ea;
+  background-color: #ffffff;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 0;
   -ms-flex: 1 1 0;
@@ -3010,18 +3036,21 @@ button.btn-tiny {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  white-space: normal;
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
+  -webkit-box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.5) inset;
+  box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.5) inset;
+  outline: 1px solid #ededed;
+  border-top: 1px solid #b7b7b7;
+  border-left: 1px solid #b7b7b7;
+  border-right: 1px solid #b7b7b7;
+  border-bottom: 1px solid #b7b7b7;
 }
 .wid-tab > .tab-container > .tab-body {
-  padding: 6px;
+  padding: 5px 10px;
   display: none;
-  border-top: 1px solid #c9c9c9;
-  border-left: 1px solid #c9c9c9;
-  border-right: 1px solid #c9c9c9;
-  border-bottom: 1px solid #c9c9c9;
-  background: #ffffff;
   position: relative;
 }
 .wid-tab.typ {
@@ -3053,7 +3082,7 @@ button.btn-tiny {
   padding-bottom: 0px;
 }
 .wid-tab.typ-top li.active {
-  border-bottom-color: #e5e6ea;
+  border-bottom-color: #ebebeb;
 }
 .wid-tab.typ-top li a {
   border-radius: 6px 6px 0px 0px;
@@ -3071,9 +3100,9 @@ button.btn-tiny {
   -ms-flex-order: 1;
   order: 1;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 auto;
-  -ms-flex: 1 1 auto;
-  flex: 1 1 auto;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 .wid-tab.typ-top .tab-body.active {
   display: block;
@@ -3101,7 +3130,7 @@ button.btn-tiny {
   padding-top: 0px;
 }
 .wid-tab.typ-bottom li.active {
-  border-top-color: #e5e6ea;
+  border-top-color: #ebebeb;
 }
 .wid-tab.typ-bottom li a {
   border-radius: 0px 0px 6px 6px;
@@ -3154,7 +3183,7 @@ button.btn-tiny {
   padding-left: 0px;
 }
 .wid-tab.typ-right li.active {
-  border-left-color: #e5e6ea;
+  border-left-color: #ebebeb;
 }
 .wid-tab.typ-right li a {
   border-radius: 0px 6px 6px 0;
@@ -3179,10 +3208,11 @@ button.btn-tiny {
 }
 .wid-tab.typ-right .tab-body.active {
   display: block;
+  overflow: auto;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 0;
-  -ms-flex: 1 1 0;
-  flex: 1 1 0;
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
 }
 .wid-tab.typ-left {
   -webkit-box-orient: horizontal ;
@@ -3210,7 +3240,7 @@ button.btn-tiny {
   padding-right: 0px;
 }
 .wid-tab.typ-left li.active {
-  border-right-color: #e5e6ea;
+  border-right-color: #ebebeb;
 }
 .wid-tab.typ-left li a {
   border-radius: 6px 0px 0px 6px;
