@@ -17,15 +17,16 @@
 		padding: 10px 20px;
 		.wid-3d();
 		
-		.flex(0);
+		.flex(0 ,0 ,auto);
 		.flex-order(1);
 	}
 	
 .body-container{
 		padding: @padding-block;
-		box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.3) inset !important;
+		box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.5) inset !important;
 		position: relative;
 		white-space: normal;
+		overflow: auto;
 		.flex(1);
 		.flex-order(2);
 		p{
@@ -34,10 +35,6 @@
 		
 	}
 
-.wid-panel-framed .body-container,
-.wid-panel-border .body-container{	
-			box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.5) inset !important;
-}
 	
 .body-footer{
 	
@@ -46,7 +43,7 @@
 		.flex-order(3);
 		position: relative;
 		padding: 10px 20px;
-		.flex(0);
+		.flex(0 ,0 ,auto);
 }
 	
 

@@ -64,7 +64,7 @@
 	> .panel-body,
 	> form > .panel-body {
 		#Panels > .body();
-		margin: 6px;
+		margin: @panel-body-padding;
 		.br(1px, solid,@panel-brColor);
 
 	}
@@ -77,7 +77,7 @@
  ************************************/
 .wid-panel-framed {
 	/*  vars block */
-	@panel-bg: #E2E2E2;
+	@panel-bg: #dadada;
 	
 	
 	/*  main block */
@@ -98,7 +98,7 @@
 		.br(1px, solid,@panel-brColor);
 
 	
-		margin: 6px;
+		margin: @panel-body-padding;
 	}
 	
 	> .panel-header+.panel-body,

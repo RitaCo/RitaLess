@@ -11,6 +11,7 @@
 	padding: 0px;
 	line-height: 0px;
 	background-color: @toolbar-bg;
+	.flex(0,0);
 	.flex-box();
 	.flex-row();
 	
@@ -20,7 +21,8 @@
 		.wid-3d();
 	   	border-bottom: 1px solid #bbb;
 		line-height: 2;
-	   	.bg-h(#fafafa,#ececec);
+	   	//.bg-h(#fafafa,#ececec);
+	   		   	
 	  	height: 50px;
     
       	padding: 2px 10px;
@@ -66,8 +68,11 @@
     align-items:center;
     padding: 0px 10px;
     margin: 0px 1px;
+    color: #000 !important;
+    
     i{
     	margin: 0px;
+    	color: #666;
     }
  }
 
@@ -93,6 +98,7 @@
 	i{
 
     	font-size: 30px;
+   		margin-left: 5px;
     }		
 }
 
@@ -113,6 +119,7 @@
 	i{
     	
     	font-size: 40px;
+   		margin-left: 5px;
     	.flex(1,1,100%);
     	
     }		

@@ -2157,15 +2157,15 @@ button.btn-tiny {
   border: none ;
 }
 .body-header {
-  background: #f0f0f0;
+  background: #f5f5f5;
   position: relative;
   padding: 10px 20px;
   -webkit-box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   -webkit-box-ordinal-group: 2;
   -webkit-order: 1;
   -ms-flex-order: 1;
@@ -2173,10 +2173,11 @@ button.btn-tiny {
 }
 .body-container {
   padding: 6px;
-  -webkit-box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.3) inset !important;
-  box-shadow: 0 0 3px -1px rgba(0, 0, 0, 0.3) inset !important;
+  -webkit-box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.5) inset !important;
+  box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.5) inset !important;
   position: relative;
   white-space: normal;
+  overflow: auto;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 auto;
   -ms-flex: 1 1 auto;
@@ -2189,13 +2190,8 @@ button.btn-tiny {
 .body-container p {
   margin: 5px 0px;
 }
-.wid-panel-framed .body-container,
-.wid-panel-border .body-container {
-  -webkit-box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.5) inset !important;
-  box-shadow: 0 0 4px -1px rgba(0, 0, 0, 0.5) inset !important;
-}
 .body-footer {
-  background: #f0f0f0;
+  background: #f5f5f5;
   -webkit-box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   -webkit-box-ordinal-group: 4;
@@ -2205,17 +2201,17 @@ button.btn-tiny {
   position: relative;
   padding: 10px 20px;
   -webkit-box-flex: 0;
-  -webkit-flex: 0 1 auto;
-  -ms-flex: 0 1 auto;
-  flex: 0 1 auto;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
 }
 .body-header + .body-container,
 .body-header + [class^="wid-"] {
-  border-top: 1px solid #bbbbbb;
+  border-top: 1px solid #b9b9b9;
 }
 .body-container + .body-footer,
 [class^="wid-"] + .body-footer {
-  border-top: 1px solid #bbbbbb !important;
+  border-top: 1px solid #b9b9b9 !important;
 }
 .body-splitter {
   border-color: #bbb;
@@ -2314,7 +2310,11 @@ button.btn-tiny {
   position: relative;
   padding: 0px;
   line-height: 0px;
-  background-color: #f0f0f0;
+  background-color: #f5f5f5;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 auto;
+  -ms-flex: 0 0 auto;
+  flex: 0 0 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2330,12 +2330,6 @@ button.btn-tiny {
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   border-bottom: 1px solid #bbb;
   line-height: 2;
-  background-image: -webkit-linear-gradient(left, color-stop(#fafafa 0%), color-stop(#ececec 100%));
-  background-image: -webkit-gradient(linear, left top, right top, from(#fafafa), to(#ececec));
-  background-image: -webkit-linear-gradient(left, #fafafa 0%, #ececec 100%);
-  background-image: linear-gradient(to right, #fafafa 0%, #ececec 100%);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffafafa', endColorstr='#ffececec', GradientType=1);
   height: 50px;
   padding: 2px 10px;
   display: -webkit-box;
@@ -2382,9 +2376,11 @@ button.btn-tiny {
   align-items: center;
   padding: 0px 10px;
   margin: 0px 1px;
+  color: #000 !important;
 }
 .toolbar-band > .btn i {
   margin: 0px;
+  color: #666;
 }
 .toolbar-band > .btn.disabled {
   color: silver;
@@ -2403,6 +2399,7 @@ button.btn-tiny {
 }
 .toolbar-band > .btn i {
   font-size: 30px;
+  margin-left: 5px;
 }
 .toolbar-band.band-sm > .btn i {
   font-size: 15px;
@@ -2421,6 +2418,7 @@ button.btn-tiny {
 }
 .toolbar-band.band-lg > .btn i {
   font-size: 40px;
+  margin-left: 5px;
   -webkit-box-flex: 1;
   -webkit-flex: 1 1 100%;
   -ms-flex: 1 1 100%;
@@ -2454,7 +2452,7 @@ button.btn-tiny {
   border-bottom: 1px solid #c9c9c9;
   background-color: #ffffff;
   overflow: hidden;
-  padding: 10px;
+  padding: 6px;
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
 }
@@ -2467,13 +2465,12 @@ button.btn-tiny {
 .wid-panel {
   /*  vars block */
   /*  main block */
-  overflow: overlay;
-  overflow: -moz-hidden-unscrollable;
+  overflow: hidden;
   position: relative;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 0;
-  -ms-flex: 1 1 0;
-  flex: 1 1 0;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2483,10 +2480,10 @@ button.btn-tiny {
   -webkit-flex-direction: column ;
   -ms-flex-direction: column ;
   flex-direction: column ;
-  border-top: 1px solid #bbbbbb;
-  border-left: 1px solid #bbbbbb;
-  border-right: 1px solid #bbbbbb;
-  border-bottom: 1px solid #bbbbbb;
+  border-top: 1px solid #b9b9b9;
+  border-left: 1px solid #b9b9b9;
+  border-right: 1px solid #b9b9b9;
+  border-bottom: 1px solid #b9b9b9;
   background-color: #ffffff;
   -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
@@ -2495,18 +2492,21 @@ button.btn-tiny {
   /*  child block */
 }
 .wid-panel > .panel-header {
-  background-color: #dedede;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#dedede));
-  background-image: -webkit-linear-gradient(top, #f2f2f2, #dedede);
-  background-image: linear-gradient(to bottom, #f2f2f2, #dedede);
-  border-bottom: 1px solid #bbbbbb;
+  background-color: #dadada;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#dadada));
+  background-image: -webkit-linear-gradient(top, #f2f2f2, #dadada);
+  background-image: linear-gradient(to bottom, #f2f2f2, #dadada);
+  border-bottom: 1px solid #b9b9b9;
   -moz-user-select: none;
-  height: 40px;
   padding: 0px 10px;
   overflow: hidden;
   position: relative;
   -webkit-box-shadow: 0 1px 0 #FFFFFF inset;
   box-shadow: 0 1px 0 #FFFFFF inset;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 40px;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2602,9 +2602,9 @@ button.btn-tiny {
   background-color: #ffffff;
   position: relative;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2614,6 +2614,9 @@ button.btn-tiny {
   -webkit-flex-direction: column ;
   -ms-flex-direction: column ;
   flex-direction: column ;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   white-space: initial;
   margin: 6px;
 }
@@ -2623,13 +2626,12 @@ button.btn-tiny {
 .wid-panel-border {
   /*  vars block */
   /*  main block */
-  overflow: overlay;
-  overflow: -moz-hidden-unscrollable;
+  overflow: hidden;
   position: relative;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 0;
-  -ms-flex: 1 1 0;
-  flex: 1 1 0;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2645,24 +2647,27 @@ button.btn-tiny {
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
   background: #e5e6ea;
-  border-top: 1px solid #bbbbbb;
-  border-left: 1px solid #bbbbbb;
-  border-right: 1px solid #bbbbbb;
-  border-bottom: 1px solid #bbbbbb;
+  border-top: 1px solid #b9b9b9;
+  border-left: 1px solid #b9b9b9;
+  border-right: 1px solid #b9b9b9;
+  border-bottom: 1px solid #b9b9b9;
   /*  child block */
 }
 .wid-panel-border > .panel-header {
-  background-color: #dedede;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#dedede));
-  background-image: -webkit-linear-gradient(top, #f2f2f2, #dedede);
-  background-image: linear-gradient(to bottom, #f2f2f2, #dedede);
+  background-color: #dadada;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#dadada));
+  background-image: -webkit-linear-gradient(top, #f2f2f2, #dadada);
+  background-image: linear-gradient(to bottom, #f2f2f2, #dadada);
   -moz-user-select: none;
-  height: 40px;
   padding: 0px 10px;
   overflow: hidden;
   position: relative;
   -webkit-box-shadow: 0 1px 0 #FFFFFF inset;
   box-shadow: 0 1px 0 #FFFFFF inset;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 40px;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2672,7 +2677,7 @@ button.btn-tiny {
   -webkit-flex-direction: row ;
   -ms-flex-direction: row ;
   flex-direction: row ;
-  border-bottom: 1px solid #bbbbbb;
+  border-bottom: 1px solid #b9b9b9;
 }
 .wid-panel-border > .panel-header > .header-caption {
   font-family: WNasim;
@@ -2759,9 +2764,9 @@ button.btn-tiny {
   background-color: #ffffff;
   position: relative;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2771,12 +2776,15 @@ button.btn-tiny {
   -webkit-flex-direction: column ;
   -ms-flex-direction: column ;
   flex-direction: column ;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   white-space: initial;
   margin: 6px;
-  border-top: 1px solid #bbbbbb;
-  border-left: 1px solid #bbbbbb;
-  border-right: 1px solid #bbbbbb;
-  border-bottom: 1px solid #bbbbbb;
+  border-top: 1px solid #b9b9b9;
+  border-left: 1px solid #b9b9b9;
+  border-right: 1px solid #b9b9b9;
+  border-bottom: 1px solid #b9b9b9;
 }
 /************************************
  *  panel framed widget
@@ -2784,13 +2792,12 @@ button.btn-tiny {
 .wid-panel-framed {
   /*  vars block */
   /*  main block */
-  overflow: overlay;
-  overflow: -moz-hidden-unscrollable;
+  overflow: hidden;
   position: relative;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 0;
-  -ms-flex: 1 1 0;
-  flex: 1 1 0;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2805,26 +2812,29 @@ button.btn-tiny {
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
   -webkit-background-clip: padding-box;
   background-clip: padding-box;
-  border-top: 1px solid #bbbbbb;
-  border-left: 1px solid #bbbbbb;
-  border-right: 1px solid #bbbbbb;
-  border-bottom: 1px solid #bbbbbb;
-  background-color: #e2e2e2;
+  border-top: 1px solid #b9b9b9;
+  border-left: 1px solid #b9b9b9;
+  border-right: 1px solid #b9b9b9;
+  border-bottom: 1px solid #b9b9b9;
+  background-color: #dadada;
   /*  child block */
 }
 .wid-panel-framed > .panel-header {
-  background-color: #dedede;
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#dedede));
-  background-image: -webkit-linear-gradient(top, #f2f2f2, #dedede);
-  background-image: linear-gradient(to bottom, #f2f2f2, #dedede);
-  border-bottom: 1px solid #bbbbbb;
+  background-color: #dadada;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#dadada));
+  background-image: -webkit-linear-gradient(top, #f2f2f2, #dadada);
+  background-image: linear-gradient(to bottom, #f2f2f2, #dadada);
+  border-bottom: 1px solid #b9b9b9;
   -moz-user-select: none;
-  height: 40px;
   padding: 0px 10px;
   overflow: hidden;
   position: relative;
   -webkit-box-shadow: 0 1px 0 #FFFFFF inset;
   box-shadow: 0 1px 0 #FFFFFF inset;
+  -webkit-box-flex: 0;
+  -webkit-flex: 0 0 40px;
+  -ms-flex: 0 0 40px;
+  flex: 0 0 40px;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2921,9 +2931,9 @@ button.btn-tiny {
   background-color: #ffffff;
   position: relative;
   -webkit-box-flex: 1;
-  -webkit-flex: 1 1 100%;
-  -ms-flex: 1 1 100%;
-  flex: 1 1 100%;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -2933,11 +2943,14 @@ button.btn-tiny {
   -webkit-flex-direction: column ;
   -ms-flex-direction: column ;
   flex-direction: column ;
+  -webkit-flex-wrap: nowrap;
+  -ms-flex-wrap: nowrap;
+  flex-wrap: nowrap;
   white-space: initial;
-  border-top: 1px solid #bbbbbb;
-  border-left: 1px solid #bbbbbb;
-  border-right: 1px solid #bbbbbb;
-  border-bottom: 1px solid #bbbbbb;
+  border-top: 1px solid #b9b9b9;
+  border-left: 1px solid #b9b9b9;
+  border-right: 1px solid #b9b9b9;
+  border-bottom: 1px solid #b9b9b9;
   margin: 6px;
 }
 .wid-panel-framed > .panel-header + .panel-body,
@@ -2959,6 +2972,9 @@ button.btn-tiny {
   border-right: 1px solid #c9c9c9;
   border-bottom: 1px solid #c9c9c9;
   background-color: #ebebeb;
+  -webkit-box-shadow: 0px 0px 3px 0 #ccc inset;
+  box-shadow: 0px 0px 3px 0 #ccc inset;
+  overflow: hidden;
 }
 .wid-tab > .tab-nav {
   list-style: none;
@@ -2977,6 +2993,8 @@ button.btn-tiny {
   -ms-flex-direction: row ;
   flex-direction: row ;
   -moz-user-select: none;
+  -webkit-box-shadow: 0px 0px 3px 0 #ccc;
+  box-shadow: 0px 0px 3px 0 #ccc;
 }
 .wid-tab > .tab-nav > li {
   position: relative;
@@ -3023,7 +3041,7 @@ button.btn-tiny {
   font-weight: normal;
 }
 .wid-tab > .tab-container {
-  margin: 6px;
+  margin: 10px;
   -webkit-background-clip: content-box-box;
   background-clip: content-box-box;
   position: relative;
@@ -3040,8 +3058,6 @@ button.btn-tiny {
   -webkit-flex-wrap: nowrap;
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
-  -webkit-box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.5) inset;
-  box-shadow: 0 0 4px 0px rgba(0, 0, 0, 0.5) inset;
   outline: 1px solid #ededed;
   border-top: 1px solid #b7b7b7;
   border-left: 1px solid #b7b7b7;
@@ -3049,7 +3065,7 @@ button.btn-tiny {
   border-bottom: 1px solid #b7b7b7;
 }
 .wid-tab > .tab-container > .tab-body {
-  padding: 5px 10px;
+  padding: 6px;
   display: none;
   position: relative;
 }
@@ -3078,7 +3094,7 @@ button.btn-tiny {
   border-bottom: 1px solid #c9c9c9;
 }
 .wid-tab.typ-top li {
-  margin-bottom: -1px;
+  margin-bottom: 0px;
   padding-bottom: 0px;
 }
 .wid-tab.typ-top li.active {
@@ -3105,9 +3121,19 @@ button.btn-tiny {
   flex: 1;
 }
 .wid-tab.typ-top .tab-body.active {
-  display: block;
-  width: 100%;
-  overflow: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical ;
+  -webkit-box-direction: normal ;
+  -webkit-flex-direction: column ;
+  -ms-flex-direction: column ;
+  flex-direction: column ;
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 .wid-tab.typ-bottom {
   -webkit-box-orient: vertical ;
@@ -3126,7 +3152,7 @@ button.btn-tiny {
   border-top: 1px solid #c9c9c9;
 }
 .wid-tab.typ-bottom li {
-  margin-top: -1px;
+  margin-top: 0px;
   padding-top: 0px;
 }
 .wid-tab.typ-bottom li.active {
@@ -3179,7 +3205,7 @@ button.btn-tiny {
   flex-direction: column ;
 }
 .wid-tab.typ-right li {
-  margin-left: -1px;
+  margin-left: 0px;
   padding-left: 0px;
 }
 .wid-tab.typ-right li.active {
@@ -3207,12 +3233,19 @@ button.btn-tiny {
   flex-direction: column ;
 }
 .wid-tab.typ-right .tab-body.active {
-  display: block;
-  overflow: auto;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical ;
+  -webkit-box-direction: normal ;
+  -webkit-flex-direction: column ;
+  -ms-flex-direction: column ;
+  flex-direction: column ;
   -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 .wid-tab.typ-left {
   -webkit-box-orient: horizontal ;
@@ -3236,7 +3269,7 @@ button.btn-tiny {
   flex-direction: column ;
 }
 .wid-tab.typ-left li {
-  margin-right: -1px;
+  margin-right: 0px;
   padding-right: 0px;
 }
 .wid-tab.typ-left li.active {
