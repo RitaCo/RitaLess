@@ -17,7 +17,7 @@
 	
 	
 	> .toolbar-band {
-	
+		align-items:center;
 		.wid-3d();
 	   	border-bottom: 1px solid #bbb;
 		line-height: 2;
@@ -69,11 +69,18 @@
     padding: 0px 10px;
     margin: 0px 1px;
     color: #000 !important;
-    
+    .text-wrap-none();
+    text-align: right;
     i{
     	margin: 0px;
     	color: #666;
     }
+    	span{
+		
+		font-size: 18px;
+font-family: wroya;
+font-weight: 700;
+}
  }
 
 .toolbar-band  > .btn.disabled{
@@ -94,6 +101,7 @@
 
 
 .toolbar-band > .btn{
+
 		
 	i{
 
@@ -120,7 +128,7 @@
     	
     	font-size: 40px;
    		margin-left: 5px;
-    	.flex(1,1,100%);
+    	.flex(1,1,0);
     	
     }		
 }
@@ -146,6 +154,7 @@
    	background-color: #ccc;
    	.br(1px, solid,#bbb);
     margin:3px 10px;
+    height: 80%;
 
 }
 

@@ -49,16 +49,31 @@
 	
 }
 
-.flex-none{
+.fluid-none{
 	display: block !important;
 }
-.flex-nofluid { 
-	.flex(0) !important;  
+
+.box-nofluid { 
+	.flex(0,0,auto) !important;  
 }
 
-.fluid{
+
+.box-fluid{
 	.flex(1) 
 }
+
+.bc-visible{
+	overflow: visible !important;
+}
+
+.bc-hidden{
+	overflow: hidden !important;
+}
+
+.bc-auto{
+	overflow: auto !important;
+}
+
 
 .inherited{
 	.flex-inherit();
