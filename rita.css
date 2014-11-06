@@ -438,13 +438,13 @@ a {
  * text align
  */
 .text-right {
-  text-align: right;
+  text-align: right!important;
 }
 .text-center {
-  text-align: center;
+  text-align: center!important;
 }
 .text-left {
-  text-align: left;
+  text-align: left!important;
 }
 /**
  * padding class
@@ -635,6 +635,18 @@ a {
   padding-right: 1.5%;
   padding-left: 1.5%;
   vertical-align: top;
+}
+.com-gridTable > .grid-col.valign-top {
+  vertical-align: top;
+}
+.com-gridTable > .grid-col.valign-center {
+  vertical-align: middle;
+}
+.com-gridTable > .grid-col.valign-bottom {
+  vertical-align: bottom;
+}
+.com-gridTable > .grid-col.valign-baseline {
+  vertical-align: baseline;
 }
 .com-gridTable.opt-border > .grid-col {
   border-right: 1px solid #c9c9c9;
@@ -2640,6 +2652,7 @@ button.btn-tiny {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   white-space: initial;
+  overflow: auto;
   margin: 0px;
 }
 .wid-panel > .panel-body > .body-container,
@@ -2807,6 +2820,7 @@ button.btn-tiny {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   white-space: initial;
+  overflow: auto;
   margin: 6px;
   border-top: 1px solid #b9b9b9;
   border-left: 1px solid #b9b9b9;
@@ -2974,6 +2988,7 @@ button.btn-tiny {
   -ms-flex-wrap: nowrap;
   flex-wrap: nowrap;
   white-space: initial;
+  overflow: auto;
   border-top: 1px solid #b9b9b9;
   border-left: 1px solid #b9b9b9;
   border-right: 1px solid #b9b9b9;
@@ -3335,4 +3350,70 @@ button.btn-tiny {
   -webkit-flex: 1 1 0;
   -ms-flex: 1 1 0;
   flex: 1 1 0;
+}
+.wid-menu,
+.menu-submenu {
+  display: block;
+  position: relative;
+}
+.wid-menu > li,
+.wid-menu .menu-submenu > li {
+  display: block;
+  position: relative;
+}
+.wid-menu a {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+  width: 100%;
+  padding: 10px 0;
+  position: relative;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+  -ms-flex-align: center;
+  align-items: center;
+  height: 80px;
+}
+.wid-menu .icon {
+  -webkit-align-self: center;
+  -ms-flex-item-align: center;
+  align-self: center;
+  text-align: center;
+}
+.wid-menu .icon i {
+  color: #01B070;
+  font-size: 1.3rem;
+  font-weight: 400;
+  position: relative;
+}
+.wid-menu .label {
+  -webkit-box-flex: 1;
+  -webkit-flex: 1 1 auto;
+  -ms-flex: 1 1 auto;
+  flex: 1 1 auto;
+  padding-top: 10px;
+}
+.wid-menu .label span {
+  color: #DCE2E6;
+  font-family: wroya;
+  font-size: 1.1rem;
+  line-height: 1;
+  font-weight: 400;
+  text-shadow: 1px 1px 1px #444;
+}
+.wid-menu a {
+  -webkit-box-orient: vertical ;
+  -webkit-box-direction: normal ;
+  -webkit-flex-direction: column ;
+  -ms-flex-direction: column ;
+  flex-direction: column ;
+}
+.wid-menu .menu-submenu a {
+  -webkit-box-orient: horizontal ;
+  -webkit-box-direction: normal ;
+  -webkit-flex-direction: row ;
+  -ms-flex-direction: row ;
+  flex-direction: row ;
 }
