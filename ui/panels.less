@@ -1,0 +1,147 @@
+.ui-panel{
+
+	background-color: #FFFFFF;
+	box-shadow: 0 1px 2px #c3c3c3;
+	border-radius: 3px;
+	color: #8b91a0;
+	position: relative;
+	overflow: hidden;
+	//flex:1 1 auto;
+	.flex-box();
+	.flex-row();
+	padding: @padding-block;
+	margin-bottom: 20px;	
+}
+
+.t{
+	border: 1px dotted red;
+}
+
+.panel-header{
+		-moz-user-select:none;
+		padding: 0px 10px;	
+		overflow: hidden;
+		position: relative;
+		box-shadow: 0 1px 0 #FFFFFF inset;
+		
+		.flex(0,0,40px);
+		.flex-box();
+		.flex-col();
+		.flex-nowrap();
+		align-items : stretch;	
+		
+		
+		.header-icon, .header-caption, .header-helpers  {
+			align-self:center;
+			flex:0;
+		}
+		
+		.header-icon{
+			padding: 0px 10px;
+			order:1;
+			
+		}
+		.header-caption{
+			.flex(1);
+			order:2;
+			font-family: WNasim;
+			font-style: normal;
+			font-size: 16px;
+		}
+		.header-helpers{
+			order:3;
+			.flex-box();
+			.flex-col();
+			> *{
+				.br(1px, solid,#777272);
+				padding: 2px 4px;
+				overflow: hidden;
+				box-shadow: 0 0 1px #707070 inset;
+				background-color: white;
+				margin: 0px 2px;
+				text-align: center;
+				align-self: center;
+				.brCorner-sm;
+				cursor: pointer;
+				> i{
+					text-align: center;
+					position: relative;
+				}
+			}			
+		}
+}	   
+
+/**
+ * .panel-header style
+ */
+.panel-header.set{
+	&-w3{
+		background-color: @panel-head-bg;
+		background-image: linear-gradient(to bottom, @panel-head-bg-gradient-strat, @panel-head-bg-gradient-end);
+		.br-bottom(1px,solid,@panel-head-brColor);
+	}	
+}
+
+
+.panel-body{
+		padding: @padding-block;
+		background-color: @panel-body-bg;
+		position: relative;
+		.flex(1,1,auto);
+		.flex-box();
+		.flex-row();
+		.flex-nowrap();
+		.text-wrap();
+		overflow: auto;	
+}
+
+
+
+/**
+ * .ui-panel-box
+ */
+
+.ui-panel-box:extend(.ui-panel){
+	  padding: @padding-block;
+	  
+}
+
+
+
+/**
+ * .ui-panel-framed
+ */
+.ui-panel-framed:extend(.ui-panel){
+	padding:0;
+	.br(1px, solid,@panel-brColor);
+	background-color: @panel-bg;
+					  
+	> .panel-header:extend(.panel-header){
+//		background-color: @panel-head-bg;
+//		background-image: linear-gradient(to bottom, @panel-head-bg-gradient-strat, @panel-head-bg-gradient-end);
+//		.br-bottom(1px,solid,@panel-head-brColor);	
+	}
+	
+	
+}
+
+
+.ui-panel-border:extend(.ui-panel){
+	@panel-bg:  #e5e6ea;
+	padding:0;
+	.br(1px, solid,@panel-brColor);
+	background-color: @panel-bg;
+
+
+	> .panel-header:extend(.ui-panel-framed > .panel-header){
+		background-color: @panel-head-bg;
+		background-image: linear-gradient(to bottom, @panel-head-bg-gradient-strat, @panel-head-bg-gradient-end);
+		.br-bottom(1px,solid,@panel-head-brColor);	
+	}
+
+	> .panel-body:extend(.panel-body){
+		margin: @panel-body-padding;
+		
+		.br(1px, solid,@panel-brColor);
+	}
+}

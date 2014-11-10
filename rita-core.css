@@ -1,0 +1,1832 @@
+/*! normalize.css v2.1.3 | MIT License | git.io/normalize */
+/* ==========================================================================
+   HTML5 display definitions
+   ========================================================================== */
+/**
+ * Correct `block` display not defined in IE 8/9.
+ */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+nav,
+section,
+summary {
+  display: block;
+}
+/**
+ * Correct `inline-block` display not defined in IE 8/9.
+ */
+audio,
+canvas,
+video {
+  display: inline-block;
+}
+/**
+ * Prevent modern browsers from displaying `audio` without controls.
+ * Remove excess height in iOS 5 devices.
+ */
+audio:not([controls]) {
+  display: none;
+  height: 0;
+}
+/**
+ * Address `[hidden]` styling not present in IE 8/9.
+ * Hide the `template` element in IE, Safari, and Firefox < 22.
+ */
+[hidden],
+template {
+  display: none;
+}
+/* ==========================================================================
+   Base
+   ========================================================================== */
+/**
+ * 1. Set default font family to sans-serif.
+ * 2. Prevent iOS text size adjust after orientation change, without disabling
+ *    user zoom.
+ */
+/**
+ * Remove default margin.
+ */
+body {
+  margin: 0;
+  white-space: nowrap;
+}
+/* ==========================================================================
+   Links
+   ========================================================================== */
+/**
+ * Remove the gray background color from active links in IE 10.
+ */
+a {
+  background: transparent;
+}
+/**
+ * Address `outline` inconsistency between Chrome and other browsers.
+ */
+a:focus {
+  outline: thin dotted;
+}
+/**
+ * Improve readability when focused and also mouse hovered in all browsers.
+ */
+a:active,
+a:hover {
+  outline: 0;
+}
+/* ==========================================================================
+   Typography
+   ========================================================================== */
+/**
+ * Address variable `h1` font-size and margin within `section` and `article`
+ * contexts in Firefox 4+, Safari 5, and Chrome.
+ */
+h1 {
+  font-size: 2em;
+  margin: 0.1rem 0;
+}
+/**
+ * Address styling not present in IE 8/9, Safari 5, and Chrome.
+ */
+abbr[title] {
+  border-bottom: 1px dotted;
+}
+/**
+ * Address style set to `bolder` in Firefox 4+, Safari 5, and Chrome.
+ */
+b,
+strong {
+  font-weight: bold;
+}
+/**
+ * Address styling not present in Safari 5 and Chrome.
+ */
+dfn {
+  font-style: italic;
+}
+/**
+ * Address differences between Firefox and other browsers.
+ */
+hr {
+  -moz-box-sizing: content-box;
+  box-sizing: content-box;
+  height: 0;
+}
+/**
+ * Address styling not present in IE 8/9.
+ */
+mark {
+  background: #ff0;
+  color: #000;
+}
+/**
+ * Correct font family set oddly in Safari 5 and Chrome.
+ */
+code,
+kbd,
+pre,
+samp {
+  font-family: monospace, serif;
+  font-size: 1em;
+}
+/**
+ * Improve readability of pre-formatted text in all browsers.
+ */
+pre {
+  white-space: pre-wrap;
+}
+/**
+ * Set consistent quote types.
+ */
+q {
+  quotes: "\201C" "\201D" "\2018" "\2019";
+}
+/**
+ * Address inconsistent and variable font size in all browsers.
+ */
+small {
+  font-size: 80%;
+}
+/**
+ * Prevent `sub` and `sup` affecting `line-height` in all browsers.
+ */
+sub,
+sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+sup {
+  top: -0.5em;
+}
+sub {
+  bottom: -0.25em;
+}
+/* ==========================================================================
+   Embedded content
+   ========================================================================== */
+/**
+ * Remove border when inside `a` element in IE 8/9.
+ */
+img {
+  border: 0;
+}
+/**
+ * Correct overflow displayed oddly in IE 9.
+ */
+svg:not(:root) {
+  overflow: hidden;
+}
+/* ==========================================================================
+   Figures
+   ========================================================================== */
+/**
+ * Address margin not present in IE 8/9 and Safari 5.
+ */
+figure {
+  margin: 0;
+}
+/* ==========================================================================
+   Forms
+   ========================================================================== */
+/**
+ * Define consistent border, margin, and padding.
+ */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em;
+}
+/**
+ * 1. Correct `color` not being inherited in IE 8/9.
+ * 2. Remove padding so people aren't caught out if they zero out fieldsets.
+ */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * 1. Correct font family not being inherited in all browsers.
+ * 2. Correct font size not being inherited in all browsers.
+ * 3. Address margins set differently in Firefox 4+, Safari 5, and Chrome.
+ */
+button,
+input,
+select,
+textarea {
+  font-family: inherit;
+  /* 1 */
+  font-size: 100%;
+  /* 2 */
+  margin: 0;
+  /* 3 */
+}
+/**
+ * Address Firefox 4+ setting `line-height` on `input` using `!important` in
+ * the UA stylesheet.
+ */
+button,
+input {
+  line-height: normal;
+}
+/**
+ * Address inconsistent `text-transform` inheritance for `button` and `select`.
+ * All other form control elements do not inherit `text-transform` values.
+ * Correct `button` style inheritance in Chrome, Safari 5+, and IE 8+.
+ * Correct `select` style inheritance in Firefox 4+ and Opera.
+ */
+button,
+select {
+  text-transform: none;
+}
+/**
+ * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+ *    and `video` controls.
+ * 2. Correct inability to style clickable `input` types in iOS.
+ * 3. Improve usability and consistency of cursor style between image-type
+ *    `input` and others.
+ */
+button,
+html input[type="button"],
+input[type="reset"],
+input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+}
+/**
+ * Re-set default cursor for disabled elements.
+ */
+button[disabled],
+html input[disabled] {
+  cursor: default;
+}
+/**
+ * 1. Address box sizing set to `content-box` in IE 8/9/10.
+ * 2. Remove excess padding in IE 8/9/10.
+ */
+input[type="checkbox"],
+input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+}
+/**
+ * 1. Address `appearance` set to `searchfield` in Safari 5 and Chrome.
+ * 2. Address `box-sizing` set to `border-box` in Safari 5 and Chrome
+ *    (include `-moz` to future-proof).
+ */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box;
+}
+/**
+ * Remove inner padding and search cancel button in Safari 5 and Chrome
+ * on OS X.
+ */
+input[type="search"]::-webkit-search-cancel-button,
+input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none;
+}
+/**
+ * Remove inner padding and border in Firefox 4+.
+ */
+button::-moz-focus-inner,
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+/**
+ * 1. Remove default vertical scrollbar in IE 8/9.
+ * 2. Improve readability and alignment in all browsers.
+ */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */
+}
+/* ==========================================================================
+   Tables
+   ========================================================================== */
+/**
+ * Remove most spacing between table cells.
+ */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+*,
+*:before,
+*:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+br {
+  margin: 10px 0px !important;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+}
+/**
+ * Helpers Utility
+ */
+/**
+ *  Typography related mixins
+ */
+.text-wrap {
+  white-space: initial;
+}
+/**
+* flex-start | flex-end | center | baseline | stretch
+*/
+/**
+ * Borders Radius
+ */
+/**
+ * Border
+ */
+/* BackGround */
+/**
+	Horizontal gradient, from left to right
+	Creates two color stops, start and end, by specifying a color and position for each color stop.
+	 Color stops are not available in IE9 and below. 
+ 
+ */
+/**
+	Vertical gradient, from top to bottom
+	
+	Creates two color stops, start and end, by specifying a color and position for each color stop.
+	Color stops are not available in IE9 and below.
+ */
+/**
+ * directional
+ */
+/**
+ * horizontal-three-colors
+ */
+/**
+ * vertical-three-colors
+ */
+/**
+ * radial
+ */
+/**
+ * striped
+ */
+/*Transformations*/
+/* shadow */
+.rita-viewport {
+  min-height: 100%;
+  min-width: 500px;
+  position: absolute;
+  width: 100%;
+}
+/**
+ * shadow class
+ */
+.boxShadow-sm {
+  box-shadow: 0 0 3px -1px #aaaaaa !important;
+}
+.boxShadow {
+  box-shadow: 0 0 6px -1px #aaaaaa !important;
+}
+.boxShadow-lg {
+  box-shadow: 0 0 9px -1px #aaaaaa !important;
+}
+/**
+ * border radius class
+ */
+.brCorner {
+  border-radius: 4px 4px 4px 4px !important;
+}
+.brCorner-sm {
+  border-radius: 3px 3px 3px 3px !important;
+}
+.brCorner-lg {
+  border-radius: 6px 6px 6px 6px !important;
+}
+/**
+ * text align
+ */
+.text-right {
+  text-align: right!important;
+}
+.text-center {
+  text-align: center!important;
+}
+.text-left {
+  text-align: left!important;
+}
+/**
+ * padding class
+ */
+.padding-none {
+  padding: 0px!important;
+}
+.padding-sm {
+  padding: 15px!important;
+}
+.padding-lg {
+  padding: 30px!important;
+}
+/**
+ * margin class
+ */
+.margin-none {
+  margin: 0px!important;
+}
+/**
+ * border class
+ */
+.border-none {
+  border-left: none!important;
+  border-right: none!important;
+  border-top: none!important;
+  border-bottom: none!important;
+}
+/**
+ * background class
+ */
+.bg-none {
+  background: transparent !important;
+}
+.fluid-none {
+  display: block !important;
+}
+.box-nofluid {
+  flex: 0 0 auto !important;
+}
+.box-fluid {
+  flex: 1 1 auto;
+}
+.bc-visible {
+  overflow: visible !important;
+}
+.bc-hidden {
+  overflow: hidden !important;
+}
+.bc-auto {
+  overflow: auto !important;
+}
+.inherited {
+  display: inherit !important;
+  -webkit-flex-direction: inherit !important;
+  -ms-flex-direction: inherit !important;
+  flex-direction: inherit !important;
+  flex: 1 1 auto ;
+  min-width: min-content;
+}
+.com-layout {
+  display: flex;
+  position: relative;
+}
+.com-layout.typ-row {
+  flex-flow: column nowrap;
+}
+.com-layout.typ-col {
+  flex-flow: row nowrap;
+}
+.typ-col.opt-childs-fluid-fix > *,
+.typ-row.opt-childs-fluid-fix > * {
+  flex: 1 1 0;
+}
+.typ-col.opt-childs-fluid-auto > *,
+.typ-row.opt-childs-fluid-auto > * {
+  flex: 1 1 auto;
+}
+.typ-col > *:not(script),
+.typ-row > *:not(script) {
+  position: relative;
+}
+.com-layout-columns {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+.com-layout-columns > .layout-cell {
+  flex: 1;
+  background-clip: content-box;
+  color: #222;
+  padding: 1rem 1rem ;
+}
+.com-layout-columns.col1 > .layout-cell {
+  flex: 0 0 100%;
+}
+.com-layout-columns.col2 > .layout-cell {
+  flex: 0 0 50%;
+}
+.com-layout-columns.col3 > .layout-cell {
+  flex: 0 0 33.33%;
+}
+.com-layout-columns.col4 > .layout-cell {
+  flex: 0 0 25%;
+}
+.com-layout-columns.col5 > .layout-cell {
+  flex: 0 0 20%;
+}
+.com-layout-columns.col6 > .layout-cell {
+  flex: 0 0 16.66%;
+}
+/**
+ *  grid with table /support fluid with/height- nestet - border spiliter 
+ */
+.com-gridTable {
+  display: table;
+  width: 100% ;
+  table-layout: fixed;
+  position: relative;
+  overflow: auto;
+}
+.com-gridTable + .com-gridTable {
+  margin-top: grid-gap-between;
+}
+.com-gridTable.opt-autoHeight {
+  height: 100%;
+}
+.com-gridTable > .grid-col {
+  display: table-cell;
+  width: auto;
+  padding-right: 1.5%;
+  padding-left: 1.5%;
+  vertical-align: top;
+}
+.com-gridTable > .grid-col.valign-top {
+  vertical-align: top;
+}
+.com-gridTable > .grid-col.valign-center {
+  vertical-align: middle;
+}
+.com-gridTable > .grid-col.valign-bottom {
+  vertical-align: bottom;
+}
+.com-gridTable > .grid-col.valign-baseline {
+  vertical-align: baseline;
+}
+.com-gridTable.opt-border > .grid-col {
+  border-right: 1px solid #c9c9c9;
+}
+.com-gridTable.opt-border > .grid-col:first-child {
+  border-right: none ;
+}
+.grid-col.grid1 {
+  width: 8.33%;
+}
+.grid-col.grid2 {
+  width: 16.6%;
+}
+.grid-col.grid3 {
+  width: 25%;
+}
+.grid-col.grid4 {
+  width: 33.33%;
+}
+.grid-col.grid5 {
+  width: 41.66%;
+}
+.grid-col.grid6 {
+  width: 50%;
+}
+.grid-col.grid7 {
+  width: 58.33%;
+}
+.grid-col.grid8 {
+  width: 66.66%;
+}
+.grid-col.grid9 {
+  width: 75%;
+}
+.grid-col.grid10 {
+  width: 83.33%;
+}
+.grid-col.grid11 {
+  width: 91.66%;
+}
+.grid-col.grid12 {
+  width: 100%;
+}
+.com-gridTable > .grid-col:only-child {
+  padding: 0px;
+  border-right: none;
+}
+.grid-col > .com-gridTable > .grid-col:first-child {
+  padding-left: 1.5%;
+  border-right: none;
+}
+.grid-col > .com-gridTable > .grid-col:last-child {
+  padding-right: 1.5%;
+}
+.grid-col > .com-gridTable:only-child > .grid-col:first-child {
+  padding-right: 0px;
+}
+.grid-col > .com-gridTable:only-child > .grid-col:last-child {
+  padding-left: 0px;
+}
+.com-gridTable > .com-gridTable .grid-col:first-child {
+  border-right: none;
+}
+.com-form {
+  padding: 0;
+  position: relative;
+}
+.com-form .form-col {
+  flex: 1 1 0;
+  display: flex;
+  flex-direction: row ;
+  flex-wrap: nowrap;
+  border-bottom: 1px solid #ddd;
+}
+.com-form .form-col .com-input {
+  border-left: 1px solid #fff;
+  border-right: 1px solid #ddd;
+  border-bottom: none;
+  display: block;
+}
+.com-form .form-col .com-input:first-child {
+  border-right: none;
+}
+.com-form .form-col .com-input:last-child {
+  border-left: none;
+}
+.com-form .com-input:last-child,
+.com-form .form-col:last-child {
+  border-bottom: none;
+}
+.form-bg-none .com-input {
+  background: none;
+  border-top: none ;
+}
+.com-input {
+  background: #f9f9f9;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #ddd;
+  position: relative;
+  flex: 1 1 0;
+}
+.com-input.required .input-container > label:after {
+  color: #e32;
+  content: '*';
+  padding: 5px;
+}
+.com-input.error .input-container {
+  border-right: 10px solid #DC0000;
+}
+.com-input .error-message {
+  border: 2px solid #e67e22;
+  background-color: rgba(255, 243, 224, 0.85);
+  font-family: WRoya;
+  font-weight: normal;
+  font-size: 16px;
+  color: #22277E;
+  left: 20px;
+  text-shadow: 0 0 3px #c5c5c5;
+  z-index: 5;
+  padding: 5px 15px;
+  box-shadow: 2px 2px 2px 0px #C9C9C9;
+  border-radius: 6px;
+  text-wrap: none;
+  white-space: nowrap;
+  word-wrap: normal;
+  position: absolute;
+}
+.com-input .error-message:before {
+  border-bottom: 13px solid #e67e22;
+  border-left: 10px solid transparent;
+  border-right: 10px solid transparent;
+  content: " ";
+  height: 0;
+  left: 13px;
+  position: absolute;
+  top: -13px;
+  width: 0;
+}
+.com-input .error-message:hover {
+  cursor: pointer;
+}
+.com-input > .input-container {
+  display: flex;
+  flex-direction: row ;
+  flex-wrap: nowrap;
+  flex: 1 1 auto;
+  padding: 10px;
+  border-right: 10px solid transparent;
+  border-bottom: none	;
+  border-top: none;
+  text-align: right;
+}
+.com-input > .input-container > label {
+  color: #222;
+  font-family: WMitra,Tahoma;
+  font-size: 16px;
+  align-self: center;
+  font-weight: bold;
+  text-shadow: 1px 1px 1px #c9c9c9;
+  min-width: 130px;
+  display: block;
+  text-wrap: none;
+  white-space: nowrap;
+  word-wrap: normal;
+}
+.com-input > .input-container > input,
+.com-input > .input-container > textarea,
+.com-input > .input-container > select {
+  display: block;
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-family: WAmer, sans-serif;
+  color: #555;
+  box-shadow: 0px 0px 5px 0px #DCDCDC inset;
+  background: #fdfdfd;
+  background-clip: padding-box;
+}
+.com-input > .input-container > input:focus,
+.com-input > .input-container > textarea:focus,
+.com-input > .input-container > select:focus {
+  box-shadow: 0px 0px 2px 0px #DCDCDC inset;
+  background: white;
+}
+.com-input > .input-container > input[type='text'],
+.com-input > .input-container > input[type='email'],
+.com-input > .input-container > input[type='password'],
+.com-input > .input-container > textarea {
+  padding: 2px 10px;
+  flex: 1;
+}
+.com-input > .input-container select option {
+  padding: 2px 10px;
+  font-size: 12px;
+}
+.form-v .com-input .input-container,
+.com-input.form-v .input-container {
+  display: block;
+  padding-right: 0px;
+}
+.form-v .com-input.error .input-container,
+.com-input.form-v.error .input-container {
+  padding-right: 10px !important;
+}
+.form-v .com-input .input-container > label,
+.com-input.form-v .input-container > label {
+  padding: 0 20px;
+  padding-bottom: 2px;
+}
+.form-v .com-input .error-message,
+.com-input.form-v .error-message {
+  top: auto;
+  right: 3%;
+}
+.form-v .com-input input,
+.com-input.form-v input,
+.form-v .com-input textarea,
+.com-input.form-v textarea {
+  width: 100% ;
+}
+.form-v .com-input select,
+.com-input.form-v select {
+  width: 50%;
+}
+.com-input.checkbox > .input-container {
+  align-items: center;
+}
+div.submit {
+  display: inline-block;
+}
+.alert_warning {
+  padding: auto;
+  background: #fcf2a5;
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px #ccc;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 0 0 0 transparent;
+}
+.alert_info {
+  padding: auto;
+  background: #e6f5fd;
+  border: 1px solid #b2c8ff;
+  border-radius: 5px;
+  box-shadow: 0 1px 2px #ccc;
+  color: #333;
+  font-weight: bold;
+  cursor: pointer;
+  text-shadow: 0 0 0 transparent;
+}
+.alert_success {
+  padding: auto;
+  background: #08A000;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0 0px 2px #000;
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 0 1px #333;
+  cursor: pointer;
+}
+.alert_error {
+  display: flex;
+  flex-direction: row ;
+  padding: 0px 20px;
+  align-items: center;
+  background: #fb1800;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  box-shadow: 0px 0px 3px 0px #444;
+  color: #fff;
+  font-weight: bold;
+  background-clip: padding-box;
+}
+.alert_warning p,
+.alert_info p,
+.alert_success p,
+.alert_error p {
+  vertical-align: middle;
+  font-family: WAmer, sans-serif;
+}
+.alert_warning p i,
+.alert_info p i,
+.alert_success p i,
+.alert_error p i {
+  color: yellow;
+  font-size: 15px;
+  margin: 0 0 0 3px;
+  vertical-align: middle;
+}
+@keyframes glowing {
+  /* line 29, ../scss/partials/_glow.scss */
+  from {
+    box-shadow: 0px 0px 0px rgba(44, 154, 219, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  /* line 30, ../scss/partials/_glow.scss */
+  50% {
+    box-shadow: 0px 0px 16px rgba(44, 154, 219, 0.8), 0px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+  /* line 31, ../scss/partials/_glow.scss */
+  to {
+    box-shadow: 0px 0px 0px rgba(44, 154, 219, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
+  }
+}
+/* line 24, ../scss/partials/_buttons.scss */
+.btn {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15);
+  background-color: #eeeeee;
+  background: linear-gradient(to bottom, #fbfbfb, #e1e1e1);
+  display: inline-table;
+  vertical-align: middle;
+  zoom: 1;
+  border: 1px solid #b4b4b4;
+  height: 32px;
+  line-height: 32px;
+  padding: 0px 25.6px;
+  font-weight: 400;
+  align-self: stretch;
+  font-size: 14px;
+  font-family: "WIranian", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  color: #666666;
+  text-shadow: 0 1px 1px white;
+  margin: 0 2px;
+  text-decoration: none;
+  text-align: center;
+}
+.btn i {
+  margin: 0 5px;
+}
+/* line 42, ../scss/partials/_buttons.scss */
+.btn:hover {
+  background-color: #eeeeee;
+  background: linear-gradient(to bottom, #ffffff, #dcdcdc);
+  cursor: pointer;
+}
+/* line 46, ../scss/partials/_buttons.scss */
+.btn:active {
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px #ffffff;
+  text-shadow: 0px 1px 0px rgba(255, 255, 255, 0.4);
+  background: #eeeeee;
+  color: #bbbbbb;
+}
+/* line 52, ../scss/partials/_buttons.scss */
+.btn:focus {
+  outline: none;
+}
+/* line 58, ../scss/partials/_buttons.scss */
+input.btn,
+button.btn {
+  height: 34px;
+  cursor: pointer;
+}
+/* line 65, ../scss/partials/_buttons.scss */
+.btn-block {
+  display: block;
+}
+/* line 74, ../scss/partials/_buttons.scss */
+.btn.disabled,
+.btn.disabled:hover,
+.btn.disabled:active,
+input.btn:disabled,
+button.btn:disabled {
+  box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.1);
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+  opacity: 0.8;
+  background: #EEE;
+  border: 1px solid #DDD;
+  text-shadow: 0 1px 1px white;
+  color: #CCC;
+  cursor: default;
+}
+/* line 86, ../scss/partials/_buttons.scss */
+.btn-wrap {
+  background: linear-gradient(to bottom, #e3e3e3, #f2f2f2);
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.04);
+  padding: 10px;
+  display: inline-block;
+}
+/* line 96, ../scss/partials/_buttons.scss */
+.btn-flat {
+  box-shadow: none;
+  transition-property: background;
+  transition-duration: 0.3s;
+  background: #eeeeee;
+  border: none;
+  text-shadow: none;
+}
+/* line 105, ../scss/partials/_buttons.scss */
+.btn-flat:hover {
+  background: #fbfbfb;
+}
+/* line 108, ../scss/partials/_buttons.scss */
+.btn-flat:active {
+  transition-duration: 0s;
+  background: #eeeeee;
+  color: #bbbbbb;
+}
+/* line 113, ../scss/partials/_buttons.scss */
+.btn-flat.disabled {
+  box-shadow: none;
+}
+/* line 123, ../scss/partials/_buttons.scss */
+.btn-border {
+  box-shadow: none;
+  transition-property: all;
+  transition-duration: 0.3s;
+  color: #666666;
+  border: 2px solid #666666;
+  background: none;
+  text-shadow: none;
+}
+/* line 132, ../scss/partials/_buttons.scss */
+.btn-border:hover {
+  background: none;
+  color: gray;
+  border: 2px solid gray;
+}
+/* line 137, ../scss/partials/_buttons.scss */
+.btn-border:active {
+  transition-duration: 0s;
+  background: none;
+  color: #4d4d4d;
+  border: 2px solid #4d4d4d;
+}
+/* line 143, ../scss/partials/_buttons.scss */
+.btn-border.disabled {
+  box-shadow: none;
+}
+/* line 153, ../scss/partials/_buttons.scss */
+.btn-3d {
+  transition-property: all;
+  transition-duration: 0.3s;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #bbbbbb, 0px 8px 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #f3f3f3, #e9e9e9);
+  background-color: #eeeeee;
+  color: #666666;
+  border: 1px solid #e1e1e1;
+  text-shadow: none;
+  position: relative;
+  top: 0px;
+}
+/* line 165, ../scss/partials/_buttons.scss */
+.btn-3d:hover {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #bbbbbb, 0px 8px 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #ffffff, #ebebeb);
+  background-color: white;
+}
+/* line 170, ../scss/partials/_buttons.scss */
+.btn-3d:active {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #bbbbbb, 0px 3px 3px rgba(0, 0, 0, 0.2);
+  background: linear-gradient(to bottom, #e9e9e9, #f3f3f3);
+  background-color: #eeeeee;
+  color: #bbbbbb;
+  border: 1px solid #e1e1e1;
+  top: 5px;
+}
+/* line 178, ../scss/partials/_buttons.scss */
+.btn-3d.disabled {
+  box-shadow: none;
+}
+/* line 192, ../scss/partials/_buttons.scss */
+.btn-rounded {
+  border-radius: 3px;
+}
+/* line 192, ../scss/partials/_buttons.scss */
+.btn-pill {
+  border-radius: 50px;
+}
+/* line 192, ../scss/partials/_buttons.scss */
+.btn-circle {
+  border-radius: 240px;
+  box-shadow: inset 0px 1px 1px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.2);
+  width: 120px;
+  line-height: 120px;
+  height: 120px;
+  padding: 0px;
+  border-width: 4px;
+  font-size: 19px;
+}
+/* line 226, ../scss/partials/_buttons.scss */
+.btn-primary {
+  background: linear-gradient(to bottom, #00b5e5, #008db2);
+  background-color: #00a1cb;
+  border-color: #007998;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(0, 40, 50, 0.35);
+}
+/* line 233, ../scss/partials/_buttons.scss */
+.btn-primary:hover {
+  background-color: #00a1cb;
+  background: linear-gradient(to bottom, #00c9fe, #008db2);
+}
+/* line 237, ../scss/partials/_buttons.scss */
+.btn-primary:active {
+  background: #1495b7;
+  color: #005065;
+}
+/* line 250, ../scss/partials/_buttons.scss */
+.btn-3d-primary {
+  transition-property: all;
+  transition-duration: 0.3s;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #007998, 0px 8px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #00a9d5, #0099c1);
+  background-color: #00a1cb;
+  color: white;
+  border: 1px solid #007998;
+  text-shadow: none;
+  position: relative;
+  top: 0px;
+}
+/* line 262, ../scss/partials/_buttons.scss */
+.btn-3d-primary:hover {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #00708e, 0px 8px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #00c1f4, #009dc6);
+  background-color: #00c9fe;
+}
+/* line 267, ../scss/partials/_buttons.scss */
+.btn-3d-primary:active {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #007998, 0px 3px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #0099c1, #00a9d5);
+  background-color: #1495b7;
+  color: #005065;
+  border: 1px solid #008db2;
+  top: 5px;
+}
+/* line 275, ../scss/partials/_buttons.scss */
+.btn-3d-primary.disabled {
+  box-shadow: none;
+}
+/* line 289, ../scss/partials/_buttons.scss */
+.btn-border-primary {
+  box-shadow: none;
+  transition-property: all;
+  transition-duration: 0.3s;
+  color: #00a1cb;
+  border: 2px solid #00a1cb;
+  background: none;
+  text-shadow: none;
+}
+/* line 298, ../scss/partials/_buttons.scss */
+.btn-border-primary:hover {
+  background: none;
+  color: #00c9fe;
+  border: 2px solid #00c9fe;
+}
+/* line 303, ../scss/partials/_buttons.scss */
+.btn-border-primary:active {
+  transition-duration: 0s;
+  background: none;
+  color: #007998;
+  border: 2px solid #007998;
+}
+/* line 309, ../scss/partials/_buttons.scss */
+.btn-border-primary.disabled {
+  box-shadow: none;
+}
+/* line 321, ../scss/partials/_buttons.scss */
+.btn-flat-primary {
+  box-shadow: none;
+  transition-property: background;
+  transition-duration: 0.3s;
+  background: #00a1cb;
+  color: white;
+  text-shadow: none;
+  border: none;
+}
+/* line 330, ../scss/partials/_buttons.scss */
+.btn-flat-primary:hover {
+  background: #00b5e5;
+}
+/* line 333, ../scss/partials/_buttons.scss */
+.btn-flat-primary:active {
+  transition-duration: 0s;
+  background: #1495b7;
+  color: #00647f;
+}
+/* line 338, ../scss/partials/_buttons.scss */
+.btn-flat-primary.disabled {
+  box-shadow: none;
+}
+/* line 226, ../scss/partials/_buttons.scss */
+.btn-secondary {
+  background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+  background-color: white;
+  border-color: #e6e6e6;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(179, 179, 179, 0.35);
+}
+/* line 233, ../scss/partials/_buttons.scss */
+.btn-secondary:hover {
+  background-color: white;
+  background: linear-gradient(to bottom, #ffffff, #f2f2f2);
+}
+/* line 237, ../scss/partials/_buttons.scss */
+.btn-secondary:active {
+  background: white;
+  color: #cccccc;
+}
+/* line 250, ../scss/partials/_buttons.scss */
+.btn-3d-secondary {
+  transition-property: all;
+  transition-duration: 0.3s;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #e6e6e6, 0px 8px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #ffffff, #fafafa);
+  background-color: white;
+  color: white;
+  border: 1px solid #e6e6e6;
+  text-shadow: none;
+  position: relative;
+  top: 0px;
+}
+/* line 262, ../scss/partials/_buttons.scss */
+.btn-3d-secondary:hover {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #e0e0e0, 0px 8px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #ffffff, #fcfcfc);
+  background-color: white;
+}
+/* line 267, ../scss/partials/_buttons.scss */
+.btn-3d-secondary:active {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #e6e6e6, 0px 3px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #fafafa, #ffffff);
+  background-color: white;
+  color: #cccccc;
+  border: 1px solid #f2f2f2;
+  top: 5px;
+}
+/* line 275, ../scss/partials/_buttons.scss */
+.btn-3d-secondary.disabled {
+  box-shadow: none;
+}
+/* line 289, ../scss/partials/_buttons.scss */
+.btn-border-secondary {
+  box-shadow: none;
+  transition-property: all;
+  transition-duration: 0.3s;
+  color: white;
+  border: 2px solid white;
+  background: none;
+  text-shadow: none;
+}
+/* line 298, ../scss/partials/_buttons.scss */
+.btn-border-secondary:hover {
+  background: none;
+  color: white;
+  border: 2px solid white;
+}
+/* line 303, ../scss/partials/_buttons.scss */
+.btn-border-secondary:active {
+  transition-duration: 0s;
+  background: none;
+  color: #e6e6e6;
+  border: 2px solid #e6e6e6;
+}
+/* line 309, ../scss/partials/_buttons.scss */
+.btn-border-secondary.disabled {
+  box-shadow: none;
+}
+/* line 321, ../scss/partials/_buttons.scss */
+.btn-flat-secondary {
+  box-shadow: none;
+  transition-property: background;
+  transition-duration: 0.3s;
+  background: white;
+  color: white;
+  text-shadow: none;
+  border: none;
+}
+/* line 330, ../scss/partials/_buttons.scss */
+.btn-flat-secondary:hover {
+  background: white;
+}
+/* line 333, ../scss/partials/_buttons.scss */
+.btn-flat-secondary:active {
+  transition-duration: 0s;
+  background: white;
+  color: #d9d9d9;
+}
+/* line 338, ../scss/partials/_buttons.scss */
+.btn-flat-secondary.disabled {
+  box-shadow: none;
+}
+/* line 226, ../scss/partials/_buttons.scss */
+.btn-action {
+  background: linear-gradient(to bottom, #8fcf00, #6b9c00);
+  background-color: #7db500;
+  border-color: #5a8200;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(19, 28, 0, 0.35);
+}
+/* line 233, ../scss/partials/_buttons.scss */
+.btn-action:hover {
+  background-color: #7db500;
+  background: linear-gradient(to bottom, #a0e800, #6b9c00);
+}
+/* line 237, ../scss/partials/_buttons.scss */
+.btn-action:active {
+  background: #76a312;
+  color: #374f00;
+}
+/* line 250, ../scss/partials/_buttons.scss */
+.btn-3d-action {
+  transition-property: all;
+  transition-duration: 0.3s;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #5a8200, 0px 8px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #84bf00, #76ab00);
+  background-color: #7db500;
+  color: white;
+  border: 1px solid #5a8200;
+  text-shadow: none;
+  position: relative;
+  top: 0px;
+}
+/* line 262, ../scss/partials/_buttons.scss */
+.btn-3d-action:hover {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #537800, 0px 8px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #99de00, #79b000);
+  background-color: #a0e800;
+}
+/* line 267, ../scss/partials/_buttons.scss */
+.btn-3d-action:active {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #5a8200, 0px 3px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #76ab00, #84bf00);
+  background-color: #76a312;
+  color: #374f00;
+  border: 1px solid #6b9c00;
+  top: 5px;
+}
+/* line 275, ../scss/partials/_buttons.scss */
+.btn-3d-action.disabled {
+  box-shadow: none;
+}
+/* line 289, ../scss/partials/_buttons.scss */
+.btn-border-action {
+  box-shadow: none;
+  transition-property: all;
+  transition-duration: 0.3s;
+  color: #7db500;
+  border: 2px solid #7db500;
+  background: none;
+  text-shadow: none;
+}
+/* line 298, ../scss/partials/_buttons.scss */
+.btn-border-action:hover {
+  background: none;
+  color: #a0e800;
+  border: 2px solid #a0e800;
+}
+/* line 303, ../scss/partials/_buttons.scss */
+.btn-border-action:active {
+  transition-duration: 0s;
+  background: none;
+  color: #5a8200;
+  border: 2px solid #5a8200;
+}
+/* line 309, ../scss/partials/_buttons.scss */
+.btn-border-action.disabled {
+  box-shadow: none;
+}
+/* line 321, ../scss/partials/_buttons.scss */
+.btn-flat-action {
+  box-shadow: none;
+  transition-property: background;
+  transition-duration: 0.3s;
+  background: #7db500;
+  color: white;
+  text-shadow: none;
+  border: none;
+}
+/* line 330, ../scss/partials/_buttons.scss */
+.btn-flat-action:hover {
+  background: #8fcf00;
+}
+/* line 333, ../scss/partials/_buttons.scss */
+.btn-flat-action:active {
+  transition-duration: 0s;
+  background: #76a312;
+  color: #486900;
+}
+/* line 338, ../scss/partials/_buttons.scss */
+.btn-flat-action.disabled {
+  box-shadow: none;
+}
+/* line 226, ../scss/partials/_buttons.scss */
+.btn-highlight {
+  background: linear-gradient(to bottom, #fa9915, #d87e04);
+  background-color: #f18d05;
+  border-color: #bf7004;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(91, 53, 2, 0.35);
+}
+/* line 233, ../scss/partials/_buttons.scss */
+.btn-highlight:hover {
+  background-color: #f18d05;
+  background: linear-gradient(to bottom, #fba42e, #d87e04);
+}
+/* line 237, ../scss/partials/_buttons.scss */
+.btn-highlight:active {
+  background: #d8891e;
+  color: #8d5303;
+}
+/* line 250, ../scss/partials/_buttons.scss */
+.btn-3d-highlight {
+  transition-property: all;
+  transition-duration: 0.3s;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #bf7004, 0px 8px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #fa9306, #e78705);
+  background-color: #f18d05;
+  color: white;
+  border: 1px solid #bf7004;
+  text-shadow: none;
+  position: relative;
+  top: 0px;
+}
+/* line 262, ../scss/partials/_buttons.scss */
+.btn-3d-highlight:hover {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #b56a04, 0px 8px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #faa024, #ec8a05);
+  background-color: #fba42e;
+}
+/* line 267, ../scss/partials/_buttons.scss */
+.btn-3d-highlight:active {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #bf7004, 0px 3px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #e78705, #fa9306);
+  background-color: #d8891e;
+  color: #8d5303;
+  border: 1px solid #d87e04;
+  top: 5px;
+}
+/* line 275, ../scss/partials/_buttons.scss */
+.btn-3d-highlight.disabled {
+  box-shadow: none;
+}
+/* line 289, ../scss/partials/_buttons.scss */
+.btn-border-highlight {
+  box-shadow: none;
+  transition-property: all;
+  transition-duration: 0.3s;
+  color: #f18d05;
+  border: 2px solid #f18d05;
+  background: none;
+  text-shadow: none;
+}
+/* line 298, ../scss/partials/_buttons.scss */
+.btn-border-highlight:hover {
+  background: none;
+  color: #fba42e;
+  border: 2px solid #fba42e;
+}
+/* line 303, ../scss/partials/_buttons.scss */
+.btn-border-highlight:active {
+  transition-duration: 0s;
+  background: none;
+  color: #bf7004;
+  border: 2px solid #bf7004;
+}
+/* line 309, ../scss/partials/_buttons.scss */
+.btn-border-highlight.disabled {
+  box-shadow: none;
+}
+/* line 321, ../scss/partials/_buttons.scss */
+.btn-flat-highlight {
+  box-shadow: none;
+  transition-property: background;
+  transition-duration: 0.3s;
+  background: #f18d05;
+  color: white;
+  text-shadow: none;
+  border: none;
+}
+/* line 330, ../scss/partials/_buttons.scss */
+.btn-flat-highlight:hover {
+  background: #fa9915;
+}
+/* line 333, ../scss/partials/_buttons.scss */
+.btn-flat-highlight:active {
+  transition-duration: 0s;
+  background: #d8891e;
+  color: #a66103;
+}
+/* line 338, ../scss/partials/_buttons.scss */
+.btn-flat-highlight.disabled {
+  box-shadow: none;
+}
+/* line 226, ../scss/partials/_buttons.scss */
+.btn-caution {
+  background: linear-gradient(to bottom, #e8543f, #d9331a);
+  background-color: #e54028;
+  border-color: #c22d18;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(103, 24, 13, 0.35);
+}
+/* line 233, ../scss/partials/_buttons.scss */
+.btn-caution:hover {
+  background-color: #e54028;
+  background: linear-gradient(to bottom, #eb6855, #d9331a);
+}
+/* line 237, ../scss/partials/_buttons.scss */
+.btn-caution:active {
+  background: #cd5240;
+  color: #952312;
+}
+/* line 250, ../scss/partials/_buttons.scss */
+.btn-3d-caution {
+  transition-property: all;
+  transition-duration: 0.3s;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #c22d18, 0px 8px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #e64831, #e4381f);
+  background-color: #e54028;
+  color: white;
+  border: 1px solid #c22d18;
+  text-shadow: none;
+  position: relative;
+  top: 0px;
+}
+/* line 262, ../scss/partials/_buttons.scss */
+.btn-3d-caution:hover {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #b92b16, 0px 8px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #e9604c, #e43c23);
+  background-color: #eb6855;
+}
+/* line 267, ../scss/partials/_buttons.scss */
+.btn-3d-caution:active {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #c22d18, 0px 3px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #e4381f, #e64831);
+  background-color: #cd5240;
+  color: #952312;
+  border: 1px solid #d9331a;
+  top: 5px;
+}
+/* line 275, ../scss/partials/_buttons.scss */
+.btn-3d-caution.disabled {
+  box-shadow: none;
+}
+/* line 289, ../scss/partials/_buttons.scss */
+.btn-border-caution {
+  box-shadow: none;
+  transition-property: all;
+  transition-duration: 0.3s;
+  color: #e54028;
+  border: 2px solid #e54028;
+  background: none;
+  text-shadow: none;
+}
+/* line 298, ../scss/partials/_buttons.scss */
+.btn-border-caution:hover {
+  background: none;
+  color: #eb6855;
+  border: 2px solid #eb6855;
+}
+/* line 303, ../scss/partials/_buttons.scss */
+.btn-border-caution:active {
+  transition-duration: 0s;
+  background: none;
+  color: #c22d18;
+  border: 2px solid #c22d18;
+}
+/* line 309, ../scss/partials/_buttons.scss */
+.btn-border-caution.disabled {
+  box-shadow: none;
+}
+/* line 321, ../scss/partials/_buttons.scss */
+.btn-flat-caution {
+  box-shadow: none;
+  transition-property: background;
+  transition-duration: 0.3s;
+  background: #e54028;
+  color: white;
+  text-shadow: none;
+  border: none;
+}
+/* line 330, ../scss/partials/_buttons.scss */
+.btn-flat-caution:hover {
+  background: #e8543f;
+}
+/* line 333, ../scss/partials/_buttons.scss */
+.btn-flat-caution:active {
+  transition-duration: 0s;
+  background: #cd5240;
+  color: #ac2815;
+}
+/* line 338, ../scss/partials/_buttons.scss */
+.btn-flat-caution.disabled {
+  box-shadow: none;
+}
+/* line 226, ../scss/partials/_buttons.scss */
+.btn-royal {
+  background: linear-gradient(to bottom, #99389f, #752a79);
+  background-color: #87318c;
+  border-color: #632466;
+  color: white;
+  text-shadow: 0 -1px 1px rgba(26, 9, 27, 0.35);
+}
+/* line 233, ../scss/partials/_buttons.scss */
+.btn-royal:hover {
+  background-color: #87318c;
+  background: linear-gradient(to bottom, #ab3eb2, #752a79);
+}
+/* line 237, ../scss/partials/_buttons.scss */
+.btn-royal:active {
+  background: #764479;
+  color: #3e1740;
+}
+/* line 250, ../scss/partials/_buttons.scss */
+.btn-3d-royal {
+  transition-property: all;
+  transition-duration: 0.3s;
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #632466, 0px 8px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #8e3494, #802e84);
+  background-color: #87318c;
+  color: white;
+  border: 1px solid #632466;
+  text-shadow: none;
+  position: relative;
+  top: 0px;
+}
+/* line 262, ../scss/partials/_buttons.scss */
+.btn-3d-royal:hover {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #5b215f, 0px 8px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #a43caa, #833088);
+  background-color: #ab3eb2;
+}
+/* line 267, ../scss/partials/_buttons.scss */
+.btn-3d-royal:active {
+  box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #632466, 0px 3px 3px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(to bottom, #802e84, #8e3494);
+  background-color: #764479;
+  color: #3e1740;
+  border: 1px solid #752a79;
+  top: 5px;
+}
+/* line 275, ../scss/partials/_buttons.scss */
+.btn-3d-royal.disabled {
+  box-shadow: none;
+}
+/* line 289, ../scss/partials/_buttons.scss */
+.btn-border-royal {
+  box-shadow: none;
+  transition-property: all;
+  transition-duration: 0.3s;
+  color: #87318c;
+  border: 2px solid #87318c;
+  background: none;
+  text-shadow: none;
+}
+/* line 298, ../scss/partials/_buttons.scss */
+.btn-border-royal:hover {
+  background: none;
+  color: #ab3eb2;
+  border: 2px solid #ab3eb2;
+}
+/* line 303, ../scss/partials/_buttons.scss */
+.btn-border-royal:active {
+  transition-duration: 0s;
+  background: none;
+  color: #632466;
+  border: 2px solid #632466;
+}
+/* line 309, ../scss/partials/_buttons.scss */
+.btn-border-royal.disabled {
+  box-shadow: none;
+}
+/* line 321, ../scss/partials/_buttons.scss */
+.btn-flat-royal {
+  box-shadow: none;
+  transition-property: background;
+  transition-duration: 0.3s;
+  background: #87318c;
+  color: white;
+  text-shadow: none;
+  border: none;
+}
+/* line 330, ../scss/partials/_buttons.scss */
+.btn-flat-royal:hover {
+  background: #99389f;
+}
+/* line 333, ../scss/partials/_buttons.scss */
+.btn-flat-royal:active {
+  transition-duration: 0s;
+  background: #764479;
+  color: #501d53;
+}
+/* line 338, ../scss/partials/_buttons.scss */
+.btn-flat-royal.disabled {
+  box-shadow: none;
+}
+/* line 351, ../scss/partials/_buttons.scss */
+.btn-group {
+  position: relative;
+  display: inline-block;
+}
+/* line 354, ../scss/partials/_buttons.scss */
+.btn-group .btn {
+  float: left;
+}
+/* line 356, ../scss/partials/_buttons.scss */
+.btn-group .btn:focus,
+.btn-group .btn:hover,
+.btn-group .btn.active {
+  z-index: 5;
+}
+/* line 359, ../scss/partials/_buttons.scss */
+.btn-group .btn.active {
+  background: gainsboro;
+}
+/* line 363, ../scss/partials/_buttons.scss */
+.btn-group .btn:not(:first-child):not(:last-child) {
+  border-radius: 0;
+}
+/* line 366, ../scss/partials/_buttons.scss */
+.btn-group .btn:first-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+/* line 370, ../scss/partials/_buttons.scss */
+.btn-group .btn:last-child {
+  border-top-left-radius: 0;
+  border-bottom-left-radius: 0;
+}
+/* line 376, ../scss/partials/_buttons.scss */
+.btn-group .btn + .btn {
+  margin-left: -1px;
+}
+/* line 389, ../scss/partials/_buttons.scss */
+.btn-jumbo {
+  font-size: 24px;
+  height: 51.2px;
+  line-height: 51.2px;
+  padding: 0px 40.96px;
+}
+/* line 389, ../scss/partials/_buttons.scss */
+.btn-large {
+  font-size: 19px;
+  height: 38.4px;
+  line-height: 38.4px;
+  padding: 0px 30.72px;
+}
+/* line 420, ../scss/partials/_buttons.scss */
+input.btn-large,
+button.btn-large {
+  height: 40.4px;
+}
+/* line 389, ../scss/partials/_buttons.scss */
+.btn-small {
+  font-size: 15px;
+  height: 25.6px;
+  line-height: 25.6px;
+  padding: 0px 20.48px;
+}
+/* line 420, ../scss/partials/_buttons.scss */
+input.btn-small,
+button.btn-small {
+  height: 27.6px;
+}
+/* line 389, ../scss/partials/_buttons.scss */
+.btn-tiny {
+  font-size: 12px;
+  height: 22.4px;
+  line-height: 22.4px;
+  padding: 0px 17.92px;
+}
+/* line 420, ../scss/partials/_buttons.scss */
+input.btn-tiny,
+button.btn-tiny {
+  height: 24.4px;
+}
+/* line 441, ../scss/partials/_buttons.scss */
+.btn.glow {
+  animation-duration: 3s;
+  -khtml-animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
+  -khtml-animation-name: glowing;
+  animation-name: glowing;
+}
+/* line 444, ../scss/partials/_buttons.scss */
+.btn.glow:active {
+  animation-name: none;
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px #ffffff;
+}
+/* line 456, ../scss/partials/_buttons.scss */
+.btn-dropdown {
+  position: relative;
+  overflow: visible;
+  display: inline-block;
+}
+/* line 463, ../scss/partials/_buttons.scss */
+.btn-dropdown .button .icon-caret-down {
+  font-size: 90%;
+  margin: 0px 0px 0px 3px;
+  vertical-align: middle;
+}
+/* line 470, ../scss/partials/_buttons.scss */
+.btn-dropdown ul.btn-dropdown-menu-below {
+  top: 115%;
+}
+/* line 473, ../scss/partials/_buttons.scss */
+.btn-dropdown ul.btn-dropdown-menu-above {
+  bottom: 115%;
+  top: auto;
+}
+/* line 479, ../scss/partials/_buttons.scss */
+.btn-dropdown ul {
+  box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.6);
+  border-radius: 3px;
+  display: none;
+  position: absolute;
+  background: #fcfcfc;
+  top: -2px;
+  left: -2px;
+  z-index: 1000;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+  min-width: 102%;
+}
+/* line 493, ../scss/partials/_buttons.scss */
+.btn-dropdown ul li {
+  padding: 0px;
+  margin: 0px;
+  display: block;
+}
+/* line 498, ../scss/partials/_buttons.scss */
+.btn-dropdown ul li:first-child a {
+  border-top-left-radius: 3px;
+  border-top-right-radius: 3px;
+}
+/* line 501, ../scss/partials/_buttons.scss */
+.btn-dropdown ul li:last-child a {
+  border-bottom-left-radius: 3px;
+  border-bottom-right-radius: 3px;
+}
+/* line 507, ../scss/partials/_buttons.scss */
+.btn-dropdown ul .btn-dropdown-divider {
+  box-shadow: inset 0px 1px 0px white;
+  border-top: 1px solid #e4e4e4;
+}
+/* line 512, ../scss/partials/_buttons.scss */
+.btn-dropdown ul a {
+  display: block;
+  padding: 0px 20px;
+  text-decoration: none;
+  font-size: 12px;
+  color: #333333;
+  line-height: 30px;
+  white-space: nowrap;
+}
+/* line 521, ../scss/partials/_buttons.scss */
+.btn-dropdown ul a:hover {
+  background-color: #3c6ab9;
+  color: white;
+}

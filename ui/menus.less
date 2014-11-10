@@ -1,21 +1,21 @@
-.wid-menu,
+.ui-menu,
 .menu-submenu{
 	display: block;
 	position: relative;
-	background-color: @wid-menu-bg;
+	background-color: @menu-bg;
 }
 
-.wid-menu  li{
+.ui-menu  li{
 	display: block;
 	position: relative;	
 }
-.wid-menu > li{	
+.ui-menu > li{	
 	border-top: 1px solid rgba(102, 110, 123, 0.43) ;
 	&:first-child{
 		border-top: none;
 	}	
 }
-.wid-menu  a{
+.ui-menu  a{
 	.flex-box();
 	cursor: pointer;
 	position: relative;
@@ -24,12 +24,12 @@
 	
 }
 
-.wid-menu .icon{
+.ui-menu .icon{
 		align-self:center;
 		text-align: center;
 }
 
-.wid-menu .icon i{
+.ui-menu .icon i{
 	color: #01B070;
 	
 	font-size: 1.3rem;
@@ -37,12 +37,12 @@
 	position: relative;
 }
 
-.wid-menu .label{
+.ui-menu .label{
 	.flex-fluid(1);
 
 }
 
-.wid-menu .label span{
+.ui-menu .label span{
 	color: #DCE2E6;
 	font-family: wroya;
 	font-size: 1.1rem;
@@ -51,7 +51,7 @@
 	text-shadow: 1px 1px 1px #444;
 }
 
-.wid-menu > li > a{
+.ui-menu > li > a{
 	.flex-row();
 	padding: 15px 0;
 	
@@ -60,8 +60,8 @@
 	}
 }
 
-.wid-menu > li:hover > a{
-	background: @wid-menu-bg-hover ;
+.ui-menu > li:hover > a{
+	background: @menu-bg-hover ;
 	
 	.label span{
 		color : #FFFFFF;
@@ -70,14 +70,14 @@
 
 
 .menu-submenu{
-	background-color:  @wid-menu-submenu-bg;
+	background-color:  @menu-submenu-bg;
 	display: none;
 	position: absolute;
 	left: 0;
 	top: 0;
 	z-index: 100;
 	width: 100%;
-	right: @sidebar-width;
+	right: 100%;
 }
 
 .menu-submenu{
@@ -104,18 +104,18 @@
 }
 
 .menu-submenu > li:hover > a{
-		background: @wid-menu-bg-hover ;
+		background: @menu-bg-hover ;
 }
 
 .menu-submenu .icon{
-	padding: 0 5px;
-	background-color: red;
+	padding: 0 5px 0 10px;
+	//background-color: red;
 }
 
 
 
 
-.wid-menu > li:hover > .menu-submenu,
+.ui-menu > li:hover > .menu-submenu,
 .menu-submenu  li:hover > .menu-submenu{ 	
 	display: block;
 }
@@ -123,7 +123,7 @@
 
 
 
-.wid-menu,
+.ui-menu,
 .menu-submenu{
 
 	li:hover > a:not(:only-child):after{
@@ -131,7 +131,7 @@
 			width: 0; 
 			height: 0; 
 			border-top: 10px solid transparent; 
-			border-left: 10px solid @wid-menu-submenu-bg; 
+			border-left: 10px solid @menu-submenu-bg; 
 			border-bottom: 10px solid transparent;		
 			content: "";
 			left:0;
