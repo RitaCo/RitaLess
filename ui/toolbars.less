@@ -1,10 +1,10 @@
-.body-footer > .wid-toolbar,
-.body-header > .wid-toolbar {
+.body-footer > .ui-toolbar,
+.body-header > .ui-toolbar {
 	border :none;
 }
 
 
-.wid-toolbar{
+.ui-toolbar{
 	overflow: hidden;    
 	.br(1px, solid,@tab-brColor);
 	position: relative; 
@@ -33,11 +33,11 @@
    			
    		}
    		
-   		&.band-sm{
+   		&.band--sm{
    			height: 36px;
    		
    		}
-   		&.band-lg{
+   		&.band--lg{
    			height: 70px;
 			line-height:3.5;
    		}	
@@ -58,7 +58,7 @@
 
 
 .toolbar-band  > .btn{
-        border-radius: 0;
+	border-radius: 0;
     border: 1px solid transparent ;
 	background: transparent;
     box-shadow: none;
@@ -68,19 +68,24 @@
     align-items:center;
     padding: 0px 10px;
     margin: 0px 1px;
-    color: #000 !important;
+    
     .text-wrap-none();
     text-align: right;
+    .transition();
+    
     i{
     	margin: 0px;
+   		margin-left: 10px;
     	color: #666;
+   		font-size: 25px;
     }
-    	span{
+   	
+	span{
 		
-		font-size: 18px;
-font-family: wroya;
-font-weight: 700;
-}
+		font-size: 17px;
+		font-family: wamer;
+		font-weight: 400;
+	}
  }
 
 .toolbar-band  > .btn.disabled{
@@ -97,29 +102,20 @@ font-weight: 700;
 	.wid-3d();
     background: none;
     color: #222;
+    .transition()
  } 
 
 
-.toolbar-band > .btn{
-
-		
-	i{
-
-    	font-size: 30px;
-   		margin-left: 5px;
-    }		
-}
-
-.toolbar-band.band-sm  > .btn{
+.toolbar-band.band--sm  > .btn{
 		
 	i{
     	
     	font-size: 15px;
-    	margin-left: 5px;
+    
     }		
 }
 
-.toolbar-band.band-lg  > .btn{
+.toolbar-band.band--lg  > .btn{
 	   	
 		.flex-col();
 		justify-content:center;
@@ -127,7 +123,7 @@ font-weight: 700;
 	i{
     	
     	font-size: 40px;
-   		margin-left: 5px;
+  
     	.flex(1,1,0);
     	
     }		
@@ -149,7 +145,7 @@ font-weight: 700;
 
 
 
-.toolbar-band  >  .separator {
+.toolbar-band  >  .band--separator {
 	width: 4px	;
    	background-color: #ccc;
    	.br(1px, solid,#bbb);
