@@ -17,7 +17,9 @@
   }
 }
 
-/* line 24, ../scss/partials/_buttons.scss */
+
+
+
 .btn {
   
    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15);
@@ -29,19 +31,24 @@
   border: 1px solid #b4b4b4;
   height: 32px;
   line-height: 32px;
-  padding: 0px 25.6px;
+  padding: 0px 12.6px;
   font-weight: 400;
   align-self:stretch;
-  font-size: 14px;
-  font-family: "WIranian", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  color: #666666;
-  text-shadow: 0 1px 1px white;
-  margin: 0 2px;
+  font-size: @base-font-size;
+  font-family: @base-font-name !important;
+  font-size-adjust: 0.5;
+  color: #444;
+  text-shadow: 0 1px 0px white;
+  
   text-decoration: none;
   text-align: center;
   i{
   	margin: 0 5px;
   }
+}
+
+.btn+.btn{
+	margin: 0 2px;
 }
 
 /* line 42, ../scss/partials/_buttons.scss */
@@ -207,7 +214,7 @@ button.btn:disabled {
 }
 
 /* line 226, ../scss/partials/_buttons.scss */
-.btn-primary {
+.btn-main {
   background: linear-gradient(to bottom, #00b5e5, #008db2);
   background-color: #00a1cb;
   border-color: #007998;
@@ -215,209 +222,41 @@ button.btn:disabled {
   text-shadow: 0 -1px 1px rgba(0, 40, 50, 0.35);
 }
 /* line 233, ../scss/partials/_buttons.scss */
-.btn-primary:hover {
+.btn-main:hover {
+	color: white;
   background-color: #00a1cb;
   background: linear-gradient(to bottom, #00c9fe, #008db2);
+    
 }
 /* line 237, ../scss/partials/_buttons.scss */
-.btn-primary:active {
+.btn-main:active {
   background: #1495b7;
   color: #005065;
 }
 
-/* line 250, ../scss/partials/_buttons.scss */
-.btn-3d-primary {
-     transition-property: all;
-     transition-duration: 0.3s;
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #007998, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #00a9d5, #0099c1);
-  background-color: #00a1cb;
-  color: white;
-  border: 1px solid #007998;
-  text-shadow: none;
-  position: relative;
-  top: 0px;
-}
-/* line 262, ../scss/partials/_buttons.scss */
-.btn-3d-primary:hover {
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #00708e, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #00c1f4, #009dc6);
-  background-color: #00c9fe;
-}
-/* line 267, ../scss/partials/_buttons.scss */
-.btn-3d-primary:active {
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #007998, 0px 3px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #0099c1, #00a9d5);
-  background-color: #1495b7;
-  color: #005065;
-  border: 1px solid #008db2;
-  top: 5px;
-}
-/* line 275, ../scss/partials/_buttons.scss */
-.btn-3d-primary.disabled {
-    box-shadow: none;
- }
-
-/* line 289, ../scss/partials/_buttons.scss */
-.btn-border-primary {
-    box-shadow: none;
-     transition-property: all;
-     transition-duration: 0.3s;
-  color: #00a1cb;
-  border: 2px solid #00a1cb;
-  background: none;
-  text-shadow: none;
-}
-/* line 298, ../scss/partials/_buttons.scss */
-.btn-border-primary:hover {
-  background: none;
-  color: #00c9fe;
-  border: 2px solid #00c9fe;
-}
-/* line 303, ../scss/partials/_buttons.scss */
-.btn-border-primary:active {
-     transition-duration: 0s;
-  background: none;
-  color: #007998;
-  border: 2px solid #007998;
-}
-/* line 309, ../scss/partials/_buttons.scss */
-.btn-border-primary.disabled {
-    box-shadow: none;
- }
-
-/* line 321, ../scss/partials/_buttons.scss */
-.btn-flat-primary {
-    box-shadow: none;
-     transition-property: background;
-     transition-duration: 0.3s;
-  background: #00a1cb;
-  color: white;
-  text-shadow: none;
-  border: none;
-}
-/* line 330, ../scss/partials/_buttons.scss */
-.btn-flat-primary:hover {
-  background: #00b5e5;
-}
-/* line 333, ../scss/partials/_buttons.scss */
-.btn-flat-primary:active {
-     transition-duration: 0s;
-  background: #1495b7;
-  color: #00647f;
-}
-/* line 338, ../scss/partials/_buttons.scss */
-.btn-flat-primary.disabled {
-    box-shadow: none;
- }
 
 /* line 226, ../scss/partials/_buttons.scss */
-.btn-secondary {
+.btn-white {
   background: linear-gradient(to bottom, #ffffff, #f2f2f2);
   background-color: white;
   border-color: #e6e6e6;
-  color: white;
+  color: ;
   text-shadow: 0 -1px 1px rgba(179, 179, 179, 0.35);
 }
 /* line 233, ../scss/partials/_buttons.scss */
-.btn-secondary:hover {
+.btn-white:hover {
   background-color: white;
   background: linear-gradient(to bottom, #ffffff, #f2f2f2);
 }
 /* line 237, ../scss/partials/_buttons.scss */
-.btn-secondary:active {
+.btn-white:active {
   background: white;
   color: #cccccc;
 }
 
-/* line 250, ../scss/partials/_buttons.scss */
-.btn-3d-secondary {
-     transition-property: all;
-     transition-duration: 0.3s;
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #e6e6e6, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #ffffff, #fafafa);
-  background-color: white;
-  color: white;
-  border: 1px solid #e6e6e6;
-  text-shadow: none;
-  position: relative;
-  top: 0px;
-}
-/* line 262, ../scss/partials/_buttons.scss */
-.btn-3d-secondary:hover {
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #e0e0e0, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #ffffff, #fcfcfc);
-  background-color: white;
-}
-/* line 267, ../scss/partials/_buttons.scss */
-.btn-3d-secondary:active {
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #e6e6e6, 0px 3px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #fafafa, #ffffff);
-  background-color: white;
-  color: #cccccc;
-  border: 1px solid #f2f2f2;
-  top: 5px;
-}
-/* line 275, ../scss/partials/_buttons.scss */
-.btn-3d-secondary.disabled {
-    box-shadow: none;
- }
-
-/* line 289, ../scss/partials/_buttons.scss */
-.btn-border-secondary {
-    box-shadow: none;
-     transition-property: all;
-     transition-duration: 0.3s;
-  color: white;
-  border: 2px solid white;
-  background: none;
-  text-shadow: none;
-}
-/* line 298, ../scss/partials/_buttons.scss */
-.btn-border-secondary:hover {
-  background: none;
-  color: white;
-  border: 2px solid white;
-}
-/* line 303, ../scss/partials/_buttons.scss */
-.btn-border-secondary:active {
-     transition-duration: 0s;
-  background: none;
-  color: #e6e6e6;
-  border: 2px solid #e6e6e6;
-}
-/* line 309, ../scss/partials/_buttons.scss */
-.btn-border-secondary.disabled {
-    box-shadow: none;
- }
-
-/* line 321, ../scss/partials/_buttons.scss */
-.btn-flat-secondary {
-    box-shadow: none;
-     transition-property: background;
-     transition-duration: 0.3s;
-  background: white;
-  color: white;
-  text-shadow: none;
-  border: none;
-}
-/* line 330, ../scss/partials/_buttons.scss */
-.btn-flat-secondary:hover {
-  background: white;
-}
-/* line 333, ../scss/partials/_buttons.scss */
-.btn-flat-secondary:active {
-     transition-duration: 0s;
-  background: white;
-  color: #d9d9d9;
-}
-/* line 338, ../scss/partials/_buttons.scss */
-.btn-flat-secondary.disabled {
-    box-shadow: none;
- }
 
 /* line 226, ../scss/partials/_buttons.scss */
-.btn-action {
+.btn-green {
   background: linear-gradient(to bottom, #8fcf00, #6b9c00);
   background-color: #7db500;
   border-color: #5a8200;
@@ -425,101 +264,15 @@ button.btn:disabled {
   text-shadow: 0 -1px 1px rgba(19, 28, 0, 0.35);
 }
 /* line 233, ../scss/partials/_buttons.scss */
-.btn-action:hover {
+.btn-green:hover {
   background-color: #7db500;
   background: linear-gradient(to bottom, #a0e800, #6b9c00);
 }
 /* line 237, ../scss/partials/_buttons.scss */
-.btn-action:active {
+.btn-green:active {
   background: #76a312;
   color: #374f00;
 }
-
-/* line 250, ../scss/partials/_buttons.scss */
-.btn-3d-action {
-     transition-property: all;
-     transition-duration: 0.3s;
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #5a8200, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #84bf00, #76ab00);
-  background-color: #7db500;
-  color: white;
-  border: 1px solid #5a8200;
-  text-shadow: none;
-  position: relative;
-  top: 0px;
-}
-/* line 262, ../scss/partials/_buttons.scss */
-.btn-3d-action:hover {
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #537800, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #99de00, #79b000);
-  background-color: #a0e800;
-}
-/* line 267, ../scss/partials/_buttons.scss */
-.btn-3d-action:active {
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #5a8200, 0px 3px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #76ab00, #84bf00);
-  background-color: #76a312;
-  color: #374f00;
-  border: 1px solid #6b9c00;
-  top: 5px;
-}
-/* line 275, ../scss/partials/_buttons.scss */
-.btn-3d-action.disabled {
-    box-shadow: none;
- }
-
-/* line 289, ../scss/partials/_buttons.scss */
-.btn-border-action {
-    box-shadow: none;
-     transition-property: all;
-     transition-duration: 0.3s;
-  color: #7db500;
-  border: 2px solid #7db500;
-  background: none;
-  text-shadow: none;
-}
-/* line 298, ../scss/partials/_buttons.scss */
-.btn-border-action:hover {
-  background: none;
-  color: #a0e800;
-  border: 2px solid #a0e800;
-}
-/* line 303, ../scss/partials/_buttons.scss */
-.btn-border-action:active {
-     transition-duration: 0s;
-  background: none;
-  color: #5a8200;
-  border: 2px solid #5a8200;
-}
-/* line 309, ../scss/partials/_buttons.scss */
-.btn-border-action.disabled {
-    box-shadow: none;
- }
-
-/* line 321, ../scss/partials/_buttons.scss */
-.btn-flat-action {
-    box-shadow: none;
-     transition-property: background;
-     transition-duration: 0.3s;
-  background: #7db500;
-  color: white;
-  text-shadow: none;
-  border: none;
-}
-/* line 330, ../scss/partials/_buttons.scss */
-.btn-flat-action:hover {
-  background: #8fcf00;
-}
-/* line 333, ../scss/partials/_buttons.scss */
-.btn-flat-action:active {
-     transition-duration: 0s;
-  background: #76a312;
-  color: #486900;
-}
-/* line 338, ../scss/partials/_buttons.scss */
-.btn-flat-action.disabled {
-    box-shadow: none;
- }
 
 /* line 226, ../scss/partials/_buttons.scss */
 .btn-highlight {
@@ -540,94 +293,8 @@ button.btn:disabled {
   color: #8d5303;
 }
 
-/* line 250, ../scss/partials/_buttons.scss */
-.btn-3d-highlight {
-     transition-property: all;
-     transition-duration: 0.3s;
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #bf7004, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #fa9306, #e78705);
-  background-color: #f18d05;
-  color: white;
-  border: 1px solid #bf7004;
-  text-shadow: none;
-  position: relative;
-  top: 0px;
-}
-/* line 262, ../scss/partials/_buttons.scss */
-.btn-3d-highlight:hover {
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #b56a04, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #faa024, #ec8a05);
-  background-color: #fba42e;
-}
-/* line 267, ../scss/partials/_buttons.scss */
-.btn-3d-highlight:active {
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #bf7004, 0px 3px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #e78705, #fa9306);
-  background-color: #d8891e;
-  color: #8d5303;
-  border: 1px solid #d87e04;
-  top: 5px;
-}
-/* line 275, ../scss/partials/_buttons.scss */
-.btn-3d-highlight.disabled {
-    box-shadow: none;
- }
-
-/* line 289, ../scss/partials/_buttons.scss */
-.btn-border-highlight {
-    box-shadow: none;
-     transition-property: all;
-     transition-duration: 0.3s;
-  color: #f18d05;
-  border: 2px solid #f18d05;
-  background: none;
-  text-shadow: none;
-}
-/* line 298, ../scss/partials/_buttons.scss */
-.btn-border-highlight:hover {
-  background: none;
-  color: #fba42e;
-  border: 2px solid #fba42e;
-}
-/* line 303, ../scss/partials/_buttons.scss */
-.btn-border-highlight:active {
-     transition-duration: 0s;
-  background: none;
-  color: #bf7004;
-  border: 2px solid #bf7004;
-}
-/* line 309, ../scss/partials/_buttons.scss */
-.btn-border-highlight.disabled {
-    box-shadow: none;
- }
-
-/* line 321, ../scss/partials/_buttons.scss */
-.btn-flat-highlight {
-    box-shadow: none;
-     transition-property: background;
-     transition-duration: 0.3s;
-  background: #f18d05;
-  color: white;
-  text-shadow: none;
-  border: none;
-}
-/* line 330, ../scss/partials/_buttons.scss */
-.btn-flat-highlight:hover {
-  background: #fa9915;
-}
-/* line 333, ../scss/partials/_buttons.scss */
-.btn-flat-highlight:active {
-     transition-duration: 0s;
-  background: #d8891e;
-  color: #a66103;
-}
-/* line 338, ../scss/partials/_buttons.scss */
-.btn-flat-highlight.disabled {
-    box-shadow: none;
- }
-
 /* line 226, ../scss/partials/_buttons.scss */
-.btn-caution {
+.btn-red {
   background: linear-gradient(to bottom, #e8543f, #d9331a);
   background-color: #e54028;
   border-color: #c22d18;
@@ -635,101 +302,15 @@ button.btn:disabled {
   text-shadow: 0 -1px 1px rgba(103, 24, 13, 0.35);
 }
 /* line 233, ../scss/partials/_buttons.scss */
-.btn-caution:hover {
+.btn-red:hover {
   background-color: #e54028;
   background: linear-gradient(to bottom, #eb6855, #d9331a);
 }
 /* line 237, ../scss/partials/_buttons.scss */
-.btn-caution:active {
+.btn-red:active {
   background: #cd5240;
   color: #952312;
 }
-
-/* line 250, ../scss/partials/_buttons.scss */
-.btn-3d-caution {
-     transition-property: all;
-     transition-duration: 0.3s;
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #c22d18, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #e64831, #e4381f);
-  background-color: #e54028;
-  color: white;
-  border: 1px solid #c22d18;
-  text-shadow: none;
-  position: relative;
-  top: 0px;
-}
-/* line 262, ../scss/partials/_buttons.scss */
-.btn-3d-caution:hover {
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #b92b16, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #e9604c, #e43c23);
-  background-color: #eb6855;
-}
-/* line 267, ../scss/partials/_buttons.scss */
-.btn-3d-caution:active {
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #c22d18, 0px 3px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #e4381f, #e64831);
-  background-color: #cd5240;
-  color: #952312;
-  border: 1px solid #d9331a;
-  top: 5px;
-}
-/* line 275, ../scss/partials/_buttons.scss */
-.btn-3d-caution.disabled {
-    box-shadow: none;
- }
-
-/* line 289, ../scss/partials/_buttons.scss */
-.btn-border-caution {
-    box-shadow: none;
-     transition-property: all;
-     transition-duration: 0.3s;
-  color: #e54028;
-  border: 2px solid #e54028;
-  background: none;
-  text-shadow: none;
-}
-/* line 298, ../scss/partials/_buttons.scss */
-.btn-border-caution:hover {
-  background: none;
-  color: #eb6855;
-  border: 2px solid #eb6855;
-}
-/* line 303, ../scss/partials/_buttons.scss */
-.btn-border-caution:active {
-     transition-duration: 0s;
-  background: none;
-  color: #c22d18;
-  border: 2px solid #c22d18;
-}
-/* line 309, ../scss/partials/_buttons.scss */
-.btn-border-caution.disabled {
-    box-shadow: none;
- }
-
-/* line 321, ../scss/partials/_buttons.scss */
-.btn-flat-caution {
-    box-shadow: none;
-     transition-property: background;
-     transition-duration: 0.3s;
-  background: #e54028;
-  color: white;
-  text-shadow: none;
-  border: none;
-}
-/* line 330, ../scss/partials/_buttons.scss */
-.btn-flat-caution:hover {
-  background: #e8543f;
-}
-/* line 333, ../scss/partials/_buttons.scss */
-.btn-flat-caution:active {
-     transition-duration: 0s;
-  background: #cd5240;
-  color: #ac2815;
-}
-/* line 338, ../scss/partials/_buttons.scss */
-.btn-flat-caution.disabled {
-    box-shadow: none;
- }
 
 /* line 226, ../scss/partials/_buttons.scss */
 .btn-royal {
@@ -750,104 +331,26 @@ button.btn:disabled {
   color: #3e1740;
 }
 
-/* line 250, ../scss/partials/_buttons.scss */
-.btn-3d-royal {
-     transition-property: all;
-     transition-duration: 0.3s;
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #632466, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #8e3494, #802e84);
-  background-color: #87318c;
-  color: white;
-  border: 1px solid #632466;
-  text-shadow: none;
-  position: relative;
-  top: 0px;
-}
-/* line 262, ../scss/partials/_buttons.scss */
-.btn-3d-royal:hover {
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 7px 0px #5b215f, 0px 8px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #a43caa, #833088);
-  background-color: #ab3eb2;
-}
-/* line 267, ../scss/partials/_buttons.scss */
-.btn-3d-royal:active {
-    box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.3), inset 0px -1px 1px rgba(255, 255, 255, 0.15), 0px 2px 0px #632466, 0px 3px 3px rgba(0, 0, 0, 0.3);
-  background: linear-gradient(to bottom, #802e84, #8e3494);
-  background-color: #764479;
-  color: #3e1740;
-  border: 1px solid #752a79;
-  top: 5px;
-}
-/* line 275, ../scss/partials/_buttons.scss */
-.btn-3d-royal.disabled {
-    box-shadow: none;
- }
-
-/* line 289, ../scss/partials/_buttons.scss */
-.btn-border-royal {
-    box-shadow: none;
-     transition-property: all;
-     transition-duration: 0.3s;
-  color: #87318c;
-  border: 2px solid #87318c;
-  background: none;
-  text-shadow: none;
-}
-/* line 298, ../scss/partials/_buttons.scss */
-.btn-border-royal:hover {
-  background: none;
-  color: #ab3eb2;
-  border: 2px solid #ab3eb2;
-}
-/* line 303, ../scss/partials/_buttons.scss */
-.btn-border-royal:active {
-     transition-duration: 0s;
-  background: none;
-  color: #632466;
-  border: 2px solid #632466;
-}
-/* line 309, ../scss/partials/_buttons.scss */
-.btn-border-royal.disabled {
-    box-shadow: none;
- }
-
-/* line 321, ../scss/partials/_buttons.scss */
-.btn-flat-royal {
-    box-shadow: none;
-     transition-property: background;
-     transition-duration: 0.3s;
-  background: #87318c;
-  color: white;
-  text-shadow: none;
-  border: none;
-}
-/* line 330, ../scss/partials/_buttons.scss */
-.btn-flat-royal:hover {
-  background: #99389f;
-}
-/* line 333, ../scss/partials/_buttons.scss */
-.btn-flat-royal:active {
-     transition-duration: 0s;
-  background: #764479;
-  color: #501d53;
-}
-/* line 338, ../scss/partials/_buttons.scss */
-.btn-flat-royal.disabled {
-    box-shadow: none;
- }
 
 /* line 351, ../scss/partials/_buttons.scss */
 .btn-group {
   position: relative;
-  display: inline-block;
+  display: flex;
+  .flex-col();
+  
+  overflow: hidden;
 }
 /* line 354, ../scss/partials/_buttons.scss */
 .btn-group .btn {
-  float: left;
+  display: block;
+  margin: 0px;
+  
+  
 }
 /* line 356, ../scss/partials/_buttons.scss */
 .btn-group .btn:focus, .btn-group .btn:hover, .btn-group .btn.active {
   z-index: 5;
+  
 }
 /* line 359, ../scss/partials/_buttons.scss */
 .btn-group .btn.active {
@@ -859,17 +362,17 @@ button.btn:disabled {
 }
 /* line 366, ../scss/partials/_buttons.scss */
 .btn-group .btn:first-child {
-  border-top-right-radius: 0;
-  border-bottom-right-radius: 0;
-}
-/* line 370, ../scss/partials/_buttons.scss */
-.btn-group .btn:last-child {
   border-top-left-radius: 0;
   border-bottom-left-radius: 0;
 }
+/* line 370, ../scss/partials/_buttons.scss */
+.btn-group .btn:last-child {
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
 /* line 376, ../scss/partials/_buttons.scss */
 .btn-group .btn + .btn {
-  margin-left: -1px;
+  margin-right: -1px;
 }
 
 /* line 389, ../scss/partials/_buttons.scss */
@@ -895,15 +398,15 @@ input.btn-large, button.btn-large {
 
 /* line 389, ../scss/partials/_buttons.scss */
 .btn-small {
-  font-size: 15px;
-  height: 25.6px;
-  line-height: 25.6px;
-  padding: 0px 20.48px;
+  font-size: 0.7rem;
+  height: 29.6px;
+  line-height: 29.6px;
+  padding: 0px 7px;
 }
 
 /* line 420, ../scss/partials/_buttons.scss */
 input.btn-small, button.btn-small {
-  height: 27.6px;
+  
 }
 
 /* line 389, ../scss/partials/_buttons.scss */
