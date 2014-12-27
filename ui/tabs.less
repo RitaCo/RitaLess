@@ -1,15 +1,18 @@
-@import  (reference) "/bundles/tab.less";
+@import  (reference) "bundles/tab.less";
 
 
 
 .wid-tab{ 
 	#Tab > .tab();
+	box-shadow: 0px 0px 3px 0 #ccc inset;
+	overflow: hidden;
 }
 	
 
 		
 .wid-tab > .tab-nav{
 	#Tab > .tab-nav();
+	box-shadow:   0px 0px 3px 0 #ccc;
 
 }		
 .wid-tab > .tab-nav	> li {
@@ -45,12 +48,12 @@
 	}
 	
 	li {
-		margin-bottom: -1px;
+		margin-bottom: 0px;
 		padding-bottom: 0px;
 	}
 
 	li.active {
-		border-bottom-color: @tab-container-bg;
+		border-bottom-color: @tab-bg;
 	}
 		
 	li a {
@@ -69,12 +72,13 @@
 	
 	.tab-container{
 		.flex-order(1);	
-		.flex(1);	
+		flex:1;	
+		
 	}
 	.tab-body.active{
-		display: block;
-		width: 100%;
-		
+		.flex-box();
+		.flex-row();
+		.flex(1);
 		overflow: auto;
 	}	
 }	
@@ -91,12 +95,12 @@
 	}
 	
 	li {
-		margin-top: -1px;
+		margin-top: 0px;
 		padding-top: 0px;
 	}
 
 	li.active {
-		border-top-color: @tab-container-bg;
+		border-top-color: @tab-bg;
 	}
 
 	
@@ -148,13 +152,13 @@
 	
 	li {
 		
-		margin-left: -1px;
+		margin-left: 0px;
 		padding-left: 0px;
 		
 	}
 	
 	li.active {
-		border-left-color: @tab-container-bg;
+		border-left-color: @tab-bg;
 	}
 
 	
@@ -162,14 +166,17 @@
 		.br-radius(0px,6px,6px,0);
 		border-left: none;
 
+
 	}
 	
 	li:not(.active):hover > a{
 		border-left: none;
+		
 	}
 	
 	li.active a{
 		border-left: none;
+
 	}
 	
 	.tab-container{
@@ -178,9 +185,12 @@
 
 	}
 	.tab-body.active{
-		display: block;
-		flex:1 1 0;
+		
+		.flex-box();
+		.flex-row();
+		.flex(1);
 
+	overflow: auto;
 	}	
 
 	
@@ -204,12 +214,12 @@
 	}
 	
 	li {
-		margin-right: -1px;
+		margin-right: 0px;
 		padding-right: 0px;
 	}
 
 	li.active {
-		border-right-color: @tab-container-bg;
+		border-right-color: @tab-bg;
 	}
 	
 	li a {

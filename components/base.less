@@ -1,3 +1,10 @@
+.rita-viewport{
+  min-height: 100%;
+
+  min-width: 500px;
+  position: absolute;
+  width: 100%;
+}
 /**
  * shadow class
  */
@@ -15,9 +22,9 @@
 /**
  * text align
  */
-.text-right{ text-align: right; }
-.text-center{ text-align: center; }
-.text-left{ text-align: left; }
+.text-right{ text-align: right!important; }
+.text-center{ text-align: center!important;}
+.text-left{ text-align: left!important; }
 
 /**
  * padding class
@@ -49,9 +56,32 @@
 	
 }
 
-.flex-none{
+.fluid-none{
 	display: block !important;
 }
-.flex-nofluid { 
-	.flex(0) !important;  
+
+.box-nofluid { 
+	.flex(0,0,auto) !important;  
+}
+
+
+.box-fluid{
+	.flex(1) 
+}
+
+.bc-visible{
+	overflow: visible !important;
+}
+
+.bc-hidden{
+	overflow: hidden !important;
+}
+
+.bc-auto{
+	overflow: auto !important;
+}
+
+
+.inherited{
+	.flex-inherit();
 }

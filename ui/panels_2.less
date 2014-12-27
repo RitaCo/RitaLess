@@ -1,4 +1,4 @@
-@import  (reference) "/bundles/panel.less";
+@import  (reference) "bundles/panel.less";
 
 
 /************************************
@@ -35,7 +35,11 @@
 	> .panel-body,
 	>form > .panel-body{
 		#Panels > .body();
+		margin: 0px;
 		
+		>.body-container{
+			box-shadow: unset !important;
+		}	
 	}
 }
 
@@ -64,9 +68,9 @@
 	> .panel-body,
 	> form > .panel-body {
 		#Panels > .body();
-		margin: 6px;
+		margin: @panel-body-padding;
 		.br(1px, solid,@panel-brColor);
-	//	box-shadow: 0 0 1px #fff;
+
 	}
 	
 }
@@ -77,7 +81,7 @@
  ************************************/
 .wid-panel-framed {
 	/*  vars block */
-	@panel-bg: #E2E2E2;
+	@panel-bg: #dadada;
 	
 	
 	/*  main block */
@@ -96,8 +100,9 @@
 	> form > .panel-body {
 		#Panels > .body();
 		.br(1px, solid,@panel-brColor);
-	//	box-shadow: 0px 0px 1px 0px #ccc;
-		margin: 6px;
+
+	
+		margin: @panel-body-padding;
 	}
 	
 	> .panel-header+.panel-body,

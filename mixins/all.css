@@ -4,10 +4,8 @@
 /**
  *  Typography related mixins
  */
-.text-not-wrap {
-  text-wrap: none;
-  white-space: nowrap;
-  word-wrap: normal;
+.text-wrap {
+  white-space: initial;
 }
 /**
 * flex-start | flex-end | center | baseline | stretch

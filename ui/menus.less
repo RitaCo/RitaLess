@@ -1,0 +1,145 @@
+.ui-menu,
+.menu-submenu{
+	display: block;
+	position: relative;
+	background-color: @menu-bg;
+}
+
+.ui-menu  li{
+	display: block;
+	position: relative;	
+}
+.ui-menu > li{	
+	border-top: 1px solid rgba(102, 110, 123, 0.43) ;
+	&:first-child{
+		border-top: none;
+	}	
+}
+.ui-menu  a{
+	.flex-box();
+	cursor: pointer;
+	position: relative;
+	align-items : center;
+	overflow: hidden;
+	
+}
+
+.ui-menu .icon{
+		align-self:center;
+		text-align: center;
+}
+
+.ui-menu .icon i{
+	color: #01B070;
+	
+	font-size: 1.3rem;
+	font-weight: 400;
+	position: relative;
+}
+
+.ui-menu .label{
+	.flex-fluid(1);
+
+}
+
+.ui-menu .label span{
+	color: #DCE2E6;
+	font-family: wroya;
+	font-size: 1.1rem;
+	line-height: 0;
+	font-weight: 400;
+	text-shadow: 1px 1px 1px #444;
+}
+
+.ui-menu > li > a{
+	.flex-row();
+	padding: 15px 0;
+	
+	.label{
+		padding-top: 10px;		
+	}
+}
+
+.ui-menu > li:hover > a{
+	background: @menu-bg-hover ;
+	
+	.label span{
+		color : #FFFFFF;
+	}	
+}
+
+
+.menu-submenu{
+	background-color:  @menu-submenu-bg;
+	display: none;
+	position: absolute;
+	left: 0;
+	top: 0;
+	z-index: 100;
+	width: 100%;
+	right: 100%;
+}
+
+.menu-submenu{
+	li{
+		padding: 0 5px 5px 5px;
+	}
+
+	li:first-child{
+		padding-top: 5px;
+	}			
+}
+
+.menu-submenu   a{
+	align-items:center;
+	.flex-col();
+	width: 100%;
+	background-color: transparent;
+	padding: 5px 0  ;
+	
+}
+
+.menu-submenu   a >*{
+	align-self:center;
+}
+
+.menu-submenu > li:hover > a{
+		background: @menu-bg-hover ;
+}
+
+.menu-submenu .icon{
+	padding: 0 5px 0 10px;
+	//background-color: red;
+}
+
+
+
+
+.ui-menu > li:hover > .menu-submenu,
+.menu-submenu  li:hover > .menu-submenu{ 	
+	display: block;
+}
+
+
+
+
+.ui-menu,
+.menu-submenu{
+
+	li:hover > a:not(:only-child):after{
+			position: absolute;
+			width: 0; 
+			height: 0; 
+			border-top: 10px solid transparent; 
+			border-left: 10px solid @menu-submenu-bg; 
+			border-bottom: 10px solid transparent;		
+			content: "";
+			left:0;
+			top: calc(50% - 10px);
+			.transition(all,0.2s);
+		}
+
+
+}
+
+	
