@@ -337,6 +337,10 @@
   font-size: 18px;
   color: #666;
 }
+.panel-header .header-icon:empty,
+.ui-panel-framed > .panel-header .header-icon:empty {
+  padding: 10px;
+}
 .panel-header .header-caption,
 .ui-panel-framed > .panel-header .header-caption {
   -webkit-flex: 1 1 auto;
@@ -673,8 +677,8 @@
   background: linear-gradient(to bottom, #ffffff 0%, #dddddd 100%);
   cursor: pointer;
   padding: 3px 10px !important;
-  font-family: 'WTitr';
-  font-size: 16px;
+  font-family: 'wtitr';
+  font-size: 17px;
   text-shadow: 1px 1px 1px #fff;
 }
 .ui-dataGrid .table-header th:hover,

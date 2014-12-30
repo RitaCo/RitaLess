@@ -22,29 +22,35 @@
 
 .btn {
   
-   box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15);
-  background-color: #eeeeee;
-  background: linear-gradient(to bottom, #fbfbfb, #e1e1e1);
-  display: inline-table;
-  vertical-align: middle;
-  zoom: 1;
-  border: 1px solid #b4b4b4;
-  height: 32px;
-  line-height: 32px;
-  padding: 0px 12.6px;
-  font-weight: 400;
-  align-self:stretch;
-  font-size: @base-font-size;
-  font-family: @base-font-name !important;
-  font-size-adjust: 0.5;
-  color: #444;
-  text-shadow: 0 1px 0px white;
-  
-  text-decoration: none;
-  text-align: center;
-  i{
-  	margin: 0 5px;
-  }
+    //box-shadow: inset 0px 1px 0px rgba(255, 255, 255, 0.5), 0px 1px 2px rgba(0, 0, 0, 0.15) inset;
+    box-shadow: 
+    inset 1px 0px 0px rgba(255, 255, 255, 0.15),
+    inset 0px 1px 0px rgba(255, 255, 255, 0.15),
+    inset -1px 0px 0px rgba(255, 255, 255, 0.15),
+    inset 0px -1px 0px rgba(255, 255, 255, 0.15);
+    
+    background: linear-gradient(to bottom, #fbfbfb, #e1e1e1);
+    display: inline-table;
+    vertical-align: middle;
+    
+    border: 1px solid #b4b4b4;
+    line-height: 28px;
+    padding: 0px 14px;
+
+    align-self:stretch;
+    .def-font();
+    font-family: wiraniansans;
+    font-weight: 400;
+    font-size: 15px;
+    color: #353535;
+    text-shadow: 0 1px 0px white;
+    text-decoration: none;
+    text-align: center;
+    
+    i{
+        margin: 0 5px;
+    }
+    
 }
 
 .btn+.btn{
