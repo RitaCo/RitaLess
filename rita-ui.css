@@ -638,9 +638,11 @@
 .ui-dataGrid .table-body td,
 .ui-dataGrid > table > tbody td {
   text-shadow: 1px 1px 1px #ccc;
-  font-size-adjust: 0.53;
+  font-family: WAmer, "Fira";
+  font-size: 12px;
+  font-size-adjust: 0.5;
+  font-weight: 400;
   font-size: 14px;
-  font-family: Wamer,Fira;
 }
 .ui-dataGrid .table-header th:last-child,
 .ui-dataGrid thead th:last-child,

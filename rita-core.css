@@ -738,11 +738,11 @@ a {
 }
 .com-input .error-message {
   border: 2px solid #e67e22;
-  background-color: rgba(255, 243, 224, 0.85);
-  font-family: WRoya;
-  font-weight: normal;
-  font-size: 16px;
-  color: #22277E;
+  background-color: rgba(255, 243, 224, 0.95);
+  font-family: wiraniansans;
+  font-weight: 300;
+  font-size: 17px;
+  color: #2D339C;
   left: 20px;
   text-shadow: 0 0 3px #c5c5c5;
   z-index: 5;
@@ -790,12 +790,12 @@ a {
 }
 .com-input > .input-container > label {
   color: #222;
-  font-family: WMitra,Fira Sans;
-  font-size: 16px;
+  font-family: Wirans,Fira Sans;
+  font-size: 14px;
   -webkit-align-self: center;
       -ms-flex-item-align: center;
           align-self: center;
-  font-weight: bold;
+  font-weight: normal;
   text-shadow: 1px 1px 1px #c9c9c9;
   min-width: 130px;
   display: block;
@@ -809,7 +809,10 @@ a {
   display: block;
   border: 1px solid #bbb;
   border-radius: 3px;
-  font-family: WAmer, sans-serif;
+  font-family: WAmer, "Fira";
+  font-size: 12px;
+  font-size-adjust: 0.5;
+  font-weight: 400;
   color: #555;
   box-shadow: 0px 0px 5px 0px #DCDCDC inset;
   background: #fdfdfd;
@@ -818,6 +821,33 @@ a {
 .com-input > .input-container > input:focus,
 .com-input > .input-container > textarea:focus,
 .com-input > .input-container > select:focus {
+  box-shadow: 0px 0px 2px 0px #DCDCDC inset;
+  background: white;
+}
+.com-input > .input-container > .dateSelect {
+  -webkit-flex: 1 1 auto;
+      -ms-flex: 1 1 auto;
+          flex: 1 1 auto;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: row ;
+      -ms-flex-direction: row ;
+          flex-direction: row ;
+}
+.com-input > .input-container > .dateSelect select {
+  border: 1px solid #bbb;
+  border-radius: 3px;
+  font-family: WAmer, "Fira";
+  font-size: 12px;
+  font-size-adjust: 0.5;
+  font-weight: 400;
+  color: #555;
+  box-shadow: 0px 0px 5px 0px #DCDCDC inset;
+  background: #fdfdfd;
+  background-clip: padding-box;
+}
+.com-input > .input-container > .dateSelect select:focus {
   box-shadow: 0px 0px 2px 0px #DCDCDC inset;
   background: white;
 }
@@ -982,8 +1012,8 @@ div.submit {
   -webkit-align-self: stretch;
       -ms-flex-item-align: stretch;
           align-self: stretch;
-  font-size: 16px;
-  font-family: "WAmer", "Fira Sans" !important;
+  font-size: 12px;
+  font-family: WAmer, "Fira" !important;
   font-size-adjust: 0.5;
   color: #444;
   text-shadow: 0 1px 0px white;
