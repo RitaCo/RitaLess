@@ -114,6 +114,7 @@ dfn {
  * Address differences between Firefox and other browsers.
  */
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -210,7 +211,7 @@ fieldset {
 legend {
   border: 0;
   /* 1 */
-  padding: 0
+  padding: 0;
   /* 2 */
 }
 /**
@@ -226,7 +227,7 @@ textarea {
   /* 1 */
   font-size: 100%;
   /* 2 */
-  margin: 0
+  margin: 0;
   /* 3 */
 }
 /**
@@ -260,7 +261,7 @@ input[type="reset"],
 input[type="submit"] {
   -webkit-appearance: button;
   /* 2 */
-  cursor: pointer
+  cursor: pointer;
   /* 3 */
 }
 /**
@@ -278,7 +279,7 @@ input[type="checkbox"],
 input[type="radio"] {
   box-sizing: border-box;
   /* 1 */
-  padding: 0
+  padding: 0;
   /* 2 */
 }
 /**
@@ -289,6 +290,8 @@ input[type="radio"] {
 input[type="search"] {
   -webkit-appearance: textfield;
   /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   /* 2 */
   box-sizing: content-box;
 }
@@ -315,7 +318,7 @@ input::-moz-focus-inner {
 textarea {
   overflow: auto;
   /* 1 */
-  vertical-align: top
+  vertical-align: top;
   /* 2 */
 }
 /* ==========================================================================
@@ -472,14 +475,10 @@ a {
   display: block !important;
 }
 .box-nofluid {
-  -webkit-flex: 0 0 auto !important;
-      -ms-flex: 0 0 auto !important;
-          flex: 0 0 auto !important;
+  flex: 0 0 auto !important;
 }
 .box-fluid {
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 .bc-visible {
   overflow: visible !important;
@@ -495,93 +494,59 @@ a {
   -webkit-flex-direction: inherit !important;
   -ms-flex-direction: inherit !important;
   flex-direction: inherit !important;
-  -webkit-flex: 1 1 auto ;
-      -ms-flex: 1 1 auto ;
-          flex: 1 1 auto ;
-  min-width: -webkit-min-content;
-  min-width: -moz-min-content;
+  flex: 1 1 auto ;
   min-width: min-content;
 }
 .com-layout {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
   position: relative;
 }
 .com-layout.typ-row {
-  -webkit-flex-flow: column nowrap;
-      -ms-flex-flow: column nowrap;
-          flex-flow: column nowrap;
+  flex-flow: column nowrap;
 }
 .com-layout.typ-col {
-  -webkit-flex-flow: row nowrap;
-      -ms-flex-flow: row nowrap;
-          flex-flow: row nowrap;
+  flex-flow: row nowrap;
 }
 .typ-col.opt-childs-fluid-fix > *,
 .typ-row.opt-childs-fluid-fix > * {
-  -webkit-flex: 1 1 0;
-      -ms-flex: 1 1 0;
-          flex: 1 1 0;
+  flex: 1 1 0;
 }
 .typ-col.opt-childs-fluid-auto > *,
 .typ-row.opt-childs-fluid-auto > * {
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex: 1 1 auto;
 }
 .typ-col > *:not(script),
 .typ-row > *:not(script) {
   position: relative;
 }
 .com-layout-columns {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-flex-wrap: wrap;
-      -ms-flex-wrap: wrap;
-          flex-wrap: wrap;
+  flex-direction: row;
+  flex-wrap: wrap;
 }
 .com-layout-columns > .layout-cell {
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
   background-clip: content-box;
   color: #222;
   padding: 1rem 1rem ;
 }
 .com-layout-columns.col1 > .layout-cell {
-  -webkit-flex: 0 0 100%;
-      -ms-flex: 0 0 100%;
-          flex: 0 0 100%;
+  flex: 0 0 100%;
 }
 .com-layout-columns.col2 > .layout-cell {
-  -webkit-flex: 0 0 50%;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+  flex: 0 0 50%;
 }
 .com-layout-columns.col3 > .layout-cell {
-  -webkit-flex: 0 0 33.33%;
-      -ms-flex: 0 0 33.33%;
-          flex: 0 0 33.33%;
+  flex: 0 0 33.33%;
 }
 .com-layout-columns.col4 > .layout-cell {
-  -webkit-flex: 0 0 25%;
-      -ms-flex: 0 0 25%;
-          flex: 0 0 25%;
+  flex: 0 0 25%;
 }
 .com-layout-columns.col5 > .layout-cell {
-  -webkit-flex: 0 0 20%;
-      -ms-flex: 0 0 20%;
-          flex: 0 0 20%;
+  flex: 0 0 20%;
 }
 .com-layout-columns.col6 > .layout-cell {
-  -webkit-flex: 0 0 16.66%;
-      -ms-flex: 0 0 16.66%;
-          flex: 0 0 16.66%;
+  flex: 0 0 16.66%;
 }
 /**
  *  grid with table /support fluid with/height- nestet - border spiliter 
@@ -685,18 +650,10 @@ a {
   position: relative;
 }
 .com-form .form-col {
-  -webkit-flex: 1 1 0;
-      -ms-flex: 1 1 0;
-          flex: 1 1 0;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  flex: 1 1 0;
   display: flex;
-  -webkit-flex-direction: row ;
-      -ms-flex-direction: row ;
-          flex-direction: row ;
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
+  flex-direction: row ;
+  flex-wrap: nowrap;
   border-bottom: 1px solid #ddd;
 }
 .com-form .form-col .com-input {
@@ -724,9 +681,7 @@ a {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #ddd;
   position: relative;
-  -webkit-flex: 1 1 0;
-      -ms-flex: 1 1 0;
-          flex: 1 1 0;
+  flex: 1 1 0;
 }
 .com-input.required .input-container > label:after {
   color: #e32;
@@ -770,18 +725,10 @@ a {
   cursor: pointer;
 }
 .com-input > .input-container {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row ;
-      -ms-flex-direction: row ;
-          flex-direction: row ;
-  -webkit-flex-wrap: nowrap;
-      -ms-flex-wrap: nowrap;
-          flex-wrap: nowrap;
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
+  flex-direction: row ;
+  flex-wrap: nowrap;
+  flex: 1 1 auto;
   padding: 10px;
   border-right: 10px solid transparent;
   border-bottom: none	;
@@ -792,9 +739,7 @@ a {
   color: #222;
   font-family: Wirans,Fira Sans;
   font-size: 14px;
-  -webkit-align-self: center;
-      -ms-flex-item-align: center;
-          align-self: center;
+  align-self: center;
   font-weight: normal;
   text-shadow: 1px 1px 1px #c9c9c9;
   min-width: 130px;
@@ -825,15 +770,9 @@ a {
   background: white;
 }
 .com-input > .input-container > .dateSelect {
-  -webkit-flex: 1 1 auto;
-      -ms-flex: 1 1 auto;
-          flex: 1 1 auto;
-  display: -webkit-flex;
-  display: -ms-flexbox;
+  flex: 1 1 auto;
   display: flex;
-  -webkit-flex-direction: row ;
-      -ms-flex-direction: row ;
-          flex-direction: row ;
+  flex-direction: row ;
 }
 .com-input > .input-container > .dateSelect select {
   border: 1px solid #bbb;
@@ -856,9 +795,7 @@ a {
 .com-input > .input-container > input[type='password'],
 .com-input > .input-container > textarea {
   padding: 2px 10px;
-  -webkit-flex: 1;
-      -ms-flex: 1;
-          flex: 1;
+  flex: 1;
 }
 .com-input > .input-container select option {
   padding: 2px 10px;
@@ -894,9 +831,7 @@ a {
   width: 50%;
 }
 .com-input.checkbox > .input-container {
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 div.submit {
   display: inline-block;
@@ -935,16 +870,10 @@ div.submit {
   cursor: pointer;
 }
 .alert_error {
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row ;
-      -ms-flex-direction: row ;
-          flex-direction: row ;
+  flex-direction: row ;
   padding: 0px 20px;
-  -webkit-align-items: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   background: #fb1800;
   border: 1px solid #fff;
   border-radius: 5px;
@@ -969,20 +898,6 @@ div.submit {
   margin: 0 0 0 3px;
   vertical-align: middle;
 }
-@-webkit-keyframes glowing {
-  /* line 29, ../scss/partials/_glow.scss */
-  from {
-    box-shadow: 0px 0px 0px rgba(44, 154, 219, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-  /* line 30, ../scss/partials/_glow.scss */
-  50% {
-    box-shadow: 0px 0px 16px rgba(44, 154, 219, 0.8), 0px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-  /* line 31, ../scss/partials/_glow.scss */
-  to {
-    box-shadow: 0px 0px 0px rgba(44, 154, 219, 0.3), 0px 1px 2px rgba(0, 0, 0, 0.2);
-  }
-}
 @keyframes glowing {
   /* line 29, ../scss/partials/_glow.scss */
   from {
@@ -1005,9 +920,7 @@ div.submit {
   border: 1px solid #b4b4b4;
   line-height: 28px;
   padding: 0px 14px;
-  -webkit-align-self: stretch;
-      -ms-flex-item-align: stretch;
-          align-self: stretch;
+  align-self: stretch;
   font-family: WAmer, "Fira";
   font-size: 12px;
   font-size-adjust: 0.5;
@@ -1287,12 +1200,8 @@ button.btn:disabled {
 /* line 351, ../scss/partials/_buttons.scss */
 .btn-group {
   position: relative;
-  display: -webkit-flex;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-flex-direction: row ;
-      -ms-flex-direction: row ;
-          flex-direction: row ;
+  flex-direction: row ;
   overflow: hidden;
 }
 /* line 354, ../scss/partials/_buttons.scss */
@@ -1369,19 +1278,15 @@ button.btn-tiny {
 }
 /* line 441, ../scss/partials/_buttons.scss */
 .btn.glow {
-  -webkit-animation-duration: 3s;
-          animation-duration: 3s;
+  animation-duration: 3s;
   -khtml-animation-iteration-count: infinite;
-  -webkit-animation-iteration-count: infinite;
-          animation-iteration-count: infinite;
+  animation-iteration-count: infinite;
   -khtml-animation-name: glowing;
-  -webkit-animation-name: glowing;
-          animation-name: glowing;
+  animation-name: glowing;
 }
 /* line 444, ../scss/partials/_buttons.scss */
 .btn.glow:active {
-  -webkit-animation-name: none;
-          animation-name: none;
+  animation-name: none;
   box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
 }
 /* line 456, ../scss/partials/_buttons.scss */

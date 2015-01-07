@@ -1,0 +1,194 @@
+<div class="demo-title">
+Forms Demo
+
+</div>
+
+<div class="wid-panel brCorner">
+	<header class="panel-header">
+		<div class="header-icon"><i class="user-icon-businessmen2"></i></div>
+		<div class="header-caption">گروه ها</div>
+	</header>
+
+	<div class="panel-body">
+	<?= $this->Form->create('UserManager.Group'); ?>
+		<div class="body-container padding-none form-h">
+			
+			<?= $this->Form->input(
+				'Group.title',
+				array( 
+					'label' => 'عنوان گروه Aval',
+					
+				)
+			); ?>
+			
+			
+			<?= $this->Form->input(
+				'Group.slug',
+				array('label' => 'نامک','type' => 'textarea')
+			); ?>
+			
+			<div class="form-col">
+			<?= $this->Form->input(
+				'Group.title',
+				array( 
+					'label' => 'عنوان گروه Aval',
+					
+				)
+			); ?>
+			
+			
+			<?= $this->Form->input(
+				'Group.slug',
+				array('label' => 'نامک','type' => 'textarea')
+			); ?>			
+			
+			</div>
+			
+			
+			<?php 
+				$sizes = array('s' => 'کوچیک', 'm' => 'متوسط', 'l' => 'بزرگ');
+			echo $this->Form->input(
+				'Group.user',
+				array(
+					'label' => 'نامک',
+					'type' => 'select',
+					'options' => $sizes,
+					'empty' => true,
+									
+				)
+			); ?>
+
+			<?= $this->Form->input(
+				'Group.xxx',
+				array('label' => 'نامک', 'type'=> 'number')
+			); ?>
+
+		</div>
+		<div class="body-footer">
+			<?= $this->Form->submit('ایجاد'); ?>
+		</div>
+	 	<?= $this->Form->end(); ?>
+	</div>
+</div>
+
+
+
+
+<div class="wid-panel-border brCorner-lg">
+	<header class="panel-header">
+		<div class="header-icon"><i class="user-icon-businessmen2"></i></div>
+		<div class="header-caption">گروه ها</div>
+	</header>
+	<div class="panel-body">
+		<?= $this->Form->create('UserManager.Group'); ?>
+		<div class="body-container padding-none form-v">
+			
+			<?= $this->Form->input(
+				'Group.title',
+				array( 'label' => 'عنوان گروه Aval')
+			); ?>
+			
+			
+			<?= $this->Form->input(
+				'Group.slug',
+				array('label' => 'نامک')
+			); ?>
+
+
+			<div class="form-col">
+			<?= $this->Form->input(
+				'Group.title',
+				array( 
+					'label' => 'عنوان گروه Aval',
+					
+				)
+			); ?>
+			
+			
+			<?= $this->Form->input(
+				'Group.slug',
+				array('label' => 'نامک','type' => 'textarea')
+			); ?>			
+			
+			</div>
+			
+			<?php 
+				$sizes = array('s' => 'کوچیک', 'm' => 'متوسط', 'l' => 'بزرگ');
+			echo $this->Form->input(
+				'Group.user',
+				array(
+					'label' => 'نامک',
+					'type' => 'select',
+					'options' => $sizes,
+					'empty' => true					
+				)
+			); ?>
+
+			<?= $this->Form->input(
+				'Group.xxx',
+				array('label' => 'نامک', 'type'=> 'number')
+			); ?>
+
+		</div>
+		<div class="body-footer">
+			<?= $this->Form->submit('ایجاد'); ?>
+		</div>
+	<?= $this->Form->end(); ?>	
+	</div>
+	
+</div>
+
+
+
+
+<div class="wid-panel-framed brCorner-sm">
+	<header class="panel-header">
+		<div class="header-icon"><i class="user-icon-businessmen2"></i></div>
+		<div class="header-caption">گروه ها</div>
+	</header>
+	<div class="panel-body">
+	<?= $this->Form->create('UserManager.Group'); ?>
+
+		<div class="body-container padding-none ">
+			
+			<?= $this->Form->input(
+				'Group.title',
+				array( 'label' => 'عنوان گروه Aval')
+			); ?>
+			
+			
+			<?= $this->Form->input(
+				'Group.slug',
+				array(
+					'label' => 'نامک',
+					'form' => 'form-v'
+				)
+			); ?>
+			
+			<?php 
+				$sizes = array('s' => 'کوچیک', 'm' => 'متوسط', 'l' => 'بزرگ');
+			echo $this->Form->input(
+				'Group.user',
+				array(
+					'label' => 'نامک',
+					'type' => 'select',
+					'options' => $sizes	,
+					'empty' => true,
+					
+					'form' => 'form-v'				
+				)
+			); ?>
+
+			<?= $this->Form->input(
+				'Group.xxx',
+				array('label' => 'نامک', 'type'=> 'number')
+			); ?>
+
+		</div>
+		<div class="body-footer">
+			<?= $this->Form->submit('ایجاد'); ?>
+		</div>
+		<?= $this->Form->end(); ?>
+	</div>
+	
+</div>

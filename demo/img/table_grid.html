@@ -1,0 +1,108 @@
+<div class="demo-title">
+	Table Grid
+
+</div>
+<style>
+#grid1{
+
+	border: 1px dotted red;
+}
+
+#grid1 > .grid-col{
+	background-color: rgba(0,0,0,0.1);
+	background-clip: content-box;
+	
+}
+#grid2{
+	background: red;
+}
+#grid2 .grid-col{
+	background-color: rgba(0,0,0,0.5);
+	background-clip: content-box;
+	
+}
+
+#grid2 .grid-col > * {
+	margin: 5px 0px;
+}
+</style>
+<div id="grid1" class="com-gridTable opt-border ">
+	<div class="grid-col grid3">
+	<h3>grid 3/12</h3>
+	</div>
+	<div class="grid-col grid3">
+		<h3>grid 3/12</h3>
+		
+	</div>
+	
+	<div class="grid-col grid4">
+	<h3>grid 4/12</h3>
+		<div class="wid-panel-framed brCorner">
+			<div class="panel-body">
+				<div class="body-container"> {text}</div>
+			</div>
+		</div>
+	</div>
+	<div class="grid-col grid2">
+		<h3>grid 2/12</h3>
+		<div class="wid-panel-framed brCorner fluid">
+			<div class="panel-body">
+				<div class="body-container"> {text}</div>
+			</div>
+		</div>	
+	</div>
+</div>
+
+<br />
+
+<div id="grid1" class="com-gridTable opt-border ">
+	<div class="grid-col grid1">
+	<h3>grid 1/12</h3>
+	</div>
+	<div class="grid-col grid1">
+		<h3>grid 1/12</h3>
+		
+	</div>
+	
+	<div class="grid-col grid8">
+	<h3>grid 8/12</h3>
+		<div id="grid2" class="com-gridTable opt-border">
+			<div class="grid-col ">
+				<div class="wid-panel-framed brCorner fluid">
+					<div class="panel-body">
+				col
+					</div>
+				</div>	
+			</div>
+			<div class="grid-col ">
+				<div class="wid-panel-framed brCorner fluid">
+					<div class="panel-body">
+				col
+					</div>
+				</div>	
+			</div>
+			<div class="grid-col ">
+				<div class="wid-panel-framed brCorner fluid">
+					<div class="panel-body">
+				col
+					</div>
+				</div>	
+			</div>
+			<div class="grid-col ">
+				<div class="wid-panel-framed brCorner fluid">
+					<div class="panel-body">
+				col
+					</div>
+				</div>	
+			</div>						
+		</div>
+	</div>
+	<div class="grid-col grid2">
+		<h3>grid 2/12</h3>
+		<div class="wid-panel-framed brCorner fluid">
+			<div class="panel-body">
+				<div class="body-container"> {text}</div>
+			</div>
+		</div>	
+	</div>
+</div>

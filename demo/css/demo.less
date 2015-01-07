@@ -1,0 +1,44 @@
+@import  "../../rita.less";
+*{
+		font-family:tahoma ;
+		font-size : 14px;
+}
+
+body{
+
+    background-color: #f1f1f1;
+
+
+}
+
+
+#container{
+   .flex-box();
+   .flex-row();
+    
+    
+    
+    header {
+        height: 120px;
+        background-color: #F57F17;
+        border-top: 10px solid #B04443;
+        display: block;
+        overflow: hidden;
+        position: relative;
+        padding: 0px 20%;
+        
+        img{
+            height: 90%;
+            
+        }
+    }
+    #content{
+        flex:1;
+        
+          .flex-box();
+          .flex-col(); 
+    }
+    footer{
+        background-color: #263238;
+    }
+}
