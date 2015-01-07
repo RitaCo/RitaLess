@@ -4,9 +4,6 @@
 /**
  *  Typography related mixins
  */
-.text-wrap {
-  white-space: initial;
-}
 /**
 * flex-start | flex-end | center | baseline | stretch
 */

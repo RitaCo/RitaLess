@@ -345,6 +345,9 @@ a {
   text-decoration: none;
   color: inherit;
 }
+p {
+  white-space: normal;
+}
 .rita-viewport {
   min-height: 400px;
   height: 100%;
@@ -386,6 +389,17 @@ a {
 }
 .text-left {
   text-align: left!important;
+}
+/**
+ * text wrap
+ */
+.text-wrap {
+  white-space: initial;
+}
+.text-nowrap {
+  text-wrap: none;
+  white-space: nowrap;
+  word-wrap: normal;
 }
 /**
  * padding class
@@ -430,7 +444,7 @@ a {
   flex: 0 0 auto !important;
 }
 .box-fluid {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
 }
 .bc-visible {
   overflow: visible !important;
@@ -680,7 +694,7 @@ a {
   display: flex;
   flex-direction: row ;
   flex-wrap: nowrap;
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   padding: 10px;
   border-right: 10px solid transparent;
   border-bottom: none	;
@@ -722,7 +736,7 @@ a {
   background: white;
 }
 .com-input > .input-container > .dateSelect {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   display: flex;
   flex-direction: row ;
 }
@@ -867,7 +881,7 @@ div.submit {
 .btn {
   box-shadow: inset 1px 0px 0px rgba(255, 255, 255, 0.15), inset 0px 1px 0px rgba(255, 255, 255, 0.15), inset -1px 0px 0px rgba(255, 255, 255, 0.15), inset 0px -1px 0px rgba(255, 255, 255, 0.15);
   background: linear-gradient(to bottom, #fbfbfb, #e1e1e1);
-  display: inline-table;
+  display: inline-flex;
   vertical-align: middle;
   border: 1px solid #b4b4b4;
   line-height: 28px;
@@ -1313,54 +1327,6 @@ button.btn-tiny {
   background-color: #3c6ab9;
   color: white;
 }
-/**
- * Helpers Utility
- */
-/**
- *  Typography related mixins
- */
-.text-wrap {
-  white-space: initial;
-}
-/**
-* flex-start | flex-end | center | baseline | stretch
-*/
-/**
- * Borders Radius
- */
-/**
- * Border
- */
-/* BackGround */
-/**
-	Horizontal gradient, from left to right
-	Creates two color stops, start and end, by specifying a color and position for each color stop.
-	 Color stops are not available in IE9 and below. 
- 
- */
-/**
-	Vertical gradient, from top to bottom
-	
-	Creates two color stops, start and end, by specifying a color and position for each color stop.
-	Color stops are not available in IE9 and below.
- */
-/**
- * directional
- */
-/**
- * horizontal-three-colors
- */
-/**
- * vertical-three-colors
- */
-/**
- * radial
- */
-/**
- * striped
- */
-/*Transformations*/
-/* shadow */
 [class^="ui-"] + [class^="ui-"] {
   margin-top: 20px;
 }
@@ -1388,7 +1354,7 @@ button.btn-tiny {
   box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.5) inset !important;
   position: relative;
   white-space: normal;
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   order: 2;
 }
 .body-container p {
@@ -1421,7 +1387,7 @@ button.btn-tiny {
   margin-left: -1px;
   margin-right: -2px;
   order: 2;
-  flex: 0 1 auto;
+  flex: 0 0 auto;
 }
 .c-splitter-row {
   height: 6px;
@@ -1436,7 +1402,7 @@ button.btn-tiny {
   border-bottom-width: 1px;
   border-left: none;
   border-right: none;
-  flex: 0 1 auto;
+  flex: 0 0 auto;
 }
 .c-splitter-row.flat {
   background: #D8D8D8  !important;
@@ -1452,7 +1418,7 @@ button.btn-tiny {
   margin-top: -1px;
   margin-bottom: -2px;
   order: 2;
-  flex: 0 1 auto;
+  flex: 0 0 auto;
 }
 .c-splitter-col2 {
   width: 20px;
@@ -1600,6 +1566,7 @@ button.btn-tiny {
   overflow: hidden;
   display: flex;
   flex-direction: column ;
+  padding: 2px;
 }
 .t {
   border: 1px dotted red;
@@ -1644,7 +1611,7 @@ button.btn-tiny {
 }
 .panel-header .header-caption,
 .ui-panel-framed > .panel-header .header-caption {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
   order: 2;
   font-family: WMofid;
   font-style: normal;
@@ -1764,6 +1731,245 @@ button.btn-tiny {
   border-right: 1px solid #b9b9b9;
   border-bottom: 1px solid #b9b9b9;
 }
+.ui-tab {
+  position: relative;
+  flex: 1 0 auto;
+  display: flex;
+  border-top: 1px solid #c9c9c9;
+  border-left: 1px solid #c9c9c9;
+  border-right: 1px solid #c9c9c9;
+  border-bottom: 1px solid #c9c9c9;
+  background-color: #ebebeb;
+  box-shadow: 0px 0px 3px 0 #ccc inset;
+  overflow: hidden;
+}
+.ui-tab > .tab-nav {
+  list-style: none;
+  position: relative;
+  background: #f5f5f5;
+  padding: 20px;
+  flex: 0 0 auto;
+  box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
+  display: flex;
+  flex-direction: row ;
+  -moz-user-select: none;
+  box-shadow: 0px 0px 3px 0 #ccc;
+}
+.ui-tab > .tab-nav > li {
+  position: relative;
+  z-index: 1;
+  margin-left: 2px;
+  padding: 2px;
+  cursor: default;
+  background: transparent;
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+}
+.ui-tab > .tab-nav > li > a {
+  border-top: 1px solid transparent;
+  border-left: 1px solid transparent;
+  border-right: 1px solid transparent;
+  border-bottom: 1px solid transparent;
+  z-index: 2;
+  white-space: nowrap;
+}
+.ui-tab > .tab-nav > li.active > a {
+  background-color: #ebebeb;
+  border-top: 1px solid #c9c9c9;
+  border-left: 1px solid #c9c9c9;
+  border-right: 1px solid #c9c9c9;
+  border-bottom: 1px solid #c9c9c9;
+}
+.ui-tab > .tab-nav > li:not(.active):hover > a {
+  border-top: 1px solid #c9c9c9;
+  border-left: 1px solid #c9c9c9;
+  border-right: 1px solid #c9c9c9;
+  border-bottom: 1px solid #c9c9c9;
+  background-color: #eeeeee;
+  cursor: pointer;
+}
+.ui-tab > .tab-nav > li > a {
+  position: relative;
+  display: block;
+  color: #333333;
+  padding: 5px 15px;
+  font-size: 14px;
+  font-family: "WAmer", "Tahoma";
+  font-weight: normal;
+}
+.ui-tab > .tab-container {
+  margin: 10px;
+  background-clip: content-box-box;
+  position: relative;
+  background-color: #ffffff;
+  flex: 1 1 0;
+  display: flex;
+  white-space: normal;
+  flex-wrap: nowrap;
+  outline: 1px solid #ededed;
+  border-top: 1px solid #b7b7b7;
+  border-left: 1px solid #b7b7b7;
+  border-right: 1px solid #b7b7b7;
+  border-bottom: 1px solid #b7b7b7;
+}
+.ui-tab > .tab-container > .tab-body {
+  padding: 6px;
+  display: none;
+  position: relative;
+}
+.ui-tab.typ {
+  /**
+ * 
+ */
+  /**
+ * 
+ */
+}
+.ui-tab.typ-top {
+  flex-direction: column ;
+}
+.ui-tab.typ-top > .tab-nav {
+  padding-bottom: 0px;
+  padding-top: 5px;
+  order: 0;
+  border-bottom: 1px solid #c9c9c9;
+}
+.ui-tab.typ-top li {
+  margin-bottom: 0px;
+  padding-bottom: 0px;
+}
+.ui-tab.typ-top li.active {
+  border-bottom-color: #ebebeb;
+}
+.ui-tab.typ-top li a {
+  border-radius: 6px 6px 0px 0px;
+  border-bottom: none;
+}
+.ui-tab.typ-top li:not(.active):hover > a {
+  border-bottom: none;
+}
+.ui-tab.typ-top li.active a {
+  border-bottom: none;
+}
+.ui-tab.typ-top .tab-container {
+  order: 1;
+  flex: 1;
+}
+.ui-tab.typ-top .tab-body.active {
+  display: flex;
+  flex-direction: column ;
+  flex: 1 0 auto;
+  overflow: auto;
+}
+.ui-tab.typ-bottom {
+  flex-direction: column ;
+}
+.ui-tab.typ-bottom > .tab-nav {
+  padding-bottom: 5px;
+  padding-top: 0px;
+  order: 1;
+  border-top: 1px solid #c9c9c9;
+}
+.ui-tab.typ-bottom li {
+  margin-top: 0px;
+  padding-top: 0px;
+}
+.ui-tab.typ-bottom li.active {
+  border-top-color: #ebebeb;
+}
+.ui-tab.typ-bottom li a {
+  border-radius: 0px 0px 6px 6px;
+  border-top: none;
+}
+.ui-tab.typ-bottom li:not(.active):hover > a {
+  border-top: none;
+}
+.ui-tab.typ-bottom li.active a {
+  border-top: none;
+}
+.ui-tab.typ-bottom .tab-container {
+  order: 0;
+  flex: 1 0 auto;
+}
+.ui-tab.typ-bottom .tab-body.active {
+  display: block;
+  width: 100%;
+  overflow: auto;
+}
+.ui-tab.typ-right {
+  flex-direction: row ;
+}
+.ui-tab.typ-right > .tab-nav {
+  padding-left: 0px;
+  padding-right: 10px;
+  order: 0;
+  border-left: 1px solid #c9c9c9;
+  flex-direction: column ;
+}
+.ui-tab.typ-right li {
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.ui-tab.typ-right li.active {
+  border-left-color: #ebebeb;
+}
+.ui-tab.typ-right li a {
+  border-radius: 0px 6px 6px 0;
+  border-left: none;
+}
+.ui-tab.typ-right li:not(.active):hover > a {
+  border-left: none;
+}
+.ui-tab.typ-right li.active a {
+  border-left: none;
+}
+.ui-tab.typ-right .tab-container {
+  order: 1;
+  flex-direction: column ;
+}
+.ui-tab.typ-right .tab-body.active {
+  display: flex;
+  flex-direction: column ;
+  flex: 1 0 auto;
+  overflow: auto;
+}
+.ui-tab.typ-left {
+  flex-direction: row ;
+}
+.ui-tab.typ-left > .tab-nav {
+  padding-left: 5px;
+  padding-right: 0px;
+  order: 1;
+  border-right: 1px solid #c9c9c9;
+  flex-direction: column ;
+}
+.ui-tab.typ-left li {
+  margin-right: 0px;
+  padding-right: 0px;
+}
+.ui-tab.typ-left li.active {
+  border-right-color: #ebebeb;
+}
+.ui-tab.typ-left li a {
+  border-radius: 6px 0px 0px 6px;
+  border-right: 0px;
+}
+.ui-tab.typ-left li:not(.active):hover > a {
+  border-right: 0px;
+}
+.ui-tab.typ-left li.active a {
+  border-right: 0px;
+}
+.ui-tab.typ-left .tab-container {
+  order: 0;
+  flex-direction: column ;
+}
+.ui-tab.typ-left .tab-body.active {
+  display: block;
+  flex: 1 1 0;
+}
 .ui-menu,
 .menu-submenu {
   display: block;
@@ -1799,7 +2005,7 @@ button.btn-tiny {
   position: relative;
 }
 .ui-menu .label {
-  flex: 1 1 auto;
+  flex: 1 0 auto;
 }
 .ui-menu .label span {
   color: #DCE2E6;

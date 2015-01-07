@@ -1,14 +1,9 @@
-
+@import  (reference) "bundles/tab.less";
 
 
 
 .ui-tab{ 
-    position: relative;
-    .flex(1);
-    .flex-box();
-    
-    .br(1px, solid,@tab-brColor);
-    background-color: @tab-bg;
+	#Tab > .tab();
 	box-shadow: 0px 0px 3px 0 #ccc inset;
 	overflow: hidden;
 }
@@ -16,83 +11,26 @@
 
 		
 .ui-tab > .tab-nav{
-    list-style:none;
-    position: relative;
-    background: @tab-nav-bg;
-    padding: @tab-nav-padding;
-    flex : 0 0 auto;
-    .wid-3d();
-    .flex-box();
-    .flex-col();
-    -moz-user-select:none;
-    box-shadow:   0px 0px 3px 0 #ccc;
+	#Tab > .tab-nav();
+	box-shadow:   0px 0px 3px 0 #ccc;
+
 }		
-
-.tab-nav > li,
-.tab-nav > .nav-item {
-		position: relative;
-		z-index: 1;
-		margin-left:2px;
-		padding: 2px;
-		cursor: default;
-		background: @tab-item-bg;
-		.br(1px, solid, transparent);
-}
-			
-.tab-nav > li > a,
-.tab-nav > .nav-item > a{
-    position: relative;
-    display: block;
-    color: @tab-item-color ;
-    padding : @tab-item-padding;
-    font-size: @tab-item-font-size;
-    font-family: @tab-item-font-family;
-    font-weight: @tab-item-font-weight;	
-    
-	.br(1px, solid, transparent);
-	z-index:2;
-	white-space: nowrap; 
-    
-
-   
-}
-
-
-.tab-nav > li,
-.tab-nav > .nav-item {
-    &.active > a{
-            background-color: @tab-bg;
-            .br(1px, solid, @tab-item-brColor);
-    }
-    
-    &:not(.active):hover > a{
-        .br(1px, solid, @tab-item-brColor);
-        background-color: @tab-item-bg-hover;
-        cursor: pointer;
-    }    
+.ui-tab > .tab-nav	> li {
+	#Tab > .tab-item();	
+}			
+.ui-tab > .tab-nav	> li > a{
+	#Tab > .tab-item-link();
 }
 
 
 .ui-tab > .tab-container{
-    
-    margin: @tab-container-margin;
-    background-clip: content-box-box;
-    position: relative;
-    background-color: @tab-container-bg;
-    flex : 1 1 0;
-    display: flex;
-    white-space: normal;
-    flex-wrap : nowrap;
-    outline: 1px solid #ededed;
-    .br(1px, solid,@tab-container-border-color);	
+	 #Tab > .tab-container();
 	 
 	
 }		
 
 .ui-tab > .tab-container > .tab-body{
-		padding: @tab-body-padding;
-		display: none;
-		position: relative;	
+	 #Tab > .tab-body();	
 }
 
 
