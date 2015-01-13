@@ -7,7 +7,9 @@
 	 	.flex(1,1,0);
 		.flex-box();
 		.flex-col();
-		.flex-nowrap();
+		.flex-wrap();
+        position: realtive;
+        
 
   		border-bottom: 1px solid #ddd;
 		
@@ -15,7 +17,8 @@
 			border-left:1px solid #fff;
 			border-right: 1px solid #ddd;
 				border-bottom: none;
-			display: block;
+			
+            position: relative;
 			
 			&:first-child{
 				border-right : none;
@@ -78,7 +81,7 @@
 		padding: 5px 15px;
 		box-shadow: 2px 2px 2px 0px #C9C9C9;
 		border-radius: 6px;
-		.text-nowrap();
+		.text-wrap();
 		position: absolute;
 	       display: none;
 		
@@ -118,22 +121,22 @@
 		color: #222;
 		font-family: Wirans,Fira Sans;
 		font-size: 14px;
-		align-self:center;
+		
 		font-weight: normal;
 		text-shadow: 1px 1px 1px #c9c9c9;
 		min-width: 130px;
-		display: block;
+		
 			.text-nowrap();				
 	}
 	
 	> input,
 	> textarea,
 	> select{
-		display: block;
+		
 		border: 1px solid #bbb;
 		border-radius: 3px;
 	    position: relative;   
-        .def-font();		
+        font-size: 16px;	
 		color: #555;
 		box-shadow: 0px 0px 5px 0px #DCDCDC inset;
 		background: #fdfdfd;
@@ -156,7 +159,7 @@
 		border-radius: 3px;
         
         
-        .def-font();		
+        	
 		color: #555;
 		box-shadow: 0px 0px 5px 0px #DCDCDC inset;
 		background: #fdfdfd;
@@ -196,8 +199,9 @@
 .form-v .com-input,
 .com-input.form-v{
 	.input-container {
-			display:block;
+			.flex-row();
 			padding-right: 0px;
+            
 	}
 	&.error .input-container{
 		padding-right: 10px !important;
@@ -206,23 +210,26 @@
 		
 		padding: 0 20px;
 		padding-bottom: 2px;
+        text-align: right !important;
 	}
 	
 	.error-message {
-		top: auto;
-		right : 3%;
-		
+		top: auto !important;
+		right : 3% !important;
+		display: block;
+        position: absolute;
+        left: 30% !important;
 		&:before{
 			//top: auto;
 		}
 	}
 	input,
 	textarea{
-		width: 100% ;	
+			
 	}
 	
 	select{
-		width: 50%;
+		padding: 4px;
 	
 	}
 }	
@@ -235,4 +242,6 @@
 
 div.submit{
 	display: inline-block;
+    
+    
 }
