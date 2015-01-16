@@ -1,4 +1,117 @@
-.ui{
+.ui-paginator{
+	.flex-box();
+	.flex-col();
+    list-style: none;
+    margin: 10px 0px;
+    padding: 5px;
+    border: 1px solid @paginator-brColor;
+    background-color: #fff;
+    box-shadow: 3px 3px 3px rgba(0, 0, 0, 0.20);
+    position: relative;
+    .br-radius(5px);
+    overflow: hidden;
+    [class^="page-"]+[class^="page-"]{
+        margin-right: 5px;
+    }
     
+     .page-status{
+        background-color: @paginator-cells-bg;
+        border: 1px solid @paginator-cells-brColor;
+  
+        position: relative;
+        overflow: hidden;
+        flex:1 0 auto;
+        
+        .flex-box();
+	    .flex-row();
+        
+           
+        .numbers,           
+        .status{
+            
+            position: relative;
+            
+
+        }
+        
+        .status{
+            position: absolute;
+            display: block !important;
+            color: #5F7DA1;
+            background-color: #fff;
+            top:0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            opacity: 1;
+            font-size: 14px;
+            .transition(all,0.2s);
+            z-index: 1;
+            padding: 3px 0px;
+            font-family: wamer;
+        text-align: center;  
+        }
+        
     
+    }
+    
+    .page-status .numbers {
+                flex :1 0 0px;
+                margin: 2px;
+   	         .flex-box();
+	       .flex-col();
+           list-style: none;
+           justify-content: center;
+           overflow: hidden;
+           
+           a{
+            background-color: #eee;
+            border: 1px solid #ccc;
+            margin: 0px 5px;
+            overflow: hidden;
+            flex:0 1 25px;
+            position: relative;
+            .transition();
+            text-
+            
+            &:hover{
+                background-color : #FBF5CA;
+                .transition();
+            }
+            
+            &.active{
+                background-color : #F07777;
+                .transition();
+                
+               span{ color :#eee} 
+            }
+            
+            span{
+                font-size: 1.6rem;
+                font-family: WRoya;
+                font-weight: 700;
+                color: #354354;
+                margin-top: 12px;
+                display: block;
+                line-height: 0;
+                text-align: center;
+            }
+           }
+    }
+    
+    .page-next{
+        
+    }
+    .page-perv{
+        
+    }
+    
+    &:hover .page-status {
+           .status { 
+                  .translate(0,36px);   
+                  opacity: 0;
+                  .transition(all,0.2s);
+                  
+           } 
+        }     
 }

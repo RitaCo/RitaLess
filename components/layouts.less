@@ -12,6 +12,20 @@
 		 flex-flow: row wrap;
 	}
 
+
+    &.typ-col > .layout-splitter{
+        border-color: #bbb;
+        border-style: solid;
+        border-width: 1px;
+        border-top: none;
+        border-bottom: none;
+        background-color: #E2E2E2;
+        width: 8px;
+        margin-top: -1px;
+        margin-bottom: -2px;	
+        
+        .flex(0);        
+    }
 }
 
 
@@ -33,6 +47,10 @@
 	
 	> *:not(script) {
 		position: relative;
+        flex:0 1 auto;
+       .flex-box();
+	   position: relative;
+       flex-flow: column wrap;
 	}
 }
 

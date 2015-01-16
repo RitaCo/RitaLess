@@ -4,9 +4,10 @@
 	box-shadow: 0 1px 2px #c3c3c3;
 	border-radius: 3px;
 	color: #8b91a0;
+    .brCorner();
 	position: relative;
 	overflow: hidden;
-	   box-shadow:  0px 3px 10px rgba(0, 0, 0, 0.23), 0px 3px 10px rgba(0, 0, 0, 0.16);
+	   box-shadow:  0px 3px 10px rgba(0, 0, 0, 0.23);
 	.flex-box();
 	.flex-row();
     	padding: 2px;
@@ -179,9 +180,12 @@
 
 		padding :@panel-body-padding;
 		
-		margin: @panel-body-padding;
-		.br(1px, solid,@panel-brColor);
+		//margin: @panel-body-padding;
+		//.br(1px, solid,@panel-brColor);
 	}
+	> .panel-body > .body-container{
+	   box-shadow: none !important;
+	}        
 	.panel-header+.panel-body{
 		//margin-top: 0;
 	}		

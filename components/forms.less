@@ -1,24 +1,24 @@
 
 .com-form{
-	padding: 0;
+	padding: 0px;
 	position: relative;
     background-color: #fafafa;
+    
 	 .form-col{
 	 	.flex(1,1,0);
 		.flex-box();
 		.flex-col();
 		.flex-wrap();
         position: realtive;
-        
-
   		border-bottom: 1px solid #ddd;
 		
 		.com-input{
-			border-left:1px solid #fff;
-			border-right: 1px solid #ddd;
-				border-bottom: none;
-			
-            position: relative;
+            border-left:1px solid #fff;
+            border-right: 1px solid #ddd;
+            border-bottom: none;
+            
+     		
+           
 			
 			&:first-child{
 				border-right : none;
@@ -43,21 +43,20 @@
 
 
 .form-bg-none .com-input{
-		background: none;
+		background-color: none;
 		border-top: none ;
 }
 
 
 .com-input {		
-	
-	background-color: #f7f7f7;
-	border-top:1px solid #fff;
-	border-bottom: 1px solid #ddd;
-	position: relative;
-	.flex(1,1,0);
 
-
-	
+       background-color: #f7f7f7;
+            border-top:1px solid #fff;
+            border-bottom: 1px solid #ddd;
+            position: relative;
+            .flex(1,1,0);	
+            
+            	
 	&.required .input-container > label:after {
 		color: #e32;
 		content: '*';
@@ -68,22 +67,22 @@
 		border-right: 10px solid #DC0000;
 	}
 	.error-message{
-		position: absolute;
-		border: 2px solid #e67e22;
-		background-color: rgba(255, 243, 224, 0.95);
-		font-family: wiraniansans;
-		font-weight: 300;
-		font-size: 17px;
-		color:#2D339C;
-	
-		text-shadow: 0 0 3px #c5c5c5;
-		z-index: 5;
-		padding: 5px 15px;
-		box-shadow: 2px 2px 2px 0px #C9C9C9;
-		border-radius: 6px;
-		.text-wrap();
-		position: absolute;
-	       display: none;
+        position: absolute;
+        border: 2px solid #e67e22;
+        background-color: rgba(255, 243, 224, 0.95);
+        font-family: wiraniansans;
+        font-weight: 300;
+        font-size: 17px;
+        color:#2D339C;
+        
+        text-shadow: 0 0 3px #c5c5c5;
+        z-index: 5;
+        padding: 5px 15px;
+        box-shadow: 2px 2px 2px 0px #C9C9C9;
+        border-radius: 6px;
+        .text-wrap();
+        position: absolute;
+        display: none;
 		
 		&:before{
 			border-bottom: 13px solid #e67e22;
@@ -121,12 +120,10 @@
 		color: #222;
 		font-family: Wirans,Fira Sans;
 		font-size: 14px;
-		
 		font-weight: normal;
 		text-shadow: 1px 1px 1px #c9c9c9;
 		min-width: 130px;
-		
-			.text-nowrap();				
+		.text-nowrap();				
 	}
 	
 	> input,
@@ -134,42 +131,40 @@
 	> select{
 		
 		border: 1px solid #bbb;
-		border-radius: 3px;
+		border-radius: 0px;
 	    position: relative;   
         font-size: 16px;	
+        font-family: wiraniansans,Fira Sans;
 		color: #555;
-		box-shadow: 0px 0px 5px 0px #DCDCDC inset;
-		background: #fdfdfd;
+		box-shadow: 1px 1px 3px 0px #DCDCDC inset;
+		background-color: #fdfdfd;
 		background-clip: padding-box;
 		
 		&:focus{
 			box-shadow:  0px 0px 2px 0px #DCDCDC inset;
-			background: white;	
+			background-color: white;	
 		}	 
 	}
 
     > .dateSelect{ 
-        	.flex(1);
-            	.flex-box();
-	       .flex-col();
+    	.flex(1);
+    	.flex-box();
+        .flex-col();
 	
-     select {
+        select{
 		
-		border: 1px solid #bbb;
-		border-radius: 3px;
-        
-        
-        	
-		color: #555;
-		box-shadow: 0px 0px 5px 0px #DCDCDC inset;
-		background: #fdfdfd;
-		background-clip: padding-box;
+            border: 1px solid #bbb;
+            border-radius: 3px;
+            color: #555;
+            box-shadow: 0px 0px 5px 0px #DCDCDC inset;
+            background-color: #fdfdfd;
+            background-clip: padding-box;
 		> option {
 		  	   
 		}
 		&:focus{
 			box-shadow:  0px 0px 2px 0px #DCDCDC inset;
-			background: white;	
+			background-color: white;	
 		}	 
 	}    
 	}
@@ -177,7 +172,7 @@
 	> input[type='email'],
 	> input[type='password'],
 	> textarea{
-		padding: 2px 10px;
+		padding: 5px 10px;
 		flex:1;
 	}
 	
@@ -186,8 +181,8 @@
 	}
 	select {
 		option{
-			padding:2px 10px;
-			font-size: 12px;
+			padding:5px 10px;
+			font-size: 14px;
 		}
 		
 	}
