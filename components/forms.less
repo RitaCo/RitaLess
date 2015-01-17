@@ -8,20 +8,21 @@
 	 	.flex(1,1,0);
 		.flex-box();
 		.flex-col();
-		.flex-nowrap();
+		.flex-wrap();
         position: realtive;
   		border-bottom: 1px solid #ddd;
 		
 		.com-input{
             border-left:1px solid #fff;
             border-right: 1px solid #ddd;
-            border-bottom: none;
-            
+             border-bottom: none;
+            flex:1 1 50%;
      		
            
 			
 			&:first-child{
 				border-right : none;
+               
 			}
 			&:last-child{
 				border-left : none;
@@ -116,7 +117,7 @@
 	position: relative;
     
 	
-	> label{
+	 label{
 		color: #222;
 		font-family: Wirans,Fira Sans;
 		font-size: 14px;
@@ -126,27 +127,28 @@
 		.text-nowrap();				
 	}
 	
-	> input,
-	> textarea,
-	> select{
+	 input,
+	 textarea,
+	 select{
 		
 		border: 1px solid #bbb;
 		border-radius: 0px;
 	    position: relative;   
-        font-size: 16px;	
+        font-size: 14px;	
         font-family: wiraniansans,Fira Sans;
-		color: #555;
+		color: #717D90;
 		box-shadow: 1px 1px 3px 0px #DCDCDC inset;
 		background-color: #fdfdfd;
 		background-clip: padding-box;
 		
 		&:focus{
 			box-shadow:  0px 0px 2px 0px #DCDCDC inset;
-			background-color: white;	
+			background-color: white;
+            color: #222;	
 		}	 
 	}
 
-    > .dateSelect{ 
+     .dateSelect{ 
     	.flex(1);
     	.flex-box();
         .flex-col();
@@ -168,15 +170,15 @@
 		}	 
 	}    
 	}
-	> input[type='text'],
-	> input[type='email'],
-	> input[type='password'],
-	> textarea{
+	 input[type='text'],
+	 input[type='email'],
+	 input[type='password'],
+	 textarea{
 		padding: 5px 10px;
 		flex:1;
 	}
 	
-	> input[type='checkbox']{
+	 input[type='checkbox']{
 		//margin: 0 20px;
 	}
 	select {
