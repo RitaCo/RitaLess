@@ -8,7 +8,7 @@
 	 	.flex(1,1,0);
 		.flex-box();
 		.flex-col();
-		.flex-wrap();
+		.flex-nowrap();
         position: realtive;
   		border-bottom: 1px solid #ddd;
 		
@@ -106,7 +106,7 @@
 .com-input > .input-container{ 
 	.flex-box();
 	.flex-col();
-	.flex-wrap();
+	.flex-nowrap();
 	.flex(1);
 	padding: 10px;
 	border-right: 10px solid transparent;
@@ -181,9 +181,16 @@
 	}
 	select {
 		option{
-			padding:5px 10px;
+			padding:5px 5px;
+            margin: 2px 5px;
 			font-size: 14px;
+            color: #000;
 		}
+        
+        option:disabled{
+            color: #555;
+            background-color: #DBE3FF;
+        }
 		
 	}
 		 

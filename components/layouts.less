@@ -4,12 +4,12 @@
 	//	overflow: -moz-hidden-unscrollable;	
 
 	&.typ-row{
-	 	 flex-flow: column wrap;
+	 	 flex-flow: column nowrap;
 	}
 	
 	
 	&.typ-col{
-		 flex-flow: row wrap;
+		 flex-flow: row nowrap;
 	}
 
 
@@ -50,7 +50,7 @@
         flex:0 1 auto;
        .flex-box();
 	   position: relative;
-       flex-flow: column wrap;
+       flex-flow: column nowrap;
 	}
 }
 
@@ -61,7 +61,7 @@
 
  	display: flex;
     flex-direction: row;
-	flex-wrap:wrap;
+	flex-wrap:nowrap;
 	 		
 	> .layout-cell {
 		flex:1;
