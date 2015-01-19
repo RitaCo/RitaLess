@@ -5,11 +5,11 @@
     background-color: #fafafa;
     
 	 .form-col{
-	 	.flex(1,1,0);
+	 	.flex(1,1,0%);
 		.flex-box();
 		.flex-col();
-		.flex-wrap();
-        position: realtive;
+		
+        position: relative;
   		border-bottom: 1px solid #ddd;
 		
 		.com-input{
@@ -44,7 +44,7 @@
 
 
 .form-bg-none .com-input{
-		background-color: none;
+		background-color: transparent;
 		border-top: none ;
 }
 
@@ -55,7 +55,7 @@
             border-top:1px solid #fff;
             border-bottom: 1px solid #ddd;
             position: relative;
-            .flex(1,1,0);	
+            .flex(1,1,0%);	
             
             	
 	&.required .input-container > label:after {
@@ -103,11 +103,45 @@
 		}
 	}		
 }
+
+
+    
+	
+    label{
+		color: #222;
+		font-family: @label-font-family;
+		font-size: @label-font-size;
+		font-weight: @label-font-weight;
+		text-shadow: 1px 1px 1px #c9c9c9;
+		min-width: 130px;
+		.text-nowrap();				
+	}
+	
+    input,
+    textarea,
+    select{
+		border: 1px solid #bbb;
+	    position: relative;   
+        font-size: @inputs-font-size;
+        font-family: @inputs-font-family;
+        font-weight: @inputs-font-weight;
+		color: #717D90;
+		box-shadow: 1px 1px 3px 0px #DCDCDC inset;
+		background-color: #fdfdfd;
+		font-size-adjust: auto;
+        .transition();
+		&:focus{
+			box-shadow:  0px 0px 2px 0px #DCDCDC inset;
+			background-color: white;
+            color: #333;
+            border: 1px solid #999;
+            .transition()	
+		}	 
+	}
 	
 .com-input > .input-container{ 
 	.flex-box();
 	.flex-col();
-	.flex-nowrap();
 	.flex(1);
 	padding: 10px;
 	border-right: 10px solid transparent;
@@ -115,38 +149,7 @@
 	border-top: none;
 	text-align: right;	
 	position: relative;
-    
-	
-	 label{
-		color: #222;
-		font-family: Wirans,Fira Sans;
-		font-size: 14px;
-		font-weight: normal;
-		text-shadow: 1px 1px 1px #c9c9c9;
-		min-width: 130px;
-		.text-nowrap();				
-	}
-	
-	 input,
-	 textarea,
-	 select{
-		
-		border: 1px solid #bbb;
-		border-radius: 0px;
-	    position: relative;   
-        font-size: 14px;	
-        font-family: wiraniansans,Fira Sans;
-		color: #717D90;
-		box-shadow: 1px 1px 3px 0px #DCDCDC inset;
-		background-color: #fdfdfd;
-		background-clip: padding-box;
-		
-		&:focus{
-			box-shadow:  0px 0px 2px 0px #DCDCDC inset;
-			background-color: white;
-            color: #222;	
-		}	 
-	}
+
 
      .dateSelect{ 
     	.flex(1);
@@ -160,10 +163,8 @@
             color: #555;
             box-shadow: 0px 0px 5px 0px #DCDCDC inset;
             background-color: #fdfdfd;
-            background-clip: padding-box;
-		> option {
-		  	   
-		}
+            
+
 		&:focus{
 			box-shadow:  0px 0px 2px 0px #DCDCDC inset;
 			background-color: white;	
@@ -181,21 +182,19 @@
 	 input[type='checkbox']{
 		//margin: 0 20px;
 	}
-	select {
-		option{
-			padding:5px 5px;
+	select > option{
+            /**
+             * fire fox hang if padding:5px 5px; 
+             */
+			
             margin: 2px 5px;
-			font-size: 14px;
-            color: #000;
+            font-size: 14px;
+            color: #343434;
 		}
-        
-        option:disabled{
+          select>  option:disabled{
             color: #555;
             background-color: #DBE3FF;
         }
-		
-	}
-		 
 }
 
 
@@ -259,3 +258,4 @@ div.submit{
     margin-top: @padding-block;
     
 }
+

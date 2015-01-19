@@ -54,6 +54,15 @@
 		position: relative;
 		padding: 10px 20px;
 		.flex(0 ,0 ,auto);
+        
+        
+        .btn{
+            box-shadow: 2px 2px 1px #ccc !important;
+            
+            &:focus{
+                box-shadow: inset 2px 2px 1px #ccc !important;
+            }
+        }
 }
 	
 
@@ -116,9 +125,7 @@
 }
 
 .parentInherit{
-	display: inherit !important;
-	flex-direction: inherit !important;
-    flex: 1 1 auto ;
+    .flex-inherit();
     	
 }
 

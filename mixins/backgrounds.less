@@ -2,11 +2,9 @@
 
 .bg-gradient(@from: #000, @to: #EEE){
 	background: @from;
-	background-image: -webkit-gradient(linear, left top, left bottom, from(@from), to(@to));
-	background-image: -moz-linear-gradient(top, @from, @to);
-	background-image: -ms-linear-gradient(top, @from, @to);
-	background-image: linear-gradient(top, @from, @to);
-	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='@{from}', endColorstr='@{to}',GradientType=0);
+
+	background-image: linear-gradient(to top, @from, @to);
+	
 
 }
 
