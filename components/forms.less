@@ -8,7 +8,8 @@
 	 	.flex(1,1,0%);
 		.flex-box();
 		.flex-col();
-		
+		.flex-wrap();
+        
         position: relative;
   		border-bottom: 1px solid #ddd;
 		
@@ -171,6 +172,7 @@
 		}	 
 	}    
 	}
+     
 	 input[type='text'],
 	 input[type='email'],
 	 input[type='password'],
@@ -178,7 +180,10 @@
 		padding: 5px 10px;
 		flex:1;
 	}
-	
+	input[type='file']{
+	   width: 50%;
+	}
+    
 	 input[type='checkbox']{
 		//margin: 0 20px;
 	}
@@ -215,7 +220,10 @@
 		padding-bottom: 2px;
         text-align: right !important;
 	}
-	
+	input[type='file']{
+	   width: 100% ;
+       min-width: 200px;
+	}	
 	.error-message {
 		top: auto !important;
 		right : 3% !important;
@@ -228,7 +236,7 @@
 	}
 	input,
 	textarea{
-			
+	   min-width: 200px;		
 	}
 	
 	select{
@@ -259,3 +267,8 @@ div.submit{
     
 }
 
+@media (max-width: 750px) {
+.form-col .com-input {
+	  border-bottom: inherit !important;
+	}
+}

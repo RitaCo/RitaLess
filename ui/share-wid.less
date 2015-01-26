@@ -9,8 +9,9 @@
 	border: none ;
 	
 } 
-
-
+/**
+ * 
+ */
 .body-header{
 		background: @toolbar-bg;
 		position: relative;
@@ -20,7 +21,9 @@
 		.flex(0 ,0 ,auto);
 		.flex-order(1);
 	}
-	
+/**
+ * 
+ */
 .body-leftSide{
 		background: @toolbar-bg;
 		position: relative;
@@ -30,7 +33,10 @@
 		.flex(0 ,0 ,auto);
 		.flex-order(1);
 }	
-	
+
+/**
+ * 
+ */
 .body-container{
 		padding: @padding-block;
 		box-shadow: 0px 0px 5px -2px rgba(0, 0, 0, 0.5) inset !important;
@@ -45,7 +51,9 @@
 		
 	}
 
-	
+/**
+ * 
+ */
 .body-footer{
 	
 		background: @toolbar-bg;
@@ -65,13 +73,47 @@
         }
 }
 	
+/**
+ * 
+ */
+.body-layouter{
+        overflow: hidden;
+	.flex-box();
+	position: relative;
+    border:1px solid #bbb;
+    background-color: #e7e7e7;
+    
+    padding: 8px 8px;
+        .wid-3d();
+    
+    > .layout-cell{
+        flex: 1 1 0%;
+        padding: @padding-block;
+        border: 1px solid #bbb;
+        background-color: #fff;
+    }
+     > .layout-cell +  .layout-cell{
+        margin-right: 8px;
+     }
+   
+}
 
-.body-header+.body-container,
+.padding-none > .body-layouter{
+    border-width: 0px;
+    box-shadow: none;
+}
+
+
+.ui-panel-framed .body-layouter{
+    background-color: rgba(221, 221, 221, 0.5);
+}
+
+.body-header+[class^="body-"],
 .body-header+[class^="wid-"]{
 	.br-top(1px,solid,@panel-brColor);	
 }
 
-.body-container+.body-footer,
+[class^="body-"]+.body-footer,
 [class^="wid-"]+.body-footer,
  {
 		.br-top(1px,solid,@panel-brColor) !important;
@@ -79,7 +121,7 @@
 
 
 
-.body-splitter{
+.body1-splitter{
   border-color: #bbb;
   border-style: solid;
   border-width: 1px;
