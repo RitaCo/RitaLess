@@ -1,13 +1,13 @@
 .ui-panel{
 
 	background-color: #FFFFFF;
-	box-shadow: 0 1px 2px #c3c3c3;
-	border-radius: 3px;
+	
+	.br(1px, solid,@panel-brColor);
 	color: #8b91a0;
     .br-radius(@border-radius-base);
 	position: relative;
 	overflow: hidden;
-	   box-shadow:  0px 3px 10px rgba(0, 0, 0, 0.23);
+	  box-shadow:  1px 1px 4px 1px #C3C3C3;
 	.flex-box();
 	.flex-row();
 	padding: 2px;
@@ -27,7 +27,7 @@
 		position: relative;
 		box-shadow: 0 1px 0 #FFFFFF inset;
 		
-		height: 40px;
+		height: 45px;
 		.flex-box();
 		.flex-col();
 		align-items : stretch;	
@@ -58,6 +58,8 @@
 			font-family: @panel-head-font-name;
 			font-style: normal;
 			font-size: @panel-head-font-size;
+                 border-top-left-radius: inherit;
+         border-top-right-radius: inherit;
 			color: #333;
 			text-shadow: 1px 1px 1px #999;
             position: relative;
@@ -92,7 +94,7 @@
  */
 .panel-header{
 	&.bg-3d{
-		background-color: @panel-head-bg;
+		
 		background-image: linear-gradient(to bottom, @panel-head-bg-gradient-strat, @panel-head-bg-gradient-end);
 	
 	}
@@ -104,13 +106,13 @@
 
 
 .panel-body{
-		padding: @padding-block;
+		
 		background-color: @panel-body-bg;
 		position: relative;
-		.flex(1,1,auto);
+		.flex(1,1,0%);
 		.flex-box();
 		.flex-row();
-		
+
 	//	overflow: auto;	
 }
 
@@ -125,7 +127,7 @@
     
     	  padding: @padding-block;
 	
-	.br(1px, solid,@panel-brColor); 
+	
 };
 
 
@@ -137,7 +139,7 @@
 	@panel-bg: #dadada;
 	
 	padding:0;
-	.br(1px, solid,@panel-brColor);
+
 	background-color: @panel-bg;
 					  
 
@@ -150,8 +152,8 @@
 	 	
 	
 	> .panel-body{
-		margin: @panel-body-padding;
-		padding :@panel-body-padding;	
+		margin: @panel-body-padding+1;
+		
 		.br(1px, solid,@panel-brColor);
 		
 		
@@ -168,18 +170,24 @@
 .ui-panel-border{
 	@panel-bg:  #e5e6ea;
 	padding:0;
-	.br(1px, solid,@panel-brColor);
 	background-color: @panel-bg;
 
 
 	> .panel-header{
 		.br-bottom(1px, solid,@panel-brColor);
+    
 	}	
 
 	> .panel-body{
 
 		padding :@panel-body-padding;
-		
+		border-bottom-left-radius: inherit;
+        border-bottom-right-radius: inherit;
+        
+            .body-footer{
+                border-bottom-left-radius: inherit;
+                border-bottom-right-radius: inherit;
+            }
 		//margin: @panel-body-padding;
 		//.br(1px, solid,@panel-brColor);
 	}
@@ -188,5 +196,8 @@
 	}        
 	.panel-header+.panel-body{
 		//margin-top: 0;
+        ;
 	}		
+    
+    
 }
