@@ -76,36 +76,54 @@
 /**
  * 
  */
-.body-layouter{
-        overflow: hidden;
+.container--layout-splitter{
+    overflow: hidden !important;
+    
 	.flex-box();
 	position: relative;
-    border:1px solid #bbb;
-    background-color: #e7e7e7;
     
-    padding: 8px 8px;
-        .wid-3d();
+    background-color: #ECECEC;
+    
+    padding: 10px;
+        
     
     > .layout-cell{
         flex: 1 1 0%;
-        padding: @padding-block;
-        border: 1px solid #bbb;
-        background-color: #fff;
+        .flex-box();
+        .flex-row();
     }
-     > .layout-cell +  .layout-cell{
-        margin-right: 8px;
+        
+    > .layout-box{
+            flex: 1 1 0%;
+           	        .flex-box();
+        .flex-row();
+            padding: @padding-block;
+            border: 1px solid #bbb;
+            background-color: #fff;
+        
+        }    
+     > .layout-cell +  .layout-cell,
+     >.layout-box +  .layout-box,
+     >.layout-box +  .layout-cell,
+     >.layout-cell +  .layout-box,
+     {
+        margin-right: 10px;
      }
-   
+   .layout-box .box-splitter{
+        border-bottom: 1px solid #bbb;
+         .bg-gradient(#F1F1F1,#D8D8D8);
+         
+        background-color: #eee;
+        height: 10px;
+
+   }
 }
 
-.padding-none > .body-layouter{
-    border-width: 0px;
-    box-shadow: none;
-}
 
 
-.ui-panel-framed .body-layouter{
-    background-color: rgba(221, 221, 221, 0.5);
+.ui-panel-border .body-container.container--layout-splitter{
+    	background-color: #D1D1D1;
+        padding: 8px;
 }
 
 .body-header+[class^="body-"],
@@ -121,7 +139,7 @@
 
 
 
-.body1-splitter{
+.body-splitter{
   border-color: #bbb;
   border-style: solid;
   border-width: 1px;
@@ -131,9 +149,17 @@
   height: 8px;
   margin-left: -1px;
   margin-right: -2px;	
-		.flex-order(2);
+	
 				.flex(0);
+                
 }
+
+.body-header+.body-splitter{
+    	.flex-order(2);
+}
+
+
+
 	
 .c-splitter-row{
   height: 6px;
