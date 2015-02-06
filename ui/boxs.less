@@ -2,49 +2,56 @@
 
   border: none;
   position: relative;
-  border: 1px solid #bbb;
+  border: 1px solid @panel-brColor;
   .flex-box();
   .flex-row();  
 
-}
 
 
-.box-caption{
-    background-color: @panel-head-bg;
-	background-image: linear-gradient(to bottom, @panel-head-bg-gradient-strat, @panel-head-bg-gradient-end);
-    border-bottom: 1px solid #bbb;
-    padding:8px 10px;
-    color: #000;
-    font-family: wamer;
-    font-size: 14px;
-    line-height: 1;
-    position: relative;
-    flex: 0 0 auto;
-    display: block;
-    overflow: hidden;
-    &:before{
-        content:'\f3c6';
-        font-family: "WebHostingHub-Glyphs" !important;
+    
+    >.box-caption{
+        background-color: #e9e9e9;
+//        background-image:linear-gradient(to top, #e9e9e9 0%, #d9d9d9 25%, #c9c9c9 45%, #c9c9c9 55%, #d9d9d9 75%, #e9e9e9 100%);
+         background-image: linear-gradient(0deg, #e9e9e9 0%, #d9d9d9 30%, #c9c9c9 50%, #d9d9d9 70%, #e9e9e9 100%);
+        border-bottom: 1px solid @panel-brColor;
+        padding:8px 10px;
+        color: #000;
+        font-family: wamer;
+        font-size: 14px;
+        line-height: 1;
         position: relative;
-        top: 1px;
-        color: #595959;
-        margin-left: 5px;
+        flex: 0 0 auto;
+        display: block;
+        overflow: hidden;
+       &:before{
+                content:'\f3c6';
+                font-family: "WebHostingHub-Glyphs" !important;
+                position: relative;
+                top: 1px;
+                color: #595959;
+                margin-left: 5px;
+            }     
+       
+       &.box-caption--3d{
+    	background-image: linear-gradient(to bottom, @panel-head-bg-gradient-strat, @panel-head-bg-gradient-end);
+        
+       } 
     }
     
-}
-.box-body{
-  padding: 6px;
-  background-color: #FFFFFF;
-  color: #666;
-  font-family: wyekan;
-font-size: 15px;
-line-height: 1;
-  .flex(1);
-}
+    >.box-body{
+        padding: 6px;
+        background-color: #FFFFFF;
+        color: #666;
+        font-family: wyekan;
+        font-size: 15px;
+        line-height: 1;
+        .flex(1);
+    }
 
+}
 
 .padding-none > .ui-box{
-    border-width: 0 0 1px 0;
+    border-width: 0 0 0px 0;
     .wid-3d();
 }
 
