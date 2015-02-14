@@ -143,7 +143,7 @@ button.btn:disabled {
      transition-property: all;
      transition-duration: 0.3s;
   color: #666666;
-  border: 2px solid #666666;
+  border: 1px solid #666666;
   background: none;
   text-shadow: none;
 }
@@ -151,14 +151,14 @@ button.btn:disabled {
 .btn-border:hover {
   background: none;
   color: gray;
-  border: 2px solid gray;
+  border: 1px solid gray;
 }
 /* line 137, ../scss/partials/_buttons.scss */
 .btn-border:active {
      transition-duration: 0s;
   background: none;
   color: #4d4d4d;
-  border: 2px solid #4d4d4d;
+  border: 1px solid #4d4d4d;
 }
 /* line 143, ../scss/partials/_buttons.scss */
 .btn-border.disabled {
@@ -218,6 +218,7 @@ button.btn:disabled {
   height: 120px;
   padding: 0px;
   border-width: 4px;
+  justify-content:center;
   font-size: 19px;
 }
 
@@ -410,6 +411,9 @@ input.btn-large, button.btn-large {
   height: 29.6px;
   line-height: 29.6px;
   padding: 0px 7px;
+   span,i{
+    font-size: 0.7rem;
+   }
 }
 
 /* line 420, ../scss/partials/_buttons.scss */

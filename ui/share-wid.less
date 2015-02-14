@@ -64,7 +64,7 @@
 		.flex(0 ,0 ,auto);
 
         
-        .btn{
+        >.btn{
             box-shadow: 2px 2px 1px #ccc !important;
             
             &:focus{
@@ -112,8 +112,8 @@
    .layout-box .box-splitter{
         border-bottom: 1px solid @panel-brColor;
         border-top: 1px solid @panel-brColor;
-         .bg-gradient(#F1F1F1,#D8D8D8);
          
+         .bg-linear-gradient(@color1:#c7c7c7, @color2:#f5f5f5, @stop1:0, @stop2:100%, @deg:180deg);
         background-color: #eee;
         height: 10px;
 
@@ -141,15 +141,15 @@
 
 
 .body-splitter{
-  border-color: #bbb;
+  border-color: @panel-brColor;
   border-style: solid;
   border-width: 1px;
   border-left: none;
   border-right: none;
-  background-color: #E2E2E2;
+  background-color: #dadada;
   height: 8px;
   margin-left: -1px;
-  margin-right: -2px;	
+  margin-right: -1px;	
 	
 				.flex(0);
                 

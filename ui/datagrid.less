@@ -9,7 +9,8 @@
 
 
 .ui-dataGrid{
-    border:1px solid #bbb;
+    border:1px solid @panel-brColor;
+    .wid-3d();
     position: relative;
     overflow: hidden;
 }
@@ -109,7 +110,7 @@
 
 .ui-dataGrid .table-header th:hover,
 .ui-dataGrid  thead th:hover{
-    background: linear-gradient(to bottom, #f1f1f1   0%, #ddd  100%);	
+    background-image: linear-gradient(to bottom, #f1f1f1   0%, #ddd  100%);	
 }
 .ui-dataGrid .table-header th a,
 .ui-dataGrid  thead th a{
@@ -137,6 +138,7 @@
 .ui-dataGrid .table-body td,
 .ui-dataGrid tbody td{
     border-bottom: 1px dotted #ccc;
+    border-left:1px solid #fff;
 }
 
 .ui-dataGrid .table-body .table-row:last-child td,
@@ -146,16 +148,16 @@
 
 .ui-dataGrid .table-body  tr:first-child td,
 .ui-dataGrid tbody  tr:first-child td{
-	padding-top: 10px;
+	padding-top: 5px;
 }
 .ui-dataGrid .table-body  tr:last-child td,
 .ui-dataGrid tbody  tr:last-child td{
-	padding-bottom: 10px;
+	padding-bottom: 5px;
 }
 
-.ui-dataGrid .table-body  tr:nth-child(odd),
-.ui-dataGrid tbody tr:nth-child(odd){
- background: #fafafa;	
+.ui-dataGrid .table-body  tr:nth-child(even),
+.ui-dataGrid tbody tr:nth-child(even){
+ background-color: #FFFDEF;	
 } 
 .ui-dataGrid .table-body  tr:hover,
 .ui-dataGrid .table-body  tr:focus,
