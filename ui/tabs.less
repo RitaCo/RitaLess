@@ -18,7 +18,7 @@
 .ui-tab > .tab-nav{
     list-style:none;
     position: relative;
-    background: @tab-nav-bg;
+    background-color: @tab-nav-bg;
     padding: @tab-nav-padding;
     flex : 0 0 auto;
     .wid-3d();
@@ -34,7 +34,7 @@
 		z-index: 1;
 		margin-left:0px;
 		cursor: default;
-		background: @tab-item-bg;
+		background-color: @tab-item-bg;
 		.br(1px, solid, transparent);
 }
 			
@@ -47,7 +47,7 @@
     font-size: @tab-item-font-size;
     font-family: @tab-item-font-family;
     font-weight: @tab-item-font-weight;	
-    
+    .transition();
 	.br(1px, solid, transparent);
 	z-index:2;
 	white-space: nowrap; 
@@ -60,7 +60,7 @@
 .tab-nav > li,
 .tab-nav > .nav-item {
     &.active > a{
-            background-color: @tab-bg;
+            background-color: @tab-item-bg-active;
             .br(1px, solid, @tab-item-brColor);
     }
     
@@ -77,6 +77,7 @@
         .br(1px, solid, @tab-item-brColor);
         background-color: @tab-item-bg-hover;
         cursor: pointer;
+            .transition();
     }    
 }
 
@@ -87,7 +88,7 @@
     background-clip: content-box;
     position: relative;
     background-color: @tab-container-bg;
-    flex : 1 1 0;
+    flex : 1 1 0%;
     display: flex;
     white-space: normal;
     flex-wrap : nowrap;
@@ -142,13 +143,13 @@
 	
 	.tab-container{
 		.flex-order(1);	
-		flex:1;	
+		flex:1 1 0%;	
 		
 	}
 	.tab-body.active{
 		.flex-box();
 		.flex-row();
-		.flex(1);
+		.flex(1,1,0%);
 		
 	}	
 }	
@@ -223,8 +224,11 @@
 		
 		margin-left: 0px;
 		padding-left: 0px;
-		
+	   
 	}
+    li+li{
+       margin-top: 5px;	 
+    }
 	
 	li.active {
 		border-left-color: @tab-bg;
@@ -234,7 +238,9 @@
 	li a {
 		.br-radius(0px,6px,6px,0);
 		border-left: none;
-
+        padding: 10px 10px;
+        line-height: 1.5;
+        text-align: left;
 
 	}
 	

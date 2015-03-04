@@ -63,41 +63,102 @@
  	display: flex;
     flex-direction: row;
 	flex-wrap:wrap;
-	 		
+    overflow: hidden;
+    
+    	 		
 	> .layout-cell {
-		flex:1;
+		flex:1 1 0%;
 		background-clip: content-box;
 		color: #222;
-		padding: 1rem 1rem ;
-		//padding: 10px;
+		
+        align-self:stretch;
+		padding: 10px;
+        .flex-box();
 	
 	
 	}
+    
+    
+    
 
 	&.col1 > .layout-cell{
 	    flex: 0 0 100%;
+        
+      
 	}
 		
 	&.col2 > .layout-cell{
 	    flex: 1 1 50%;
+   
 	}
 	
 	&.col3 > .layout-cell{
 	    flex: 0 0 33.33%;
+        
+
+        
 	}
 	
 	&.col4 > .layout-cell{
 		flex: 0 0 25%;
+           
 	}
 
 	&.col5 > .layout-cell{
 		flex: 0 0 20%;
+        
+         
 	}
 
 	&.col6 > .layout-cell{
 		flex: 0 0 16.66%;
+        
+      
 	}	
 }
 
 
 
+//
+//	&.col1 > .layout-cell{
+//	    flex: 0 0 100%;
+//        
+//        &:first-child{ padding-right: 0px;}
+//        &:last-child{ padding-left: 0px;}
+//	}
+//		
+//	&.col2 > .layout-cell{
+//	    flex: 1 1 50%;
+//        &:nth-child(2n+1){ padding-right: 0px;}
+//        &:nth-child(2n){ padding-left: 0px;}
+//	}
+//	
+//	&.col3 > .layout-cell{
+//	    flex: 0 0 33.33%;
+//        
+//
+//        &:nth-child(3n+1){ padding-right: 0px;}
+//        &:nth-child(3n){ padding-left: 0px;}
+//        
+//	}
+//	
+//	&.col4 > .layout-cell{
+//		flex: 0 0 25%;
+//        
+//        &:nth-child(4n+1){ padding-right: 0px;}
+//        &:nth-child(4n){ padding-left: 0px;}        
+//	}
+//
+//	&.col5 > .layout-cell{
+//		flex: 0 0 20%;
+//        
+//        &:nth-child(5n+1){ padding-right: 0px;}
+//        &:nth-child(5n){ padding-left: 0px;}        
+//	}
+//
+//	&.col6 > .layout-cell{
+//		flex: 0 0 16.66%;
+//        
+//        &:nth-child(6n+1){ padding-right: 0px;}
+//        &:nth-child(6n){ padding-left: 0px;}        
+//	}	

@@ -76,13 +76,13 @@
         font-weight: 300;
         font-size: 17px;
         color:#2D339C;
-        
+                user-select:none;	
         text-shadow: 0 0 3px #c5c5c5;
         z-index: 5;
         padding: 5px 15px;
         box-shadow: 2px 2px 2px 0px #C9C9C9;
         border-radius: 6px;
-        .text-wrap();
+        .text-nowrap();
         position: absolute;
         display: none;
 		
@@ -115,7 +115,8 @@
 		font-weight: @label-font-weight;
 		text-shadow: 1px 1px 1px #c9c9c9;
 		min-width: 130px;
-		.text-nowrap();				
+		.text-nowrap();
+        user-select:none;				
 	}
 	
     input,
@@ -183,7 +184,11 @@
 	input[type='file']{
 	   width: 50%;
 	}
-    
+	input[type='hidden']{
+	   background: none;
+       border: none;
+       box-shadow: none;
+	}    
 	 input[type='checkbox']{
 		//margin: 0 20px;
 	}
@@ -192,14 +197,14 @@
              * fire fox hang if padding:5px 5px; 
              */
 			
-            margin: 2px 5px;
+            padding: 2px 5px;
             font-size: 14px;
             color: #343434;
-		}
-          select>  option:disabled{
-            color: #555;
-            background-color: #DBE3FF;
-        }
+	}
+    select >  option:disabled{
+    color: #555;
+    background-color: #DBE3FF;
+    }
 }
 
 
@@ -229,6 +234,7 @@
 		right : 3% !important;
 		display: block;
         position: absolute;
+	
         left: 30% !important;
 		&:before{
 			//top: auto;

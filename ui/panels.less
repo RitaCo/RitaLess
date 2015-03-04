@@ -150,19 +150,18 @@
 		margin: @panel-body-padding+1;
 		background-color: @panel-body-bg;
 		.br(1px, solid,@panel-brColor);
-		
-		
-		
 	}
 	
-	
+	> .panel-body > .body-container{
+	       .body-container.shadow;
+	}        	
 	.panel-header+.panel-body{
 		margin-top: 0;
 	}	
 }
 
 /**
- * 
+ * .ui-panel-framed
  */
 .ui-panel-border:extend(.ui-panel){}
 .ui-panel-border{
