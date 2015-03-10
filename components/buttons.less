@@ -346,7 +346,7 @@ button.btn:disabled {
   position: relative;
   display: flex;
   .flex-col();
-  
+  .flex-wrap();    
   overflow: hidden;
 }
 /* line 354, ../scss/partials/_buttons.scss */
@@ -384,6 +384,10 @@ button.btn:disabled {
   margin-right: -1px;
 }
 
+.btn-group > .btn-flat{
+    margin-left:5px;
+    margin-bottom: 5px;
+}
 /* line 389, ../scss/partials/_buttons.scss */
 .btn-jumbo {
   font-size: 24px;
@@ -442,13 +446,13 @@ input.btn-tiny, button.btn-tiny {
    -khtml-animation-name: glowing;
      animation-name: glowing;
 }
-/* line 444, ../scss/partials/_buttons.scss */
+
 .btn.glow:active {
       animation-name: none;
     box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
 }
 
-/* line 456, ../scss/partials/_buttons.scss */
+
 .btn-dropdown {
   position: relative;
   overflow: visible;
