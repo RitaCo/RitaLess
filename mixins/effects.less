@@ -1,9 +1,7 @@
 
-.opacity(@opacity: 0.5) {
-  -moz-opacity: @opacity;
-  -khtml-opacity: @opacity;
-  -webkit-opacity: @opacity;
-  opacity: @opacity;
+.opacity(@opacity: 50) {
+  opacity: @opacity / 100;
+  filter: ~"alpha(opacity=@{opacity})";
 }
 
 .transition(@range: all, @time: 0.2s, @ease: ease-in-out) {
@@ -12,18 +10,11 @@
 
 /*Transformations*/
 .skew(@angle_x:35, @angle_y:0) {
-	-webkit-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
-	-moz-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
-	-o-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
-	-ms-transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
+	
 	transform: skew(formatstring("{0}deg", @angle_x), formatstring("{0}deg", @angle_y));
 }
 
 .scale(@scale_x: 1){
-	-webkit-transform: scale(@scale_x);
-	-moz-transform: scale(@scale_x);
-	-o-transform: scale(@scale_x);
-	-ms-transform: scale(@scale_x);
 	transform: scale(@scale_x);
 }
 

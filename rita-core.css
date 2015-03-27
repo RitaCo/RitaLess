@@ -547,7 +547,13 @@ p{
   flex: 0 0 auto !important;
 }
 .box-fluid {
-  flex: 1 0 auto !important;
+  flex: 1 1 0% !important;
+}
+.flex-col {
+  flex-direction: row  !important;
+}
+.flex-row {
+  flex-direction: column  !important;
 }
 .bc-visible {
   overflow: visible !important;
@@ -585,9 +591,11 @@ p{
 }
 .com-layout.typ-row {
   flex-direction: column ;
+  flex-direction: column  !important;
 }
 .com-layout.typ-col {
   flex-direction: row ;
+  flex-direction: row  !important;
 }
 .com-layout.typ-col > .layout-splitter {
   border-color: #bbb;
@@ -599,7 +607,7 @@ p{
   width: 8px;
   margin-top: -1px;
   margin-bottom: -2px;
-  flex: 0 0 auto;
+  flex: 0 1 0%;
 }
 .typ-col.opt-childs-fluid-fix > *,
 .typ-row.opt-childs-fluid-fix > * {
@@ -620,18 +628,15 @@ p{
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
+  overflow: hidden;
 }
 .com-layout-columns > .layout-cell {
-  flex: 1;
+  flex: 1 1 0%;
   background-clip: content-box;
   color: #222;
-  padding: 0 1rem 1rem 1rem;
-}
-.com-layout-columns > .layout-cell:first-child {
-  padding-right: 0px;
-}
-.com-layout-columns > .layout-cell:last-child {
-  padding-left: 0px;
+  align-self: stretch;
+  padding: 10px;
+  display: flex;
 }
 .com-layout-columns.col1 > .layout-cell {
   flex: 0 0 100%;
@@ -748,6 +753,63 @@ p{
 .com-gridTable > .com-gridTable .grid-col:first-child {
   border-right: none;
 }
+/**
+ * grid flex
+ */
+.com-grid-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  flex: 1 1 0%;
+}
+.com-grid-flex > * {
+  flex: 1 1 0%;
+  background-clip: content-box;
+  color: #222;
+  padding: 0 1rem 1rem 1rem;
+}
+.com-grid-flex > .layout-cell:first-child {
+  padding-right: 0px;
+}
+.com-grid-flex > .layout-cell:last-child {
+  padding-left: 0px;
+}
+.com-grid-flex .grid1 {
+  flex: 1 1  8.33%;
+}
+.com-grid-flex .grid2 {
+  flex: 1 1  16.6%;
+}
+.com-grid-flex .grid3 {
+  flex: 1 1  25%;
+}
+.com-grid-flex .grid4 {
+  flex: 1 1  33.33%;
+}
+.com-grid-flex .grid5 {
+  flex: 1 1  41.66%;
+}
+.com-grid-flex .grid6 {
+  flex: 1 1  50%;
+}
+.com-grid-flex .grid7 {
+  flex: 1 1  58.33%;
+}
+.com-grid-flex .grid8 {
+  flex: 1 1  66.66%;
+}
+.com-grid-flex .grid9 {
+  flex: 1 1  75%;
+}
+.com-grid-flex .grid10 {
+  flex: 1 1  83.33%;
+}
+.com-grid-flex .grid11 {
+  flex: 1 1  91.66%;
+}
+.com-grid-flex .grid12 {
+  flex: 1 1  100%;
+}
 .com-form {
   padding: 0px;
   position: relative;
@@ -757,6 +819,7 @@ p{
   flex: 1 1 0%;
   display: flex;
   flex-direction: row ;
+  flex-direction: row  !important;
   flex-wrap: wrap;
   position: relative;
   border-bottom: 1px solid #ddd;
@@ -865,7 +928,8 @@ select:focus {
 .com-input > .input-container {
   display: flex;
   flex-direction: row ;
-  flex: 1 0 auto;
+  flex-direction: row  !important;
+  flex: 1 1 0%;
   padding: 10px;
   border-right: 10px solid transparent;
   border-bottom: none	;
@@ -874,9 +938,10 @@ select:focus {
   position: relative;
 }
 .com-input > .input-container .dateSelect {
-  flex: 1 0 auto;
+  flex: 1 1 0%;
   display: flex;
   flex-direction: row ;
+  flex-direction: row  !important;
 }
 .com-input > .input-container .dateSelect select {
   border: 1px solid #bbb;
@@ -908,7 +973,7 @@ select:focus {
   /**
              * fire fox hang if padding:5px 5px; 
              */
-  margin: 2px 5px;
+  padding: 2px 5px;
   font-size: 14px;
   color: #343434;
 }
@@ -919,6 +984,7 @@ select:focus {
 .form-v .com-input .input-container,
 .com-input.form-v .input-container {
   flex-direction: column ;
+  flex-direction: column  !important;
   padding-right: 0px;
 }
 .form-v .com-input.error .input-container,
@@ -1005,6 +1071,7 @@ div.submit {
 .alert_error {
   display: flex;
   flex-direction: row ;
+  flex-direction: row  !important;
   padding: 0px 20px;
   align-items: center;
   background: #fb1800;
@@ -1334,6 +1401,8 @@ button.btn:disabled {
   position: relative;
   display: flex;
   flex-direction: row ;
+  flex-direction: row  !important;
+  flex-wrap: wrap;
   overflow: hidden;
 }
 /* line 354, ../scss/partials/_buttons.scss */
@@ -1368,6 +1437,10 @@ button.btn:disabled {
 /* line 376, ../scss/partials/_buttons.scss */
 .btn-group .btn + .btn {
   margin-right: -1px;
+}
+.btn-group > .btn-flat {
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 /* line 389, ../scss/partials/_buttons.scss */
 .btn-jumbo {
@@ -1420,12 +1493,10 @@ button.btn-tiny {
   -khtml-animation-name: glowing;
   animation-name: glowing;
 }
-/* line 444, ../scss/partials/_buttons.scss */
 .btn.glow:active {
   animation-name: none;
   box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
 }
-/* line 456, ../scss/partials/_buttons.scss */
 .btn-dropdown {
   position: relative;
   overflow: visible;

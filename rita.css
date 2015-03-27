@@ -547,7 +547,7 @@ p{
   flex: 0 0 auto !important;
 }
 .box-fluid {
-  flex: 1 0 auto !important;
+  flex: 1 1 0% !important;
 }
 .flex-col {
   flex-direction: row  !important;
@@ -607,7 +607,7 @@ p{
   width: 8px;
   margin-top: -1px;
   margin-bottom: -2px;
-  flex: 0 0 auto;
+  flex: 0 1 0%;
 }
 .typ-col.opt-childs-fluid-fix > *,
 .typ-row.opt-childs-fluid-fix > * {
@@ -929,7 +929,7 @@ select:focus {
   display: flex;
   flex-direction: row ;
   flex-direction: row  !important;
-  flex: 1 0 auto;
+  flex: 1 1 0%;
   padding: 10px;
   border-right: 10px solid transparent;
   border-bottom: none	;
@@ -938,7 +938,7 @@ select:focus {
   position: relative;
 }
 .com-input > .input-container .dateSelect {
-  flex: 1 0 auto;
+  flex: 1 1 0%;
   display: flex;
   flex-direction: row ;
   flex-direction: row  !important;
@@ -973,7 +973,7 @@ select:focus {
   /**
              * fire fox hang if padding:5px 5px; 
              */
-  margin: 2px 5px;
+  padding: 2px 5px;
   font-size: 14px;
   color: #343434;
 }
@@ -1402,6 +1402,7 @@ button.btn:disabled {
   display: flex;
   flex-direction: row ;
   flex-direction: row  !important;
+  flex-wrap: wrap;
   overflow: hidden;
 }
 /* line 354, ../scss/partials/_buttons.scss */
@@ -1436,6 +1437,10 @@ button.btn:disabled {
 /* line 376, ../scss/partials/_buttons.scss */
 .btn-group .btn + .btn {
   margin-right: -1px;
+}
+.btn-group > .btn-flat {
+  margin-left: 5px;
+  margin-bottom: 5px;
 }
 /* line 389, ../scss/partials/_buttons.scss */
 .btn-jumbo {
@@ -1488,12 +1493,10 @@ button.btn-tiny {
   -khtml-animation-name: glowing;
   animation-name: glowing;
 }
-/* line 444, ../scss/partials/_buttons.scss */
 .btn.glow:active {
   animation-name: none;
   box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.3), 0px 1px 0px white;
 }
-/* line 456, ../scss/partials/_buttons.scss */
 .btn-dropdown {
   position: relative;
   overflow: visible;
@@ -1599,7 +1602,7 @@ button.btn-tiny {
   padding: 0px;
   line-height: 0px;
   background-color: #efefef;
-  flex: 0 0 auto;
+  flex: 0 0 0%;
   display: flex;
   flex-direction: column ;
   flex-direction: column  !important;
@@ -1718,6 +1721,7 @@ button.btn-tiny {
   display: flex;
   flex-direction: column ;
   flex-direction: column  !important;
+  flex: 1 1 0%;
 }
 .ui-box > .box-caption {
   background-color: #e7e7e7;
@@ -1755,7 +1759,7 @@ button.btn-tiny {
   color: #666;
   font-family: wnazanin;
   font-size: 16px;
-  flex: 1 0 auto;
+  flex: 1 1 0%;
 }
 .padding-none > .ui-box {
   border-width: 0 0 0px 0;
@@ -1930,7 +1934,7 @@ button.btn-tiny {
 }
 .ui-tab {
   position: relative;
-  flex: 1 0 auto;
+  flex: 1 1 0%;
   display: flex;
   border-top: 1px solid #9f9f9f;
   border-left: 1px solid #9f9f9f;
@@ -2102,13 +2106,13 @@ button.btn-tiny {
 }
 .ui-tab.typ-bottom .tab-container {
   order: 0;
-  flex: 1 0 auto;
+  flex: 1 1 0%;
 }
 .ui-tab.typ-bottom .tab-body.active {
   display: flex;
   flex-direction: column ;
   flex-direction: column  !important;
-  flex: 1 0 auto;
+  flex: 1 1 0%;
 }
 .ui-tab.typ-right {
   flex-direction: row ;
@@ -2154,7 +2158,7 @@ button.btn-tiny {
   display: flex;
   flex-direction: column ;
   flex-direction: column  !important;
-  flex: 1 0 auto;
+  flex: 1 1 0%;
 }
 .ui-tab.typ-left {
   flex-direction: row ;
@@ -2194,7 +2198,7 @@ button.btn-tiny {
   display: flex;
   flex-direction: column ;
   flex-direction: column  !important;
-  flex: 1 0 auto;
+  flex: 1 1 0%;
 }
 .ui-menu,
 .menu-submenu {
@@ -2231,7 +2235,7 @@ button.btn-tiny {
   position: relative;
 }
 .ui-menu .label {
-  flex: 1 0 auto;
+  flex: 1 1 0%;
 }
 .ui-menu .label span {
   color: #DCE2E6;
@@ -2609,9 +2613,12 @@ button.btn-tiny {
  */
 .body-container {
   padding: 10px;
+  display: flex;
+  flex-direction: column ;
+  flex-direction: column  !important;
   position: relative;
   white-space: normal;
-  flex: 1 0 auto;
+  flex: 1 1 0%;
   order: 2;
 }
 .body-container p {
@@ -2641,16 +2648,18 @@ button.btn-tiny {
  * 
  */
 .body-container.container--layout-splitter {
-  overflow: hidden !important;
-  display: flex;
   position: relative;
   background-color: #ECECEC;
   padding: 10px;
+  flex-direction: row ;
+  flex-direction: row  !important;
 }
 .body-container.container--layout-splitter > .layout-cell,
 .body-container.container--layout-splitter > .layout-box {
-  flex: 1 1 0%;
   display: flex;
+  flex-direction: column ;
+  flex-direction: column  !important;
+  flex: 1 1 0%;
 }
 .body-container.container--layout-splitter > .layout-box {
   padding: 10px;
@@ -2662,13 +2671,6 @@ button.btn-tiny {
 .body-container.container--layout-splitter > .layout-box + .layout-cell,
 .body-container.container--layout-splitter > .layout-cell + .layout-box {
   margin-right: 10px;
-}
-.body-container.container--layout-splitter.flex-row > .layout-cell + .layout-cell,
-.body-container.container--layout-splitter.flex-row > .layout-box + .layout-box,
-.body-container.container--layout-splitter.flex-row > .layout-box + .layout-cell,
-.body-container.container--layout-splitter.flex-row > .layout-cell + .layout-box {
-  margin-top: 10px;
-  margin-right: 0px;
 }
 .body-container.container--layout-splitter .layout-box .box-splitter {
   border-bottom: 1px solid #9f9f9f;
@@ -2682,6 +2684,17 @@ button.btn-tiny {
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#cccccc', endColorstr='#000000');
   background-color: #eee;
   height: 10px;
+}
+.container--layout-splitter.flex--row {
+  flex-direction: column ;
+  flex-direction: column  !important;
+}
+.container--layout-splitter.flex--row > .layout-cell + .layout-cell,
+.container--layout-splitter.flex--row > .layout-box + .layout-box,
+.container--layout-splitter.flex--row > .layout-box + .layout-cell,
+.container--layout-splitter.flex--row > .layout-cell + .layout-box {
+  margin-top: 10px;
+  margin-right: 0px;
 }
 .ui-panel-border .body-container.container--layout-splitter {
   background-color: #d0d0d0;
@@ -2705,7 +2718,7 @@ button.btn-tiny {
   height: 8px;
   margin-left: -1px;
   margin-right: -1px;
-  flex: 0 0 auto;
+  flex: 0 1 auto;
 }
 .body-header + .body-splitter {
   order: 2;
@@ -2719,7 +2732,7 @@ button.btn-tiny {
   border-bottom-width: 1px;
   border-left: none;
   border-right: none;
-  flex: 0 0 auto;
+  flex: 0 1 0%;
 }
 .c-splitter-row.flat {
   background: #D8D8D8  !important;
@@ -2735,7 +2748,7 @@ button.btn-tiny {
   margin-top: -1px;
   margin-bottom: -2px;
   order: 2;
-  flex: 0 0 auto;
+  flex: 0 1 0%;
 }
 .c-splitter-col2 {
   width: 20px;
