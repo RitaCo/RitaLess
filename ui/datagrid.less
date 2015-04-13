@@ -1,9 +1,9 @@
 
-.padding-none .ui-dataGrid{
-    border: none;
-    border-top: 1px solid #fff !important;	
-    border-bottom: 1px solid #fff !important;
-    margin: 0px 1px;
+.padding-none > .ui-dataGrid{
+
+    border: 1px solid #fff !important;	
+
+    
 		
 }
 
@@ -13,6 +13,8 @@
     .wid-3d();
     position: relative;
     overflow: hidden;
+    width: 100%;
+    max-width: 100%;    
 }
 
 
@@ -20,11 +22,11 @@
 .ui-dataGrid > table{
   	border-collapse: separate;
     table-layout: fixed;
-    overflow: hidden;
+    
     position: relative;
     border-spacing: 0px 0px;
-    width: auto;
-    min-width: 100%;
+    width: 100%;
+    
 	    
 }   
 
@@ -169,7 +171,14 @@
  }
 
 
+/**
+ * action
+ */
 
+.ui-dataGrid .table-body .table-row td.actions,
+.ui-dataGrid tbody tr td.actions{
+    background-color: #E1E1DF;
+}
 
 /**
  * table footer
