@@ -74,19 +74,24 @@
     .transition();
     
     i{
-    	margin: 0px;
-   		margin-left: 10px;
+    	
+   		
     	color: #666;
-   		font-size: 15px;
+   		font-size: 1.3em;
+    .transition();
     }
    	
 	span{
 		
-		font-size: 14px;
+		font-size: 1.2em;
 		font-family: wamer;
 		font-weight: 400;
+            .transition();
 	}
  }
+ 
+ 
+ 
 
 .toolbar-band  > .btn.disabled{
 	color: silver;
@@ -100,9 +105,20 @@
 .toolbar-band  > .btn:not(.disabled):hover{
     border: 1px solid silver;
 	.wid-3d();
-    background: none;
+    background:rgba(0, 0, 0, 0.05);
     color: #222;
-    .transition()
+    .transition();
+    
+    
+    span{
+        color: #404056;
+            .transition();
+    }
+    
+    i{
+        color:rgb(170, 18, 18);
+            .transition();
+    }
  } 
 
 

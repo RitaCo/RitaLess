@@ -45,7 +45,7 @@
 		white-space: normal;
 		//overflow: auto;
 		.flex(1);
-		.flex-order(2);
+		.flex-order(3);
 		p{
 			margin: 5px 0px;
 		}
@@ -62,7 +62,7 @@
 	
 		background: @toolbar-bg;
 		.wid-3d();
-		.flex-order(3);
+		.flex-order(5);
 		position: relative;
 		padding: 10px 20px;
 		.flex(0 ,0 ,auto);
@@ -178,7 +178,10 @@
 }
 
 
-
+.body-container+.body-splitter{
+    .flex-order(4);
+    border-bottom: none;    
+}
 	
 .c-splitter-row{
   height: 6px;
