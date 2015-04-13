@@ -30,24 +30,28 @@
 		text-align: center;
 }
 
+
 .ui-menu .icon i{
 	color: #01B070;
 	
-	font-size: 1.3rem;
+	font-size: 1.4rem;
 	font-weight: 400;
 	position: relative;
 }
 
+.ui-menu >li > a .icon i{
+    font-size: 1.7rem;
+}
 .ui-menu .label{
 	.flex(1);
 
 }
 
-.ui-menu .label span{
-	color: #DCE2E6;
+.ui-menu .label{
+	color: #fff;
 	font-family: Wirans;
 	font-size: 1rem;
-	line-height: 0;
+	
 	font-weight: 300;
 	text-shadow: 1px 1px 1px #444;
 }
@@ -74,21 +78,17 @@
 	background-color:  @menu-submenu-bg;
 	display: none;
 	position: absolute;
-	left: 0;
+	
 	top: 0;
 	z-index: 100;
-	width: 100%;
+	
 	right: 100%;
+    padding: 10px;
+    box-shadow: -2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
 
 .menu-submenu{
-	li{
-		padding: 0 5px 5px 5px;
-	}
-
-	li:first-child{
-		padding-top: 5px;
-	}			
+				
 }
 
 .menu-submenu   a{
@@ -97,6 +97,7 @@
 	width: 100%;
 	background-color: transparent;
 	padding: 5px 0  ;
+    white-space: nowrap;
 	
 }
 
@@ -117,7 +118,10 @@
 .menu-submenu .icon i{
     color: #f69a9a;
 }
-
+.menu-submenu .label{
+    font-family: wiraniansans;
+    font-size: 1.1rem;
+}
 .ui-menu > li:hover > .menu-submenu,
 .menu-submenu  li:hover > .menu-submenu{ 	
 	display: block;
@@ -126,10 +130,7 @@
 
 
 
-.ui-menu,
-.menu-submenu{
-
-	li:hover > a:not(:only-child):after{
+.ui-menu li:hover > a:not(:only-child):after{
 			position: absolute;
 			width: 0; 
 			height: 0; 
@@ -139,10 +140,25 @@
 			content: "";
 			left:0;
 			top: calc(50% - 10px);
+            z-index: 200;
 			.transition(all,0.2s);
-		}
-
+		
 
 }
+
+
+.menu-submenu >.menu-submenu:after{
+			position: absolute;
+			width: 0; 
+			height: 0; 
+			border-top: 10px solid transparent; 
+			border-left: 10px solid @menu-submenu-bg; 
+			border-bottom: 10px solid transparent;		
+			content: "";
+			left:0;
+			top: calc("50% - 10px");
+            z-index: 200;
+			.transition(all,0.2s);
+		}
 
 	
