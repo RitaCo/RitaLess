@@ -56,7 +56,7 @@
             border-top:1px solid #fff;
             border-bottom: 1px solid #ddd;
             position: relative;
-            .flex(1,1,0%);	
+            .flex(0,1,0%);	
             
             	
 	&.required .input-container > label:after {
@@ -66,7 +66,7 @@
 	}	
 
 	&.error .input-container{
-		border-right: 10px solid #DC0000;
+		border-right: 4px solid #DC0000;
 	}
 	.error-message{
         position: absolute;
@@ -174,6 +174,8 @@
 	}    
 	}
      
+    
+     
 	 input[type='text'],
 	 input[type='email'],
 	 input[type='password'],
@@ -231,11 +233,11 @@
 	}	
 	.error-message {
 		top: auto !important;
-		right : 3% !important;
+		
 		display: block;
         position: absolute;
 	
-        left: 30% !important;
+        
 		&:before{
 			//top: auto;
 		}

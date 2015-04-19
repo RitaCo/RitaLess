@@ -68,7 +68,11 @@
 		.flex(0 ,0 ,auto);
 
         
-        >.btn{
+        >.btn,
+         button,
+         input[type="button"],
+         input[type="reset"],
+         input[type="submit"]{
             box-shadow: 2px 2px 1px #ccc !important;
             
             &:focus{
@@ -83,21 +87,23 @@
 .body-container.container--layout-splitter{
 //    overflow: hidden !important;
 	position: relative;
-    background-color: #ECECEC;
-    padding: 10px;
+    background-color: #C9C9C9; // #ECECEC;
+    padding: 8px;
     .flex-col();    
     
     > .layout-cell,
     > .layout-box{
         .flex-box();
         .flex-row() ;
-          flex: 1 1 0%;
+        .flex-wrap();
+          flex: 0 1 0%;
+          
     }
         
     > .layout-box{
-        padding: @padding-block;
+       
         border: 1px solid @panel-brColor;
-        background-color: #fff;
+        background-color: #F7F7F7;
     }
         
      >.layout-cell +  .layout-cell,
@@ -105,7 +111,7 @@
      >.layout-box +  .layout-cell,
      >.layout-cell +  .layout-box,
      {
-        margin-right: 10px;
+        margin-right: 8px;
      }
      
      
@@ -133,7 +139,7 @@
      >.layout-box +  .layout-cell,
      >.layout-cell +  .layout-box,
      {
-            margin-top: 10px;
+            margin-top: 8px;
              margin-right: 0px;
      }   
 }
