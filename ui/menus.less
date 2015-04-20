@@ -61,7 +61,7 @@
 	padding: 15px 0;
 	
 	.label{
-		padding-top: 10px;		
+		padding-top: 4px;		
 	}
 }
 
@@ -88,7 +88,9 @@
 }
 
 .menu-submenu{
-				
+    min-width: 150px;
+    min-height: 88px;
+    border-radius: 2\px;				
 }
 
 .menu-submenu   a{
@@ -96,7 +98,7 @@
 	.flex-col();
 	width: 100%;
 	background-color: transparent;
-	padding: 5px 0  ;
+	padding: 10px 10px  ;
     white-space: nowrap;
 	
 }
@@ -112,15 +114,18 @@
 .menu-submenu .icon{
 	padding: 0 5px 0 10px;
 	//background-color: red;
+    
 }
 
 
 .menu-submenu .icon i{
-    color: #f69a9a;
+    color: #DEAE23;
+    font-size: 1rem;
 }
 .menu-submenu .label{
     font-family: wiraniansans;
-    font-size: 1.1rem;
+    font-size: 1.15rem;
+    text-shadow: 1px 1px 1px #000;
 }
 .ui-menu > li:hover > .menu-submenu,
 .menu-submenu  li:hover > .menu-submenu{ 	
@@ -159,6 +164,7 @@
 			top: calc("50% - 10px");
             z-index: 200;
 			.transition(all,0.2s);
+                
 		}
 
 	

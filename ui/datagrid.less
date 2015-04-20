@@ -21,7 +21,7 @@
 
 .ui-dataGrid > table{
   	border-collapse: separate;
-    table-layout: auto;
+    table-layout: fixed;
     
     position: relative;
     border-spacing: 0px 0px;
@@ -41,7 +41,7 @@
 .ui-dataGrid .table-footer td
 .ui-dataGrid > table > tfoot td{
     
-    padding: 5px 10px;
+    padding: 5px 5px;
     border-right:1px solid #CCCCCC;
     border-left:1px solid #fff;
     color: rgba(17, 17, 17, 0.73);
@@ -101,11 +101,12 @@
     border-bottom:1px solid #aaa;
     background: linear-gradient(to bottom, #fff  0%, #ddd  100%);
     cursor: pointer;
-    padding: 3px 10px !important;
+    line-height: 1.5;
     font-family: 'wtitr';
     font-size: 15px;
     text-shadow: 1px 1px 1px #fff;
-    
+    padding-right:  0px !important;
+    padding-left:  0px !important;
 }
 
 
@@ -116,18 +117,20 @@
 }
 .ui-dataGrid .table-header th a,
 .ui-dataGrid  thead th a{
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAJFBMVEUAAAApQghqnB9toCH///9zoyxqnB9zoyxzoyxzoyyY1D6844FRtSItAAAACXRSTlMAAAAAAAED/f4yiQJ2AAAAPklEQVR4XmNwgQPcTAeGySkwJudOuOjs1VOgTM/du3fCmDNnzkQygSATU5sHwjCH6tUTYUx3hMUMU5OIMRcAHfM84bGp8C0AAAAASUVORK5CYII=') no-repeat center right;
-	padding-right: 20px ;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAJFBMVEUAAAApQghqnB9toCH///9zoyxqnB9zoyxzoyxzoyyY1D6844FRtSItAAAACXRSTlMAAAAAAAED/f4yiQJ2AAAAPklEQVR4XmNwgQPcTAeGySkwJudOuOjs1VOgTM/du3fCmDNnzkQygSATU5sHwjCH6tUTYUx3hMUMU5OIMRcAHfM84bGp8C0AAAAASUVORK5CYII=');
+    background-position: 109% 77%;
+    background-repeat: no-repeat;
+	padding-right: 15px ;
 
 }
 .ui-dataGrid .table-header th a.asc,
 .ui-dataGrid  thead th a.asc{
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAJFBMVEUAAABqnB////+7Dg68Dg+8Dw9qnB+kQBm8Dw+8EBDpRkbxh4etKS3WAAAACHRSTlMAAAABAgIDA5EuZY0AAAAsSURBVHheY1CCA9xMBYb2RBhTY6cTlKncvXoqlKmxe/cOGLOjowPJhIFkAgDSNiA4ehEq8wAAAABJRU5ErkJggg==') no-repeat center right;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAJFBMVEUAAABqnB////+7Dg68Dg+8Dw9qnB+kQBm8Dw+8EBDpRkbxh4etKS3WAAAACHRSTlMAAAABAgIDA5EuZY0AAAAsSURBVHheY1CCA9xMBYb2RBhTY6cTlKncvXoqlKmxe/cOGLOjowPJhIFkAgDSNiA4ehEq8wAAAABJRU5ErkJggg==');
 }
 
 .ui-dataGrid .table-header th a.desc,
 .ui-dataGrid  thead th a.desc{
-    background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAG1BMVEUAAAApQghqnB////9zoyxqnB+8Dw/pRkbxh4fnPRblAAAABnRSTlMAAAAAAQPutGdqAAAAKElEQVR4XmMwhoMBZZqlpaXBmB0dbVCmQUZFIoxp1mYMYzKkBBFjLgDTwiqH2P5dfAAAAABJRU5ErkJggg==') no-repeat center right;
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAG1BMVEUAAAApQghqnB////9zoyxqnB+8Dw/pRkbxh4fnPRblAAAABnRSTlMAAAAAAQPutGdqAAAAKElEQVR4XmMwhoMBZZqlpaXBmB0dbVCmQUZFIoxp1mYMYzKkBBFjLgDTwiqH2P5dfAAAAABJRU5ErkJggg==');
 }
 
 
