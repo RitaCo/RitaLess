@@ -555,6 +555,12 @@ p{
 .flex-row {
   flex-direction: column  !important;
 }
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
 .bc-visible {
   overflow: visible !important;
 }
@@ -583,6 +589,14 @@ p{
   overflow: inherit !important;
   z-index: inherit !important;
   position: inherit !important;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
 }
 .com-layout {
   overflow: hidden;
@@ -821,6 +835,7 @@ p{
   flex-direction: row ;
   flex-direction: row  !important;
   flex-wrap: wrap;
+  flex-wrap: wrap !important;
   position: relative;
   border-bottom: 1px solid #ddd;
 }
@@ -849,7 +864,7 @@ p{
   border-top: 1px solid #fff;
   border-bottom: 1px solid #ddd;
   position: relative;
-  flex: 1 1 0%;
+  flex: 0 1 0%;
 }
 .com-input.required .input-container > label:after {
   color: #e32;
@@ -857,7 +872,7 @@ p{
   padding: 5px;
 }
 .com-input.error .input-container {
-  border-right: 10px solid #DC0000;
+  border-right: 4px solid #DC0000;
 }
 .com-input .error-message {
   border: 2px solid #e67e22;
@@ -1000,21 +1015,19 @@ select:focus {
 .form-v .com-input input[type='file'],
 .com-input.form-v input[type='file'] {
   width: 100% ;
-  min-width: 200px;
+  min-width: 130px;
 }
 .form-v .com-input .error-message,
 .com-input.form-v .error-message {
   top: auto !important;
-  right: 3% !important;
   display: block;
   position: absolute;
-  left: 30% !important;
 }
 .form-v .com-input input,
 .com-input.form-v input,
 .form-v .com-input textarea,
 .com-input.form-v textarea {
-  min-width: 200px;
+  min-width: 130px;
 }
 .form-v .com-input select,
 .com-input.form-v select {
@@ -1118,8 +1131,8 @@ div.submit {
   display: inline-flex;
   vertical-align: middle;
   border: 1px solid #b4b4b4;
-  line-height: 28px;
-  padding: 0px 14px;
+  line-height: 30px;
+  padding: 0px 10px;
   align-self: stretch;
   font-family: WAmer, "Fira";
   font-size: 12px;
@@ -1157,7 +1170,6 @@ div.submit {
 /* line 58, ../scss/partials/_buttons.scss */
 input.btn,
 button.btn {
-  height: 34px;
   cursor: pointer;
 }
 /* line 65, ../scss/partials/_buttons.scss */
@@ -1403,6 +1415,7 @@ button.btn:disabled {
   flex-direction: row ;
   flex-direction: row  !important;
   flex-wrap: wrap;
+  flex-wrap: wrap !important;
   overflow: hidden;
 }
 /* line 354, ../scss/partials/_buttons.scss */
@@ -1654,15 +1667,15 @@ button.btn-tiny {
   transition: all 0.2s ease-in-out;
 }
 .toolbar-band > .btn i {
-  margin: 0px;
-  margin-left: 10px;
   color: #666;
-  font-size: 15px;
+  font-size: 1.3em;
+  transition: all 0.2s ease-in-out;
 }
 .toolbar-band > .btn span {
-  font-size: 14px;
+  font-size: 1.2em;
   font-family: wamer;
   font-weight: 400;
+  transition: all 0.2s ease-in-out;
 }
 .toolbar-band > .btn.disabled {
   color: silver;
@@ -1674,8 +1687,16 @@ button.btn-tiny {
 .toolbar-band > .btn:not(.disabled):hover {
   border: 1px solid silver;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
-  background: none;
+  background: rgba(0, 0, 0, 0.05);
   color: #222;
+  transition: all 0.2s ease-in-out;
+}
+.toolbar-band > .btn:not(.disabled):hover span {
+  color: #404056;
+  transition: all 0.2s ease-in-out;
+}
+.toolbar-band > .btn:not(.disabled):hover i {
+  color: #aa1212;
   transition: all 0.2s ease-in-out;
 }
 .toolbar-band.band--sm > .btn i {
@@ -2230,18 +2251,20 @@ button.btn-tiny {
 }
 .ui-menu .icon i {
   color: #01B070;
-  font-size: 1.3rem;
+  font-size: 1.4rem;
   font-weight: 400;
   position: relative;
+}
+.ui-menu > li > a .icon i {
+  font-size: 1.7rem;
 }
 .ui-menu .label {
   flex: 1 1 0%;
 }
-.ui-menu .label span {
-  color: #DCE2E6;
+.ui-menu .label {
+  color: #fff;
   font-family: Wirans;
   font-size: 1rem;
-  line-height: 0;
   font-weight: 300;
   text-shadow: 1px 1px 1px #444;
 }
@@ -2251,7 +2274,7 @@ button.btn-tiny {
   padding: 15px 0;
 }
 .ui-menu > li > a .label {
-  padding-top: 10px;
+  padding-top: 4px;
 }
 .ui-menu > li:hover > a {
   background: #3d4a53;
@@ -2263,17 +2286,16 @@ button.btn-tiny {
   background-color: #303a41;
   display: none;
   position: absolute;
-  left: 0;
   top: 0;
   z-index: 100;
-  width: 100%;
   right: 100%;
+  padding: 10px;
+  box-shadow: -2px 2px 2px 2px rgba(0, 0, 0, 0.5);
 }
-.menu-submenu li {
-  padding: 0 5px 5px 5px;
-}
-.menu-submenu li:first-child {
-  padding-top: 5px;
+.menu-submenu {
+  min-width: 150px;
+  min-height: 88px;
+  border-radius: 2\px;
 }
 .menu-submenu a {
   align-items: center;
@@ -2281,7 +2303,8 @@ button.btn-tiny {
   flex-direction: row  !important;
   width: 100%;
   background-color: transparent;
-  padding: 5px 0  ;
+  padding: 10px 10px  ;
+  white-space: nowrap;
 }
 .menu-submenu a > * {
   align-self: center;
@@ -2293,14 +2316,19 @@ button.btn-tiny {
   padding: 0 5px 0 10px;
 }
 .menu-submenu .icon i {
-  color: #f69a9a;
+  color: #DEAE23;
+  font-size: 1rem;
+}
+.menu-submenu .label {
+  font-family: wiraniansans;
+  font-size: 1.15rem;
+  text-shadow: 1px 1px 1px #000;
 }
 .ui-menu > li:hover > .menu-submenu,
 .menu-submenu li:hover > .menu-submenu {
   display: block;
 }
-.ui-menu li:hover > a:not(:only-child):after,
-.menu-submenu li:hover > a:not(:only-child):after {
+.ui-menu li:hover > a:not(:only-child):after {
   position: absolute;
   width: 0;
   height: 0;
@@ -2310,35 +2338,45 @@ button.btn-tiny {
   content: "";
   left: 0;
   top: calc(40%);
+  z-index: 200;
   transition: all 0.2s ease-in-out;
 }
-.padding-none .ui-dataGrid {
-  border: none;
-  border-top: 1px solid #fff !important;
-  border-bottom: 1px solid #fff !important;
-  margin: 0px 1px;
+.menu-submenu > .menu-submenu:after {
+  position: absolute;
+  width: 0;
+  height: 0;
+  border-top: 10px solid transparent;
+  border-left: 10px solid #303a41;
+  border-bottom: 10px solid transparent;
+  content: "";
+  left: 0;
+  top: calc("50% - 10px");
+  z-index: 200;
+  transition: all 0.2s ease-in-out;
+}
+.padding-none > .ui-dataGrid {
+  border: 1px solid #fff !important;
 }
 .ui-dataGrid {
   border: 1px solid #9f9f9f;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
   position: relative;
   overflow: hidden;
+  width: 100%;
 }
 .ui-dataGrid > table {
   border-collapse: separate;
   table-layout: fixed;
-  overflow: hidden;
   position: relative;
   border-spacing: 0px 0px;
-  width: auto;
-  min-width: 100%;
+  width: 100%;
 }
 .ui-dataGrid .table-header th,
 .ui-dataGrid > table > thead th,
 .ui-dataGrid .table-body td,
 .ui-dataGrid > table > tbody td,
 .ui-dataGrid .table-footer td .ui-dataGrid > table > tfoot td {
-  padding: 5px 10px;
+  padding: 5px 5px;
   border-right: 1px solid #CCCCCC;
   border-left: 1px solid #fff;
   color: rgba(17, 17, 17, 0.73);
@@ -2350,7 +2388,7 @@ button.btn-tiny {
   font-family: WAmer, "Fira";
   font-size: 12px;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 14px;
 }
 .ui-dataGrid .table-header th:last-child,
 .ui-dataGrid thead th:last-child,
@@ -2380,10 +2418,12 @@ button.btn-tiny {
   border-bottom: 1px solid #aaa;
   background: linear-gradient(to bottom, #ffffff 0%, #dddddd 100%);
   cursor: pointer;
-  padding: 3px 10px !important;
+  line-height: 1.5;
   font-family: 'wtitr';
   font-size: 15px;
   text-shadow: 1px 1px 1px #fff;
+  padding-right: 0px !important;
+  padding-left: 0px !important;
 }
 .ui-dataGrid .table-header th:hover,
 .ui-dataGrid thead th:hover {
@@ -2391,16 +2431,18 @@ button.btn-tiny {
 }
 .ui-dataGrid .table-header th a,
 .ui-dataGrid thead th a {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAJFBMVEUAAAApQghqnB9toCH///9zoyxqnB9zoyxzoyxzoyyY1D6844FRtSItAAAACXRSTlMAAAAAAAED/f4yiQJ2AAAAPklEQVR4XmNwgQPcTAeGySkwJudOuOjs1VOgTM/du3fCmDNnzkQygSATU5sHwjCH6tUTYUx3hMUMU5OIMRcAHfM84bGp8C0AAAAASUVORK5CYII=') no-repeat center right;
-  padding: 0px 20px ;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAJFBMVEUAAAApQghqnB9toCH///9zoyxqnB9zoyxzoyxzoyyY1D6844FRtSItAAAACXRSTlMAAAAAAAED/f4yiQJ2AAAAPklEQVR4XmNwgQPcTAeGySkwJudOuOjs1VOgTM/du3fCmDNnzkQygSATU5sHwjCH6tUTYUx3hMUMU5OIMRcAHfM84bGp8C0AAAAASUVORK5CYII=');
+  background-position: 109% 77%;
+  background-repeat: no-repeat;
+  padding-right: 15px ;
 }
 .ui-dataGrid .table-header th a.asc,
 .ui-dataGrid thead th a.asc {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAJFBMVEUAAABqnB////+7Dg68Dg+8Dw9qnB+kQBm8Dw+8EBDpRkbxh4etKS3WAAAACHRSTlMAAAABAgIDA5EuZY0AAAAsSURBVHheY1CCA9xMBYb2RBhTY6cTlKncvXoqlKmxe/cOGLOjowPJhIFkAgDSNiA4ehEq8wAAAABJRU5ErkJggg==') no-repeat center right;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAJFBMVEUAAABqnB////+7Dg68Dg+8Dw9qnB+kQBm8Dw+8EBDpRkbxh4etKS3WAAAACHRSTlMAAAABAgIDA5EuZY0AAAAsSURBVHheY1CCA9xMBYb2RBhTY6cTlKncvXoqlKmxe/cOGLOjowPJhIFkAgDSNiA4ehEq8wAAAABJRU5ErkJggg==');
 }
 .ui-dataGrid .table-header th a.desc,
 .ui-dataGrid thead th a.desc {
-  background: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAG1BMVEUAAAApQghqnB////9zoyxqnB+8Dw/pRkbxh4fnPRblAAAABnRSTlMAAAAAAQPutGdqAAAAKElEQVR4XmMwhoMBZZqlpaXBmB0dbVCmQUZFIoxp1mYMYzKkBBFjLgDTwiqH2P5dfAAAAABJRU5ErkJggg==') no-repeat center right;
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUBAMAAAB/pwA+AAAAG1BMVEUAAAApQghqnB////9zoyxqnB+8Dw/pRkbxh4fnPRblAAAABnRSTlMAAAAAAQPutGdqAAAAKElEQVR4XmMwhoMBZZqlpaXBmB0dbVCmQUZFIoxp1mYMYzKkBBFjLgDTwiqH2P5dfAAAAABJRU5ErkJggg==');
 }
 /**
  * table body
@@ -2432,6 +2474,13 @@ button.btn-tiny {
 .ui-dataGrid tbody tr:focus {
   background-color: rgba(234, 235, 247, 0.68);
   color: #000;
+}
+/**
+ * action
+ */
+.ui-dataGrid .table-body .table-row td.actions,
+.ui-dataGrid tbody tr td.actions {
+  background-color: #E1E1DF;
 }
 /**
  * table footer
@@ -2619,7 +2668,7 @@ button.btn-tiny {
   position: relative;
   white-space: normal;
   flex: 1 1 0%;
-  order: 2;
+  order: 3;
 }
 .body-container p {
   margin: 5px 0px;
@@ -2633,15 +2682,23 @@ button.btn-tiny {
 .body-footer {
   background: #efefef;
   box-shadow: 0 1px 0 #ffffff inset, 0 -1px 0 #ffffff inset, 1px 0 0 #ffffff inset, -1px 0 0 #ffffff inset;
-  order: 3;
+  order: 5;
   position: relative;
   padding: 10px 20px;
   flex: 0 0 auto;
 }
-.body-footer > .btn {
+.body-footer > .btn,
+.body-footer button,
+.body-footer input[type="button"],
+.body-footer input[type="reset"],
+.body-footer input[type="submit"] {
   box-shadow: 2px 2px 1px #ccc !important;
 }
-.body-footer > .btn:focus {
+.body-footer > .btn:focus,
+.body-footer button:focus,
+.body-footer input[type="button"]:focus,
+.body-footer input[type="reset"]:focus,
+.body-footer input[type="submit"]:focus {
   box-shadow: inset 2px 2px 1px #ccc !important;
 }
 /**
@@ -2649,8 +2706,8 @@ button.btn-tiny {
  */
 .body-container.container--layout-splitter {
   position: relative;
-  background-color: #ECECEC;
-  padding: 10px;
+  background-color: #C9C9C9;
+  padding: 8px;
   flex-direction: row ;
   flex-direction: row  !important;
 }
@@ -2659,18 +2716,19 @@ button.btn-tiny {
   display: flex;
   flex-direction: column ;
   flex-direction: column  !important;
-  flex: 1 1 0%;
+  flex-wrap: wrap;
+  flex-wrap: wrap !important;
+  flex: 0 1 auto;
 }
 .body-container.container--layout-splitter > .layout-box {
-  padding: 10px;
   border: 1px solid #9f9f9f;
-  background-color: #fff;
+  background-color: #F7F7F7;
 }
 .body-container.container--layout-splitter > .layout-cell + .layout-cell,
 .body-container.container--layout-splitter > .layout-box + .layout-box,
 .body-container.container--layout-splitter > .layout-box + .layout-cell,
 .body-container.container--layout-splitter > .layout-cell + .layout-box {
-  margin-right: 10px;
+  margin-right: 8px;
 }
 .body-container.container--layout-splitter .layout-box .box-splitter {
   border-bottom: 1px solid #9f9f9f;
@@ -2693,7 +2751,7 @@ button.btn-tiny {
 .container--layout-splitter.flex--row > .layout-box + .layout-box,
 .container--layout-splitter.flex--row > .layout-box + .layout-cell,
 .container--layout-splitter.flex--row > .layout-cell + .layout-box {
-  margin-top: 10px;
+  margin-top: 8px;
   margin-right: 0px;
 }
 .ui-panel-border .body-container.container--layout-splitter {
@@ -2722,6 +2780,10 @@ button.btn-tiny {
 }
 .body-header + .body-splitter {
   order: 2;
+}
+.body-container + .body-splitter {
+  order: 4;
+  border-bottom: none;
 }
 .c-splitter-row {
   height: 6px;

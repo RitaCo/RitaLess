@@ -555,6 +555,12 @@ p{
 .flex-row {
   flex-direction: column  !important;
 }
+.flex-wrap {
+  flex-wrap: wrap !important;
+}
+.flex-nowrap {
+  flex-wrap: nowrap !important;
+}
 .bc-visible {
   overflow: visible !important;
 }
@@ -583,6 +589,14 @@ p{
   overflow: inherit !important;
   z-index: inherit !important;
   position: inherit !important;
+}
+.clearfix:before,
+.clearfix:after {
+  content: " ";
+  display: table;
+}
+.clearfix:after {
+  clear: both;
 }
 .com-layout {
   overflow: hidden;
@@ -821,6 +835,7 @@ p{
   flex-direction: row ;
   flex-direction: row  !important;
   flex-wrap: wrap;
+  flex-wrap: wrap !important;
   position: relative;
   border-bottom: 1px solid #ddd;
 }
@@ -849,7 +864,7 @@ p{
   border-top: 1px solid #fff;
   border-bottom: 1px solid #ddd;
   position: relative;
-  flex: 1 1 0%;
+  flex: 0 1 0%;
 }
 .com-input.required .input-container > label:after {
   color: #e32;
@@ -857,7 +872,7 @@ p{
   padding: 5px;
 }
 .com-input.error .input-container {
-  border-right: 10px solid #DC0000;
+  border-right: 4px solid #DC0000;
 }
 .com-input .error-message {
   border: 2px solid #e67e22;
@@ -1000,21 +1015,19 @@ select:focus {
 .form-v .com-input input[type='file'],
 .com-input.form-v input[type='file'] {
   width: 100% ;
-  min-width: 200px;
+  min-width: 130px;
 }
 .form-v .com-input .error-message,
 .com-input.form-v .error-message {
   top: auto !important;
-  right: 3% !important;
   display: block;
   position: absolute;
-  left: 30% !important;
 }
 .form-v .com-input input,
 .com-input.form-v input,
 .form-v .com-input textarea,
 .com-input.form-v textarea {
-  min-width: 200px;
+  min-width: 130px;
 }
 .form-v .com-input select,
 .com-input.form-v select {
@@ -1118,8 +1131,8 @@ div.submit {
   display: inline-flex;
   vertical-align: middle;
   border: 1px solid #b4b4b4;
-  line-height: 28px;
-  padding: 0px 14px;
+  line-height: 30px;
+  padding: 0px 10px;
   align-self: stretch;
   font-family: WAmer, "Fira";
   font-size: 12px;
@@ -1157,7 +1170,6 @@ div.submit {
 /* line 58, ../scss/partials/_buttons.scss */
 input.btn,
 button.btn {
-  height: 34px;
   cursor: pointer;
 }
 /* line 65, ../scss/partials/_buttons.scss */
@@ -1403,6 +1415,7 @@ button.btn:disabled {
   flex-direction: row ;
   flex-direction: row  !important;
   flex-wrap: wrap;
+  flex-wrap: wrap !important;
   overflow: hidden;
 }
 /* line 354, ../scss/partials/_buttons.scss */
