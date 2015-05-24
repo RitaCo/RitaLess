@@ -1,12 +1,7 @@
-
-
-
-
 .ui-tab{ 
     position: relative;
     .flex(1);
     .flex-box();
-    
     .br(1px, solid,@tab-brColor);
     background-color: @tab-bg;
 	box-shadow: 0px 0px 3px 0 #ccc inset;
@@ -15,31 +10,33 @@
 	
 
 		
-.ui-tab > .tab-nav{
+.ui-tab > .tab--nav{
     list-style:none;
     position: relative;
     background-color: @tab-nav-bg;
     padding: @tab-nav-padding;
-    flex : 0 0 auto;
+    flex : 0;
     .wid-3d();
     .flex-box();
-    .flex-col();
+    .flex-wrap();
+    align-content: flex-start;
     -moz-user-select:none;
     box-shadow:   0px 0px 3px 0 #ccc;
 }		
 
-.tab-nav > li,
-.tab-nav > .nav-item {
+.tab--nav > li,
+.tab--nav > .nav--item {
 		position: relative;
 		z-index: 1;
 		margin-left:0px;
+        .transition();
 		cursor: default;
 		background-color: @tab-item-bg;
 		.br(1px, solid, transparent);
 }
 			
-.tab-nav > li > a,
-.tab-nav > .nav-item > a{
+.tab--nav > li > a,
+.tab--nav > .nav--item > a{
     position: relative;
     display: block;
     color: @tab-item-color ;
@@ -48,32 +45,29 @@
     font-family: @tab-item-font-family;
     font-weight: @tab-item-font-weight;	
     .transition();
-	.br(1px, solid, transparent);
+	
 	z-index:2;
 	white-space: nowrap; 
-    
-
-   
 }
 
 
-.tab-nav > li,
-.tab-nav > .nav-item {
-    &.active > a{
-            background-color: @tab-item-bg-active;
-            .br(1px, solid, @tab-item-brColor);
+.tab--nav > li,
+.tab--nav > .nav--item {
+    
+    &.active {
+        background-color: @tab-item-bg-active;
+        .br(1px, solid, @tab-item-brColor);
     }
     
-    &.disabled > a{
-           
-           color: #A2A2A2;
+    &.disabled {
+        color: #A2A2A2;
     }
     
     & > a.disabled{
         color: #A2A2A2;        
     }    
     
-    &:not(.active):not(.disabled):hover > a{
+    &:not(.active):not(.disabled):hover{
         .br(1px, solid, @tab-item-brColor);
         background-color: @tab-item-bg-hover;
         cursor: pointer;
@@ -82,7 +76,7 @@
 }
 
 
-.ui-tab > .tab-container{
+.ui-tab > .tab--container{
     
     margin: @tab-container-margin;
     background-clip: content-box;
@@ -98,7 +92,7 @@
 	
 }		
 
-.ui-tab > .tab-container > .tab-body{
+.ui-tab > .tab--container > .tab--body{
 		padding: @tab-body-padding;
 		display: none;
 		position: relative;	
@@ -106,47 +100,44 @@
 
 
 
-.ui-tab.typ{
+.ui-tab.tab__pos{
 	
 &-top{
 	.flex-row();
 		
-	>.tab-nav{
+	>.tab--nav{
 		padding-bottom: 0px;
-		padding-top: 5px;
+		padding-top: 10px;
 		.flex-order(0);
 		.br-bottom(1px, solid, @tab-brColor);
 	}
 	
-	li {
-		margin-bottom: 0px;
+	li,
+    .nav--item  {
+		margin-bottom: -1px;
 		padding-bottom: 0px;
+        border-bottom-color: transparent;
+        .br-radius(5px,5px,0px,0);        
+	}
+    
+   	li+li,
+    .nav--item+.nav--item{
+        margin-right: 10px;
+    } 
+
+	li.active,
+    .nav--item.active  {
+		
+        box-shadow: 2px -2px 0px 1px rgba(138, 138, 138, 0.4);
+        
 	}
 
-	li.active {
-		border-bottom-color: @tab-bg;
-	}
-		
-	li a {
-		.br-radius(6px,0px);
-    	border-bottom: none;
-    	
-	}
-	
-	li:not(.active):hover > a{
-		border-bottom: none;
-	}
-	
-	li.active a{
-		border-bottom: none;
-	}
-	
-	.tab-container{
+	.tab--container{
 		.flex-order(1);	
 		flex:1 1 0%;	
 		
 	}
-	.tab-body.active{
+	.tab--body.active{
 		.flex-box();
 		.flex-row();
 		.flex(1,1,0%);
@@ -155,120 +146,117 @@
 }	
 
 
-&-bottom{
-	.flex-row();
-	
-	>.tab-nav{
-		padding-bottom: 5px;
-		padding-top: 0px;
-		.flex-order(1);
-		.br-top(1px, solid, @tab-brColor);
-	}
-	
-	li {
-		margin-top: 0px;
-		padding-top: 0px;
-	}
-
-	li.active {
-		border-top-color: @tab-bg;
-	}
-
-	
-	li a {
-		.br-radius(0px,6px);
-		border-top: none;
-    
-	}
-	
-	li:not(.active):hover > a{
-		border-top: none;
-	}
-		
-	li.active a{
-			border-top: none;
-	}
-	
-	
-	.tab-container{
-		.flex-order(0);	
-		.flex(1);	
-	}
-	.tab-body.active{
-		.flex-box();
-		.flex-row();
-		.flex(1);
-	}	
-
-	
-}
-
 /**
- * 
+ *  right
  */
 
 &-right{
 	.flex-col();
 	
 	
-	>.tab-nav{
+	>.tab--nav{
 		padding-left: 0px;
-		padding-right: 10px;
+		padding-right: 10px ;
 		.flex-order(0);
-		.br-left(1px, solid, @tab-brColor);
-		.flex-row();
-
+		.flex-col() !important;
+        .br-left(1px, solid, @tab-brColor);
 	}
 	
-	li {
-		
-		margin-left: 0px;
+	li,
+    .nav--item  {
+		border-left-color: transparent;
+		margin-left: -1px;
 		padding-left: 0px;
-	   
+ 	    .br-radius(0px,5px,5px,0);
+        flex: 1;
 	}
     li+li{
        margin-top: 5px;	 
     }
 	
-	li.active {
-		border-left-color: @tab-bg;
+	li.active,
+    .nav--item.active  {
+          box-shadow: 2px 2px 0px 1px rgba(138, 138, 138, 0.4);
 	}
-
 	
-	li a {
-		.br-radius(0px,6px,6px,0);
-		border-left: none;
+	li a,
+    .nav--item a {
         padding: 10px 10px;
         line-height: 1.5;
         text-align: left;
+	}
 
-	}
-	
-	li:not(.active):hover > a{
-		border-left: none;
-		
-	}
-	
-	li.active a{
-		border-left: none;
-
-	}
-	
-	.tab-container{
+	.tab--container{
 		.flex-order(1);
 		.flex-row();
-
 	}
-	.tab-body.active{
-		
+
+	.tab--body.active{
 		.flex-box();
 		.flex-row();
 		.flex(1);
+	}	
+}
 
+/**
+ *  bottom
+ */
+&-bottom{
+	.flex-row();
+	
+	>.tab--nav{
+		padding-bottom: 5px;
+		padding-top: 0px;
+		.flex-order(1);
+		.br-top(1px, solid, @tab-brColor);
+	}
+	
+	li,
+    .nav--item  {
+		margin-top: 0px;
+		padding-top: 0px;
+	}
+
+	li.active,
+    .nav--item.active  {
+//		border-top-color: @tab-bg;
+		//border-left-color: transparent;
+//          box-shadow: 2px 2px 1px 0px #c9c9c9;
+          		.br-radius(0px,6px,6px,0);
+	}
+
+	
+	li a,
+    .nav--item a {
+		.br-radius(0px,6px);
+		border-top: none;
+    
+	}
+	
+	li:not(.active):hover > a,
+	.nav--item:not(.active):hover > a{
+		border-top: none;
+	}
+		
+	li.active a,
+    .nav--item.active a{
+			border-top: none;
+	}
+	
+	
+	.tab--container{
+		.flex-order(0);	
+		.flex(1);	
+	}
+	.tab--body.active{
+		.flex-box();
+		.flex-row();
+		.flex(1);
 	}	
 
 	
 }
+
 
 /**
  * 
@@ -278,44 +266,49 @@
 	.flex-col();
 	
 	
-	>.tab-nav{
+	>.tab--nav{
 		padding-left:5px;
 		padding-right: 0px;
 		.flex-order(1);
 		.br-right(1px, solid, @tab-brColor);
-		.flex-row();
+		.flex-col();
 
 	}
 	
-	li {
+	li,
+    .nav--item  {
 		margin-right: 0px;
 		padding-right: 0px;
 	}
 
-	li.active {
+	li.active,
+    .nav--item.active  {
 		border-right-color: @tab-bg;
 	}
 	
-	li a {
+	li a,
+    .nav--item a {
 		.br-radius(6px,0px,0px,6px);
 		border-right: 0px;
  
 	}
 	
-	li:not(.active):hover > a{
+	li:not(.active):hover > a,
+	.nav--item:not(.active):hover > a{
 		border-right: 0px;
 	}
 	
-	li.active a{
+	li.active a,
+    .nav--item.active a{
 		border-right: 0px;
 	}
 	
-	.tab-container{
+	.tab--container{
 		.flex-order(0);
 		.flex-row();
 
 	}
-	.tab-body.active{
+	.tab--body.active{
 		.flex-box();
 		.flex-row();
 		.flex(1);

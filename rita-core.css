@@ -859,6 +859,9 @@ p{
   background-color: transparent;
   border-top: none ;
 }
+/**
+ * component: inputs container
+ */
 .com-input {
   background-color: #f7f7f7;
   border-top: 1px solid #fff;
@@ -913,9 +916,9 @@ label {
   font-weight: 400;
   text-shadow: 1px 1px 1px #c9c9c9;
   min-width: 130px;
+  user-select: none;
   white-space: nowrap;
   word-wrap: normal;
-  user-select: none;
 }
 input,
 textarea,
@@ -974,7 +977,7 @@ select:focus {
 .com-input > .input-container input[type='password'],
 .com-input > .input-container textarea {
   padding: 5px 10px;
-  flex: 1;
+  flex: 1 0 auto;
 }
 .com-input > .input-container input[type='file'] {
   width: 50%;
@@ -985,9 +988,6 @@ select:focus {
   box-shadow: none;
 }
 .com-input > .input-container select > option {
-  /**
-             * fire fox hang if padding:5px 5px; 
-             */
   padding: 2px 5px;
   font-size: 14px;
   color: #343434;

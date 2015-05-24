@@ -838,11 +838,12 @@
   right: 100%;
   padding: 10px;
   box-shadow: -2px 2px 2px 2px rgba(0, 0, 0, 0.5);
-}
-.menu-submenu {
   min-width: 150px;
   min-height: 88px;
-  border-radius: 2\px;
+  border-radius: 2px;
+}
+.menu-submenu > li + li {
+  margin-bottom: 2px;
 }
 .menu-submenu a {
   -webkit-align-items: center;
@@ -853,7 +854,7 @@
           flex-direction: row ;
   width: 100%;
   background-color: transparent;
-  padding: 10px 10px  ;
+  padding: 5px 10px  ;
   white-space: nowrap;
 }
 .menu-submenu a > * {
@@ -865,11 +866,25 @@
   background: #3d4a53;
 }
 .menu-submenu .icon {
-  padding: 0 5px 0 10px;
+  width: 30px;
+  height: 30px;
+  margin-left: 5px;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 .menu-submenu .icon i {
+  color: #ADADAD;
+  font-size: 1.3rem;
+}
+.menu-submenu li a:hover .icon i {
   color: #DEAE23;
-  font-size: 1rem;
 }
 .menu-submenu .label {
   font-family: wiraniansans;
@@ -905,6 +920,15 @@
   top: calc("50% - 10px");
   z-index: 200;
   transition: all 0.2s ease-in-out;
+}
+.menu-submenu > li.menu-divider {
+  background-color: #5D5D5D !important;
+  height: 1px;
+}
+.menu-submenu i[class^="mdi-"],
+.menu-submenu i[class*=" mdi-"] {
+  line-height: 1 !important;
+  font-size: 1.8rem !important;
 }
 .padding-none > .ui-dataGrid {
   border: 1px solid #fff !important;

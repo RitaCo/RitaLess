@@ -4,7 +4,7 @@
 	position: relative;
     background-color: #fafafa;
     
-	 .form-col{
+    .form-col{
 	 	.flex(1,1,0%);
 		.flex-box();
 		.flex-col();
@@ -14,52 +14,46 @@
   		border-bottom: 1px solid #ddd;
 		
 		.com-input{
-            border-left:1px solid #fff;
+            border-left: 1px solid #fff;
             border-right: 1px solid #ddd;
-             border-bottom: none;
+            border-bottom: none;
             flex:1 1 50%;
      		
-           
-			
 			&:first-child{
 				border-right : none;
-               
 			}
+            
 			&:last-child{
 				border-left : none;
-			
 			}
+            
 		}
-		
 	}
 	
 	  .com-input:last-child,
 	  .form-col:last-child{
-		border-bottom:none;
+            border-bottom:none;
 	}
-	
-	
 
 }
-
-
 
 .form-bg-none .com-input{
 		background-color: transparent;
 		border-top: none ;
 }
 
-
+/**
+ * component: inputs container
+ */
 .com-input {		
 
-       background-color: #f7f7f7;
-            border-top:1px solid #fff;
-            border-bottom: 1px solid #ddd;
-            position: relative;
-            .flex(0,1,0%);	
+    background-color: #f7f7f7;
+    border-top:1px solid #fff;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    .flex(0,1,0%);	
             
-            	
-	&.required .input-container > label:after {
+	&.required .input-container > label:after{
 		color: #e32;
 		content: '*';
 		padding: 5px;
@@ -68,6 +62,7 @@
 	&.error .input-container{
 		border-right: 4px solid #DC0000;
 	}
+    
 	.error-message{
         position: absolute;
         border: 2px solid #e67e22;
@@ -76,7 +71,7 @@
         font-weight: 300;
         font-size: 17px;
         color:#2D339C;
-                user-select:none;	
+        user-select:none;	
         text-shadow: 0 0 3px #c5c5c5;
         z-index: 5;
         padding: 5px 15px;
@@ -96,7 +91,6 @@
 			position: absolute;
 			top: -13px;
 			width: 0;							
-			
 		}
 		
 		&:hover{
@@ -105,42 +99,49 @@
 	}		
 }
 
-
     
+label{
+	color: #222;
+	font-family: @label-font-family;
+	font-size: @label-font-size;
+	font-weight: @label-font-weight;
+	text-shadow: 1px 1px 1px #c9c9c9;
+	min-width: 130px;
+    user-select: none;
+    .text-nowrap();	
+    line-height: 2;			
+}
 	
-    label{
-		color: #222;
-		font-family: @label-font-family;
-		font-size: @label-font-size;
-		font-weight: @label-font-weight;
-		text-shadow: 1px 1px 1px #c9c9c9;
-		min-width: 130px;
-		.text-nowrap();
-        user-select:none;				
-	}
-	
-    input,
-    textarea,
-    select{
-		border: 1px solid #bbb;
-	    position: relative;   
-        font-size: @inputs-font-size;
-        font-family: @inputs-font-family;
-        font-weight: @inputs-font-weight;
-		color: #717D90;
-		box-shadow: 1px 1px 3px 0px #DCDCDC inset;
-		background-color: #fdfdfd;
-		font-size-adjust: auto;
-        .transition();
-		&:focus{
-			box-shadow:  0px 0px 2px 0px #DCDCDC inset;
-			background-color: white;
-            color: #333;
-            border: 1px solid #999;
-            .transition()	
-		}	 
-	}
-	
+input,
+textarea,
+select{
+	border: 1px solid #bbb;
+    position: relative;   
+    font-size: @inputs-font-size;
+    font-family: @inputs-font-family;
+    font-weight: @inputs-font-weight;
+	color: #636363;
+	box-shadow: 1px 1px 2px 0px #DCDCDC inset;
+	background-color: #fdfdfd;
+	font-size-adjust: 0.45;
+    .transition();
+    
+	&:focus{
+		box-shadow:  0px 0px 2px 0px #DCDCDC inset;
+		background-color: white;
+        color: #333;
+        border: 1px solid #999;
+        .transition()	
+	}	 
+}
+
+input,
+select{
+    
+    height: 30px;
+}
+
+
 .com-input > .input-container{ 
 	.flex-box();
 	.flex-col();
@@ -152,60 +153,85 @@
 	text-align: right;	
 	position: relative;
 
-
-     .dateSelect{ 
+    .dateSelect{ 
     	.flex(1);
     	.flex-box();
         .flex-col();
-	
+        padding: 0 10px;
+        
         select{
-		
             border: 1px solid #bbb;
-            border-radius: 3px;
+            border-radius: 1px;
             color: #555;
-            box-shadow: 0px 0px 5px 0px #DCDCDC inset;
-            background-color: #fdfdfd;
+            -moz-appearance : unset;
+            -webkit-appearance : unset;
+            font-family: wmitra,Fira;
+            font-size-adjust: 0.45;
+            font-weight: bold;
             
-
-		&:focus{
-			box-shadow:  0px 0px 2px 0px #DCDCDC inset;
-			background-color: white;	
-		}	 
-	}    
-	}
+    		&:focus{
+    			box-shadow:  0px 0px 2px 0px #DCDCDC inset;
+    			background-color: white;
+                 -moz-appearance : toolbarbutton-dropdown;
+                -webkit-appearance : toolbarbutton-dropdown;	
+    		}
+            &:hover{
+                 -moz-appearance : toolbarbutton-dropdown;
+                -webkit-appearance : toolbarbutton-dropdown;	
+            }	 
+	   }
+       .divider{
+            background-color: #cecece;
+            border: 1px solid #fafafa;
+        
+            margin: 2px 4px;
+            outline: 1px solid #d0d0d0;
+            width: 4px;
+            
+            &:last-child{
+                display:none;
+            }
+       }
+       select+select{
+            margin: 0 1px;
+       }
+    }
      
     
      
-	 input[type='text'],
-	 input[type='email'],
-	 input[type='password'],
-	 textarea{
-		padding: 5px 10px;
-		flex:1;
-	}
-	input[type='file']{
-	   width: 50%;
-	}
-	input[type='hidden']{
-	   background: none;
+    input[type='text'],
+    input[type='email'],
+    input[type='password'],
+    textarea{
+        padding: 5px 10px;
+        flex:1 0 auto;
+    }
+    
+    input[type='file']{
+       width: 50%;
+    }
+    
+    input[type='hidden']{
+       background: none;
        border: none;
        box-shadow: none;
-	}    
-	 input[type='checkbox']{
-		//margin: 0 20px;
-	}
-	select > option{
-            /**
-             * fire fox hang if padding:5px 5px; 
-             */
-			
+    }   
+     
+    input[type='checkbox']{
+        //margin: 0 20px;
+    }
+    select{
+        padding : 0 5px;
+    }
+    select > option{
             padding: 2px 5px;
             font-size: 14px;
             color: #343434;
-	}
-    select >  option:disabled{
-    color: #555;
-    background-color: #DBE3FF;
+    }
+    
+    select > option:disabled{
+        color: #555;
+        background-color: #DBE3FF;
     }
 }
 
@@ -266,8 +292,8 @@ div.submit{
 }
 
 .com-form  .group-inputs{
-	border: 1px solid #C4C4C4; 
-    box-shadow:0px 2px 2px -1px rgba(0, 0, 0, 0.15);
+	border: 1px solid #bbb; 
+    box-shadow:-5px 5px 3px -2px #DADADA;
 }
 
 .group-inputs + .group-inputs{
