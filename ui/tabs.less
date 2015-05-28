@@ -15,7 +15,7 @@
     position: relative;
     background-color: @tab-nav-bg;
     padding: @tab-nav-padding;
-    flex : 0;
+  
     .wid-3d();
     .flex-box();
     .flex-wrap();
@@ -110,6 +110,8 @@
 		padding-top: 10px;
 		.flex-order(0);
 		.br-bottom(1px, solid, @tab-brColor);
+   
+        
 	}
 	
 	li,
@@ -157,8 +159,7 @@
 	>.tab--nav{
 		padding-left: 0px;
 		padding-right: 10px ;
-		.flex-order(0);
-		.flex-col() !important;
+     .flex-row();
         .br-left(1px, solid, @tab-brColor);
 	}
 	
@@ -168,7 +169,8 @@
 		margin-left: -1px;
 		padding-left: 0px;
  	    .br-radius(0px,5px,5px,0);
-        flex: 1;
+        flex:0 0 auto;
+        
 	}
     li+li{
        margin-top: 5px;	 
